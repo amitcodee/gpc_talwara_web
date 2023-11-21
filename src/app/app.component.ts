@@ -4,14 +4,13 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./header/header.component";
 
 import { HeroSectionComponent } from "./hero-section/hero-section.component";
-import { FooterComponent } from "./footer/footer.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
-    imports: [CommonModule, RouterOutlet, HeaderComponent, HeroSectionComponent, FooterComponent]
+    imports: [CommonModule, RouterOutlet,HeaderComponent, HeroSectionComponent, ]
 })
 export class AppComponent {
   title = 'Gpc Talwara';
