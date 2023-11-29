@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,5 +9,15 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  navbarScrolled = false;
+
+  @HostListener('window:scroll') 
+  onWindowScroll() {
+    if (window.pageYOffset > 50) {
+      this.navbarScrolled = true;
+    } else {
+      this.navbarScrolled = false;
+    }
+  }
 
 }

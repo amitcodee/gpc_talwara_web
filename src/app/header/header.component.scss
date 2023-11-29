@@ -1,8 +1,8 @@
-.dropdown:hover>.dropdown-menu {
-    display: block;
-  }
-  
-  .dropdown>.dropdown-toggle:active {
-    /*Without this, clicking will make it sticky*/
-      pointer-events: none;
-  }
+.navbar {
+  background: transparent; 
+  transition: background 0.5s ease;
+}
+
+.navbar-scrolled {
+   background: #d60000;
+}
