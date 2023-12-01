@@ -2,6 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../language.service';
 import { ThemeService } from '../theme.service';
+import { TextSizeService } from '../text-size.service';
 
 @Component({
   selector: 'app-header',
@@ -25,11 +26,19 @@ throw new Error('Method not implemented.');
     } else {
       this.navbarScrolled = false;
     }
-  }
-  constructor(
+  } constructor(
+    private textSizeService: TextSizeService,
     private languageService: LanguageService,
     private themeService: ThemeService
   ) {}
+
+  increaseTextSize(): void {
+    this.textSizeService.increaseTextSize();
+  }
+
+  decreaseTextSize(): void {
+    this.textSizeService.decreaseTextSize();
+  }
 
   toggleLanguage() {
     this.languageService.toggleLanguage();
