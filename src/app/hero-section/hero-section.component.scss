@@ -1,0 +1,10 @@
+/* other.component.css */
+:host {
+    background-color: #fff; /* Light mode background */
+  }
+  
+  .dark-mode {
+    background-color: #333; /* Dark mode background */
+    color: #fff; /* Dark mode text color */
+  }
+  

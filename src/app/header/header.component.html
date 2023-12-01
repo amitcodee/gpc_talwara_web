@@ -1,34 +1,50 @@
-<nav class="navbar navbar-expand-lg fixed-top"  [ngClass]="{'navbar-scrolled': navbarScrolled}">
-    <a class="navbar-brand" href="#">My App</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-    </div>
-    <div class="form-check form-switch language-toggle">
-      <input class="form-check-input" type="checkbox" role="switch" id="languageSwitch" (change)="toggleLanguage()">
-      <label class="form-check-label" for="languageSwitch">
-        <span *ngIf="isEnglish">ਪੰਜਾਬੀ</span>
-        <span *ngIf="!isEnglish">English</span>
-      </label>
+<nav class="navbar navbar-expand-lg fixed-top" [ngClass]="{'navbar-scrolled': navbarScrolled}">
+  <a class="navbar-brand" href="#">My App</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+  <div class="form-check form-switch language-toggle">
+    <input class="form-check-input" type="checkbox" role="switch" id="languageSwitch" (change)="toggleLanguage()">
+    <label class="form-check-label" for="languageSwitch">
       <div class="toggle-frame">
         <div class="toggle-circle" [ngClass]="{'toggle-circle-english': isEnglish, 'toggle-circle-punjabi': !isEnglish}">
         </div>
       </div>
-    </div>
-  </nav>
+      <span *ngIf="!isEnglish">ਪੰਜਾਬੀ</span>
+      <span *ngIf="isEnglish">English</span>
+    </label>
+  </div>
   
+  
+  
+  <div class="form-check form-switch theme-toggle">
+    <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch" (change)="toggleDarkMode()">
+    <label class="form-check-label" for="themeSwitch">
+      <i *ngIf="!isDarkMode" class="fas fa-sun"></i>
+      <i *ngIf="isDarkMode" class="fas fa-moon"></i>
+    </label>
+    <div class="toggle-frame">
+      <div class="toggle-circle" [ngClass]="{'toggle-circle-light-mode': !isDarkMode, 'toggle-circle-dark-mode': isDarkMode}">
+      </div>
+    </div>
+  </div>
+  
+  
+</nav>

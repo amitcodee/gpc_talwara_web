@@ -1,7 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../language.service';
-
+import { ThemeService } from '../theme.service';
 
 @Component({
   selector: 'app-header',
@@ -12,6 +12,7 @@ import { LanguageService } from '../language.service';
 })
 export class HeaderComponent {
 isEnglish: any;
+isDarkMode: any;
 getCurrentLanguage() {
 throw new Error('Method not implemented.');
 }
@@ -25,9 +26,16 @@ throw new Error('Method not implemented.');
       this.navbarScrolled = false;
     }
   }
-  constructor(private languageService: LanguageService) {}
+  constructor(
+    private languageService: LanguageService,
+    private themeService: ThemeService
+  ) {}
 
   toggleLanguage() {
     this.languageService.toggleLanguage();
+  }
+
+  toggleDarkMode() {
+    this.themeService.toggleDarkMode();
   }
 }
