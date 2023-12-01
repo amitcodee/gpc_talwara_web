@@ -1,5 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LanguageService } from '../language.service';
+
 
 @Component({
   selector: 'app-header',
@@ -9,6 +11,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+isEnglish: any;
+getCurrentLanguage() {
+throw new Error('Method not implemented.');
+}
   navbarScrolled = false;
 
   @HostListener('window:scroll') 
@@ -19,5 +25,9 @@ export class HeaderComponent {
       this.navbarScrolled = false;
     }
   }
+  constructor(private languageService: LanguageService) {}
 
+  toggleLanguage() {
+    this.languageService.toggleLanguage();
+  }
 }

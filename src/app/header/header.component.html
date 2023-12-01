@@ -19,4 +19,16 @@
         </li>
       </ul>
     </div>
+    <div class="form-check form-switch language-toggle">
+      <input class="form-check-input" type="checkbox" role="switch" id="languageSwitch" (change)="toggleLanguage()">
+      <label class="form-check-label" for="languageSwitch">
+        <span *ngIf="isEnglish">ਪੰਜਾਬੀ</span>
+        <span *ngIf="!isEnglish">English</span>
+      </label>
+      <div class="toggle-frame">
+        <div class="toggle-circle" [ngClass]="{'toggle-circle-english': isEnglish, 'toggle-circle-punjabi': !isEnglish}">
+        </div>
+      </div>
+    </div>
   </nav>
+  
