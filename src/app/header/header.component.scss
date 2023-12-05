@@ -1,8 +1,56 @@
 .navbar {
-  background: transparent; 
+  background: transparent;
   transition: background 0.5s ease;
 }
 
 .navbar-scrolled {
-   background: #d60000;
+  background: #d60000;
+}
+
+:host {
+  background-color: #fff;
+  /* Light mode background */
+  color: black;
+  transition: background-color 0.5s ease;
+
+}
+
+:host .text {
+  color: #d60000;
+  /* Light mode link color */
+}
+
+.dark-mode {
+  background-color: #333;
+  /* Dark mode background */
+  color: #fff;
+  /* Dark mode text color */
+}
+
+.dark-mode .text,
+.dark-mode .nav-link {
+  background-color: #333;
+  /* Dark mode background */
+  color: #fff;
+  /* Dark mode text color */
+}
+
+/* header.component.scss */
+
+.btn-group {
+  // Common styles for the button group
+  display: flex;
+  gap: 10px; // Adjust the gap as needed
+
+  button {
+    // Common styles for buttons
+    padding: 5px 10px; // Adjust padding as needed
+    font-size: 16px; // Adjust font size as needed
+    transition: color 0.3s ease; // Smooth transition for color change
+
+    // Light mode styles
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+  }
 }

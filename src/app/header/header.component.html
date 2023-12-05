@@ -1,3 +1,4 @@
+<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'en'"  [style.font-size.px]="getTextSize()">
 <div class="container-fluid d-none d-lg-flex mt-2 mx-0">
   <div class="row align-items-center">
     <div class="col-lg-6">
@@ -6,7 +7,7 @@
           <img src="../../assets/images/used/logo.png" alt="College Logo" class="img-fluid" width="90" height="90">
         </div>
         <div class="col">
-          <a href="#" class="fw-bold fs-3 text-decoration-none text-dark">S. Amarjeet Singh Sahi Government
+          <a href="#" class="fw-bold fs-3 text-decoration-none text">S. Amarjeet Singh Sahi Government
             Polytechnic College</a>
           <p>
             Approved by AICTE, Affiliated to PSBTE & IT, Punjab
@@ -58,8 +59,9 @@
 
 <nav class="navbar navbar-expand-lg" [ngClass]="{'fixed-top': navbarScrolled, 'navbar-scrolled': navbarScrolled}">
   <div class="container-fluid">
-    <a class="navbar-brand d-lg-none" href="#">t6r5
-      <i class="fas fa-icon"></i>
+    <a class="navbar-brand d-lg-none fw-bold fs-3" href="#">
+      <img src="../../assets/images/used/logo.png" alt="College Logo" class="img-fluid" width="50" height="50">
+      S. Amarjeet Singh Sahi Government Polytechnic College
     </a>
 
     <!-- Navbar Toggle Button for Small Screens -->
@@ -70,9 +72,9 @@
 
     <!-- Navbar Links -->
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mx-auto text-center"> <!-- Center the navlinks in large screens -->
+      <ul class="navbar-nav mx-auto text-lg-center"> <!-- Center the navlinks in large screens -->
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link " aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Features</a>
@@ -87,3 +89,83 @@
     </div>
   </div>
 </nav>
+</div>
+<!-- punjabi -->
+<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'pa'"  [style.font-size.px]="getTextSize()">
+  <div class="container-fluid d-none d-lg-flex mt-2 mx-0">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <img src="../../assets/images/used/logo.png" alt="ਕਾਲਜ ਦਾ ਲੋਗੋ" class="img-fluid" width="90" height="90">
+          </div>
+          <div class="col">
+            <a href="#" class="fw-bold fs-3 text-decoration-none text">ਐਸ. ਅਮਰਜੀਤ ਸਿੰਘ ਸਾਹੀ ਸਰਕਾਰੀ ਪਾਲੀਟੈਕਨਿਕ ਕਾਲਜ</a>
+            <p>
+              AICTE ਦੁਆਰਾ ਮਨਜੂਰ, PSBTE & IT, ਪੰਜਾਬ ਦੇ ਸਾਹਿਤ
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="form-check form-switch theme-toggle">
+              <input class="form-check-input" type="checkbox" role="switch" id="languageSwitch"
+                (change)="toggleLanguage()">
+              <label class="form-check-label" for="languageSwitch">
+                <span class="toggle-label">ਭਾਸ਼ਾ ਬਦਲੋ</span>
+              </label>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="form-check form-switch theme-toggle">
+              <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch" (change)="toggleDarkMode()">
+              <label class="form-check-label" for="themeSwitch">
+                <span class="toggle-label">ਥੀਮ ਬਦਲੋ</span>
+              </label>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="btn-group" role="group" aria-label="First group">
+              <button type="button" class="btn btn-outline-secondary" (click)="increaseTextSize()">A++</button>
+              <button type="button" class="btn btn-outline-secondary" (click)="decreaseTextSize()">A--</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <nav class="navbar navbar-expand-lg" [ngClass]="{'fixed-top': navbarScrolled, 'navbar-scrolled': navbarScrolled}">
+    <div class="container-fluid">
+      <a class="navbar-brand d-lg-none" href="#">t6r5
+        <i class="fas fa-icon"></i>
+      </a>
+  
+      <!-- Navbar Toggle Button for Small Screens -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto text-center">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#">ਹੋਮ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ਫੀਚਰ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ਮੁਲਾਜ਼ਮ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">ਅਯੋਗ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

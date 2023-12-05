@@ -12,11 +12,8 @@ import { TextSizeService } from '../text-size.service';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-isEnglish: any;
-isDarkMode: any;
-getCurrentLanguage() {
-throw new Error('Method not implemented.');
-}
+  isEnglish: any;
+  isDarkMode: any;
   navbarScrolled = false;
 
   @HostListener('window:scroll') 
@@ -26,7 +23,9 @@ throw new Error('Method not implemented.');
     } else {
       this.navbarScrolled = false;
     }
-  } constructor(
+  }
+
+  constructor(
     private textSizeService: TextSizeService,
     private languageService: LanguageService,
     private themeService: ThemeService
@@ -46,5 +45,18 @@ throw new Error('Method not implemented.');
 
   toggleDarkMode() {
     this.themeService.toggleDarkMode();
+  }
+
+  ngOnInit() {
+    this.themeService.isDarkMode$.subscribe((darkMode: boolean) => {
+      this.isDarkMode = darkMode;
+      // Update component styles or perform other actions based on darkMode
+    });
+  }
+  getTextSize(): number {
+    return this.textSizeService.getTextSize();
+  }
+  getCurrentLanguage() {
+    return this.languageService.currentLanguage;
   }
 }
