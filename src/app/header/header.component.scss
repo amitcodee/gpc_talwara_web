@@ -3,8 +3,8 @@
   transition: background 0.5s ease;
 }
 
-.navbar-scrolled {
-  background: #d60000;
+:host .navbar-scrolled {
+  background: #ecdede;
 }
 
 :host {
@@ -28,7 +28,7 @@
 }
 
 .dark-mode .text,
-.dark-mode .nav-link {
+.dark-mode .nav-link,  .dark-mode .navbar-scrolled {
   background-color: #333;
   /* Dark mode background */
   color: #fff;
