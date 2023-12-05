@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { LanguageService } from '../language.service';
 import { ThemeService } from '../theme.service';
 import { TextSizeService } from '../text-size.service';
+import { HeaderComponent } from "../header/header.component";
+
 
 @Component({
-  selector: 'app-hero-section',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './hero-section.component.html',
-  styleUrl: './hero-section.component.scss'
+    selector: 'app-hero-section',
+    standalone: true,
+    templateUrl: './hero-section.component.html',
+    styleUrl: './hero-section.component.scss',
+    imports: [CommonModule, HeaderComponent]
 })
 export class HeroSectionComponent {
   isDarkMode = false;
