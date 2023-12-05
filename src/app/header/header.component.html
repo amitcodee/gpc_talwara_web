@@ -1,49 +1,62 @@
-<nav class="navbar navbar-expand-lg d-none d-lg-flex">
-  <div class="container-fluid">
-    <div class="row align-items-start"> <!-- Center align items vertically -->
-      <!-- Navigation Brand -->
-      <div class="col-lg-6">
-        <a class="navbar-brand fw-bold fs-3" href="#">
-          <img src="../../assets/images/used/logo.png" alt="College Logo" class="mr-2 img-fluid" width="50" height="50">
-          S. Amarjeet Singh Sahi Government Polytechnic College
-        </a>
-      </div>
-
-      <!-- Toggle Elements -->
-      <div class="col-lg-6 text-end">
-        <div class="row align-items-end"> <!-- Center align items vertically -->
-          <div class="col-lg-3">
-            <div class="form-check form-switch theme-toggle ml-3" style="z-index: 1;">
-              <input class="form-check-input" type="checkbox" role="switch" id="languageSwitch" (change)="toggleLanguage()">
-              <label class="form-check-label" for="languageSwitch">
-                <span class="toggle-label">Change Language</span>
-              </label>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="form-check form-switch theme-toggle ml-3" style="z-index: 1;">
-              <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch" (change)="toggleDarkMode()">
-              <label class="form-check-label" for="themeSwitch">
-                <span class="toggle-label">Switch Theme</span>
-              </label>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="btn-group me-2" role="group" aria-label="First group">
-              <button type="button" class="btn btn-outline-secondary" (click)="increaseTextSize()">A++</button>
-              <button type="button" class="btn btn-outline-secondary" (click)="decreaseTextSize()">A--</button>
-            </div>
-          </div>
+<div class="container-fluid d-none d-lg-flex mt-2 mx-0">
+  <div class="row align-items-center">
+    <div class="col-lg-6">
+      <div class="row align-items-center">
+        <div class="col-auto">
+          <img src="../../assets/images/used/logo.png" alt="College Logo" class="img-fluid" width="90" height="90">
+        </div>
+        <div class="col">
+          <a href="#" class="fw-bold fs-3 text-decoration-none text-dark">S. Amarjeet Singh Sahi Government
+            Polytechnic College</a>
+          <p>
+            Approved by AICTE, Affiliated to PSBTE & IT, Punjab
+          </p>
         </div>
       </div>
     </div>
+    <div class="col-lg-6">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="form-check form-switch theme-toggle">
+            <input class="form-check-input" type="checkbox" role="switch" id="languageSwitch"
+              (change)="toggleLanguage()">
+            <label class="form-check-label" for="languageSwitch">
+              <span class="toggle-label">Change Language</span>
+            </label>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="form-check form-switch theme-toggle">
+            <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch" (change)="toggleDarkMode()">
+            <label class="form-check-label" for="themeSwitch">
+              <span class="toggle-label">Switch Theme</span>
+            </label>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="btn-group" role="group" aria-label="First group">
+            <button type="button" class="btn btn-outline-secondary" (click)="increaseTextSize()">A++</button>
+            <button type="button" class="btn btn-outline-secondary" (click)="decreaseTextSize()">A--</button>
+          </div>
+        </div>
+        <!-- <div class="col-lg-3">
+          <div class="dropdown">
+            <button class=" border border-4 rounded-circle dropdown-toggle p-2" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+             <i class="fa-solid fa-user fa-2xl"></i></button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </div>
+        </div> -->
+      </div>
+    </div>
   </div>
-</nav>
+</div>
 
 
-
-<nav class="navbar navbar-expand-lg fixed-top mt-lg-5 mt-0"
-  [ngClass]="{'mt-lg-5': !navbarScrolled, 'mt-lg-0': navbarScrolled, 'navbar-scrolled': navbarScrolled}">
+<nav class="navbar navbar-expand-lg" [ngClass]="{'fixed-top': navbarScrolled, 'navbar-scrolled': navbarScrolled}">
   <div class="container-fluid">
     <a class="navbar-brand d-lg-none" href="#">t6r5
       <i class="fas fa-icon"></i>

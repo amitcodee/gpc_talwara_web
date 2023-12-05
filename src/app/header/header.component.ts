@@ -21,7 +21,7 @@ throw new Error('Method not implemented.');
 
   @HostListener('window:scroll') 
   onWindowScroll() {
-    if (window.pageYOffset > 50) {
+    if (window.pageYOffset > 90) {
       this.navbarScrolled = true;
     } else {
       this.navbarScrolled = false;
