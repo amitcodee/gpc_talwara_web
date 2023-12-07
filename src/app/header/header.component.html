@@ -1,46 +1,47 @@
-<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'en'"  [style.font-size.px]="getTextSize()">
-<div class="container-fluid d-none d-lg-flex mt-2 mx-0">
-  <div class="row align-items-center">
-    <div class="col-lg-6">
-      <div class="row align-items-center">
-        <div class="col-auto">
-          <img src="../../assets/images/used/logo.png" alt="College Logo" class="img-fluid" width="90" height="90">
-        </div>
-        <div class="col">
-          <a href="#" class="fw-bold fs-3 text-decoration-none text">S. Amarjeet Singh Sahi Government
-            Polytechnic College</a>
-          <p>
-            Approved by AICTE, Affiliated to PSBTE & IT, Punjab
-          </p>
+<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'en'" [style.font-size.px]="getTextSize()">
+  <div class="container-fluid d-none d-lg-flex pt-2 mx-0">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <img src="../../assets/images/used/logo.png" alt="College Logo" class="img-fluid" width="90" height="90">
+          </div>
+          <div class="col">
+            <a href="#" class="fw-bold fs-3 text-decoration-none text">S. Amarjeet Singh Sahi Government
+              Polytechnic College</a>
+            <p>
+              Approved by AICTE, Affiliated to PSBTE & IT, Punjab
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-lg-6">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="form-check form-switch theme-toggle">
-            <input class="form-check-input" type="checkbox" role="switch" id="languageSwitch"
-              (change)="toggleLanguage()">
-            <label class="form-check-label" for="languageSwitch">
-              <span class="toggle-label">Change Language</span>
-            </label>
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="form-check form-switch theme-toggle">
+              <input class="form-check-input" type="checkbox" role="switch" id="languageSwitch"
+                (change)="toggleLanguage()">
+              <label class="form-check-label" for="languageSwitch">
+                <span class="toggle-label">Change Language</span>
+              </label>
+            </div>
           </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="form-check form-switch theme-toggle">
-            <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch" (change)="toggleDarkMode()">
-            <label class="form-check-label" for="themeSwitch">
-              <span class="toggle-label">Switch Theme</span>
-            </label>
+          <div class="col-lg-4">
+            <div class="form-check form-switch theme-toggle">
+              <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch"
+                (change)="toggleDarkMode()">
+              <label class="form-check-label" for="themeSwitch">
+                <span class="toggle-label">Switch Theme</span>
+              </label>
+            </div>
           </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="btn-group" role="group" aria-label="First group">
-            <button type="button" class="btn btn-outline-secondary" (click)="increaseTextSize()">A++</button>
-            <button type="button" class="btn btn-outline-secondary" (click)="decreaseTextSize()">A--</button>
+          <div class="col-lg-4">
+            <div class="btn-group" role="group" aria-label="First group">
+              <button type="button" class="btn btn-outline-secondary" (click)="increaseTextSize()">A++</button>
+              <button type="button" class="btn btn-outline-secondary" (click)="decreaseTextSize()">A--</button>
+            </div>
           </div>
-        </div>
-        <!-- <div class="col-lg-3">
+          <!-- <div class="col-lg-3">
           <div class="dropdown">
             <button class=" border border-4 rounded-circle dropdown-toggle p-2" type="button" data-bs-toggle="dropdown"
               aria-expanded="false">
@@ -51,59 +52,133 @@
             </ul>
           </div>
         </div> -->
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
-<nav class="navbar navbar-expand-lg" [ngClass]="{'fixed-top': navbarScrolled, 'navbar-scrolled': navbarScrolled}">
-  <div class="container-fluid">
-    <a class="navbar-brand d-lg-none fw-bold fs-3" href="#">
-      <img src="../../assets/images/used/logo.png" alt="College Logo" class="img-fluid" width="50" height="50">
-      S. Amarjeet Singh Sahi Government Polytechnic College
-    </a>
+  <nav class="navbar navbar-expand-lg" [ngClass]="{'fixed-top': navbarScrolled, 'navbar-scrolled': navbarScrolled}">
+    <div class="container-fluid">
+      <a class="navbar-brand d-lg-none fw-bold fs-3" href="#">
+        <img src="../../assets/images/used/logo.png" alt="College Logo" class="img-fluid" width="50" height="50">
+        S. Amarjeet Singh Sahi Government Polytechnic College
+      </a>
 
-    <!-- Navbar Toggle Button for Small Screens -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!-- Navbar Toggle Button for Small Screens -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- Navbar Links -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mx-auto text-lg-center"> <!-- Center the navlinks in large screens -->
-        <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto text-lg-center"> <!-- Center the navlinks in large screens -->
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About us
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Principal Message</a></li>
+              <li><a class="dropdown-item" href="#">Vision & Mission</a></li>
+              <li><a class="dropdown-item" href="#">Mandatory Disclousure</a></li>
+              <li><a class="dropdown-item" href="#">Grievance Redressal Committee</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Academics
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Courses</a></li>
+              <li><a class="dropdown-item" href="#">Admission Intake</a></li>
+              <li><a class="dropdown-item" href="#">Fees Structure</a></li>
+              <li><a class="dropdown-item" href="#">Rules and Discipline</a></li>
+              <li><a class="dropdown-item" href="#">Scholarship Schemes</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Departments
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Computer Engg.</a></li>
+              <li><a class="dropdown-item" href="#">Electronics & Comm. Engg.</a></li>
+              <li><a class="dropdown-item" href="#">Civil Engg.</a></li>
+              <li><a class="dropdown-item" href="#">Electrical Engg.</a></li>
+              <li><a class="dropdown-item" href="#">Mechanical Engg.</a></li>
+              <li><a class="dropdown-item" href="#">Applied Sciences</a></li>
+              <li><a class="dropdown-item" href="#">Workshop</a></li>
+
+            </ul>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Our Faculty & Staff
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Computer Engg.</a></li>
+              <li><a class="dropdown-item" href="#">Electronics & Comm. Engg.</a></li>
+              <li><a class="dropdown-item" href="#">Civil Engg.</a></li>
+              <li><a class="dropdown-item" href="#">Electrical Engg.</a></li>
+              <li><a class="dropdown-item" href="#">Mechanical Engg.</a></li>
+              <li><a class="dropdown-item" href="#">Applied Sciences</a></li>
+              <li><a class="dropdown-item" href="#">Workshop</a></li>
+              <li><a class="dropdown-item" href="#">Supporting Staff</a></li>
+              
+
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Placement
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Training and Placement Cell</a></li>
+              <li><a class="dropdown-item" href="#">Student Placed</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Study Metrial
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Computer Engg.</a></li>
+              <li><a class="dropdown-item" href="#">Electronics & Comm. Engg.</a></li>
+              <li><a class="dropdown-item" href="#">Civil Engg.</a></li>
+              <li><a class="dropdown-item" href="#">Electrical Engg.</a></li>
+              <li><a class="dropdown-item" href="#">Mechanical Engg.</a></li>
+              <li><a class="dropdown-item" href="#">Applied Sciences</a></li>
+              <li><a class="dropdown-item" href="#">Workshop</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             Media
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Events Picture</a></li>
+              <li><a class="dropdown-item" href="#">Social Media Account</a></li>
+              <li><a class="dropdown-item" href="#">Student Activites</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact us</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 </div>
 <!-- punjabi -->
-<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'pa'"  [style.font-size.px]="getTextSize()">
-  <div class="container-fluid d-none d-lg-flex mt-2 mx-0">
+<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'pa'" [style.font-size.px]="getTextSize()">
+  <div class="container-fluid d-none d-lg-flex pt-2 mx-0">
     <div class="row align-items-center">
       <div class="col-lg-6">
         <div class="row align-items-center">
@@ -131,7 +206,8 @@
           </div>
           <div class="col-lg-4">
             <div class="form-check form-switch theme-toggle">
-              <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch" (change)="toggleDarkMode()">
+              <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch"
+                (change)="toggleDarkMode()">
               <label class="form-check-label" for="themeSwitch">
                 <span class="toggle-label">ਥੀਮ ਬਦਲੋ</span>
               </label>
@@ -147,19 +223,19 @@
       </div>
     </div>
   </div>
-  
+
   <nav class="navbar navbar-expand-lg" [ngClass]="{'fixed-top': navbarScrolled, 'navbar-scrolled': navbarScrolled}">
     <div class="container-fluid">
       <a class="navbar-brand d-lg-none" href="#">t6r5
         <i class="fas fa-icon"></i>
       </a>
-  
+
       <!-- Navbar Toggle Button for Small Screens -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-  
+
       <!-- Navbar Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto text-center">

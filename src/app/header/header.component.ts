@@ -18,7 +18,7 @@ export class HeaderComponent {
 
   @HostListener('window:scroll') 
   onWindowScroll() {
-    if (window.pageYOffset > 90) {
+    if (window.pageYOffset > 100) {
       this.navbarScrolled = true;
     } else {
       this.navbarScrolled = false;
