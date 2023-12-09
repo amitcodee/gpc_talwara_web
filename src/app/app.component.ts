@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from "./header/header.component";
+import { HeaderComponent } from "./header-footer/header/header.component";
 
-import { HeroSectionComponent } from "./hero-section/hero-section.component";
+import { HeroSectionComponent } from "./pages/hero-section/hero-section.component";
 
 @Component({
     selector: 'app-root',

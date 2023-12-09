@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LanguageService } from '../language.service';
-import { ThemeService } from '../theme.service';
-import { TextSizeService } from '../text-size.service';
-import { HeaderComponent } from "../header/header.component";
+import { LanguageService } from '../../services/language/language.service';
+import { ThemeService } from '../../services/theme/theme.service';
+import { TextSizeService } from '../../services/text-size/text-size.service';
+import { HeaderComponent } from "../../header-footer/header/header.component";
 
 
 @Component({
