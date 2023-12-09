@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./header-footer/header/header.component";
 
-import { HeroSectionComponent } from "./pages/hero-section/hero-section.component";
+import { HeroSectionComponent } from "./home/hero-section/hero-section.component";
 
 @Component({
     selector: 'app-root',
