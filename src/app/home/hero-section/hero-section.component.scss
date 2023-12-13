@@ -1,10 +1,28 @@
 /* other.component.css */
-:host {
-    background-color: #fff; /* Light mode background */
-  }
-  
-  .dark-mode {
-    background-color: #333; /* Dark mode background */
-    color: #fff; /* Dark mode text color */
-  }
-  
+:host  {
+  background-color: #fff;
+}
+:host .fixed-bottom,.scrolpy{
+  background-color: #b1040e;
+  color: #fff;
+}
+.dark-mode .fixed-bottom, .dark-mode .scrolpy{
+  background-color: #333;
+  color: #fff;
+}
+.hero {
+  background-image: url('../../../assets/images/used/01.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  color: white; /* Set text color to contrast with the background */
+}
+.hero h1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff; /* Set your desired text color */
+}

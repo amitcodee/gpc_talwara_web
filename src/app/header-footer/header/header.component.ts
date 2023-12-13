@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language/language.service';
 import { ThemeService } from '../../services/theme/theme.service';
 import { TextSizeService } from '../../services/text-size/text-size.service';
-
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
