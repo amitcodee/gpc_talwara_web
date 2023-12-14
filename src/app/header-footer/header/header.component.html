@@ -7,7 +7,7 @@
             <img src="../../assets/images/used/logo.png" alt="College Logo" class="img-fluid" width="90" height="90">
           </div>
           <div class="col">
-            <a href="#" class="fw-bold fs-3 text-decoration-none text">S. Amarjeet Singh Sahi Government
+            <a  routerLink="" class="fw-bold fs-3 text-decoration-none text">S. Amarjeet Singh Sahi Government
               Polytechnic College</a>
             <p>
               Approved by AICTE, Affiliated to PSBTE & IT, Punjab
@@ -47,8 +47,8 @@
               aria-expanded="false">
              <i class="fa-solid fa-user fa-2xl"></i></button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" href="#">Profile</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Logout</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="">Profile</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="">Logout</a></li>
             </ul>
           </div>
         </div> -->
@@ -60,7 +60,7 @@
 
   <nav class="navbar navbar-expand-lg" [ngClass]="{'fixed-top': navbarScrolled, 'navbar-scrolled': navbarScrolled}">
     <div class="container-fluid">
-      <a class="navbar-brand d-lg-none fw-bold fs-3" href="#">
+      <a class="navbar-brand d-lg-none fw-bold fs-3"  routerLink="">
         <img src="../../assets/images/used/logo.png" alt="College Logo" class="img-fluid" width="50" height="50">
         S. Amarjeet Singh Sahi Government Polytechnic College
       </a>
@@ -75,101 +75,101 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto text-lg-center"> <!-- Center the navlinks in large screens -->
           <li class="nav-item">
-            <a class="nav-link fw-semibold " aria-current="page" href="#">Home</a>
+            <a class="nav-link fw-semibold" aria-current="page" routerLink="">Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link fw-semibold dropdown-toggle"  routerLink="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               About us
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" href="#">Principal Message</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Vision & Mission</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Mandatory Disclousure</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Grievance Redressal Committee</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/principal-message">Principal Message</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/vision-mission">Vision & Mission</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/mandatory-disclousure">Mandatory Disclousure</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/grievance-redressal-committee">Grievance Redressal Committee</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link fw-semibold dropdown-toggle"  routerLink="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Academics
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" href="#">Courses</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Admission Intake</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Fees Structure</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Rules and Discipline</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Scholarship Schemes</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/courses">Courses</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/admission-intake">Admission Intake</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/fees-structure">Fees Structure</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/rules-discipline">Rules and Discipline</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/scholarship-schemes">Scholarship Schemes</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link fw-semibold dropdown-toggle"  routerLink="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Departments
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" href="#">Computer Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Electronics & Comm. Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Civil Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Electrical Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Mechanical Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Applied Sciences</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Workshop</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/cse">Computer Science & Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/ece">Electronics & Comm. Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/ce">Civil Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/ee">Electrical Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/me">Mechanical Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/as">Applied Sciences</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/ws">Workshop</a></li>
 
             </ul>
           </li>
           
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link fw-semibold dropdown-toggle"  routerLink="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Our Faculty & Staff
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" href="#">Computer Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Electronics & Comm. Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Civil Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Electrical Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Mechanical Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Applied Sciences</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Workshop</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Supporting Staff</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/cse-faculty">Computer Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/ece-faculty">Electronics & Comm. Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/ce-faculty">Civil Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/ee-faculty">Electrical Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/me-faculty">Mechanical Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/as-faculty">Applied Sciences</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/ws-faculty">Workshop</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/supporting-staff">Supporting Staff</a></li>
               
 
             </ul>
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link fw-semibold dropdown-toggle"  routerLink="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Placement
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" href="#">Training and Placement Cell</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Student Placed</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/training-placement">Training and Placement Cell</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/student-placed">Student Placed</a></li>
             </ul>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link fw-semibold dropdown-toggle"  routerLink="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Study Metrial
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" href="#">Computer Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Electronics & Comm. Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Civil Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Electrical Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Mechanical Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Applied Sciences</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Workshop</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="">Computer Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="">Electronics & Comm. Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="">Civil Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="">Electrical Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="">Mechanical Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="">Applied Sciences</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="">Workshop</a></li>
 
             </ul>
-          </li>
+          </li> -->
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link fw-semibold dropdown-toggle"  routerLink="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
              Media
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" href="#">Events Picture</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Social Media Account</a></li>
-              <li><a class="dropdown-item fw-semibold" href="#">Student Activites</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/events-picture">Events Picture</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/social-media-account">Social Media Account</a></li>
+              <li><a class="dropdown-item fw-semibold"  routerLink="/student-activites">Student Activites</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold" routerLink="/contact">Contact us</a>
+            <a class="nav-link fw-semibold" routerLink="/contact-us">Contact us</a>
           </li>
         </ul>
       </div>
@@ -186,7 +186,7 @@
             <img src="../../assets/images/used/logo.png" alt="ਕਾਲਜ ਦਾ ਲੋਗੋ" class="img-fluid" width="90" height="90">
           </div>
           <div class="col">
-            <a href="#" class="fw-bold fs-3 text-decoration-none text">ਐਸ. ਅਮਰਜੀਤ ਸਿੰਘ ਸਾਹੀ ਸਰਕਾਰੀ ਪਾਲੀਟੈਕਨਿਕ ਕਾਲਜ</a>
+            <a  routerLink="" class="fw-bold fs-3 text-decoration-none text">ਐਸ. ਅਮਰਜੀਤ ਸਿੰਘ ਸਾਹੀ ਸਰਕਾਰੀ ਪਾਲੀਟੈਕਨਿਕ ਕਾਲਜ</a>
             <p>
               AICTE ਦੁਆਰਾ ਮਨਜੂਰ, PSBTE & IT, ਪੰਜਾਬ ਦੇ ਸਾਹਿਤ
             </p>
@@ -226,7 +226,7 @@
 
   <nav class="navbar navbar-expand-lg" [ngClass]="{'fixed-top': navbarScrolled, 'navbar-scrolled': navbarScrolled}">
     <div class="container-fluid">
-      <a class="navbar-brand d-lg-none" href="#">t6r5
+      <a class="navbar-brand d-lg-none"  routerLink="">t6r5
         <i class="fas fa-icon"></i>
       </a>
 
@@ -240,13 +240,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto text-center">
           <li class="nav-item">
-            <a class="nav-link fw-semibold " aria-current="page" href="#">ਹੋਮ</a>
+            <a class="nav-link fw-semibold " aria-current="page"  routerLink="">ਹੋਮ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold" href="#">ਫੀਚਰ</a>
+            <a class="nav-link fw-semibold"  routerLink="">ਫੀਚਰ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold" href="#">ਮੁਲਾਜ਼ਮ</a>
+            <a class="nav-link fw-semibold"  routerLink="">ਮੁਲਾਜ਼ਮ</a>
           </li>
           <li class="nav-item">
             <a class="nav-link fw-semibold disabled" aria-disabled="true">ਅਯੋਗ</a>

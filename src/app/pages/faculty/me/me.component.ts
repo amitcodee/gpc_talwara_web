@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-ws-faculty',
+  selector: 'app-me',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './ws.component.html',
-  styleUrl: './ws.component.scss'
+  templateUrl: './me.component.html',
+  styleUrl: './me.component.scss'
 })
-export class WsFacultyComponent {
+export class MeFacultyComponent {
 
 }
