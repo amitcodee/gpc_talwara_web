@@ -4,7 +4,7 @@
 }
 
 :host .navbar-scrolled {
-  background: transparent;
+  background: #fff;
 }
 
 :host .first-header {
@@ -12,10 +12,11 @@
   transition: background 0.5s ease;
   color: #fff;
 }
-:host .text
-{
-  color: #fff ;
+
+:host .text {
+  color: #fff;
 }
+
 :host {
   background-color: #fff;
   /* Light mode background */
@@ -24,12 +25,13 @@
 
 }
 
-.dark-mode .first-header  {
+.dark-mode .first-header {
   background-color: #333;
   /* Dark mode background */
   color: #fff;
   /* Dark mode text color */
 }
+
 .dark-mode .navbar,
 .dark-mode .text,
 .dark-mode .nav-link,
