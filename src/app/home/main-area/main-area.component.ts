@@ -1,21 +1,19 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { LanguageService } from '../../services/language/language.service';
 import { ThemeService } from '../../services/theme/theme.service';
 import { TextSizeService } from '../../services/text-size/text-size.service';
 import { CommonModule } from '@angular/common';
-import { MainAreaComponent } from "../main-area/main-area.component";
 
 @Component({
-    selector: 'app-hero-section',
-    standalone: true,
-    templateUrl: './hero-section.component.html',
-    styleUrls: ['./hero-section.component.scss'],
-    imports: [CommonModule, MainAreaComponent]
+  selector: 'app-main-area',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './main-area.component.html',
+  styleUrl: './main-area.component.scss'
 })
-export class HeroSectionComponent implements OnInit {
+export class MainAreaComponent {
   isDarkMode = false;
   showFixedBottomDiv = false;
-  showtitle= false;
 
   constructor(
     private textSizeService: TextSizeService,
@@ -28,12 +26,6 @@ export class HeroSectionComponent implements OnInit {
       this.isDarkMode = darkMode;
       // Update component styles or perform other actions based on darkMode
     });
-  }
-
-  @HostListener('window:scroll', [])
-  onScroll(): void {
-    this.showFixedBottomDiv = window.scrollY > 30;
-    this.showtitle = window.scrollY > 100;
   }
 
   getTextSize(): number {
