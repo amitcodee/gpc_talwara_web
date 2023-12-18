@@ -30,6 +30,7 @@ import { EventPictureComponent } from './pages/media/event-picture/event-picture
 import { SocialMediaAccountComponent } from './pages/media/social-media-account/social-media-account.component';
 import { StudentActivitiesComponent } from './pages/media/student-activities/student-activities.component';
 import { CommtieesComponent } from './pages/about-us/commtiees/commtiees.component';
+import { CeFacultyComponent } from './pages/faculty/ce/ce.component';
 
 export const routes: Routes = [
   {
@@ -127,6 +128,10 @@ export const routes: Routes = [
   {
     path: 'ws-faculty',
     component: WsFacultyComponent,
+  },
+  {
+    path:'ce-faculty',
+    component:CeFacultyComponent
   },
   {
     path: 'as-faculty',
