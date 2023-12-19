@@ -30,10 +30,20 @@
   }
 
   
-  :host .btn-red {
+  :host .btn-red, .dark-mode .btn-red {
     background-color: #b1040e;
     color: #fff;
   }
   :host .red-title {
     color: #b1040e;
+  }
+  .dark-mode , .dark-mode  .red-title {
+    color: #fff;
+  }
+  .dark-mode input{
+background-color: #333;
+color: #fff;
+  }
+  .dark-mode .contact-form .input-text {
+    border-color: #fff;
   }

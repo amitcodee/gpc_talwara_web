@@ -1,99 +1,105 @@
-<div class="container">
-    <div class="course">
-        <div class="fw-bold fs-3 red-title py-3">Courses Offered</div>
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th scope="col">Serial No.</th>
-                    <th scope="col">Course Name</th>
-                    <th scope="col">Sanctioned intake</th>
-                    <th scope="col">Duration</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Civil Engineering</td>
-                    <td>54</td>
-                    <td>3 Year</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Electrical Engineering</td>
-                    <td>54</td>
-                    <td>3 Year</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Mechanical Engineering</td>
-                    <td>54</td>
-                    <td>3 Year</td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>Electronics & Communication Engineering</td>
-                    <td>54</td>
-                    <td>3 Year</td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>Computer Science Engineering</td>
-                    <td>54</td>
-                    <td>3 Year</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="pt-3">
-        <p class="fs-5">Eligibility Criteria</p>
-        <p>The Candidates having passed the Matriculation examination are eligible to seek admission in the polytechnic.
-            Counselling and seat allotment of Punjab Polytechnic Admission will be based on aggregate marks of Maths,
-            Science and English in Class 10 exam;</p>
-        <p class="fw-semibold">Counselling - Document Checklist</p>
+<div class="dark" [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'en'"
+    [style.font-size.px]="getTextSize()">
+    <div class="container">
+        <div class="course">
+            <div class="fw-bold fs-3 red-title py-3">Courses Offered</div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Serial No.</th>
+                        <th scope="col">Course Name</th>
+                        <th scope="col">Sanctioned intake</th>
+                        <th scope="col">Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Civil Engineering</td>
+                        <td>54</td>
+                        <td>3 Year</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Electrical Engineering</td>
+                        <td>54</td>
+                        <td>3 Year</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Mechanical Engineering</td>
+                        <td>54</td>
+                        <td>3 Year</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Electronics & Communication Engineering</td>
+                        <td>54</td>
+                        <td>3 Year</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Computer Science Engineering</td>
+                        <td>54</td>
+                        <td>3 Year</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pt-3">
+            <p class="fs-5">Eligibility Criteria</p>
+            <p>The Candidates having passed the Matriculation examination are eligible to seek admission in the
+                polytechnic.
+                Counselling and seat allotment of Punjab Polytechnic Admission will be based on aggregate marks of
+                Maths,
+                Science and English in Class 10 exam;</p>
+            <p class="fw-semibold">Counselling - Document Checklist</p>
 
-        <ol class="list-group list-group-numbered mt-3">
-            <li class="list-group-item">Marks Sheet of Qualifying Examination</li>
-            <li class="list-group-item">Character Certificate</li>
-            <li class="list-group-item">Matriculation Certificates as proof of Date of Birth</li>
-            <li class="list-group-item">Proof of Residence/Domicile Certificate</li>
-            <li class="list-group-item">Category Certificate</li>
-            <li class="list-group-item">Income Certificate, if admitted under Tuition Fee waiver seat / Reserved
-                Category
-            </li>
-            <li class="list-group-item">Two recent passport size photographs</li>
-        </ol>
-    </div>
-    <div class="pt-3">
-        <p class="fs-5">LEET ENTRY</p>
-        <p>10 percent of total seats are reserved for Lateral entry students in second year of Diploma.</p>
-        <p>Vacant seats of first year Diplima Course are filled through LEET.</p>
+            <ol class="list-group list-group-numbered mt-3">
+                <li class="list-group-item">Marks Sheet of Qualifying Examination</li>
+                <li class="list-group-item">Character Certificate</li>
+                <li class="list-group-item">Matriculation Certificates as proof of Date of Birth</li>
+                <li class="list-group-item">Proof of Residence/Domicile Certificate</li>
+                <li class="list-group-item">Category Certificate</li>
+                <li class="list-group-item">Income Certificate, if admitted under Tuition Fee waiver seat / Reserved
+                    Category
+                </li>
+                <li class="list-group-item">Two recent passport size photographs</li>
+            </ol>
+        </div>
+        <div class="pt-3">
+            <p class="fs-5">LEET ENTRY</p>
+            <p>10 percent of total seats are reserved for Lateral entry students in second year of Diploma.</p>
+            <p>Vacant seats of first year Diplima Course are filled through LEET.</p>
 
-    </div>
-    <div class="pt-3">
-        <p class="fs-5">Eligibility:</p>
-        <ol type="a">
-            <li>
-                10+2 Examination with Physics/ Mathematics/ Chemistry/ Computer Science/ Electronics/ Information
-                Technology/ Biology/ Informatics Practice/ Biotechnology/ Technical Vocational subject/ Agriculture/
-                Engineering Graphics/ Business Studies/ Entrepreneurship
-                <div>OR</div>
-                10th along with 2 years ITI shall be eligible for admission to Second Year Diploma Courses of in ANY
-                branch of Engineering and Technology
-            </li>
-            <li>
-                Provided however if seats remained vacant then the same will be filled on the basis of merit as per the
-                below mention eligibility criteria :
-            </li>
-        </ol>
-    </div>
-    <div class="pt-3">
-        <p class="fs-5">Curriculum</p>
-        <div>
-            <p> For Curriculum please refer to:</p>
-            <ul>
-                <li><a href="http://www.punjabteched.com">http://www.punjabteched.com</a></li>
-                <li> <a href="http://www.punjabteched.net"> http://www.punjabteched.net</a></li>
-            </ul>
+        </div>
+        <div class="pt-3">
+            <p class="fs-5">Eligibility:</p>
+            <ol type="a">
+                <li>
+                    10+2 Examination with Physics/ Mathematics/ Chemistry/ Computer Science/ Electronics/ Information
+                    Technology/ Biology/ Informatics Practice/ Biotechnology/ Technical Vocational subject/ Agriculture/
+                    Engineering Graphics/ Business Studies/ Entrepreneurship
+                    <div>OR</div>
+                    10th along with 2 years ITI shall be eligible for admission to Second Year Diploma Courses of in ANY
+                    branch of Engineering and Technology
+                </li>
+                <li>
+                    Provided however if seats remained vacant then the same will be filled on the basis of merit as per
+                    the
+                    below mention eligibility criteria :
+                </li>
+            </ol>
+        </div>
+        <div class="pt-3">
+            <p class="fs-5">Curriculum</p>
+            <div>
+                <p> For Curriculum please refer to:</p>
+                <ul>
+                    <li><a href="http://www.punjabteched.com">http://www.punjabteched.com</a></li>
+                    <li> <a href="http://www.punjabteched.net"> http://www.punjabteched.net</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
