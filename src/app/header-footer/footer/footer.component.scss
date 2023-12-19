@@ -1,0 +1,23 @@
+:host .bg-red {
+    background-color: #8c1515;
+}
+
+:host .first,
+:host .first a {
+    color: #fff;
+}
+
+:host .second {
+    background-color: rgba(201, 196, 191, 0.236);
+}
+
+:host .second a {
+    color: #b1040e;
+}
+.dark-mode .bg-red , .dark-mode.second  {
+    background-color: #333;
+    color: #fff;
+}
+.dark-mode .second , .dark-mode .second a{
+    color: #fff;
+}
