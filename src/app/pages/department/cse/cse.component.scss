@@ -4,3 +4,13 @@ ul{
 :host .red-title {
     color: #b1040e;
   }
+  .dark-mode .red-title{
+    color: #fff;
+  }
+  .dark-mode{
+    color: #fff;
+  }
+  .dark-mode th, .dark-mode td{
+    background-color: #333;
+    color: #fff;
+      }
