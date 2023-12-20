@@ -15,7 +15,7 @@ import { RouterLink } from '@angular/router';
 export class HeaderComponent {
   isDarkMode: any;
   navbarScrolled = false;
-  languageOptions: string[] = ['English', 'Punjabi'];
+  languageOptions: string[] = ['English', 'ਪੰਜਾਬੀ','हिंदी'];
 
   @HostListener('window:scroll') 
   onWindowScroll() {
