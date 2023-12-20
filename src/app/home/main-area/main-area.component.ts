@@ -14,13 +14,16 @@ import { CommonModule } from '@angular/common';
 export class MainAreaComponent {
   isDarkMode = false;
   showFixedBottomDiv = false;
+  languageOptions: string[] = ['English', 'ਪੰਜਾਬੀ','हिंदी'];
 
   constructor(
     private textSizeService: TextSizeService,
     private languageService: LanguageService,
     private themeService: ThemeService
   ) {}
-
+  setLanguage(language: string): void {
+    this.languageService.setLanguage(language);
+  }
   ngOnInit() {
     this.themeService.isDarkMode$.subscribe((darkMode: boolean) => {
       this.isDarkMode = darkMode;
