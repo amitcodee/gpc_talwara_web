@@ -1,4 +1,4 @@
-<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'en'" [style.font-size.px]="getTextSize()">
+<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'English'" [style.font-size.px]="getTextSize()">
   <div class="container-fluid d-none d-lg-flex pt-2 mx-0 first-header">
     <div class="row align-items-center">
       <div class="col-lg-6">
@@ -18,13 +18,19 @@
       <div class="col-lg-6">
         <div class="row">
           <div class="col-lg-4">
-            <div class="form-check form-switch theme-toggle">
-              <input class="form-check-input" type="checkbox" role="switch" id="languageSwitch"
-                (change)="toggleLanguage()">
-              <label class="form-check-label" for="languageSwitch">
-                <span class="toggle-label">Change Language</span>
-              </label>
+            <div class="dropdown theme-toggle">
+              <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                {{ getCurrentLanguage() }}
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li *ngFor="let language of languageOptions" (click)="setLanguage(language)">
+                  <a class="dropdown-item" href="#">{{ language }}</a>
+                </li>
+              </ul>
             </div>
+             
+            
           </div>
           <div class="col-lg-4">
             <div class="form-check form-switch theme-toggle">
@@ -177,7 +183,7 @@
   </nav>
 </div>
 <!-- punjabi -->
-<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'pa'" [style.font-size.px]="getTextSize()">
+<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'Punjabi'" [style.font-size.px]="getTextSize()">
   <div class="container-fluid d-none d-lg-flex pt-2 mx-0 first-header">
     <div class="row align-items-center">
       <div class="col-lg-6">
@@ -196,12 +202,16 @@
       <div class="col-lg-6">
         <div class="row">
           <div class="col-lg-4">
-            <div class="form-check form-switch theme-toggle">
-              <input class="form-check-input" type="checkbox" role="switch" id="languageSwitch"
-                (change)="toggleLanguage()">
-              <label class="form-check-label" for="languageSwitch">
-                <span class="toggle-label">ਭਾਸ਼ਾ ਬਦਲੋ</span>
-              </label>
+            <div class="dropdown theme-toggle">
+              <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                {{ getCurrentLanguage() }}
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li *ngFor="let language of languageOptions" (click)="setLanguage(language)">
+                  <a class="dropdown-item" href="#">{{ language }}</a>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="col-lg-4">

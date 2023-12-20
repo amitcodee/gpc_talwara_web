@@ -4,17 +4,18 @@ import { LanguageService } from '../../services/language/language.service';
 import { ThemeService } from '../../services/theme/theme.service';
 import { TextSizeService } from '../../services/text-size/text-size.service';
 import { RouterLink } from '@angular/router';
+
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule,RouterLink],
+  imports: [CommonModule, RouterLink],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  isEnglish: any;
   isDarkMode: any;
   navbarScrolled = false;
+  languageOptions: string[] = ['English', 'Punjabi'];
 
   @HostListener('window:scroll') 
   onWindowScroll() {
@@ -39,8 +40,8 @@ export class HeaderComponent {
     this.textSizeService.decreaseTextSize();
   }
 
-  toggleLanguage() {
-    this.languageService.toggleLanguage();
+  setLanguage(language: string): void {
+    this.languageService.setLanguage(language);
   }
 
   toggleDarkMode() {
@@ -53,9 +54,11 @@ export class HeaderComponent {
       // Update component styles or perform other actions based on darkMode
     });
   }
+
   getTextSize(): number {
     return this.textSizeService.getTextSize();
   }
+
   getCurrentLanguage() {
     return this.languageService.currentLanguage;
   }

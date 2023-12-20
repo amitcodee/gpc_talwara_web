@@ -5,9 +5,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class LanguageService {
-  currentLanguage: string = 'en'; // Default language is English
+  currentLanguage: string = 'English'; // Default language is English
 
-  toggleLanguage() {
-    this.currentLanguage = this.currentLanguage === 'en' ? 'pa' : 'en';
+  // This method can be used to set the language programmatically
+  setLanguage(language: string) {
+    this.currentLanguage = language;
   }
 }
