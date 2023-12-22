@@ -1,3 +1,4 @@
+// header.component.ts
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language/language.service';
@@ -15,7 +16,13 @@ import { RouterLink } from '@angular/router';
 export class HeaderComponent {
   isDarkMode: any;
   navbarScrolled = false;
-  languageOptions: string[] = ['English', 'ਪੰਜਾਬੀ','हिंदी'];
+  languageOptions: string[] = ['English', 'ਪੰਜਾਬੀ', 'हिंदी'];
+  darkModeOptions: { label: string, icon: string }[] = [
+    { label: 'Light', icon: 'fa-sun' },
+    { label: 'Dark', icon: 'fa-moon' },
+    { label: 'Default', icon: 'fa-adjust' }
+  ];
+  selectedDarkModeOption: { label: string, icon: string } = this.darkModeOptions[2]; // Default option
 
   @HostListener('window:scroll') 
   onWindowScroll() {
@@ -44,8 +51,9 @@ export class HeaderComponent {
     this.languageService.setLanguage(language);
   }
 
-  toggleDarkMode() {
-    this.themeService.toggleDarkMode();
+  setDarkMode(option: { label: string, icon: string }): void {
+    this.selectedDarkModeOption = option;
+    this.themeService.setDarkMode(option.label.toLowerCase());
   }
 
   ngOnInit() {

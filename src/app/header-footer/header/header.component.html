@@ -1,13 +1,13 @@
 <div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'English'" [style.font-size.px]="getTextSize()">
   <div class="container-fluid d-none d-lg-flex pt-2 mx-0 first-header">
     <div class="row align-items-center">
-      <div class="col-lg-6">
+      <div class="col-lg-7">
         <div class="row align-items-center">
           <div class="col-auto">
             <img src="../../assets/images/used/logo.png" alt="College Logo" class="img-fluid" width="90" height="90">
           </div>
           <div class="col">
-            <a  routerLink="" class="fw-bold fs-3 text-decoration-none text">S. Amarjeet Singh Sahi Government
+            <a routerLink="" class="fw-bold fs-3 text-decoration-none text">S. Amarjeet Singh Sahi Government
               Polytechnic College</a>
             <p>
               Approved by AICTE, Affiliated to PSBTE & IT, Punjab
@@ -15,12 +15,12 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-5">
         <div class="row">
           <div class="col-lg-4">
             <div class="dropdown theme-toggle">
-              <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown"
-                aria-expanded="false">
+              <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown"
+                data-bs-toggle="dropdown" aria-expanded="false">
                 {{ getCurrentLanguage() }}
               </button>
               <ul class="dropdown-menu" aria-labelledby="languageDropdown">
@@ -29,17 +29,30 @@
                 </li>
               </ul>
             </div>
-             
-            
+
+
           </div>
           <div class="col-lg-4">
-            <div class="form-check form-switch theme-toggle">
-              <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch"
-                (change)="toggleDarkMode()">
-              <label class="form-check-label" for="themeSwitch">
-                <span class="toggle-label">Switch Theme</span>
-              </label>
+            <div class="dropdown">
+              <button class="btn btn-light dropdown-toggle" type="button" id="darkModeDropdown" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas {{ selectedDarkModeOption.icon }}"></i> {{ selectedDarkModeOption.label }} Mode
+              </button>
+
+              <div class="dropdown-menu" aria-labelledby="darkModeDropdown">
+
+                <a class="dropdown-item" (click)="setDarkMode({ label: 'Default', icon: 'fa-adjust' })">
+                  <i class="fas fa-adjust"></i> Default Mode
+                </a> <a class="dropdown-item" (click)="setDarkMode({ label: 'Light', icon: 'fa-sun' })">
+                  <i class="fas fa-sun"></i> Light Mode
+                </a>
+                <a class="dropdown-item" (click)="setDarkMode({ label: 'Dark', icon: 'fa-solid fa-moon' })">
+                  <i class="fas fa-solid fa-moon"></i> Dark Mode
+                </a>
+
+              </div>
             </div>
+
           </div>
           <div class="col-lg-4">
             <div class="btn-group" role="group" aria-label="First group">
@@ -66,7 +79,7 @@
 
   <nav class="navbar navbar-expand-lg" [ngClass]="{'fixed-top': navbarScrolled, 'navbar-scrolled': navbarScrolled}">
     <div class="container-fluid">
-      <a class="navbar-brand d-lg-none fw-bold fs-3"  routerLink="">
+      <a class="navbar-brand d-lg-none fw-bold fs-3" routerLink="">
         <img src="../../assets/images/used/logo.png" alt="College Logo" class="img-fluid" width="50" height="50">
         SASS GPC Talwara
       </a>
@@ -84,69 +97,77 @@
             <a class="nav-link fw-semibold" aria-current="page" routerLink="">Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle"  routerLink="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
               About us
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold"  routerLink="/principal-message">Principal Message</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/vision-mission">Vision & Mission</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/mandatory-disclousure">Mandatory Disclousure</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/grievance-redressal-committee">Grievance Redressal Committee</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/principal-message">Principal Message</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/vision-mission">Vision & Mission</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/mandatory-disclousure">Mandatory Disclousure</a>
+              </li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/grievance-redressal-committee">Grievance Redressal
+                  Committee</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle"  routerLink="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
               Academics
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold"  routerLink="/courses">Courses</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/admission-intake">Admission Intake</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/fees-structure">Fees Structure</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/rules-discipline">Rules and Discipline</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/scholarship-schemes">Scholarship Schemes</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/courses">Courses</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/admission-intake">Admission Intake</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/fees-structure">Fees Structure</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/rules-discipline">Rules and Discipline</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/scholarship-schemes">Scholarship Schemes</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle"  routerLink="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
               Departments
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold"  routerLink="/cse">Computer Science & Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/ece">Electronics & Comm. Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/ce">Civil Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/ee">Electrical Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/me">Mechanical Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/as">Applied Sciences</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/ws">Workshop</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/cse">Computer Science & Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ece">Electronics & Comm. Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ce">Civil Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ee">Electrical Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/me">Mechanical Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/as">Applied Sciences</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ws">Workshop</a></li>
 
             </ul>
           </li>
-          
+
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle"  routerLink="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
               Our Faculty & Staff
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold"  routerLink="/cse-faculty">Computer Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/ece-faculty">Electronics & Comm. Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/ce-faculty">Civil Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/ee-faculty">Electrical Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/me-faculty">Mechanical Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/as-faculty">Applied Sciences</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/ws-faculty">Workshop</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/supporting-staff">Supporting Staff</a></li>
-              
+              <li><a class="dropdown-item fw-semibold" routerLink="/cse-faculty">Computer Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ece-faculty">Electronics & Comm. Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ce-faculty">Civil Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ee-faculty">Electrical Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/me-faculty">Mechanical Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/as-faculty">Applied Sciences</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ws-faculty">Workshop</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/supporting-staff">Supporting Staff</a></li>
+
 
             </ul>
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle"  routerLink="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
               Placement
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold"  routerLink="/training-placement">Training and Placement Cell</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/student-placed">Student Placed</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/training-placement">Training and Placement Cell</a>
+              </li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/student-placed">Student Placed</a></li>
             </ul>
           </li>
           <!-- <li class="nav-item dropdown">
@@ -165,13 +186,14 @@
             </ul>
           </li> -->
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle"  routerLink="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-             Media
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Media
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold"  routerLink="/events-picture">Events Picture</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/social-media-account">Social Media Account</a></li>
-              <li><a class="dropdown-item fw-semibold"  routerLink="/student-activites">Student Activites</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/events-picture">Events Picture</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/social-media-account">Social Media Account</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/student-activites">Student Activites</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -192,7 +214,8 @@
             <img src="../../assets/images/used/logo.png" alt="ਕਾਲਜ ਦਾ ਲੋਗੋ" class="img-fluid" width="90" height="90">
           </div>
           <div class="col">
-            <a  routerLink="" class="fw-bold fs-3 text-decoration-none text">ਐਸ. ਅਮਰਜੀਤ ਸਿੰਘ ਸਾਹੀ ਸਰਕਾਰੀ ਪਾਲੀਟੈਕਨਿਕ ਕਾਲਜ</a>
+            <a routerLink="" class="fw-bold fs-3 text-decoration-none text">ਐਸ. ਅਮਰਜੀਤ ਸਿੰਘ ਸਾਹੀ ਸਰਕਾਰੀ ਪਾਲੀਟੈਕਨਿਕ
+              ਕਾਲਜ</a>
             <p>
               AICTE ਦੁਆਰਾ ਮਨਜੂਰ, PSBTE & IT, ਪੰਜਾਬ ਦੇ ਸਾਹਿਤ
             </p>
@@ -203,8 +226,8 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="dropdown theme-toggle">
-              <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown"
-                aria-expanded="false">
+              <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown"
+                data-bs-toggle="dropdown" aria-expanded="false">
                 {{ getCurrentLanguage() }}
               </button>
               <ul class="dropdown-menu" aria-labelledby="languageDropdown">
@@ -215,13 +238,26 @@
             </div>
           </div>
           <div class="col-lg-4">
-            <div class="form-check form-switch theme-toggle">
-              <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch"
-                (change)="toggleDarkMode()">
-              <label class="form-check-label" for="themeSwitch">
-                <span class="toggle-label">ਥੀਮ ਬਦਲੋ</span>
-              </label>
+            <div class="dropdown">
+              <button class="btn btn-light dropdown-toggle" type="button" id="darkModeDropdown" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas {{ selectedDarkModeOption.icon }}"></i> {{ selectedDarkModeOption.label }} Mode
+              </button>
+
+              <div class="dropdown-menu" aria-labelledby="darkModeDropdown">
+
+                <a class="dropdown-item" (click)="setDarkMode({ label: 'Default', icon: 'fa-adjust' })">
+                  <i class="fas fa-adjust"></i> Default Mode
+                </a> <a class="dropdown-item" (click)="setDarkMode({ label: 'Light', icon: 'fa-sun' })">
+                  <i class="fas fa-sun"></i> Light Mode
+                </a>
+                <a class="dropdown-item" (click)="setDarkMode({ label: 'Dark', icon: 'fa-solid fa-moon' })">
+                  <i class="fas fa-solid fa-moon"></i> Dark Mode
+                </a>
+
+              </div>
             </div>
+
           </div>
           <div class="col-lg-4">
             <div class="btn-group" role="group" aria-label="First group">
@@ -236,7 +272,7 @@
 
   <nav class="navbar navbar-expand-lg" [ngClass]="{'fixed-top': navbarScrolled, 'navbar-scrolled': navbarScrolled}">
     <div class="container-fluid">
-      <a class="navbar-brand d-lg-none"  routerLink="">t6r5
+      <a class="navbar-brand d-lg-none" routerLink="">t6r5
         <i class="fas fa-icon"></i>
       </a>
 
@@ -250,13 +286,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto text-center">
           <li class="nav-item">
-            <a class="nav-link fw-semibold " aria-current="page"  routerLink="">ਹੋਮ</a>
+            <a class="nav-link fw-semibold " aria-current="page" routerLink="">ਹੋਮ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold"  routerLink="">ਫੀਚਰ</a>
+            <a class="nav-link fw-semibold" routerLink="">ਫੀਚਰ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold"  routerLink="">ਮੁਲਾਜ਼ਮ</a>
+            <a class="nav-link fw-semibold" routerLink="">ਮੁਲਾਜ਼ਮ</a>
           </li>
           <li class="nav-item">
             <a class="nav-link fw-semibold disabled" aria-disabled="true">ਅਯੋਗ</a>
@@ -277,7 +313,8 @@
             <img src="../../assets/images/used/logo.png" alt="ਕਾਲਜ ਦਾ ਲੋਗੋ" class="img-fluid" width="90" height="90">
           </div>
           <div class="col">
-            <a  routerLink="" class="fw-bold fs-3 text-decoration-none text">ਐਸ. ਅਮਰਜੀਤ ਸਿੰਘ ਸਾਹੀ ਸਰਕਾਰੀ ਪਾਲੀਟੈਕਨਿਕ ਕਾਲਜ</a>
+            <a routerLink="" class="fw-bold fs-3 text-decoration-none text">ਐਸ. ਅਮਰਜੀਤ ਸਿੰਘ ਸਾਹੀ ਸਰਕਾਰੀ ਪਾਲੀਟੈਕਨਿਕ
+              ਕਾਲਜ</a>
             <p>
               हिंदीहिंदीहिंदीहिंदीहिंदीहिंदीहिंदीहिंदीहिंदीहिंदी
             </p>
@@ -288,8 +325,8 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="dropdown theme-toggle">
-              <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown"
-                aria-expanded="false">
+              <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown"
+                data-bs-toggle="dropdown" aria-expanded="false">
                 {{ getCurrentLanguage() }}
               </button>
               <ul class="dropdown-menu" aria-labelledby="languageDropdown">
@@ -300,13 +337,26 @@
             </div>
           </div>
           <div class="col-lg-4">
-            <div class="form-check form-switch theme-toggle">
-              <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch"
-                (change)="toggleDarkMode()">
-              <label class="form-check-label" for="themeSwitch">
-                <span class="toggle-label">ਥੀਮ ਬਦਲੋ</span>
-              </label>
+            <div class="dropdown">
+              <button class="btn btn-light dropdown-toggle" type="button" id="darkModeDropdown" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas {{ selectedDarkModeOption.icon }}"></i> {{ selectedDarkModeOption.label }} Mode
+              </button>
+
+              <div class="dropdown-menu" aria-labelledby="darkModeDropdown">
+
+                <a class="dropdown-item" (click)="setDarkMode({ label: 'Default', icon: 'fa-adjust' })">
+                  <i class="fas fa-adjust"></i> Default Mode
+                </a> <a class="dropdown-item" (click)="setDarkMode({ label: 'Light', icon: 'fa-sun' })">
+                  <i class="fas fa-sun"></i> Light Mode
+                </a>
+                <a class="dropdown-item" (click)="setDarkMode({ label: 'Dark', icon: 'fa-solid fa-moon' })">
+                  <i class="fas fa-solid fa-moon"></i> Dark Mode
+                </a>
+
+              </div>
             </div>
+
           </div>
           <div class="col-lg-4">
             <div class="btn-group" role="group" aria-label="First group">
@@ -321,7 +371,7 @@
 
   <nav class="navbar navbar-expand-lg" [ngClass]="{'fixed-top': navbarScrolled, 'navbar-scrolled': navbarScrolled}">
     <div class="container-fluid">
-      <a class="navbar-brand d-lg-none"  routerLink="">t6r5
+      <a class="navbar-brand d-lg-none" routerLink="">t6r5
         <i class="fas fa-icon"></i>
       </a>
 
@@ -335,13 +385,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto text-center">
           <li class="nav-item">
-            <a class="nav-link fw-semibold " aria-current="page"  routerLink="">ਹੋਮ</a>
+            <a class="nav-link fw-semibold " aria-current="page" routerLink="">ਹੋਮ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold"  routerLink="">ਫੀਚਰ</a>
+            <a class="nav-link fw-semibold" routerLink="">ਫੀਚਰ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold"  routerLink="">ਮੁਲਾਜ਼ਮ</a>
+            <a class="nav-link fw-semibold" routerLink="">ਮੁਲਾਜ਼ਮ</a>
           </li>
           <li class="nav-item">
             <a class="nav-link fw-semibold disabled" aria-disabled="true">ਅਯੋਗ</a>
