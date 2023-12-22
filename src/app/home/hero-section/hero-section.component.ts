@@ -14,7 +14,8 @@ import { MainAreaComponent } from "../main-area/main-area.component";
 })
 export class HeroSectionComponent implements OnInit {
   isDarkMode = false;
-  showFixedBottomDiv = false;
+   showFixedBottomDiv = false;
+  languageOptions: string[] = ['English', 'ਪੰਜਾਬੀ','हिंदी'];
   showtitle= false;
 
   constructor(

@@ -13,7 +13,8 @@ import { ThemeService } from '../../../services/theme/theme.service';
 })
 export class FeesStructureComponent {
   isDarkMode = false;
-  showFixedBottomDiv = false;
+   showFixedBottomDiv = false;
+  languageOptions: string[] = ['English', 'ਪੰਜਾਬੀ','हिंदी'];
 
   constructor(
     private textSizeService: TextSizeService,
