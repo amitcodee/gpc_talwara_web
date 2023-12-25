@@ -4,3 +4,15 @@
 :host .red-title {
     color: #b1040e;
   }
+
+.dark-mode, .dark-mode .red-title{
+  color: #fff;
+}
+.dark-mode .border-danger{
+  border-color: #fff !important;
+}
+.dark-mode .card{
+  background-color: #333;
+  color: #fff;
+  border-color: #fff;
+}
