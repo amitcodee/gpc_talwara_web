@@ -1,66 +1,70 @@
 <div class="dark" [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'English'"
     [style.font-size.px]="getTextSize()">
     <div class="container">
-        <div class="fw-bold fs-3 red-title py-3">Fees</div>
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th scope="col">Sr. No</th>
-                    <th scope="col"> Details</th>
-                    <th scope="col">Amount (in rs)</th>
-                </tr>
-            </thead>
-            <tbody>
+        <div
+            class="fw-bold fs-2 red-title py-3 border-bottom border-danger border-2  border-bottom border-danger border-2">
+            Fees Structure</div>
+        <div class="pt-3">
+            <table class="table table-hover border-danger border">
+                <thead>
+                    <tr>
+                        <th scope="col">Sr. No</th>
+                        <th scope="col"> Details</th>
+                        <th scope="col">Amount (in rs)</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-                <tr>
-                    <th>1.</th>
-                    <td>
-                        <span class="fw-bold">Board charges</span> <br>
-                        Registration charges (one-time) **
-                    </td>
-                    <td>500</td>
-                </tr>
-                <tr>
-                    <th>2.</th>
-                    <td>
-                        <span class="fw-bold">Collection on behalf of institute</span> <br>
-                        Tution fees (half yearly)
-                    </td>
-                    <td>11000</td>
-                </tr>
-                <tr>
-                    <th>3.</th>
-                    <td>Refundable security (one-time)</td>
-                    <td>500</td>
-                </tr>
-                <tr>
-                    <th>4.</th>
-                    <td>Development fund (yearly)</td>
-                    <td>3650</td>
-                </tr>
-                <tr>
-                    <th>5.</th>
-                    <td>Student activity fund (yearly)</td>
-                    <td>2235</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Student activity fund (one-time)</td>
-                    <td>265</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <th>Grand Total</th>
-                    <td>18150</td>
-                </tr>
-            </tbody>
-        </table>
+                    <tr>
+                        <th>1.</th>
+                        <td>
+                            <span class="fw-bold">Board charges</span> <br>
+                            Registration charges (one-time) **
+                        </td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <th>2.</th>
+                        <td>
+                            <span class="fw-bold">Collection on behalf of institute</span> <br>
+                            Tution fees (half yearly)
+                        </td>
+                        <td>11000</td>
+                    </tr>
+                    <tr>
+                        <th>3.</th>
+                        <td>Refundable security (one-time)</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <th>4.</th>
+                        <td>Development fund (yearly)</td>
+                        <td>3650</td>
+                    </tr>
+                    <tr>
+                        <th>5.</th>
+                        <td>Student activity fund (yearly)</td>
+                        <td>2235</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Student activity fund (one-time)</td>
+                        <td>265</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <th>Grand Total</th>
+                        <td>18150</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <div>
             <p class="pt-3">The students of SC/ST category of Punjab shall pay only Rs 1133/- at the time of admission,
                 subject to the
                 condition that family annual income is less than Rs. 2.5 lakh.<br>
             </p>
-            <table class="table table-hover">
+            <table class="table table-hover border-danger border">
                 <tbody>
                     <tr>
                         <td>Refundable Security</td>
@@ -87,7 +91,7 @@
         </div>
         <div>
             <p>student activity related fund</p>
-            <table class="table table-hover">
+            <table class=" table table-hover border-danger border">
                 <tbody>
                     <tr>
                         <td>a)</td>
@@ -191,6 +195,7 @@
                     </tr>
                 </tbody>
             </table>
+            <br>
         </div>
     </div>
 </div>

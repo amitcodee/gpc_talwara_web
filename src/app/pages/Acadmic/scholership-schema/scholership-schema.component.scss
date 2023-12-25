@@ -1,3 +1,28 @@
 :host .red-title {
-    color: #b1040e;
-  }
+  color: #b1040e;
+}
+
+.dark-mode .red-title {
+  color: #fff;
+}
+
+.dark-mode {
+  color: #fff;
+}
+
+.dark-mode th,
+.dark-mode td {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .border-danger {
+  border-color: #fff !important;
+}
+.dark-mode .text-danger{
+  color: #fff !important;
+}
+.dark-mode .list-group-item{
+  background-color: #333;
+  color: #fff;
+}

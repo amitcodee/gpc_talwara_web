@@ -1,9 +1,10 @@
 <div class="dark" [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'English'"
     [style.font-size.px]="getTextSize()">
     <div class="container">
-        <div class="fw-bold fs-3 red-title py-3">College Rules</div>
-
-        <ol>
+        <div
+            class="fw-bold fs-2 red-title py-3 border-bottom border-danger border-2  border-bottom border-danger border-2">
+            College Rules</div>
+        <ol class="pt-3">
             <li>The attendance for the tests and tutorials conducted in the college is compulsory.</li>
             <li>The student having poor attendance and showing consistently poor performance in the test and tutorials
                 shall not be permitted to appear for the university examination.</li>
@@ -26,5 +27,6 @@
                 alteration and shall be modified, whenever the Principal deems it fit and proper. The decision of the
                 Principal shall be final and binding on the students.</li>
         </ol>
+        <br>
     </div>
 </div>

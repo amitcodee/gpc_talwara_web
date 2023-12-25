@@ -1,9 +1,11 @@
 <div class="dark" [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'English'"
     [style.font-size.px]="getTextSize()">
     <div class="container">
-        <div class="course">
-            <div class="fw-bold fs-3 red-title py-3">Courses Offered</div>
-            <table class="table table-hover">
+        <div
+            class="fw-bold fs-2 red-title py-3 border-bottom border-danger border-2  border-bottom border-danger border-2">
+            Courses Offered</div>
+        <div class="course pt-3">
+            <table class="table table-hover border-danger border">
                 <thead>
                     <tr>
                         <th scope="col">Serial No.</th>
@@ -47,7 +49,7 @@
             </table>
         </div>
         <div class="pt-3">
-            <p class="fs-5">Eligibility Criteria</p>
+            <p class="fs-5 fw-semibold  red-title">Eligibility Criteria</p>
             <p>The Candidates having passed the Matriculation examination are eligible to seek admission in the
                 polytechnic.
                 Counselling and seat allotment of Punjab Polytechnic Admission will be based on aggregate marks of
@@ -68,13 +70,13 @@
             </ol>
         </div>
         <div class="pt-3">
-            <p class="fs-5">LEET ENTRY</p>
+            <p class="fs-5 fw-semibold  red-title">Leet Entry</p>
             <p>10 percent of total seats are reserved for Lateral entry students in second year of Diploma.</p>
             <p>Vacant seats of first year Diplima Course are filled through LEET.</p>
 
         </div>
         <div class="pt-3">
-            <p class="fs-5">Eligibility:</p>
+            <p class="fs-5 fw-semibold  red-title">Eligibility:</p>
             <ol type="a">
                 <li>
                     10+2 Examination with Physics/ Mathematics/ Chemistry/ Computer Science/ Electronics/ Information
@@ -92,13 +94,14 @@
             </ol>
         </div>
         <div class="pt-3">
-            <p class="fs-5">Curriculum</p>
+            <p class="fs-5 fw-semibold  red-title">Curriculum</p>
             <div>
                 <p> For Curriculum please refer to:</p>
-                <ul>
-                    <li><a href="http://www.punjabteched.com">http://www.punjabteched.com</a></li>
-                    <li> <a href="http://www.punjabteched.net"> http://www.punjabteched.net</a></li>
+                <ul class="text-danger">
+                    <li><a href="http://www.punjabteched.com" class="text-danger">http://www.punjabteched.com</a></li>
+                    <li> <a href="http://www.punjabteched.net" class="text-danger"> http://www.punjabteched.net</a></li>
                 </ul>
+                <br>
             </div>
         </div>
     </div>
