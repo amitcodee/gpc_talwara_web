@@ -6,8 +6,59 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './event-picture.component.html',
-  styleUrl: './event-picture.component.scss'
+  styleUrls: ['./event-picture.component.scss'],
 })
 export class EventPictureComponent {
+  openImageInNewTab(_t14: string) {
+    throw new Error('Method not implemented.');
+  }
+  activeTab: string = 'all';
+  lightboxImage: string | null = null;
 
+  imageData = [
+    { tab: 'All Collections', images: [] },
+    {
+      tab: 'Student Activites ',
+      images: [
+        'https://example.com/image1.jpg',
+        'https://example.com/image2.jpg',
+      ],
+    },
+    {
+      tab: 'College Campus',
+      images: [
+        'https://example.com/image3.jpg',
+        'https://example.com/image4.jpg',
+      ],
+    },
+    // Add more tabs as needed
+  ];
+
+  constructor() {
+    this.changeTab('All Collections');
+  }
+
+  changeTab(tab: string): void {
+    this.activeTab = tab;
+  }
+
+  getImageList(): string[] {
+    return this.activeTab === 'All Collections'
+      ? this.getAllImages()
+      : this.getSelectedTabImages();
+  }
+
+  private getAllImages(): string[] {
+    return this.imageData.reduce(
+      (allImages: string[], tabData) => allImages.concat(tabData.images || []),
+      []
+    );
+  }
+
+  private getSelectedTabImages(): string[] {
+    const activeTabData = this.imageData.find(
+      (data) => data.tab === this.activeTab
+    );
+    return activeTabData ? activeTabData.images || [] : [];
+  }
 }

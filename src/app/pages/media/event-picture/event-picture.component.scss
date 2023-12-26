@@ -1,0 +1,39 @@
+.red-link {
+  color: black !important;
+  transition: color 0.3s ease;
+
+}
+
+.nav-tabs {
+  margin-bottom: 15px;
+}
+
+.nav-link {
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link.active {
+  background-color: #b1040e;
+  color: #fff !important;
+}
+
+
+.img-container {
+  position: relative;
+  margin-bottom: 15px;
+  transition: opacity 0.3s ease;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.img-container img:hover {
+  transform: scale(1.1);
+}
