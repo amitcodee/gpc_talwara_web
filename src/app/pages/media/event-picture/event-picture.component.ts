@@ -20,15 +20,15 @@ export class EventPictureComponent {
     {
       tab: 'Student Activites ',
       images: [
-        'https://example.com/image1.jpg',
-        'https://example.com/image2.jpg',
+        '../../../../assets/images/used/college/h.jpg',
+        '../../../../assets/images/used/college/hero.jpg',
       ],
     },
     {
       tab: 'College Campus',
       images: [
-        'https://example.com/image3.jpg',
-        'https://example.com/image4.jpg',
+        '../../../../assets/images/used/college/heroo.jpg',
+        '../../../../assets/images/used/1.jpg',
       ],
     },
     // Add more tabs as needed
