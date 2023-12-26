@@ -4,3 +4,10 @@ ul{
 :host .red-title {
     color: #b1040e;
   }
+  .dark-mode .border-danger{
+    border-color: #fff !important;
+  }
+  .dark-mode .container {
+    color: #fff;
+  }
+  
