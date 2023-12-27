@@ -15,11 +15,15 @@
 .border-red{
 border-color: #b1040e;
 }
-.img{
+.img-cardd{
   max-width: 50%;
 }
 .dark-mode .card{
   background-color: #333;
   color: #fff;
   border-color: #fff;
+}
+
+.img {
+  height: 500px !important;
 }
