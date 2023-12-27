@@ -32,6 +32,8 @@ export class EventPictureComponent implements OnInit {
         '../../../../assets/images/used/activites/16.jpg',
         '../../../../assets/images/used/activites/17.jpg',
         '../../../../assets/images/used/activites/18.jpg',
+        '../../../../assets/images/used/student-activity/68.jpg',
+        '../../../../assets/images/used/student-activity/69.jpg',
       ],
     },
     {
