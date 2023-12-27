@@ -25,7 +25,7 @@
               </button>
               <ul class="dropdown-menu" aria-labelledby="languageDropdown">
                 <li *ngFor="let language of languageOptions" (click)="setLanguage(language)">
-                  <a class="dropdown-item" href="javascript:void(0)">{{ language }}</a>
+                  <a class="dropdown-item" href="javascript:void(0)" style="cursor: grab;">{{ language }}</a>
                 </li>
               </ul>
             </div>
@@ -41,12 +41,12 @@
 
               <div class="dropdown-menu" aria-labelledby="darkModeDropdown">
 
-                <a class="dropdown-item" (click)="setDarkMode({ label: 'Default', icon: 'fa-adjust' })">
+                <a style="cursor: grab;" class="dropdown-item" (click)="setDarkMode({ label: 'Default', icon: 'fa-adjust' })">
                   <i class="fas fa-adjust"></i> Default Mode
-                </a> <a class="dropdown-item" (click)="setDarkMode({ label: 'Light', icon: 'fa-sun' })">
+                </a> <a style="cursor: grab;" class="dropdown-item" (click)="setDarkMode({ label: 'Light', icon: 'fa-sun' })">
                   <i class="fas fa-sun"></i> Light Mode
                 </a>
-                <a class="dropdown-item" (click)="setDarkMode({ label: 'Dark', icon: 'fa-solid fa-moon' })">
+                <a style="cursor: grab;" class="dropdown-item" (click)="setDarkMode({ label: 'Dark', icon: 'fa-solid fa-moon' })">
                   <i class="fas fa-solid fa-moon"></i> Dark Mode
                 </a>
 
