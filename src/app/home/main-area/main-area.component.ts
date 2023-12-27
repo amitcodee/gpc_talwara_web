@@ -15,12 +15,17 @@ export class MainAreaComponent {
   isDarkMode = false;
   showFixedBottomDiv = false;
   languageOptions: string[] = ['English', 'ਪੰਜਾਬੀ','हिंदी'];
+  selectedNews: string = 'first_news';
 
   constructor(
     private textSizeService: TextSizeService,
     private languageService: LanguageService,
     private themeService: ThemeService
   ) {}
+
+  selectNews(newsId: string): void {
+    this.selectedNews = newsId;
+  }
   setLanguage(language: string): void {
     this.languageService.setLanguage(language);
   }
