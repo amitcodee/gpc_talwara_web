@@ -24,22 +24,21 @@ export class EventPictureComponent implements OnInit {
     {
       tab: 'Student Activities',
       images: [
-        '../../../../assets/images/used/college/h.jpg',
-        '../../../../assets/images/used/college/hero.jpg',
-        '../../../../assets/images/used/student-activity/1.jpg',
-        '../../../../assets/images/used/student-activity/36.jpg',
-        '../../../../assets/images/used/student-activity/45.jpg',
-        '../../../../assets/images/used/student-activity/68.jpg',
-        '../../../../assets/images/used/student-activity/69.jpg',
-        '../../../../assets/images/used/student-activity/b.jpg',
-        '../../../../assets/images/used/student-activity/c.jpg',
+        '../../../../assets/images/used/activites/2.jpg',
+        '../../../../assets/images/used/activites/3.jpg',
+        '../../../../assets/images/used/activites/4.jpg',
+        '../../../../assets/images/used/activites/5.jpg',
+        '../../../../assets/images/used/activites/9.jpg',
+        '../../../../assets/images/used/activites/16.jpg',
+        '../../../../assets/images/used/activites/17.jpg',
+        '../../../../assets/images/used/activites/18.jpg',
       ],
     },
     {
       tab: 'College Campus',
       images: [
-        '../../../../assets/images/used/college/heroo.jpg',
-        '../../../../assets/images/used/1.jpg',
+        '../../../../assets/images/used/building/1.jpg',
+        '../../../../assets/images/used/building/9.jpg',
       ],
     },
     // Add more tabs as needed
