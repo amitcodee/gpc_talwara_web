@@ -24,25 +24,52 @@ export class EventPictureComponent implements OnInit {
     {
       tab: 'Student Activities',
       images: [
-        '../../../../assets/images/used/college/h.jpg',
-        '../../../../assets/images/used/college/hero.jpg',
-        '../../../../assets/images/used/student-activity/1.jpg',
-        '../../../../assets/images/used/student-activity/36.jpg',
-        '../../../../assets/images/used/student-activity/45.jpg',
+        '../../../../assets/images/used/activites/2.jpg',
+        '../../../../assets/images/used/activites/3.jpg',
+        '../../../../assets/images/used/activites/4.jpg',
+        '../../../../assets/images/used/activites/5.jpg',
+        '../../../../assets/images/used/activites/9.jpg',
+        '../../../../assets/images/used/activites/16.jpg',
+        '../../../../assets/images/used/activites/17.jpg',
+        '../../../../assets/images/used/activites/18.jpg',
         '../../../../assets/images/used/student-activity/68.jpg',
         '../../../../assets/images/used/student-activity/69.jpg',
-        '../../../../assets/images/used/student-activity/b.jpg',
-        '../../../../assets/images/used/student-activity/c.jpg',
       ],
     },
     {
       tab: 'College Campus',
       images: [
-        '../../../../assets/images/used/college/heroo.jpg',
-        '../../../../assets/images/used/1.jpg',
+        '../../../../assets/images/used/building/1.jpg',
+        '../../../../assets/images/used/building/9.jpg',
       ],
     },
     // Add more tabs as needed
+    {
+      tab: 'Labs',
+      images: [
+        '../../../../assets/images/used/labs/01.jpg',
+        '../../../../assets/images/used/labs/05.jpg',
+        '../../../../assets/images/used/labs/7.jpg',
+        '../../../../assets/images/used/labs/8.jpg',
+        '../../../../assets/images/used/labs/28.jpeg',
+        '../../../../assets/images/used/labs/23.jpg',
+        '../../../../assets/images/used/labs/22.jpg',
+        '../../../../assets/images/used/labs/IMG-20231225-WA0073.jpg',
+
+      ],
+    },
+    {
+      tab: 'Training',
+      images: [
+        '../../../../assets/images/used/training/d.jpg',
+        '../../../../assets/images/used/training/e.jpg',
+        '../../../../assets/images/used/training/f.jpg',
+        '../../../../assets/images/used/training/pic1.jpg',
+        '../../../../assets/images/used/training/t.jpg',
+        '../../../../assets/images/used/training/u.jpg',
+        
+      ]
+    }
   ];
 
   constructor(

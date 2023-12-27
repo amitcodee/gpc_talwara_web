@@ -27,7 +27,7 @@ import { TraningPlacementCellComponent } from './pages/placemnt/traning-placemen
 import { StudentPlacedComponent } from './pages/placemnt/student-placed/student-placed.component';
 import { EventPictureComponent } from './pages/media/college-life-memories/event-picture.component';
 import { SocialMediaAccountComponent } from './pages/media/social-media-account/social-media-account.component';
-import { StudentActivitiesComponent } from './pages/media/student-activities/student-activities.component';
+import { StudentActivitiesComponent } from './pages/media/press-clips/student-activities.component';
 import { CommtieesComponent } from './pages/about-us/commtiees/commtiees.component';
 import { CeFacultyComponent } from './pages/faculty/ce/ce.component';
 import { BuddyProgramComponent } from './home/buddy-program/buddy-program.component';
