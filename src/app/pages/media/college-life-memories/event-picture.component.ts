@@ -44,6 +44,32 @@ export class EventPictureComponent implements OnInit {
       ],
     },
     // Add more tabs as needed
+    {
+      tab: 'Labs',
+      images: [
+        '../../../../assets/images/used/labs/01.jpg',
+        '../../../../assets/images/used/labs/05.jpg',
+        '../../../../assets/images/used/labs/7.jpg',
+        '../../../../assets/images/used/labs/8.jpg',
+        '../../../../assets/images/used/labs/28.jpeg',
+        '../../../../assets/images/used/labs/23.jpg',
+        '../../../../assets/images/used/labs/22.jpg',
+        '../../../../assets/images/used/labs/IMG-20231225-WA0073.jpg',
+
+      ],
+    },
+    {
+      tab: 'Training',
+      images: [
+        '../../../../assets/images/used/training/d.jpg',
+        '../../../../assets/images/used/training/e.jpg',
+        '../../../../assets/images/used/training/f.jpg',
+        '../../../../assets/images/used/training/pic1.jpg',
+        '../../../../assets/images/used/training/t.jpg',
+        '../../../../assets/images/used/training/u.jpg',
+        
+      ]
+    }
   ];
 
   constructor(
