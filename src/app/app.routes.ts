@@ -4,7 +4,6 @@ import { HeroSectionComponent } from './home/hero-section/hero-section.component
 import { PrincipalMessageComponent } from './pages/about-us/principal-message/principal-message.component';
 import { VisionComponent } from './pages/about-us/vision/vision.component';
 import { MandotoryDiscloreComponent } from './pages/about-us/mandotory-disclore/mandotory-disclore.component';
-import { GrievanceresComponent } from './home/grievanceres/grievanceres.component';
 import { CourseComponent } from './pages/Acadmic/course/course.component';
 import { AdmissionIntakeComponent } from './pages/Acadmic/admission-intake/admission-intake.component';
 import { FeesStructureComponent } from './pages/Acadmic/fees-structure/fees-structure.component';
@@ -28,9 +27,14 @@ import { TraningPlacementCellComponent } from './pages/placemnt/traning-placemen
 import { StudentPlacedComponent } from './pages/placemnt/student-placed/student-placed.component';
 import { EventPictureComponent } from './pages/media/college-life-memories/event-picture.component';
 import { SocialMediaAccountComponent } from './pages/media/social-media-account/social-media-account.component';
-import { StudentActivitiesComponent } from './pages/media/press-clips/student-activities.component';
+import { StudentActivitiesComponent } from './pages/media/student-activities/student-activities.component';
 import { CommtieesComponent } from './pages/about-us/commtiees/commtiees.component';
 import { CeFacultyComponent } from './pages/faculty/ce/ce.component';
+import { BuddyProgramComponent } from './home/buddy-program/buddy-program.component';
+import { RegistrationComponent } from './home/registration/registration.component';
+import { RightToInfoComponent } from './home/right-to-info/right-to-info.component';
+import { ExamComponent } from './home/exam/exam.component';
+import { AdmissionHelpdeskComponent } from './home/admission-helpdesk/admission-helpdesk.component';
 
 export const routes: Routes = [
   {
@@ -160,5 +164,25 @@ export const routes: Routes = [
   {
     path:'student-activites',
     component:StudentActivitiesComponent
+  },
+  {
+    path:'buddy-program',
+    component:BuddyProgramComponent
+  },
+  {
+    path:'registration-portal',
+    component:RegistrationComponent
+  },
+  {
+    path:'right-to-information',
+    component:RightToInfoComponent
+  },
+  {
+    path:'examination',
+    component:ExamComponent
+  },
+  {
+    path:'admission-help',
+    component:AdmissionHelpdeskComponent
   }
 ];
