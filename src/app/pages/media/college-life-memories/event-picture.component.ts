@@ -21,14 +21,6 @@ export class EventPictureComponent implements OnInit {
 
   imageData = [
     { tab: 'All Collections', images: [] },
-    
-    {
-      tab: 'College Campus',
-      images: [
-        '../../../../assets/images/used/building/1.jpg',
-        '../../../../assets/images/used/building/9.jpg',
-      ],
-    },
     {
       tab: 'Student Activities',
       images: [
@@ -42,6 +34,13 @@ export class EventPictureComponent implements OnInit {
         '../../../../assets/images/used/activites/18.jpg',
         '../../../../assets/images/used/student-activity/68.jpg',
         '../../../../assets/images/used/student-activity/69.jpg',
+      ],
+    },
+    {
+      tab: 'College Campus',
+      images: [
+        '../../../../assets/images/used/building/1.jpg',
+        '../../../../assets/images/used/building/9.jpg',
       ],
     },
     // Add more tabs as needed
