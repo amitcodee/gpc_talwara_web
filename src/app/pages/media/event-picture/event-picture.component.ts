@@ -22,6 +22,13 @@ export class EventPictureComponent {
       images: [
         '../../../../assets/images/used/college/h.jpg',
         '../../../../assets/images/used/college/hero.jpg',
+        '../../../../assets/images/used/student-activity/1.jpg',
+        '../../../../assets/images/used/student-activity/36.jpg',
+        '../../../../assets/images/used/student-activity/45.jpg',
+        '../../../../assets/images/used/student-activity/68.jpg',
+        '../../../../assets/images/used/student-activity/69.jpg',
+        '../../../../assets/images/used/student-activity/b.jpg',
+        '../../../../assets/images/used/student-activity/c.jpg',
       ],
     },
     {
@@ -29,6 +36,7 @@ export class EventPictureComponent {
       images: [
         '../../../../assets/images/used/college/heroo.jpg',
         '../../../../assets/images/used/1.jpg',
+        
       ],
     },
     // Add more tabs as needed
