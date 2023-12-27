@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet,RouterLink } from '@angular/router';
 import { HeaderComponent } from "./header-footer/header/header.component";
-import AOS from 'aos';
+//import AOS from 'aos';
 import { HeroSectionComponent } from "./home/hero-section/hero-section.component";
 import { FooterComponent } from "./header-footer/footer/footer.component";
 
@@ -15,7 +15,7 @@ import { FooterComponent } from "./header-footer/footer/footer.component";
 })
 export class AppComponent implements OnInit{
   ngOnInit() {
-    AOS.init();
+    //AOS.init();
   }
   title = 'Gpc Talwara';
 }
