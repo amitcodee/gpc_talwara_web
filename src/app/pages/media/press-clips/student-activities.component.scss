@@ -1,3 +1,15 @@
-.img-fluid{
+.img-fluid {
     height: 500px !important;
+}
+
+:host .red-title {
+    color: #b1040e;
+}
+
+.dark-mode .red-title {
+    color: #fff;
+}
+
+.dark-mode .border-danger {
+    border-color: #fff !important;
 }
