@@ -5,13 +5,13 @@ import { HeaderComponent } from "./header-footer/header/header.component";
 //import AOS from 'aos';
 import { HeroSectionComponent } from "./home/hero-section/hero-section.component";
 import { FooterComponent } from "./header-footer/footer/footer.component";
-
+import { ScrollButtonComponent } from './header-footer/scroll-button/scroll-button.component';
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
-    imports: [CommonModule, RouterOutlet, RouterLink, HeaderComponent, HeroSectionComponent, FooterComponent]
+    imports: [CommonModule, RouterOutlet, RouterLink, HeaderComponent, HeroSectionComponent, FooterComponent, ScrollButtonComponent]
 })
 export class AppComponent implements OnInit{
   ngOnInit() {
