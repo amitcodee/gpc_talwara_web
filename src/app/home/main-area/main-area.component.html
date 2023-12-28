@@ -1,440 +1,372 @@
 <div class="dark" [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'English'"
-    [style.font-size.px]="getTextSize()">
-    <div class="container mx-auto">
-        <br>
-        <div class="card">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-5">
-                        <img src="../../../assets/images/used/web-use/poly.jpeg" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-md-7">
-                        <div class="fw-bold fs-3 red-title">Polytechnic Education</div>
-                        <p class="">Polytechnic means giving instruction in a number of arts and sciences with special
-                            regard for their
-                            use in making a living. Polytechnic is an institute in which technologies that are based on
-                            mathematical & scientific basis such as engineering and other applied sciences are taught.
-                            Polytechnic education provides career based education. The choice of a career is possibly
-                            one of
-                            the
-                            most critical decisions in one's life. It shapes the future and determines the life style.
-                            The
-                            rapid
-                            race of technological development and its increasing adoption by industry have led to
-                            growing
-                            complexity of industrial activity.</p>
-                    </div>
-                </div>
-            </div>
+  [style.font-size.px]="getTextSize()">
+  <div class="container mx-auto">
+    <br>
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-5">
+            <img src="../../../assets/images/used/web-use/poly.jpeg" alt="" class="img-fluid">
+          </div>
+          <div class="col-md-7">
+            <div class="fw-bold fs-3 red-title">Polytechnic Education</div>
+            <p class="">Polytechnic means giving instruction in a number of arts and sciences with special
+              regard for their
+              use in making a living. Polytechnic is an institute in which technologies that are based on
+              mathematical & scientific basis such as engineering and other applied sciences are taught.
+              Polytechnic education provides career based education. The choice of a career is possibly
+              one of
+              the
+              most critical decisions in one's life. It shapes the future and determines the life style.
+              The
+              rapid
+              race of technological development and its increasing adoption by industry have led to
+              growing
+              complexity of industrial activity.</p>
+          </div>
         </div>
-        <div class="card mt-5">
-            <div class="card-body">
-                <div class="row">
-                    <div class="fw-bold fs-3 red-title">Anti-Ragging</div>
-
-                    <div class="col-md-7">
-                        <div class="fw-bold fs-3 red-title">Anti-Ragging</div>
-                        <p class="">Any conduct by any student or students whether by words spoken or written or by an
-                            act which has the effect of teasing, treating or handling with rudeness a fresher or any
-                            other
-                            student.
-                            The college has the following provisions for action against ragging: Ragging within or
-                            outside
-                            of any educational institution is prohibited. Whosoever commits, participates , or
-                            propagates
-                            ragging within or outside institution shall be punished. Any student convicted of an offence
-                            of
-                            ragging shall be dismissed from the college.
-                            Indulging in rowdy or in disciplined activities by any student or students which causes or
-                            is
-                            likely to cause annoyance, hardship, physical or psychological harm or to raise fear or
-                            apprehension thereof in any fresher or any other student.
-                        </p>
-                        <div class="text-center">
-                            <a class="btn btn-red text-decoration-none" href="http://www.antiragging.in/">For More
-                                information </a>
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <img src="../../../assets/images/used/web-use/ragging.png" alt="" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center py-3">
-            <img src="https://gpctalwara.in/images/main/banner3Hindi.jpg">
-        </div>
-        <div class="fw-bold fs-2 red-title pt-3 border-bottom border-danger border-2  border-bottom border-danger border-2">
-            Latest News And Events 
-        </div>
-
-        <!-- Display cards for each news item -->
-        <div *ngIf="selectedNews === 'first_news'" id="first_news">
-            <div class="row">
-                <div class="col-md-8 py-2">
-                    <div class="card">
-                        <img src="../../../assets/images/used/addmision/2.jpg" class="card-img-top img-fluid" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">First News</h5>
-                            <p class="card-text">Admission process for session 2023-24 started.</p>
-                            <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#fst-news">Read more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 py-2 d-flex flex-column">
-                    <div class="card flex-grow-1">
-                        <div class="card-body">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <button class="nav-link text-start fs-4" (click)="selectNews('first_news')">First
-                                        News</button>
-                                </li>
-                                <li class="nav-item">
-                                    <button class="nav-link text-start fs-4" (click)="selectNews('second_news')">Second
-                                        News</button>
-                                </li>
-                                <!-- Add more news items here if needed -->
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 py-2">
-                    <div class="card">
-                        <img src="../../../assets/images/used/addmision/6.jpg" class="card-img-top img-fluid" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">First News</h5>
-                            <p class="card-text">Admission process for session 2023-24 started.</p>
-                            <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#sec-news">Read more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 py-2">
-                    <div class="card">
-                        <img src="../../../assets/images/used/addmision/5.jpg" class="card-img-top img-fluid" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">First News</h5>
-                            <p class="card-text">Admission process for session 2023-24 started.</p>
-                            <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#thrd-news">Read more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 py-2">
-                    <div class="card">
-                        <img src="../../../assets/images/used/addmision/7.jpg" class="card-img-top img-fluid" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">First News</h5>
-                            <p class="card-text">Admission process for session 2023-24 started.</p>
-                            <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#frth-news">Read more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div *ngIf="selectedNews === 'second_news'" id="second_news">
-            <div class="row">
-                <div class="col-md-8 py-2">
-                    <div class="card">
-                        <img src="../../../assets/images/used/addmision/1.jpg" class="card-img-top img-fluid" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">First News</h5>
-                            <p class="card-text">Admission process for session 2023-24 started.</p>
-                            <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#first-news">Read more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 py-2 d-flex flex-column">
-                    <div class="card flex-grow-1">
-                        <div class="card-body">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <button class="nav-link text-start fs-4" (click)="selectNews('first_news')">First
-                                        News</button>
-                                </li>
-                                <li class="nav-item">
-                                    <button class="nav-link text-start fs-4" (click)="selectNews('second_news')">Second
-                                        News</button>
-                                </li>
-                                <!-- Add more news items here if needed -->
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 py-2">
-                    <div class="card">
-                        <img src="../../../assets/images/used/addmision/2.jpg" class="card-img-top img-fluid" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">First News</h5>
-                            <p class="card-text">Admission process for session 2023-24 started.</p>
-                            <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#second-news">Read more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 py-2">
-                    <div class="card">
-                        <img src="../../../assets/images/used/addmision/4.jpg" class="card-img-top img-fluid" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">First News</h5>
-                            <p class="card-text">Admission process for session 2023-24 started.</p>
-                            <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#third-news">Read more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 py-2">
-                    <div class="card">
-                        <img src="../../../assets/images/used/addmision/3.jpg" class="card-img-top img-fluid" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">First News</h5>
-                            <p class="card-text">Admission process for session 2023-24 started.</p>
-                            <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#fourth-news">Read
-                                more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Add more news items here if needed -->
+      </div>
     </div>
-
-
+    <div class="card mt-5">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="fw-bold fs-3 red-title">Anti-Ragging</div>
+            <p class="">Any conduct by any student or students whether by words spoken or written or by an
+              act which has the effect of teasing, treating or handling with rudeness a fresher or any
+              other
+              student.
+              The college has the following provisions for action against ragging: Ragging within or
+              outside
+              of any educational institution is prohibited. Whosoever commits, participates , or
+              propagates
+              ragging within or outside institution shall be punished. Any student convicted of an offence
+              of
+              ragging shall be dismissed from the college.
+              Indulging in rowdy or in disciplined activities by any student or students which causes or
+              is
+              likely to cause annoyance, hardship, physical or psychological harm or to raise fear or
+              apprehension thereof in any fresher or any other student.
+            </p>
+            <div class="text-center">
+              <a class="btn btn-red text-decoration-none" href="http://www.antiragging.in/">For More
+                information </a>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <img src="../../../assets/images/used/web-use/ragging.png" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center py-3">
+      <img src="https://gpctalwara.in/images/main/banner3Hindi.jpg">
+    </div>
+    <div class="fw-bold fs-2 red-title pt-3 border-bottom border-danger border-2  border-bottom border-danger border-2">
+      Latest News And Events
+    </div>
+    <div *ngIf="selectedNews === 'first_news'" id="first_news">
+      <div class="row">
+        <div class="col-md-8 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/2.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">First News</h5>
+              <p class="card-text">Admission process for session 2023-24 started.</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#fst-news">Read more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2 d-flex flex-column">
+          <div class="card flex-grow-1">
+            <div class="card-body">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <button class="nav-link text-start fs-4" (click)="selectNews('first_news')">First
+                    News</button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link text-start fs-4" (click)="selectNews('second_news')">Second
+                    News</button>
+                </li>
+                <!-- Add more news items here if needed -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/6.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">First News</h5>
+              <p class="card-text">Admission process for session 2023-24 started.</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#sec-news">Read more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/5.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">First News</h5>
+              <p class="card-text">Admission process for session 2023-24 started.</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#thrd-news">Read more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/7.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">First News</h5>
+              <p class="card-text">Admission process for session 2023-24 started.</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#frth-news">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="selectedNews === 'second_news'" id="second_news">
+      <div class="row">
+        <div class="col-md-8 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/1.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">First News</h5>
+              <p class="card-text">Admission process for session 2023-24 started.</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#first-news">Read more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2 d-flex flex-column">
+          <div class="card flex-grow-1">
+            <div class="card-body">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <button class="nav-link text-start fs-4" (click)="selectNews('first_news')">First
+                    News</button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link text-start fs-4" (click)="selectNews('second_news')">Second
+                    News</button>
+                </li>
+                <!-- Add more news items here if needed -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/2.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">First News</h5>
+              <p class="card-text">Admission process for session 2023-24 started.</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#second-news">Read more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/4.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">First News</h5>
+              <p class="card-text">Admission process for session 2023-24 started.</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#third-news">Read more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/3.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">First News</h5>
+              <p class="card-text">Admission process for session 2023-24 started.</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#fourth-news">Read
+                more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add more news items here if needed -->
+  </div>
 </div>
 
 <!--Modals for second news-->
 <div class="modal fade" id="first-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 link-danger" id="exampleModalLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-red " data-bs-dismiss="modal">Close</button>
-         
-        </div>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 link-danger" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-red " data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
-  <div class="modal fade" id="second-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 link-danger" id="exampleModalLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-red" data-bs-dismiss="modal">Close</button>
-         
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="third-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 link-danger" id="exampleModalLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-red" data-bs-dismiss="modal">Close</button>
-         
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="fourth-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 link-danger" id="exampleModalLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-red" data-bs-dismiss="modal">Close</button>
-         
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!--First_News Modals-->
-  <div class="modal fade" id="fst-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 link-danger" id="exampleModalLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-red" data-bs-dismiss="modal">Close</button>
-         
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="sec-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 link-danger" id="exampleModalLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-red" data-bs-dismiss="modal">Close</button>
-         
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="thrd-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 link-danger" id="exampleModalLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-red" data-bs-dismiss="modal">Close</button>
-         
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="frth-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 link-danger" id="exampleModalLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-red" data-bs-dismiss="modal">Close</button>
-         
-        </div>
-      </div>
-    </div>
-  </div>
-
-<div class="py-2">
-    <img src="../../../assets/images/used/building/16.jpg" class="img-fluid" alt="">
 </div>
-<div class="modal fade" id="modal-one" tabindex="-1" aria-labelledby="1Label" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="1Label">Admission Helpdesk</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th scope="col">Teacher Name</th>
-                            <th scope="col">Contact Number</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Teacher 1</td>
-                            <td>9501107354</td>
-                        </tr>
-                        <tr>
-                            <td>Teacher 2</td>
-                            <td>9501648500</td>
-                        </tr>
-                        <tr>
-                            <td>Teacher 3</td>
-                            <td>7009110372</td>
-                        </tr>
-                        <tr>
-                            <td>Teacher 4</td>
-                            <td>8437700636</td>
-                        </tr>
-                        <tr>
-                            <td>Teacher 5</td>
-                            <td>9417433471</td>
-                        </tr>
-                        <tr>
-                            <td>Teacher 6</td>
-                            <td>7696889004</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-red" data-bs-dismiss="modal">Close</button>
-            </div>
-        </div>
+<div class="modal fade" id="second-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 link-danger" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-red" data-bs-dismiss="modal">Close</button>
+      </div>
     </div>
+  </div>
+</div>
+<div class="modal fade" id="third-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 link-danger" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-red" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="fourth-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 link-danger" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-red" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--First_News Modals-->
+<div class="modal fade" id="fst-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 link-danger" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-red" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="sec-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 link-danger" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-red" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="thrd-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 link-danger" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-red" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="frth-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 link-danger" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-red" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="">
+  <img src="../../../assets/images/used/building/16.jpg" class="img-fluid" alt="">
 </div>
 <!-- punjabi -->
 <div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'ਪੰਜਾਬੀ'" [style.font-size.px]="getTextSize()">
-    <div class="container mx-auto">
-        <div class="card">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-5">
-                        <img src="../../../assets/images/used/logos/poly.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-md-7">
-                        <div class="fw-bold fs-3 red-title">Polytechnic Education</div>
-                        <p class="">Polytechnic means giving instruction in a number of arts and sciences with
-                            special
-                            regard for their
-                            use in making a living. Polytechnic is an institute in which technologies that are based
-                            on
-                            complexity of industrial activity.</p>
-                    </div>
-                </div>
-            </div>
+  <div class="container mx-auto">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-5">
+            <img src="../../../assets/images/used/logos/poly.png" alt="" class="img-fluid">
+          </div>
+          <div class="col-md-7">
+            <div class="fw-bold fs-3 red-title">Polytechnic Education</div>
+            <p class="">Polytechnic means giving instruction in a number of arts and sciences with
+              special
+              regard for their
+              use in making a living. Polytechnic is an institute in which technologies that are based
+              on
+              complexity of industrial activity.</p>
+          </div>
         </div>
-        <div class="card mt-5 mb-5">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="fw-bold fs-3 red-title">Anti-Ragging</div>
-                        <p class="">Any conduct by any student or students whether by words spoken or written or by
-                            an
-                            ciplined activities by any student or students which causes or is
-                            likely to cause annoyance, hardship, physical or psychological harm or to raise fear or
-                            apprehension thereof in any fresher or any other student.
-                        </p>
-                        <div class="text-center">
-                            <a class="btn btn-red text-decoration-none" href="http://www.antiragging.in/">For More
-                                information </a>
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <img src="../../../assets/images/used/logos/raging.png" alt="" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="card mt-5 mb-5">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="fw-bold fs-3 red-title">Anti-Ragging</div>
+            <p class="">Any conduct by any student or students whether by words spoken or written or by
+              an
+              ciplined activities by any student or students which causes or is
+              likely to cause annoyance, hardship, physical or psychological harm or to raise fear or
+              apprehension thereof in any fresher or any other student.
+            </p>
+            <div class="text-center">
+              <a class="btn btn-red text-decoration-none" href="http://www.antiragging.in/">For More
+                information </a>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <img src="../../../assets/images/used/logos/raging.png" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
