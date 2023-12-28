@@ -10,3 +10,9 @@
   .text-black{
     color: #000;
   }
+  .dark-mode  .text-black{
+    color: #fff !important;
+  }
+  .dark-mode .list-group-item{
+    background-color: #333 !important;
+  }
