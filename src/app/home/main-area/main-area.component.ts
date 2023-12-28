@@ -17,6 +17,9 @@ export class MainAreaComponent {
   languageOptions: string[] = ['English', 'ਪੰਜਾਬੀ','हिंदी'];
   selectedNews: string = 'first_news';
 
+
+ 
+
   constructor(
     private textSizeService: TextSizeService,
     private languageService: LanguageService,
