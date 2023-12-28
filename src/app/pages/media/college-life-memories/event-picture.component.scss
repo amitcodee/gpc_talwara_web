@@ -3,6 +3,16 @@
   transition: color 0.3s ease;
 
 }
+.dark-mode .border-danger{
+  border-color: #fff !important;
+}
+:host .red-title {
+  color: #b1040e;
+}
+
+.dark-mode .red-title {
+  color: #fff;
+}
 
 .nav-tabs {
   margin-bottom: 15px;
@@ -17,10 +27,12 @@
   background-color: #b1040e;
   color: #fff !important;
 }
-.dark-mode .nav-link{
+
+.dark-mode .nav-link {
   color: #fff !important;
 
 }
+
 .dark-mode .nav-link.active {
   background-color: #fff;
   color: #000 !important;
