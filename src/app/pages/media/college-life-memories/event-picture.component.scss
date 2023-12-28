@@ -17,7 +17,14 @@
   background-color: #b1040e;
   color: #fff !important;
 }
+.dark-mode .nav-link{
+  color: #fff !important;
 
+}
+.dark-mode .nav-link.active {
+  background-color: #fff;
+  color: #000 !important;
+}
 
 .img-container {
   position: relative;
