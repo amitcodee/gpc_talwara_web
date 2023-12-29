@@ -23,11 +23,10 @@
   color: #fff;
 }
 
-@media screen and (max-width: 767px) {
-  a.navbar-brand {
-    color: #fff; /* Set the text color to white for small screens */
-  }
+:host .navbar-brand  {
+  color: #fff;
 }
+
 :host .text {
   color: #fff;
 }
