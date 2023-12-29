@@ -1,3 +1,6 @@
+<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'English'" [style.font-size.px]="getTextSize()">
+ 
 <button *ngIf="showButton" (click)="scrollToTop()">
     <span class="arrow-up-icon"></span>
 </button>
+</div>
