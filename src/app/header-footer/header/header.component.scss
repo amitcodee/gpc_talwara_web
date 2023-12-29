@@ -23,10 +23,10 @@
   color: #fff;
 }
 
-:host .navbar-brand  {
+
+:host .navbar-scrolled .navbar-brand{
   color: #fff;
 }
-
 :host .text {
   color: #fff;
 }
@@ -83,4 +83,13 @@
 .dropdown>.dropdown-toggle:active {
   /*Without this, clicking will make it sticky*/
   pointer-events: none;
+}
+
+:host .navbar-scrolled .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  
+}
+
+:host .navbar-scrolled .navbar-toggler {
+  border-color: rgb(253, 250, 252);
 }
