@@ -10,19 +10,37 @@
   <div class="fixed-bottom fixed-bottom-div  text-center fixed-bottom" [ngClass]="{ 'd-none': showFixedBottomDiv }">
     <p class="fw-semibold fs-5 pt-1">Explore GPC Talwara <i class="fa-solid fa-caret-down"></i></p>
   </div>
+  <app-main-area></app-main-area>
 </div>
+
 <div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'ਪੰਜਾਬੀ'" [style.font-size.px]="getTextSize()">
   <div class="hero d-flex align-items-center justify-content-center">
     <div class="row">
       <div class="col-12 text-center mt-5">
-        <div class="text-white fw-bold fs-1">GPC Talwara </div>
+        <!-- <h1 class="text-white fw-bold " [ngClass]="{ 'd-none': showtitle }">SASS GPC Talwara</h1> -->
       </div>
     </div>
   </div>
   <!-- Fixed bottom div -->
   <div class="fixed-bottom fixed-bottom-div text-center fixed-bottom" [ngClass]="{ 'd-none': showFixedBottomDiv }">
     <p class="fw-semibold fs-5 pt-1">Explore GPC Talwara <i class="fa-solid fa-caret-down"></i></p>
-
   </div>
+  <app-main-area></app-main-area>
+
 </div>
-<app-main-area></app-main-area>
+
+
+<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'हिंदी'" [style.font-size.px]="getTextSize()">
+  <div class="hero d-flex align-items-center justify-content-center">
+    <div class="row">
+      <div class="col-12 text-center mt-5">
+        <!-- <h1 class="text-white fw-bold " [ngClass]="{ 'd-none': showtitle }">SASS GPC Talwara</h1> -->
+      </div>
+    </div>
+  </div>
+  <!-- Fixed bottom div -->
+  <div class="fixed-bottom fixed-bottom-div text-center fixed-bottom" [ngClass]="{ 'd-none': showFixedBottomDiv }">
+    <p class="fw-semibold fs-5 pt-1">जीपीसी तलवाड़ा का अन्वेषण करें <i class="fa-solid fa-caret-down"></i></p>
+  </div>
+  <app-main-area></app-main-area>
+</div>

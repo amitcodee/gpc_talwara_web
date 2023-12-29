@@ -23,3 +23,16 @@ button {
     padding: 3px;
     transform: rotate(-135deg);
 }
+
+.dark-mode button {
+    background-color: #fff;
+    color: #333;
+}
+
+.dark-mode .arrow-up-icon {
+    border: solid #333;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-135deg);
+}

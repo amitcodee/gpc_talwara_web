@@ -6,6 +6,9 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class ThemeService {
+  toggleDarkMode() {
+    throw new Error('Method not implemented.');
+  }
   private isDarkMode = new BehaviorSubject<boolean>(false);
   public isDarkMode$ = this.isDarkMode.asObservable();
 
