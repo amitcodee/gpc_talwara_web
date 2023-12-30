@@ -265,18 +265,18 @@
             <div class="dropdown">
               <button class="btn btn-light dropdown-toggle" type="button" id="darkModeDropdown" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <i class="fas {{ selectedDarkModeOption.icon }}"></i> {{ selectedDarkModeOption.label }} Mode
+                <i class="fas {{ selectedDarkModeOption.icon }}"></i> {{ selectedDarkModeOption.label }} ਮੋਡ
               </button>
 
               <div class="dropdown-menu" aria-labelledby="darkModeDropdown">
 
                 <a class="dropdown-item" (click)="setDarkMode({ label: 'Default', icon: 'fa-adjust' })">
-                  <i class="fas fa-adjust"></i> Default Mode
+                  <i class="fas fa-adjust"></i> ਡਿਫੌਲਟ ਮੋਡ
                 </a> <a class="dropdown-item" (click)="setDarkMode({ label: 'Light', icon: 'fa-sun' })">
-                  <i class="fas fa-sun"></i> Light Mode
+                  <i class="fas fa-sun"></i> ਲਾਈਟ ਮੋਡ
                 </a>
                 <a class="dropdown-item" (click)="setDarkMode({ label: 'Dark', icon: 'fa-solid fa-moon' })">
-                  <i class="fas fa-solid fa-moon"></i> Dark Mode
+                  <i class="fas fa-solid fa-moon"></i> ਡਾਰਕ ਮੋਡ
                 </a>
 
               </div>
@@ -296,8 +296,10 @@
 
   <nav class="navbar navbar-expand-lg" [ngClass]="{'fixed-top': navbarScrolled, 'navbar-scrolled': navbarScrolled}">
     <div class="container-fluid">
-      <a class="navbar-brand d-lg-none" routerLink="">t6r5
-        <i class="fas fa-icon"></i>
+      <a class="navbar-brand d-lg-none fw-bold fs-3" routerLink="">
+        <img src="../../assets/images/used/web-use/logo_college.png" alt="कॉलेज लोगो" class="img-fluid" width="50"
+          height="50">
+        SASS GPC ਤਲਵਾਰਾ
       </a>
 
       <!-- Navbar Toggle Button for Small Screens -->
@@ -308,18 +310,133 @@
 
       <!-- Navbar Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto text-center">
+        <ul class="navbar-nav mx-auto text-lg-center"> <!-- बड़े स्क्रीन्स में नैविगेशन लिंक्स को केंद्रीय करें -->
           <li class="nav-item">
-            <a class="nav-link fw-semibold " aria-current="page" routerLink="">ਹੋਮ</a>
+            <a class="nav-link fw-semibold" aria-current="page" routerLink="">ਹੋਮ
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              ਸਾਡੇ ਬਾਰੇ
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item fw-semibold" routerLink="/principal-message">ਮੁੱਖ ਸੁਨੇਹੇ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/vision-mission">ਵਿਜ਼ਨ ਅਤੇ ਮਿਸ਼ਨ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/mandatory-disclousure">ਲਾਜ਼ਮੀ ਟੂਰ</a>
+              </li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/grievance-redressal-committee">ਸ਼ਿਕਾਇਤ ਨਿਵਾਰਣ ਕਮੇਟੀ
+                </a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              ਵਿਦਿਅਕ
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item fw-semibold" routerLink="/courses">ਕੋਰਸ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/admission-intake">ਦਾਖਲੇ ਦੇ ਅੰਕੜੇ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/fees-structure">ਫੀਸ ਬਣਤਰ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/rules-discipline">ਨਿਯਮ ਅਤੇ ਅਨੁਸ਼ਾਸਨ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/scholarship-schemes">ਸਕਾਲਰਸ਼ਿਪ ਸਕੀਮਾਂ</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              ਵਿਭਾਗ
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item fw-semibold" routerLink="/cse">ਕੰਪਿਊਟਰ ਸਾਇੰਸ ਅਤੇ ਇੰਜੀਨੀਅਰਿੰਗ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ece">ਇਲੈਕਟ੍ਰਾਨਿਕਸ ਅਤੇ ਸੰਚਾਰ ਇੰਜੀਨੀਅਰਿੰਗ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ce">ਸਿਵਲ ਇੰਜੀਨਿਅਰੀ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ee">ਇਲੈਕਟ੍ਰਿਕਲ ਇੰਜਿਨੀਰਿੰਗ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/me">ਜੰਤਰਿਕ ਇੰਜੀਨਿਅਰੀ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/as">ਲਾਗੂ ਵਿਗਿਆਨ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ws">ਵਰਕਸ਼ਾਪ</a></li>
+
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              ਸਾਡੇ ਅਧਿਆਪਕ ਅਤੇ ਸਟਾਫ
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item fw-semibold" routerLink="/cse-faculty">ਕੰਪਿਊਟਰ ਇੰਜੀਨੀਅਰਿੰਗ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ece-faculty">ਇਲੈਕਟ੍ਰਾਨਿਕਸ ਅਤੇ ਸੰਚਾਰ ਇੰਜੀਨੀਅਰਿੰਗ</a>
+              </li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ce-faculty">ਸਿਵਲ ਇੰਜੀਨਿਅਰੀ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ee-faculty">ਇਲੈਕਟ੍ਰਿਕਲ ਇੰਜਿਨੀਰਿੰਗ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/me-faculty">ਜੰਤਰਿਕ ਇੰਜੀਨਿਅਰੀ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/as-faculty">ਲਾਗੂ ਵਿਗਿਆਨ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ws-faculty">ਵਰਕਸ਼ਾਪ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/supporting-staff">ਸਹਾਇਕ ਸਟਾਫ</a></li>
+
+
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              ਪਲੇਸਮੈਂਟ
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item fw-semibold" routerLink="/training-placement">ਸਿਖਲਾਈ ਅਤੇ ਟ੍ਰਾਂਸਫਰ ਸੈੱਲ</a>
+              </li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/student-placed">ਵਿਦਿਆਰਥੀ ਦਾ ਤਬਾਦਲਾ</a></li>
+            </ul>
+          </li>
+          <!-- <li class="nav-item dropdown">
+                  <a class="nav-link fw-semibold dropdown-toggle"  routerLink="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Study Metrial
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item fw-semibold"  routerLink="">कंप्यूटर इंजीनियरिंग</a></li>
+                      <li><a class="dropdown-item fw-semibold"  routerLink="">इलेक्ट्रॉनिक्स और संचार इंजीनियरिंग</a></li>
+                      <li><a class="dropdown-item fw-semibold"  routerLink="">सिविल इंजीनियरिंग</a></li>
+                      <li><a class="dropdown-item fw-semibold"  routerLink="">इलेक्ट्रिकल इंजीनियरिंग</a></li>
+                      <li><a class="dropdown-item fw-semibold"  routerLink="">मैकेनिकल इंजीनियरिंग</a></li>
+                      <li><a class="dropdown-item fw-semibold"  routerLink="">अनुप्रयुक्त विज्ञान</a></li>
+                      <li><a class="dropdown-item fw-semibold"  routerLink="">कार्यशाला</a></li>
+
+                  </ul>
+              </li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              ਮੀਡੀਆ
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item fw-semibold" routerLink="/events-picture">ਕਾਲਜ ਜੀਵਨ ਦੀਆਂ ਯਾਦਾਂ</a></li>
+              <!-- <li><a class="dropdown-item fw-semibold" routerLink="/social-media-account">वीडियो</a></li> -->
+              <li><a class="dropdown-item fw-semibold" routerLink="/student-activites">ਕਲਿੱਪ ਦਬਾਓ</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              ਉਪਯੋਗੀ ਲਿੰਕ
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item fw-semibold" routerLink="/right-to-information">ਸੂਚਨਾ ਦਾ ਅਧਿਕਾਰ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/examination">ਇਮਤਿਹਾਨ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/admission-help">ਦਾਖਲਾ ਹੈਲਪਲਾਈਨ</a></li>
+              <li><a class="dropdown-item fw-semibold"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeBsvstC_RDi1nY1pTz_qN-6Xa44yNXXh8bfVvxdnLAukdMug/viewform"
+                  target="_blank">ਸ਼ਿਕਾਇਤ ਨਿਵਾਰਨ ਪੋਰਟਲ</a></li>
+              <li><a class="dropdown-item fw-semibold" href="../../../assets/images/used/useful-link/aitce.pdf"
+                  target="_blank">AICTE ਮਨਜ਼ੂਰੀ
+                </a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/registration-portal">ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਪੋਰਟਲ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/buddy-program">ਬੱਡੀ ਪ੍ਰੋਗਰਾਮ</a></li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold" routerLink="">ਫੀਚਰ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-semibold" routerLink="">ਮੁਲਾਜ਼ਮ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-semibold disabled" aria-disabled="true">ਅਯੋਗ</a>
+            <a class="nav-link fw-semibold" routerLink="/contact-us">ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ</a>
           </li>
         </ul>
       </div>
