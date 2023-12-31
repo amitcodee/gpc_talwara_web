@@ -26,3 +26,31 @@
    </div>
   </div>
 </div>
+
+
+<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'ਪੰਜਾਬੀ'" [style.font-size.px]="getTextSize()">
+  <div class="container">
+    <div class="fw-bold fs-2 red-title border-bottom border-danger border-2  border-bottom border-danger border-2">
+      ਕਾਲਜ ਦੀਆਂ ਯਾਦਾਂ
+    </div>
+   <div class="py-3">
+    <div class="text-center">
+      <ul class="nav nav-tabs pt-3">
+        <li class="nav-item" *ngFor="let data of imageData">
+          <a class="nav-link red-link" [class.active]="activeTab === data.tab" (click)="changeTab(data.tab)"
+            href="javascript:void(0)">{{ data.tab }}</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="row">
+          <div class="col-md-3" *ngFor="let image of getImageList()">
+            <div class="img-container">
+              <img [src]="image" alt="{{ activeTab }} Image" class="img-thumbnail" (click)="openImageInNewTab(image)">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+  </div></div>
