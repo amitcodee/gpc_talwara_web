@@ -65,3 +65,38 @@
         </div>
     </div>
 </div>
+
+
+<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'हिंदी'" [style.font-size.px]="getTextSize()">
+    <div class="container">
+        <div
+            class="fw-bold fs-2 red-title pt-3 border-bottom border-danger border-2  border-bottom border-danger border-2">
+            मित्र कार्यक्रम</div>
+        <div class="py-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p class="card-title fs-4 fw-semibold">नशे की लत को दूर करने के लिए पंजाब सरकार की योजना</p>
+                            <div class="card-text fs-5">
+                                <div>
+                                    <span class="fw-semibold"> नोडल अधिकारी:</span> 
+                                    श्री. सुखविंदर सिंह
+                                </div>
+                                <div>
+                                    <span class="fw-semibold">फ़ोन: </span> +91-7986301984
+                                </div>
+                                <div> <span class="fw-semibold"> 
+                                    ईमेल: </span> gpctalwara&#64;gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="../../../assets/images/used/useful-link/buddy.png" alt="Scheme Image"
+                                class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
