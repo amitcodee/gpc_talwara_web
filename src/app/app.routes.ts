@@ -44,146 +44,183 @@ export const routes: Routes = [
   {
     path: 'contact-us',
     component: ContactUsComponent,
-    data: { title: 'Contact Us' },
+    data: { title: 'Contact Us - GPC Talwara' },
   },
   {
     path: 'principal-message',
     component: PrincipalMessageComponent,
+    data: { title: 'Principal Message - GPC Talwara' },
   },
   {
     path: 'vision-mission',
     component: VisionComponent,
+    data: { title: 'Vision & Mission - GPC Talwara' },
   },
   {
     path: 'mandatory-disclousure',
     component: MandotoryDiscloreComponent,
+    data: { title: 'Mandatory Disclousure - GPC Talwara' },
+
   },
   {
     path: 'grievance-redressal-committee',
     component: CommtieesComponent,
+    data: { title: 'Grievance Redressal Committee - GPC Talwara' },
   },
   {
     path: 'courses',
     component: CourseComponent,
+    data: { title: 'Courses - GPC Talwara' },
   },
   {
     path: 'admission-intake',
     component: AdmissionIntakeComponent,
+    data: { title: 'Admission Intake - GPC Talwara' },
   },
   {
     path: 'fees-structure',
     component: FeesStructureComponent,
+    data: { title: 'Fees Structure - GPC Talwara' },
   },
   {
     path: 'rules-discipline',
     component: RulesDisciplainComponent,
+    data: { title: 'Rules & Discipline - GPC Talwara' },
   },
   {
     path: 'scholarship-schemes',
     component: ScholershipSchemaComponent,
+    data: { title: 'Scholarship Schemes - GPC Talwara' },
   },
   {
     path: 'cse',
     component: CseComponent,
+    data: { title: 'Computer Science & Engineering - GPC Talwara' },
   },
   {
     path: 'ce',
     component: CeComponent,
+    data: { title: 'Civil Engineering - GPC Talwara' },
   },
   {
     path: 'me',
     component: MeComponent,
+    data: { title: 'Mechanical Engineering - GPC Talwara' },
   },
   {
     path: 'ee',
     component: EeComponent,
+    data: { title: 'Electrical Engineering - GPC Talwara' },
   },
   {
     path: 'ece',
     component: EceComponent,
+    data: { title: 'Electronics & Communication Engineering - GPC Talwara' },
   },
   {
     path: 'as',
     component: AsComponent,
+    data: { title: 'Applied Science - GPC Talwara' },
   },
   {
     path: 'ws',
     component: WsComponent,
+    data: { title: 'Workshop - GPC Talwara' },
   },
   {
     path: 'cse-faculty',
     component: CseFacultyComponent,
+    data: { title: 'CSE Staff - GPC Talwara' },
   },
   {
     path: 'ee-faculty',
     component: EeFacultyComponent,
+    data: { title: 'EE Staff - GPC Talwara' },
   },
   {
     path: 'ece-faculty',
     component: EceFacultyComponent,
+    data: { title: 'ECE Staff - GPC Talwara' },
   },
   {
     path: 'ee-faculty',
     component: EeFacultyComponent,
+    data: { title: 'EE Staff - GPC Talwara' },
   },
   {
     path: 'me-faculty',
     component: MeFacultyComponent,
+    data: { title: 'ME Staff - GPC Talwara' },
   },
   {
     path: 'ws-faculty',
     component: WsFacultyComponent,
+    data: { title: 'WS Staff - GPC Talwara' },
   },
   {
     path:'ce-faculty',
-    component:CeFacultyComponent
+    component:CeFacultyComponent,
+    data:{title:'CE Staff - GPC Talwara'}
+
   },
   {
     path: 'as-faculty',
     component: AsFacultyComponent,
+    data: { title: 'AS Staff - GPC Talwara' },
   },
   {
     path: 'supporting-staff',
     component: SupportingStaffComponent,
+    data: { title: 'Supporting Staff - GPC Talwara' },
   },
   {
     path:'training-placement',
-    component:TraningPlacementCellComponent
+    component:TraningPlacementCellComponent,
+    data:{title:'Training & Placement Cell - GPC Talwara'}
   },
   {
     path:'student-placed',
-    component:StudentPlacedComponent
+    component:StudentPlacedComponent,
+    data:{title:'Student Placed - GPC Talwara'}
   },
   {
     path:'events-picture',
-    component:EventPictureComponent
+    component:EventPictureComponent,
+    data:{title:'Events Picture - GPC Talwara'}
   },
   {
     path:'social-media-account',
-    component:SocialMediaAccountComponent
+    component:SocialMediaAccountComponent,
+    data:{title:'Social Media Account - GPC Talwara'}
   },
   {
     path:'student-activites',
-    component:StudentActivitiesComponent
+    component:StudentActivitiesComponent,
+    data:{title:'Press Clips - GPC Talwara'}
   },
   {
     path:'buddy-program',
-    component:BuddyProgramComponent
+    component:BuddyProgramComponent,
+    data:{title:'Buddy Program - GPC Talwara'}
   },
   {
     path:'registration-portal',
-    component:RegistrationComponent
+    component:RegistrationComponent,
+    data:{title:'Registration Portal - GPC Talwara'}
   },
   {
     path:'right-to-information',
-    component:RightToInfoComponent
+    component:RightToInfoComponent,
+    data:{title:'Right To Information - GPC Talwara'}
   },
   {
     path:'examination',
-    component:ExamComponent
+    component:ExamComponent,
+    data:{title:'Examination - GPC Talwara'}
   },
   {
     path:'admission-help',
-    component:AdmissionHelpdeskComponent
+    component:AdmissionHelpdeskComponent,
+    data:{title:'Admission Helpdesk - GPC Talwara'}
   }
 ];
