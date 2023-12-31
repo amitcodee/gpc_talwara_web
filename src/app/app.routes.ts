@@ -44,6 +44,7 @@ export const routes: Routes = [
   {
     path: 'contact-us',
     component: ContactUsComponent,
+    data: { title: 'Contact Us' },
   },
   {
     path: 'principal-message',
