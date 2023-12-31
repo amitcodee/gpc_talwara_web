@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language/language.service';
 import { TextSizeService } from '../../services/text-size/text-size.service';
 import { ThemeService } from '../../services/theme/theme.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
