@@ -38,22 +38,7 @@ export class HeaderComponent {
     private languageService: LanguageService,
     private themeService: ThemeService
   ) {}
-  closeNavbar() {
-    // Close the navigation menu for mobile screens
-    if (this.isMobile()) {
-      const navbarToggler = document.querySelector('.navbar-toggler') as HTMLElement;
-      const navbarCollapse = document.querySelector('.navbar-collapse') as HTMLElement;
 
-      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-        navbarToggler.click();
-      }
-    }
-  }
-
-  // Check if the screen size is below 992 pixels (typical Bootstrap mobile breakpoint)
-  isMobile(): boolean {
-    return window.innerWidth < 992;
-  }
   increaseTextSize(): void {
     this.textSizeService.increaseTextSize();
   }
@@ -84,5 +69,24 @@ export class HeaderComponent {
 
   getCurrentLanguage() {
     return this.languageService.currentLanguage;
+  }
+   // New method for scrolling to top and closing the navbar
+   scrollToTopAndCloseNavbar() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Close the navigation menu for mobile screens
+    if (this.isMobile()) {
+      const navbarToggler = document.querySelector('.navbar-toggler') as HTMLElement;
+      const navbarCollapse = document.querySelector('.navbar-collapse') as HTMLElement;
+
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        navbarToggler.click();
+      }
+    }
+  }
+
+  // Check if the screen size is below 992 pixels (typical Bootstrap mobile breakpoint)
+  isMobile(): boolean {
+    return window.innerWidth < 992;
   }
 }
