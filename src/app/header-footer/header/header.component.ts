@@ -14,9 +14,6 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-toggleNavbar() {
-throw new Error('Method not implemented.');
-}
   isDarkMode: any;
   navbarScrolled = false;
   languageOptions: string[] = ['English', 'ਪੰਜਾਬੀ', 'हिंदी'];
@@ -42,23 +39,20 @@ throw new Error('Method not implemented.');
     private themeService: ThemeService
   ) {}
   closeNavbar() {
-    // Close the navigation menu for small screens
-    const navbarToggler = document.querySelector('.navbar-toggler') as HTMLElement;
-    const navbarCollapse = document.querySelector('.navbar-collapse') as HTMLElement;
+    // Close the navigation menu for mobile screens
+    if (this.isMobile()) {
+      const navbarToggler = document.querySelector('.navbar-toggler') as HTMLElement;
+      const navbarCollapse = document.querySelector('.navbar-collapse') as HTMLElement;
 
-    if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
-      navbarToggler.click();
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        navbarToggler.click();
+      }
     }
   }
 
-  closeDropdown() {
-    // Close the dropdown menu
-    const navbarToggler = document.querySelector('.navbar-toggler') as HTMLElement;
-    const navbarCollapse = document.querySelector('.navbar-collapse') as HTMLElement;
-
-    if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
-      navbarToggler.click();
-    }
+  // Check if the screen size is below 992 pixels (typical Bootstrap mobile breakpoint)
+  isMobile(): boolean {
+    return window.innerWidth < 992;
   }
   increaseTextSize(): void {
     this.textSizeService.increaseTextSize();
