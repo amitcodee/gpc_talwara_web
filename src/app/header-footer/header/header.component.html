@@ -88,16 +88,16 @@
       </a>
 
       <!-- Navbar Toggle Button for Small Screens -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      <button class="navbar-toggler" type="button"  (click)="toggleNavbar()" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <!-- Navbar Links -->
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navbarNav" [class.show]="!navbarScrolled">
         <ul class="navbar-nav mx-auto text-lg-center"> <!-- Center the navlinks in large screens -->
           <li class="nav-item">
-            <a class="nav-link fw-semibold" aria-current="page" routerLink="">Home</a>
+            <a class="nav-link fw-semibold" aria-current="page" routerLink="/" (click)="closeNavbar()">Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link fw-semibold dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
@@ -105,11 +105,11 @@
               About us
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/principal-message">Principal Message</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/vision-mission">Vision & Mission</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/mandatory-disclousure">Mandatory Disclousure</a>
+              <li><a class="dropdown-item fw-semibold" routerLink="/principal-message" (click)="closeDropdown()">Principal Message</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/vision-mission" (click)="closeDropdown()">Vision & Mission</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/mandatory-disclousure" (click)="closeDropdown()">Mandatory Disclousure</a>
               </li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/grievance-redressal-committee">Grievance Redressal
+              <li><a class="dropdown-item fw-semibold" routerLink="/grievance-redressal-committee" (click)="closeDropdown()">Grievance Redressal
                   Committee</a></li>
             </ul>
           </li>
@@ -119,11 +119,11 @@
               Academics
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/courses">Courses</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/admission-intake">Admission Intake</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/fees-structure">Fees Structure</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/rules-discipline">Rules and Discipline</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/scholarship-schemes">Scholarship Schemes</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/courses" (click)="closeDropdown()">Courses</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/admission-intake" (click)="closeDropdown()">Admission Intake</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/fees-structure" (click)="closeDropdown()">Fees Structure</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/rules-discipline" (click)="closeDropdown()">Rules and Discipline</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/scholarship-schemes" (click)="closeDropdown()">Scholarship Schemes</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -132,13 +132,13 @@
               Departments
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/cse">Computer Science & Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ece">Electronics & Comm. Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ce">Civil Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ee">Electrical Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/me">Mechanical Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/as">Applied Sciences</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ws">Workshop</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/cse" (click)="closeDropdown()">Computer Science & Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ece" (click)="closeDropdown()">Electronics & Comm. Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ce" (click)="closeDropdown()">Civil Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ee" (click)="closeDropdown()">Electrical Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/me" (click)="closeDropdown()">Mechanical Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/as" (click)="closeDropdown()">Applied Sciences</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ws" (click)="closeDropdown()">Workshop</a></li>
 
             </ul>
           </li>
@@ -149,14 +149,14 @@
               Our Faculty & Staff
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/cse-faculty">Computer Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ece-faculty">Electronics & Comm. Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ce-faculty">Civil Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ee-faculty">Electrical Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/me-faculty">Mechanical Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/as-faculty">Applied Sciences</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ws-faculty">Workshop</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/supporting-staff">Supporting Staff</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/cse-faculty" (click)="closeDropdown()">Computer Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ece-faculty" (click)="closeDropdown()">Electronics & Comm. Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ce-faculty" (click)="closeDropdown()">Civil Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ee-faculty" (click)="closeDropdown()">Electrical Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/me-faculty" (click)="closeDropdown()">Mechanical Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/as-faculty" (click)="closeDropdown()">Applied Sciences</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ws-faculty" (click)="closeDropdown()">Workshop</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/supporting-staff" (click)="closeDropdown()">Supporting Staff</a></li>
 
 
             </ul>
@@ -168,9 +168,9 @@
               Placement
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/training-placement">Training and Placement Cell</a>
+              <li><a class="dropdown-item fw-semibold" routerLink="/training-placement" (click)="closeDropdown()">Training and Placement Cell</a>
               </li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/student-placed">Student Placed</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/student-placed" (click)="closeDropdown()">Student Placed</a></li>
             </ul>
           </li>
           <!-- <li class="nav-item dropdown">
@@ -194,9 +194,9 @@
               Media
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/events-picture">College Life Memories</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/events-picture" (click)="closeDropdown()">College Life Memories</a></li>
               <!-- <li><a class="dropdown-item fw-semibold" routerLink="/social-media-account">Videos</a></li> -->
-              <li><a class="dropdown-item fw-semibold" routerLink="/student-activites">Press Clips</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/student-activites" (click)="closeDropdown()">Press Clips</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -205,20 +205,20 @@
               Useful Links
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/right-to-information">Right To Information</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/examination">Examination</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/admission-help">Admission Helpline</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/right-to-information" (click)="closeDropdown()">Right To Information</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/examination" (click)="closeDropdown()">Examination</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/admission-help" (click)="closeDropdown()">Admission Helpline</a></li>
               <li><a class="dropdown-item fw-semibold"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSeBsvstC_RDi1nY1pTz_qN-6Xa44yNXXh8bfVvxdnLAukdMug/viewform"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeBsvstC_RDi1nY1pTz_qN-6Xa44yNXXh8bfVvxdnLAukdMug/viewform" (click)="closeDropdown()"
                   target="_blank"> Grievance Redressal Portal</a></li>
-              <li><a class="dropdown-item fw-semibold" href="../../../assets/images/used/useful-link/aitce.pdf"
+              <li><a class="dropdown-item fw-semibold" href="../../../assets/images/used/useful-link/aitce.pdf" (click)="closeDropdown()"
                   target="_blank">AICTE Approval</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/registration-portal">Registration Portal</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/buddy-program">Buddy Program</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/registration-portal" (click)="closeDropdown()">Registration Portal</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/buddy-program" (click)="closeDropdown()">Buddy Program</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold" routerLink="/contact-us">Contact us</a>
+            <a class="nav-link fw-semibold" routerLink="/contact-us"  (click)="closeNavbar()">Contact us</a>
           </li>
         </ul>
       </div>
