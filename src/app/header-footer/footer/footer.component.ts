@@ -37,4 +37,22 @@ export class FooterComponent {
   getCurrentLanguage() {
     return this.languageService.currentLanguage;
   }
+  
+  scrollToTopAndCloseNavbar() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Close the navigation menu for mobile screens
+    if (this.isMobile()) {
+      const navbarToggler = document.querySelector('.navbar-toggler') as HTMLElement;
+      const navbarCollapse = document.querySelector('.navbar-collapse') as HTMLElement;
+
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        navbarToggler.click();
+      }
+    }
+  }
+
+  isMobile(): boolean {
+    return window.innerWidth < 992;
+  }
 }

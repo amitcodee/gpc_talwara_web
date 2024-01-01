@@ -70,7 +70,6 @@ export class HeaderComponent {
   getCurrentLanguage() {
     return this.languageService.currentLanguage;
   }
-   // New method for scrolling to top and closing the navbar
    scrollToTopAndCloseNavbar() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
@@ -85,7 +84,6 @@ export class HeaderComponent {
     }
   }
 
-  // Check if the screen size is below 992 pixels (typical Bootstrap mobile breakpoint)
   isMobile(): boolean {
     return window.innerWidth < 992;
   }
