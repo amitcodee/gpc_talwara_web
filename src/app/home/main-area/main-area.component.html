@@ -932,3 +932,504 @@
     <img src="../../../assets/images/used/building/16.jpg" class="img-fluid" alt="">
   </div><br>
 </div>
+
+
+
+
+
+
+<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'हिंदी'" [style.font-size.px]="getTextSize()">
+  <div class="container mx-auto">
+    <br>
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-5">
+            <img src="../../../assets/images/used/web-use/poly.jpeg" alt="" class="img-fluid">
+          </div>
+          <div class="col-md-7">
+            <div class="fw-bold fs-3 red-title">
+              पॉलिटेक्निक शिक्षा</div>
+            <p class="">पॉलिटेक्निक का अर्थ है कई कलाओं और विज्ञानों में विशेष शिक्षा देना
+              उनके प्रति सम्मान
+              जीविकोपार्जन में उपयोग करें। पॉलिटेक्निक एक ऐसा संस्थान है जिसमें प्रौद्योगिकियों पर आधारित है
+              गणितीय और वैज्ञानिक आधार जैसे इंजीनियरिंग और अन्य व्यावहारिक विज्ञान पढ़ाए जाते हैं।
+              पॉलिटेक्निक शिक्षा कैरियर आधारित शिक्षा प्रदान करती है। कॅरियर का चुनाव संभव है
+              में से एक
+              
+              किसी के जीवन के सबसे महत्वपूर्ण निर्णय। यह भविष्य को आकार देता है और जीवन शैली को निर्धारित करता है।
+              
+              तेज़
+              तकनीकी विकास की दौड़ और उद्योग द्वारा इसके बढ़ते अपनाने के कारण
+              बढ़ रही है
+              औद्योगिक गतिविधि की जटिलता.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card mt-5">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="fw-bold fs-3 red-title">
+              रैगिंग के विरोध</div>
+            <p class="">किसी छात्र या छात्रा द्वारा किया गया कोई भी आचरण चाहे बोले गए या लिखित शब्दों द्वारा या किसी द्वारा
+              ऐसा कार्य जिसमें किसी नए व्यक्ति या किसी को चिढ़ाने, उसके साथ व्यवहार करने या उसके साथ अशिष्ट व्यवहार करने का प्रभाव हो
+              अन्य
+              विद्यार्थी।
+              कॉलेज में रैगिंग के खिलाफ कार्रवाई के लिए निम्नलिखित प्रावधान हैं: रैगिंग भीतर या
+              बाहर
+              किसी भी शैक्षणिक संस्थान का प्रवेश वर्जित है। जो कोई भी प्रतिबद्ध है, भाग लेता है, या
+              प्रसारित
+              संस्थान के भीतर या बाहर रैगिंग करने पर दंडित किया जाएगा। किसी भी छात्र को किसी अपराध का दोषी ठहराया गया
+              का
+              रैगिंग को कॉलेज से बर्खास्त कर दिया जाएगा।
+              किसी छात्र या छात्रा द्वारा उपद्रवी या अनुशासित गतिविधियों में शामिल होना जो या का कारण बनता है
+              है
+              झुंझलाहट, कठिनाई, शारीरिक या मनोवैज्ञानिक हानि या भय उत्पन्न होने की संभावना है
+              किसी भी नए छात्र या किसी अन्य छात्र में इसकी आशंका।
+            </p>
+            <div class="text-center">
+              <a class="btn btn-red text-decoration-none" href="http://www.antiragging.in/">अधिक जानकारी के लिए
+                जानकारी </a>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <img src="../../../assets/images/used/web-use/ragging.png" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fw-bold fs-2 red-title pt-3 border-bottom border-danger border-2  border-bottom border-danger border-2">
+      नवीनतम समाचार और घटनाएँ
+    </div>
+    <div *ngIf="selectedNews === 'first_news'" id="first_news">
+      <div class="row">
+        <div class="col-md-8 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/2.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">
+                प्रवेश प्रक्रिया प्रारंभ </h5>
+              <p class="card-text"> सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू</p>
+              <a href="https://eakadamik.in/psbte_2022/" class="btn btn-red">और ज्यादा खोजें</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2 d-none d-md-flex flex-column">
+          <div class="card flex-grow-1">
+            <div class="card-body">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <button class="nav-link text-start fs-5 red-title fw-semibold" (click)="selectNews('first_news')">
+                    <img src="../../../assets/images/used/web-use/new.gif" class="img-fluid" height="60px" width="60px"
+                      alt=""> सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू </button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link text-start fs-5 red-title fw-semibold" (click)="selectNews('second_news')">
+                    <img src="../../../assets/images/used/web-use/new.gif" class="img-fluid" height="60px" width="60ox"
+                      alt="">
+                      प्रवेश प्रक्रिया के लिए संपर्क करें: 9501107354, 9501648500, 7009110372, 8437700636, 9417433471,7696889004
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link text-start fs-5 red-title fw-semibold" (click)="selectNews('third_news')">
+                    <img src="../../../assets/images/used/web-use/new.gif" class="img-fluid" height="60px" width="60ox"
+                      alt="">
+                    3 </button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link text-start fs-5 red-title fw-semibold" (click)="selectNews('fourth_news')">
+                    <img src="../../../assets/images/used/web-use/new.gif" class="img-fluid" height="60px" width="60ox"
+                      alt="">
+                    4 </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/3.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">
+                प्रवेश हेल्पलाइन Desk</h5>
+              <p class="card-text">प्रवेश प्रक्रिया के लिए संपर्क करें: 9501107354, 9501648500, 7009110372, 8437700636,
+                9417433471,7696889004</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#second-news">और पढ़ें</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/5.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">
+                तीसरी-खबर</h5>
+              <p class="card-text">सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू।</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#third-news">
+                और पढ़ें</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/7.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">चौथा समाचार</h5>
+              <p class="card-text">
+                सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू।</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#fourth-news">
+                और पढ़ें</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="selectedNews === 'second_news'" id="second_news">
+      <div class="row">
+        <div class="col-md-8 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/3.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">प्रवेश हेल्पलाइनDesk</h5>
+              <p class="card-text">
+                प्रवेश प्रक्रिया के लिए संपर्क करें: 9501107354, 9501648500, 7009110372, 8437700636,
+                9417433471,7696889004</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#second-news">और पढ़ें</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2 d-none d-md-flex flex-column">
+          <div class="card flex-grow-1">
+            <div class="card-body">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <button class="nav-link text-start fs-5 red-title fw-semibold" (click)="selectNews('second_news')">
+                    <img src="../../../assets/images/used/web-use/new.gif" class="img-fluid" height="60px" width="60ox"
+                      alt="">
+                
+प्रवेश प्रक्रिया के लिए संपर्क करें:9501107354, 9501648500, 7009110372, 8437700636, 9417433471,7696889004
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link text-start fs-5 red-title fw-semibold" (click)="selectNews('third_news')">
+                    <img src="../../../assets/images/used/web-use/new.gif" class="img-fluid" height="60px" width="60ox"
+                      alt="">
+                    3 </button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link text-start fs-5 red-title fw-semibold" (click)="selectNews('fourth_news')">
+                    <img src="../../../assets/images/used/web-use/new.gif" class="img-fluid" height="60px" width="60ox"
+                      alt="">
+                    4 </button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link text-start fs-5 red-title fw-semibold" (click)="selectNews('first_news')">
+                    <img src="../../../assets/images/used/web-use/new.gif" class="img-fluid" height="60px" width="60px"
+                      alt=""> सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/5.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">तीसरी-खबर</h5>
+              <p class="card-text">सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू।</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#third-news">और पढ़ें</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/7.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">
+                चौथा समाचार</h5>
+              <p class="card-text">सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू।</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#fourth-news">
+                और पढ़ें</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/4.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">
+                पहली खबर</h5>
+              <p class="card-text">सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू।</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#third-news">और पढ़ें</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="selectedNews === 'third_news'" id="third_news">
+      <div class="row">
+        <div class="col-md-8 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/5.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">तीसरी-खबर</h5>
+              <p class="card-text">सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू।</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#third-news">और पढ़ें</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2 d-none d-md-flex flex-column">
+          <div class="card flex-grow-1">
+            <div class="card-body">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <button class="nav-link text-start fs-5 red-title fw-semibold" (click)="selectNews('third_news')">
+                    <img src="../../../assets/images/used/web-use/new.gif" class="img-fluid" height="60px" width="60ox"
+                      alt="">
+                    333
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link text-start fs-5 red-title fw-semibold" (click)="selectNews('fourth_news')">
+                    <img src="../../../assets/images/used/web-use/new.gif" class="img-fluid" height="60px" width="60ox"
+                      alt="">
+                    444 </button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link text-start fs-5 red-title fw-semibold" (click)="selectNews('first_news')">
+                    <img src="../../../assets/images/used/web-use/new.gif" class="img-fluid" height="60px" width="60px"
+                      alt=""> सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू। </button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link text-start fs-5 red-title fw-semibold" (click)="selectNews('second_news')">
+                    <img src="../../../assets/images/used/web-use/new.gif" class="img-fluid" height="60px" width="60ox"
+                      alt="">
+                      प्रवेश प्रक्रिया के लिए संपर्क करें:9501107354, 9501648500, 7009110372, 8437700636, 9417433471,7696889004
+                  </button>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/7.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">चौथा समाचार</h5>
+              <p class="card-text">सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू।</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#fourth-news">
+                और पढ़ें</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/2.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">प्रवेश प्रक्रिया प्रारंभ </h5>
+              <p class="card-text"> सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू।</p>
+              <a href="https://eakadamik.in/psbte_2022/" class="btn btn-red">और ज्यादा खोजें</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/3.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">प्रवेश हेल्पलाइन डेस्क</h5>
+              <p class="card-text">प्रवेश प्रक्रिया के लिए संपर्क करें:
+                9501107354, 9501648500, 7009110372, 8437700636,
+                9417433471,7696889004</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#second-news">और पढ़ें</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="selectedNews === 'fourth_news'" id="second_news">
+      <div class="row">
+        <div class="col-md-8 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/7.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">चौथा समाचार</h5>
+              <p class="card-text">सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू।</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#fourth-news">और पढ़ें</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2 d-none d-md-flex flex-column">
+          <div class="card flex-grow-1">
+            <div class="card-body">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <button class="nav-link text-start fs-5 red-title fw-semibold" (click)="selectNews('fourth_news')">
+                    <img src="../../../assets/images/used/web-use/new.gif" class="img-fluid" height="60px" width="60ox"
+                      alt="">
+                    444 </button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link text-start fs-5 red-title fw-semibold" (click)="selectNews('first_news')">
+                    <img src="../../../assets/images/used/web-use/new.gif" class="img-fluid" height="60px" width="60px"
+                      alt=""> 
+                      सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू </button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link text-start fs-5 red-title fw-semibold" (click)="selectNews('second_news')">
+                    <img src="../../../assets/images/used/web-use/new.gif" class="img-fluid" height="60px" width="60ox"
+                      alt="">
+                      प्रवेश प्रक्रिया के लिए संपर्क करें: 9501107354, 9501648500, 7009110372, 8437700636, 9417433471,7696889004
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link text-start fs-5 red-title fw-semibold" (click)="selectNews('third_news')">
+                    <img src="../../../assets/images/used/web-use/new.gif" class="img-fluid" height="60px" width="60ox"
+                      alt="">
+                    333
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/2.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">प्रवेश प्रक्रिया प्रारंभ </h5>
+              <p class="card-text"> सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू।</p>
+              <a href="https://eakadamik.in/psbte_2022/" class="btn btn-red">और ज्यादा खोजें</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/3.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">प्रवेश हेल्पलाइन डेस्क</h5>
+              <p class="card-text">प्रवेश प्रक्रिया के लिए संपर्क करें:9501107354, 9501648500, 7009110372, 8437700636,
+                9417433471,7696889004</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#second-news">और पढ़ें</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2">
+          <div class="card">
+            <img src="../../../assets/images/used/addmision/5.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">तीसरी-खबर</h5>
+              <p class="card-text">
+                सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू।</p>
+              <a href="#" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#third-news">और पढ़ें</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="second-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title fw-bold fs-5" id="exampleModalLabel">प्रवेश हेल्पडेस्क</div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <table class="table border">
+                <thead>
+                  <tr>
+                    <th scope="col">शिक्षक का नाम</th>
+                    <th scope="col">शाखा</th>
+                    <th scope="col">
+                      संपर्क संख्या</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">
+                      अध्यापक 1</td>
+                    <td>
+                      शाखा 1</td>
+                    <td>9501107354</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">अध्यापक2</td>
+                    <td>शाखा 2</td>
+                    <td>9501648500</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">अध्यापक 3</td>
+                    <td>शाखा 3</td>
+                    <td>7009110372</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">अध्यापक 4</td>
+                    <td>शाखा 4</td>
+                    <td>8437700636</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">अध्यापक 5</td>
+                    <td>शाखा 5</td>
+                    <td>9417433471</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">अध्यापक 6</td>
+                    <td>शाखा 6</td>
+                    <td>7696889004</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-red" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="third-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fw-bold fs-5" id="exampleModalLabel">33</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-red" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="fourth-news" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fw-bold fs-5" id="exampleModalLabel">44</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-red" data-bs-dismiss="modal">बंद करना</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="">
+    <img src="../../../assets/images/used/building/16.jpg" class="img-fluid" alt="">
+  </div>
+  <br>
+</div>
+
