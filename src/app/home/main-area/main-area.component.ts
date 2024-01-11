@@ -3,13 +3,14 @@ import { LanguageService } from '../../services/language/language.service';
 import { ThemeService } from '../../services/theme/theme.service';
 import { TextSizeService } from '../../services/text-size/text-size.service';
 import { CommonModule } from '@angular/common';
+import { NewsComponent } from "../news-section/news/news.component";
 
 @Component({
-  selector: 'app-main-area',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './main-area.component.html',
-  styleUrl: './main-area.component.scss'
+    selector: 'app-main-area',
+    standalone: true,
+    templateUrl: './main-area.component.html',
+    styleUrl: './main-area.component.scss',
+    imports: [CommonModule, NewsComponent]
 })
 export class MainAreaComponent {
   isDarkMode = false;

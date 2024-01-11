@@ -35,6 +35,9 @@ import { RegistrationComponent } from './home/registration/registration.componen
 import { RightToInfoComponent } from './home/right-to-info/right-to-info.component';
 import { ExamComponent } from './home/exam/exam.component';
 import { AdmissionHelpdeskComponent } from './home/admission-helpdesk/admission-helpdesk.component';
+import { SecondNewsComponent } from './home/news-section/second-news/second-news.component';
+import { ThirdComponent } from './home/news-section/third/third.component';
+import { FourthNewsComponent } from './home/news-section/fourth-news/fourth-news.component';
 
 export const routes: Routes = [
   {
@@ -222,5 +225,20 @@ export const routes: Routes = [
     path:'admission-help',
     component:AdmissionHelpdeskComponent,
     data:{title:'Admission Helpdesk - GPC Talwara'}
+  },
+  {
+    path:'second-news',
+    component:SecondNewsComponent,  
+    data:{title:' News - GPC Talwara'}
+  },
+  {
+    path:'third-news',
+    component:ThirdComponent,
+    data:{title:' News - GPC Talwara'}
+  },
+  {
+    path:'fourth-news',
+    component:FourthNewsComponent,
+    data:{title:'News - GPC Talwara'}
   }
 ];

@@ -8,13 +8,14 @@ import { FooterComponent } from './header-footer/footer/footer.component';
 import { HeaderComponent } from './header-footer/header/header.component';
 import { ScrollButtonComponent } from './header-footer/scroll-button/scroll-button.component';
 import { HeroSectionComponent } from './home/hero-section/hero-section.component';
+import { NewsComponent } from "./home/news-section/news/news.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
-  imports: [CommonModule, RouterOutlet, RouterLink, HeaderComponent, HeroSectionComponent, FooterComponent, ScrollButtonComponent]
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss',
+    imports: [CommonModule, RouterOutlet, RouterLink, HeaderComponent, HeroSectionComponent, FooterComponent, ScrollButtonComponent, NewsComponent]
 })
 export class AppComponent implements OnInit {
   constructor(private router: Router, private titleService: TitleService) {}
