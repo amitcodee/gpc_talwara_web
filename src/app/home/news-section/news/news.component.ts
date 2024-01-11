@@ -50,7 +50,8 @@ export class NewsComponent implements OnInit {
       "imagePath": "../../../assets/images/used/addmision/2.webp",
       "description": "Admission process for session 2023-24 started",
       "link": "https://eakadamik.in/psbte_2022/",
-      "punjabi_title": "ਦਾਖਲਾ ਹੈਲਪਲਾਈਨ ਡੈਸਕ",
+      "first_punjabi_title": "ਦਾਖਲਾ ਪ੍ਰਕਿਰਿਆ ਸ਼ੁਰੂ ਹੋ ਗਈ ਹੈ",
+      "first_punjabi_description":"ਸੈਸ਼ਨ 2023-24 ਲਈ ਦਾਖਲਾ ਪ੍ਰਕਿਰਿਆ ਸ਼ੁਰੂ"
     },
     {
       "id": "second_news",
@@ -58,6 +59,7 @@ export class NewsComponent implements OnInit {
       "imagePath": "../../../assets/images/used/addmision/3.webp",
       "description": "Contact for admission process: 9501107354, 9501648500, 7009110372, 8437700636, 9417433471,7696889004",
       "link": "/second-news",
+      "punjabi_title":"ਦਾਖਲਾ ਹੈਲਪਲਾਈਨ ਡੈਸਕ"
      
 
     },
