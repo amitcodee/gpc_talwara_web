@@ -51,15 +51,22 @@ export class NewsComponent implements OnInit {
       "description": "Admission process for session 2023-24 started",
       "link": "https://eakadamik.in/psbte_2022/",
       "first_punjabi_title": "ਦਾਖਲਾ ਪ੍ਰਕਿਰਿਆ ਸ਼ੁਰੂ ਹੋ ਗਈ ਹੈ",
-      "first_punjabi_description":"ਸੈਸ਼ਨ 2023-24 ਲਈ ਦਾਖਲਾ ਪ੍ਰਕਿਰਿਆ ਸ਼ੁਰੂ"
+      "first_punjabi_description":"ਸੈਸ਼ਨ 2023-24 ਲਈ ਦਾਖਲਾ ਪ੍ਰਕਿਰਿਆ ਸ਼ੁਰੂ",
+      "first_hindi_title":"प्रवेश प्रक्रिया शुरू हो गई है",
+      "first_hindi_description":"सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू"
     },
     {
       "id": "second_news",
       "title": "Admission Helpline Desk",
       "imagePath": "../../../assets/images/used/addmision/3.webp",
-      "description": "Contact for admission process: 9501107354, 9501648500, 7009110372, 8437700636, 9417433471,7696889004",
+      "description": "ਦਾਖਲਾ ਪ੍ਰਕਿਰਿਆ ਲਈ ਸੰਪਰਕ: 9501107354, 9501648500, 7009110372, 8437700636, 9417433471,7696889004",
       "link": "/second-news",
-      "punjabi_title":"ਦਾਖਲਾ ਹੈਲਪਲਾਈਨ ਡੈਸਕ"
+      "second_punjabi_title":"ਦਾਖਲਾ ਹੈਲਪਲਾਈਨ ਡੈਸਕ",
+      "second_punjabi_description":"ਦਾਖਲਾ ਪ੍ਰਕਿਰਿਆ ਲਈ ਸੰਪਰਕ: 9501107354, 9501648500, 7009110372, 8437700636, 9417433471,7696889004",
+      "second_hindi_title":"प्रवेश हेल्पलाइन डेस्क",
+      "second_hindi_description":"प्रवेश प्रक्रिया के लिए संपर्क करें: 9501107354, 9501648500, 7009110372, 8437700636, 9417433471,7696889004",
+
+
      
 
     },
@@ -68,7 +75,11 @@ export class NewsComponent implements OnInit {
       "title": "third-news",
       "imagePath": "../../../assets/images/used/addmision/5.webp",
       "description": "Admission process for session 2023-24 started.",
-      "link": "/third-news"
+      "link": "/third-news",
+      "third_punjabi_title":"ਤੀਜੀ ਖਬਰ",
+      "third_punjabi_description":"ਸੈਸ਼ਨ 2023-24 ਲਈ ਦਾਖਲਾ ਪ੍ਰਕਿਰਿਆ ਸ਼ੁਰੂ ਹੋ ਗਈ ਹੈ।",
+      "third_hindi_title":"तीसरी खबर",
+      "third_hindi_description":"सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू हो गई है।",
 
 
     },
@@ -77,7 +88,11 @@ export class NewsComponent implements OnInit {
       "title": "fourth News",
       "imagePath": "../../../assets/images/used/addmision/7.webp",
       "description": "Admission process for session 2023-24 started.",
-      "link": "/fourth-news"
+      "link": "/fourth-news",
+      "fourth_punjabi_title":"ਚੌਥੀ ਖਬਰ",
+      "fourth_punjabi_description":"ਸੈਸ਼ਨ 2023-24 ਲਈ ਦਾਖਲਾ ਪ੍ਰਕਿਰਿਆ ਸ਼ੁਰੂ ਹੋ ਗਈ ਹੈ।",
+      "fourth_hindi_title":"चौथी खबर",
+      "fourth_hindi_description":"सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू हो गई है।"
 
     }
   ];
