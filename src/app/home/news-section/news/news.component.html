@@ -1,11 +1,8 @@
-<!-- src/app/news/news.component.html -->
-
 <div class="fw-bold fs-2 red-title pt-3 border-bottom border-danger border-2">
   Latest News And Events
 </div>
 
 <div class="row">
-  <!-- Display the selected news item in a big box -->
   <div class="col-md-8 py-2" *ngIf="selectedNews">
     <div class="card">
       <img [src]="selectedNews.imagePath" class="card-img-top img-fluid" alt="...">
@@ -17,41 +14,16 @@
     </div>
   </div>
 
-  <!-- Display the list of other news items on the right side -->
   <div class="col-md-4 py-2 d-none d-md-flex flex-column">
     <div class="card">
       <div class="card-body">
         <div class="card my-4 flex-grow-1" *ngFor="let news of newsList" (click)="selectNews(news)">
           <div class="card-body">
-            <button class="nav-link text-start fs-5 red-title fw-semibold"><img [src]="news.imagePath" class="img-fluid" height="50" width="50" alt="..."> {{ news.title }}</button>
-            <button target="_blank" class="nav-link" *ngIf="news.link" >Read More...</button>
+            <button class="nav-link text-start fs-5 red-title fw-semibold"><img [src]="news.imagePath" class="img-fluid"
+                height="50" width="50" alt="..."> {{ news.title }}</button>
+            <button target="_blank" class="nav-link" *ngIf="news.link">Read More...</button>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal for showing detailed information -->
-<!-- ... your existing content ... -->
-
-<!-- Modal for showing detailed information -->
-<div class="modal fade" id="newsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title fw-bold fs-5" id="exampleModalLabel">{{ selectedNews?.title }}</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="container">
-          <!-- Add detailed information here -->
-          <p>{{ selectedNews?.description }}</p>
-          <a *ngIf="selectedNews?.link" [href]="selectedNews?.link">Explore More</a>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-red" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

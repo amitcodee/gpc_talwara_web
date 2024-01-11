@@ -1,5 +1,3 @@
-// src/app/news/news.component.ts
-
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -50,11 +48,11 @@ export class NewsComponent {
 imagePath: any;
 
   ngOnInit(): void {
-    // Set the selectedNews to the first news in the newsList array
     this.selectedNews = this.newsList[0];
   }
 
   selectNews(news: any): void {
     this.selectedNews = news;
   }
+  
 }
