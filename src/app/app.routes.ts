@@ -26,7 +26,7 @@ import { SupportingStaffComponent } from './pages/faculty/supporting-staff/suppo
 import { TraningPlacementCellComponent } from './pages/placemnt/traning-placement-cell/traning-placement-cell.component';
 import { StudentPlacedComponent } from './pages/placemnt/student-placed/student-placed.component';
 import { EventPictureComponent } from './pages/media/college-life-memories/event-picture.component';
-import { SocialMediaAccountComponent } from './pages/media/social-media-account/social-media-account.component';
+
 import { StudentActivitiesComponent } from './pages/media/press-clips/student-activities.component';
 import { CommtieesComponent } from './pages/about-us/commtiees/commtiees.component';
 import { CeFacultyComponent } from './pages/faculty/ce/ce.component';
@@ -191,11 +191,7 @@ export const routes: Routes = [
     component:EventPictureComponent,
     data:{title:'Events Picture - GPC Talwara'}
   },
-  {
-    path:'social-media-account',
-    component:SocialMediaAccountComponent,
-    data:{title:'Social Media Account - GPC Talwara'}
-  },
+  
   {
     path:'student-activites',
     component:StudentActivitiesComponent,
