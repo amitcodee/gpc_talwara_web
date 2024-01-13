@@ -6,14 +6,14 @@
 
   <div class="row">
     <div class="col-md-8 py-2" *ngIf="selectedNews">
-      <div class="card">
+     
         <img [src]="selectedNews.imagePath" class="card-img-top img-fluid" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{ selectedNews.title }}</h5>
           <p class="card-text">{{ selectedNews.description }}</p>
-          <a *ngIf="selectedNews.link" [href]="selectedNews.link" class="btn btn-red">Explore More</a>
+          <a *ngIf="selectedNews.link" [href]="selectedNews.link" class="btn btn-red">{{ selectedNews.link_explore}}</a>
         </div>
-      </div>
+      
     </div>
 
     <div class="col-md-4 py-2 d-none d-md-flex flex-column">
@@ -33,7 +33,70 @@
 </div>
 <div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'ਪੰਜਾਬੀ'" [style.font-size.px]="getTextSize()">
 
-  <h5 class="">{{ selectedNews.first_punjabi_title }}</h5>
-  <p class="card-text">{{ selectedNews.first_punjabi_description }}</p>
+  <div class="fw-bold fs-2 red-title pt-3 border-bottom border-danger border-2">
+    {{selectedNews.heading_punjabi}}
+  </div>
 
+  <div class="row">
+    <div class="col-md-8 py-2" *ngIf="selectedNews">
+      <div class="card">
+        <img [src]="selectedNews.imagePath" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ selectedNews.first_punjabi_title }}</h5>
+          <p class="card-text">{{ selectedNews.first_punjabi_description }}</p>
+          <a *ngIf="selectedNews.link" [href]="selectedNews.link" class="btn btn-red">{{
+            selectedNews.first_punjabi_link_explore}}</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 py-2 d-none d-md-flex flex-column">
+      <div class="card">
+        <div class="card-body">
+          <div class="card my-4 flex-grow-1" *ngFor="let news of newsList" (click)="selectNews(news)">
+            <div class="card-body">
+              <button class="nav-link text-start fs-5 red-title fw-semibold"><img [src]="news.imagePath"
+                  class="img-fluid" height="50" width="50" alt="..."> {{ news.punjabi_title }}</button>
+              <button target="_blank" class="nav-link" *ngIf="news.link">ਹੋਰ ਪੜ੍ਹੋ...</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<!-----hindi----->
+<div class="dark" [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'हिंदी'"
+  [style.font-size.px]="getTextSize()">
+  <div class="fw-bold fs-2 red-title pt-3 border-bottom border-danger border-2">
+    {{ selectedNews.heading_hindi}}
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 py-2" *ngIf="selectedNews">
+      <div class="card">
+        <img [src]="selectedNews.imagePath" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ selectedNews.first_hindi_title }}</h5>
+          <p class="card-text">{{ selectedNews.first_hindi_description }}</p>
+          <a *ngIf="selectedNews.link" [href]="selectedNews.link" class="btn btn-red">{{
+            selectedNews.first_hindi_link_explore}}</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 py-2 d-none d-md-flex flex-column">
+      <div class="card">
+        <div class="card-body">
+          <div class="card my-4 flex-grow-1" *ngFor="let news of newsList" (click)="selectNews(news)">
+            <div class="card-body">
+              <button class="nav-link text-start fs-5 red-title fw-semibold"><img [src]="news.imagePath"
+                  class="img-fluid" height="50" width="50" alt="..."> {{ news.hindi_title }}</button>
+              <button target="_blank" class="nav-link" *ngIf="news.link">और पढ़ें...</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
