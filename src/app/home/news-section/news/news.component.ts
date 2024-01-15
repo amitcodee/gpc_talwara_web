@@ -56,29 +56,24 @@ link: any;
       "description": "Admission process for session 2023-24 started",
       "link_explore":"Explore More",
       "punjabi_title": "ਦਾਖਲਾ ਪ੍ਰਕਿਰਿਆ ਸ਼ੁਰੂ ਹੋ ਗਈ ਹੈ",
-      "first_punjabi_description":"ਸੈਸ਼ਨ 2023-24 ਲਈ ਦਾਖਲਾ ਪ੍ਰਕਿਰਿਆ ਸ਼ੁਰੂ",
-      "first_punjabi_link_explore":"ਹੋਰ ਪੜਚੋਲ ਕਰੋ",
-      "punjabi_nav-link":"ਹੋਰ ਪੜ੍ਹੋ...",
+      "punjabi_description":"ਸੈਸ਼ਨ 2023-24 ਲਈ ਦਾਖਲਾ ਪ੍ਰਕਿਰਿਆ ਸ਼ੁਰੂ",
+      "punjabi_link_explore":"ਹੋਰ ਪੜਚੋਲ ਕਰੋ",
       "hindi_title":"प्रवेश प्रक्रिया शुरू हो गई है",
-      "first_hindi_description":"सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू",
-      "first_hindi_link_explore":"और ज्यादा खोजें",
+      "hindi_description":"सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू",
+      "hindi_link_explore":"और ज्यादा खोजें",
       "imagePath": "../../../assets/images/used/addmision/2.webp",
       "link": "https://eakadamik.in/psbte_2022/",
     },
     {
       "id": "second_news",
       "title": "Admission Helpline Desk",
-      "imagePath": "../../../assets/images/used/addmision/3.webp",
       "description": "ਦਾਖਲਾ ਪ੍ਰਕਿਰਿਆ ਲਈ ਸੰਪਰਕ: 9501107354, 9501648500, 7009110372, 8437700636, 9417433471,7696889004",
-      "link": "/second-news",
       "punjabi_title":"ਦਾਖਲਾ ਹੈਲਪਲਾਈਨ ਡੈਸਕ",
-      "second_punjabi_description":"ਦਾਖਲਾ ਪ੍ਰਕਿਰਿਆ ਲਈ ਸੰਪਰਕ: 9501107354, 9501648500, 7009110372, 8437700636, 9417433471,7696889004",
+      "punjabi_description":"ਦਾਖਲਾ ਪ੍ਰਕਿਰਿਆ ਲਈ ਸੰਪਰਕ: 9501107354, 9501648500, 7009110372, 8437700636, 9417433471,7696889004",
       "hindi_title":"प्रवेश हेल्पलाइन डेस्क",
-      "second_hindi_description":"प्रवेश प्रक्रिया के लिए संपर्क करें: 9501107354, 9501648500, 7009110372, 8437700636, 9417433471,7696889004",
-
-
-     
-
+      "hindi_description":"प्रवेश प्रक्रिया के लिए संपर्क करें: 9501107354, 9501648500, 7009110372, 8437700636, 9417433471,7696889004",
+      "imagePath": "../../../assets/images/used/addmision/3.webp",
+      "link": "/second-news",
     },
     {
       "id": "third_news",
@@ -87,9 +82,9 @@ link: any;
       "description": "Admission process for session 2023-24 started.",
       "link": "/third-news",
       "punjabi_title":"ਤੀਜੀ ਖਬਰ",
-      "third_punjabi_description":"ਸੈਸ਼ਨ 2023-24 ਲਈ ਦਾਖਲਾ ਪ੍ਰਕਿਰਿਆ ਸ਼ੁਰੂ ਹੋ ਗਈ ਹੈ।",
+      "punjabi_description":"ਸੈਸ਼ਨ 2023-24 ਲਈ ਦਾਖਲਾ ਪ੍ਰਕਿਰਿਆ ਸ਼ੁਰੂ ਹੋ ਗਈ ਹੈ।",
       "hindi_title":"तीसरी खबर",
-      "third_hindi_description":"सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू हो गई है।",
+      "hindi_description":"सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू हो गई है।",
 
 
     },
@@ -100,9 +95,9 @@ link: any;
       "description": "Admission process for session 2023-24 started.",
       "link": "/fourth-news",
       "punjabi_title":"ਚੌਥੀ ਖਬਰ",
-      "fourth_punjabi_description":"ਸੈਸ਼ਨ 2023-24 ਲਈ ਦਾਖਲਾ ਪ੍ਰਕਿਰਿਆ ਸ਼ੁਰੂ ਹੋ ਗਈ ਹੈ।",
+      "punjabi_description":"ਸੈਸ਼ਨ 2023-24 ਲਈ ਦਾਖਲਾ ਪ੍ਰਕਿਰਿਆ ਸ਼ੁਰੂ ਹੋ ਗਈ ਹੈ।",
       "hindi_title":"चौथी खबर",
-      "fourth_hindi_description":"सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू हो गई है।"
+      "hindi_description":"सत्र 2023-24 के लिए प्रवेश प्रक्रिया शुरू हो गई है।"
 
     }
   ];
