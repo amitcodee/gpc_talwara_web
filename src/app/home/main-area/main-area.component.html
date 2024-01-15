@@ -1,52 +1,119 @@
 <div class="dark" [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'English'"
   [style.font-size.px]="getTextSize()">
-  <div class="container mx-auto">
+  <div class="container-fluid mx-auto">
     <br>
     <div class="row text-center">
-      <div class="fw-bold fs-1 red-title text-center py-3">Polytechnic Education</div>
-      <div class="col-md-12 my-2">
-        <p class="fs-3 lh-lg fw-lighter">Polytechnic means giving instruction in a number of arts and sciences with
-          special
-          regard for their
-          use in making a living. Polytechnic is an institute in which technologies that are based on
-          mathematical & scientific basis such as engineering and other applied sciences are taught.
-          Polytechnic education provides career based education. The choice of a career is possibly
-          one of
-          the
-          most critical decisions in one's life. It shapes the future and determines the life style.
-          The
-          rapid
-          race of technological development and its increasing adoption by industry have led to
-          growing
-          complexity of industrial activity.</p>
+      <div class="bg-body-tertiary py-5">
+        <div class="container">
+          <div class="fw-bold fs-1 red-title text-center">Polytechnic Education</div>
+          <div class="col-md-12 my-2">
+            <p class="fs-3 lh-lg fw-lighter">Polytechnic means giving instruction in a number of arts and sciences with
+              special
+              regard for their
+              use in making a living. Polytechnic is an institute in which technologies that are based on
+              mathematical & scientific basis such as engineering and other applied sciences are taught.
+              Polytechnic education provides career based education. The choice of a career is possibly
+              one of
+              the
+              most critical decisions in one's life. It shapes the future and determines the life style.
+              The
+              rapid
+              race of technological development and its increasing adoption by industry have led to
+              growing
+              complexity of industrial activity.</p>
+          </div>
+          <div class="col-md-12">
+            <img src="../../../assets/images/used/web-use/poly.webp" style="max-width: 85%;" alt=""
+              class="img-fluid shadow rounded">
+          </div>
+        </div>
       </div>
-      <div class="col-md-12">
-        <img src="../../../assets/images/used/web-use/poly.webp" style="max-width: 85%;" alt=""
-          class="img-fluid shadow rounded">
-      </div>
+    </div>
+    <div class="container">
       <div class="col-md-12">
         <div class="fw-bold fs-1 red-title text-center py-3">Anti-Ragging</div>
       </div>
       <div class="col-md-12 my-2">
         <p class="fs-3 lh-lg fw-lighter">The college strictly prohibits ragging, including verbal or physical
-          mistreatment of freshers. Offenders face dismissal. Any disruptive activities causing annoyance, hardship, or
+          mistreatment of freshers. Offenders face dismissal. Any disruptive activities causing annoyance, hardship,
+          or
           harm, whether physical or psychological, will result in disciplinary action. The college is committed to
-          maintaining a safe and inclusive environment for all students.
-        </p>
-        <div class="text-center">
-          <a class="btn btn-red btn-lg text-decoration-none mt-3" href="http://www.antiragging.in/">For More
+          maintaining a safe and inclusive environment for all students. <a class="red-title text-decoration-none mt-3"
+            href="http://www.antiragging.in/">For More
             information </a>
+        </p>
+        <div class="col-md-12 text-center pt-2">
+          <img src="../../../assets/images/used/web-use/ragging.webp" alt="" class="img-fluid shadow rounded">
         </div>
       </div>
-      <div class="col-md-12 text-center pt-2">
-        <img src="../../../assets/images/used/web-use/ragging.webp" alt="" 
-          class="img-fluid shadow rounded">
-
+    </div>
+    <app-news></app-news>
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <div class="fw-bold fs-1 red-title text-center py-3">Academics</div>
+        </div>
+        <div class="col-md-12 my-2">
+          <p class="fs-3 lh-lg fw-lighter">Preparing students to make meaningful contributions to society as engaged
+            citizens and leaders in a complex world
+          </p>
+          <div class="col-md-12 text-center pt-2">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card border border-0">
+                  <img src="../../../assets/images/used/web-use/ce.webp" class="card-img-top" alt="">
+                  <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's content.
+                    </p>
+                    <a routerLink="" class="text-decoration-none red-title fw-semibold">Explore More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card border border-0">
+                  <img src="../../../assets/images/used/web-use/ce.webp" class="card-img-top" alt="">
+                  <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's content.
+                    </p>
+                    <a routerLink="" class="text-decoration-none red-title fw-semibold">Explore More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card border border-0">
+                  <img src="../../../assets/images/used/web-use/ce.webp" class="card-img-top" alt="">
+                  <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's content.
+                    </p>
+                    <a routerLink="" class="text-decoration-none red-title fw-semibold">Explore More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 fw-bold fs-1 red-title text-center py-3 ">
+          Seven schools in which to pursue your passions
+        </div>
+        <div class="col-md-12">
+          <div class="row text-center">
+            <div class="col-md-2  border-3 border-start border-end fs-3">CSE</div>
+            <div class="col-md-2  border-3  border-end fs-3">ME</div>
+            <div class="col-md-2  border-3 border-end fs-3">ECE</div>
+            <div class="col-md-2  border-3 border-end fs-3">EE</div>
+            <div class="col-md-2  border-3  border-end fs-3">CE</div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <app-news></app-news>
   </div>
+
   <div class="">
     <img src="../../../assets/images/used/building/16.webp" class="img-fluid" alt="">
   </div>
