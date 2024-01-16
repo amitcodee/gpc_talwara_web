@@ -18,6 +18,9 @@ import { NewsComponent } from "./home/news-section/news/news.component";
     imports: [CommonModule, RouterOutlet, RouterLink, HeaderComponent, HeroSectionComponent, FooterComponent, ScrollButtonComponent, NewsComponent]
 })
 export class AppComponent implements OnInit {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   constructor(private router: Router, private titleService: TitleService) {}
 
   ngOnInit() {
