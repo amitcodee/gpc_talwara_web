@@ -61,7 +61,7 @@
 }
 
 .img-container:hover::before {
-  background-color: rgba(255, 255, 255, 0.5); /* White tone on hover */
+  background-color: rgba(92, 88, 88, 0.5); /* White tone on hover */
 }
 
 .overlay-text {
@@ -78,4 +78,5 @@
 
 .img-container:hover .overlay-text {
   opacity: 1; /* Show text on hover */
+  color: #fff;
 }
