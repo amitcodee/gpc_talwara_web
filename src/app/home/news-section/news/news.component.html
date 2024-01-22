@@ -1,6 +1,73 @@
-<div class="dark" [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'English'"
+<div class="dark" [class.dark-mode]="isDarkMode"
+  *ngIf="getCurrentLanguage() === 'English'"
   [style.font-size.px]="getTextSize()">
-  <div class="fw-bold fs-2 red-title pt-3 border-bottom border-danger border-2">
+  <!-- <div class="container my-5">
+    <div class="fw-bold text-center ">
+      <h1 class="fw-bold fs-1"> Campus More</h1>
+      <p class="fs-3"> Stories about people, research, and innovation across the Farm</p>
+      <div class="row " >
+        <div class="col">
+          <div class="card ">
+            <img src="../../../../assets/images/used/web-use/ce.webp" class="card-img-top" alt="m">
+            <div class="card-body">
+              <h5 class="card-title red-title fs-3 ">SCIENCE & TECHNOLOGY</h5>
+              <p class="card-text fs-6">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="../../../../assets/images/used/web-use/ce.webp" class="card-img-top" alt="m">
+            <div class="card-body">
+              <h5 class="card-title red-title fs-3 ">SCIENCE & TECHNOLOGY</h5>
+              <p class="card-text fs-6">This card has supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-70">
+            <img src="../../../../assets/images/used/web-use/ce.webp" class="card-img-top" alt="m">
+            <div class="card-body">
+              <h5 class="card-title red-title fs-3">SCIENCE & TECHNOLOGY</h5>
+              <p class="card-text fs-6">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5 ">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card ">
+          <img src="your_image_url.jpg" class="card-img-top" alt="Card Image">
+          <div class="card-body ">
+            <h5 class="card-title">science & TECHNOLOGY</h5>
+            <p class="card-text">Some example text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div></div>
+        <div class="col-md-4"><div class="card ">
+          <img src="your_image_url.jpg" class="card-img-top" alt="Card Image">
+          <div class="card-body">
+            <h5 class="card-title h-70">science & TECHNOLOGY</h5>
+            <p class="card-text">Some example text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div></div>
+        <div class="col-md-4"><div class="card">
+          <img src="your_image_url.jpg" class="card-img-top" alt="Card Image">
+          <div class="card-body">
+            <h5 class="card-title h-70">science & TECHNOLOGY</h5>
+            <p class="card-text">Some example text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div></div>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="fw-bold fs-2 red-title pt-3 border-bottom border-danger border-2 my-3">
     {{ selectedNews.heading}}
   </div>
   <div class="row">
@@ -60,41 +127,105 @@
       </div>
     </div>
   </div>
-  
+
 
   <!-- <div class="row">
     <div class="col-md-8 py-2" *ngIf="selectedNews">
-
-      <img [src]="selectedNews.imagePath" class="card-img-top img-fluid" alt="...">
+      <img [src]="selectedNews.imagePath" class="card-img-top img-fluid" alt="m">
       <h5 class="">{{ selectedNews.title }}</h5>
       <p class="">{{ selectedNews.description }}</p>
       <a *ngIf="selectedNews.link" [href]="selectedNews.link" class="btn btn-red">{{ selectedNews.link_explore}}</a>
     </div>
-
-
     <div class="col-md-4 py-2 d-none d-md-flex flex-column">
-
       <div class="card my-4 flex-grow-1" *ngFor="let news of newsList" (click)="selectNews(news)">
         <div class="card-body">
           <div class="row">
             <div class="col-md-4">
-              <img [src]="news.imagePath" class="img-fluid" height="99px" max-width="117%"  alt="...">
-
+              <img [src]="news.imagePath" class="img-fluid" height="99px" max-width="117%"  alt="m">
             </div>
             <div class="col-md-8">
               <button class="nav-link text-start fs-5 red-title fw-semibold"> {{ news.title }}</button>
               <button class="nav-link text-start"> {{ news.description }}</button>
-              <button target="_blank" class="nav-link" *ngIf="news.link">Read More...</button>
+              <button target="_blank" class="nav-link" *ngIf="news.link">Read More../../../../assets/images/used/classes/15.webp</button>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div> -->
+  <div class="grid-container">
+    <div class="container text-center ">
+      <div class="fs-1 red-title py-3 fw-semibold">
+        Campus News
+        </div>
+    <div class="row  row-cols-1 row-cols-md-3 g-3">
+      <div class="col-md-6">
+    <div class="card">
+      <img src="../../../../assets/images/used/classes/15.webp" alt="">
+      <div class="card-img-overlay">
+        <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below
+            as a natural lead-in to additional content. This content is a little
+            bit longer.</p>
+            </div>
+    </div>
+  </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img src="../../../../assets/images/used/classes/15.webp" class="card-img-top" alt="m">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card
+            title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img src="../../../../assets/images/used/classes/15.webp" class="card-img-top" alt="m">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card
+            title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row py-3">
+    <div class="col-md-4 ">
+      <div class="card " >
+        <img src="../../../../assets/images/used/classes/15.webp" class="card-img" alt="m">
+        <div class="card-img-overlay" >
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below
+            as a natural lead-in to additional content. This content is a little
+            bit longer.</p>
+          <p class="card-text"><small>Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      </div>
+   <div class="col-md-4">
+      <div class="card" >
+        <img src="../../../../assets/images/used/classes/15.webp" class="card-img-top" alt="m">
+        <div class="card-body flex-fill">
+          <p class="card-text">Some quick example text to build on the card
+            title and make up the bulk of the card's content.</p>
+        </div>
+      </div> </div>
+
+    <div class="col-md-4">
+      <div class="card" >
+        <img src="../../../../assets/images/used/classes/15.webp" class="card-img-top" alt="m">
+        <div class="card-body flex-grow-1 ms-3">
+          <p class="card-text">Some quick example text to build on the card
+            title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+
 </div>
+</div></div>
 <!---punjabi--->
-<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'ਪੰਜਾਬੀ'" [style.font-size.px]="getTextSize()">
+<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'ਪੰਜਾਬੀ'"
+  [style.font-size.px]="getTextSize()">
 
   <div class="fw-bold fs-2 red-title pt-3 border-bottom border-danger border-2">
     {{selectedNews.heading_punjabi}}
@@ -102,24 +233,31 @@
 
   <div class="row">
     <div class="col-md-8 py-2" *ngIf="selectedNews">
-      <img [src]="selectedNews.imagePath" class="card-img-top img-fluid" alt="...">
-      <h5 class="">{{ selectedNews.punjabi_title }}</h5>
-      <p class="">{{ selectedNews.first_punjabi_description }}</p>
-      <a *ngIf="selectedNews.link" [href]="selectedNews.link" class="btn btn-red">{{
+      <img [src]="selectedNews.imagePath" class="card-img-top img-fluid"
+        alt="m">
+      <h5 class>{{ selectedNews.punjabi_title }}</h5>
+      <p class>{{ selectedNews.first_punjabi_description }}</p>
+      <a *ngIf="selectedNews.link" [href]="selectedNews.link"
+        class="btn btn-red">{{
         selectedNews.first_punjabi_link_explore}}</a>
     </div>
 
     <div class="col-md-4 py-2 d-none d-md-flex flex-column">
-      <div class="card my-4 flex-grow-1" *ngFor="let news of newsList" (click)="selectNews(news)">
+      <div class="card my-4 flex-grow-1" *ngFor="let news of newsList"
+        (click)="selectNews(news)">
         <div class="card-body">
           <div class="row">
             <div class="col-md-4">
-              <img [src]="news.imagePath" class="img-fluid" height="99px" width="117%">
+              <img [src]="news.imagePath"
+                class="img-fluid" height="99px" width="117%">
             </div>
             <div class="col-md-8">
-              <button class="nav-link text-start fs-5 red-title fw-semibold"> {{ news.punjabi_title }}</button>
-              <button class="nav-link text-start "> {{ news.punjabi_description }}</button>
-              <button target="_blank" class="nav-link" *ngIf="news.link">ਹੋਰ ਪੜ੍ਹੋ...</button>
+              <button class="nav-link text-start fs-5 red-title fw-semibold"> {{
+                news.punjabi_title }}</button>
+              <button class="nav-link text-start "> {{ news.punjabi_description
+                }}</button>
+              <button target="_blank" class="nav-link" *ngIf="news.link">ਹੋਰ
+                ਪੜ੍ਹੋ../../../../assets/images/used/classes/15.webp</button>
             </div>
           </div>
         </div>
@@ -128,9 +266,9 @@
   </div>
 </div>
 
-
 <!-----hindi----->
-<div class="dark" [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'हिंदी'"
+<div class="dark" [class.dark-mode]="isDarkMode"
+  *ngIf="getCurrentLanguage() === 'हिंदी'"
   [style.font-size.px]="getTextSize()">
   <div class="fw-bold fs-2 red-title pt-3 border-bottom border-danger border-2">
     {{ selectedNews.heading_hindi}}
@@ -138,23 +276,29 @@
 
   <div class="row">
     <div class="col-md-8 py-2" *ngIf="selectedNews">
-      <img [src]="selectedNews.imagePath" class="card-img-top img-fluid" alt="...">
-      <h5 class="">{{ selectedNews.hindi_title }}</h5>
-      <p class="">{{ selectedNews.hindi_description }}</p>
-      <a *ngIf="selectedNews.link" [href]="selectedNews.link" class="btn btn-red">{{
+      <img [src]="selectedNews.imagePath" class="card-img-top img-fluid"
+        alt="m">
+      <h5 class>{{ selectedNews.hindi_title }}</h5>
+      <p class>{{ selectedNews.hindi_description }}</p>
+      <a *ngIf="selectedNews.link" [href]="selectedNews.link"
+        class="btn btn-red">{{
         selectedNews.first_hindi_link_explore}}</a>
     </div>
 
     <div class="col-md-4 py-2 d-none d-md-flex flex-column">
-      <div class="card my-4 flex-grow-1" *ngFor="let news of newsList" (click)="selectNews(news)">
+      <div class="card my-4 flex-grow-1" *ngFor="let news of newsList"
+        (click)="selectNews(news)">
         <div class="card-body">
           <div class="row">
             <div class="col-md-4">
-              <img [src]="news.imagePath" class="img-fluid" height="50" width="50" alt="...">
+              <img [src]="news.imagePath"
+                class="img-fluid" height="50" width="50" alt="m">
             </div>
             <div class="col-md-8">
-              <button class="nav-link text-start fs-5 red-title fw-semibold"> {{ news.hindi_title }}</button>
-              <button target="_blank" class="nav-link" *ngIf="news.link">और पढ़ें...</button>
+              <button class="nav-link text-start fs-5 red-title fw-semibold"> {{
+                news.hindi_title }}</button>
+              <button target="_blank" class="nav-link" *ngIf="news.link">और
+                पढ़ें../../../../assets/images/used/classes/15.webp</button>
             </div>
           </div>
         </div>
