@@ -303,10 +303,11 @@
     </div>
 </div>
 <div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'ਪੰਜਾਬੀ'" [style.font-size.px]="getTextSize()">
-    <div class="container">
+    <div class="container fs-4 lh-lg fw-lighter">
         <div
-            class="fw-bold fs-2 red-title pt-3 border-bottom border-danger border-2  border-bottom border-danger border-2">
+            class="fw-bold fs-1 red-title pt-3 border-bottom border-danger border-2  border-bottom border-danger border-2">
             ਸਾਡੀਆਂ ਕਮੇਟੀਆਂ</div>
+            <div class="py-3">
         <div class="fw-bold fs-3 red-title py-3">
             ਸ਼ਿਕਾਇਤ ਨਿਵਾਰਣ ਕਮੇਟੀ</div>
         <table class="table border-danger border">
@@ -615,7 +616,7 @@
         <br>
     </div>
 </div>
-
+</div>
 
 <!--hindi-->
 <div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'हिंदी'" [style.font-size.px]="getTextSize()">
