@@ -225,72 +225,142 @@
 <!---punjabi--->
 <div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'ਪੰਜਾਬੀ'" [style.font-size.px]="getTextSize()">
 
-  <div class="fw-bold fs-2 red-title pt-3 border-bottom border-danger border-2">
-    {{selectedNews.heading_punjabi}}
-  </div>
-
   <div class="row">
-    <div class="col-md-8 py-2" *ngIf="selectedNews">
-      <img [src]="selectedNews.imagePath" class="card-img-top img-fluid" alt="m">
-      <h5 class>{{ selectedNews.punjabi_title }}</h5>
-      <p class>{{ selectedNews.first_punjabi_description }}</p>
-      <a *ngIf="selectedNews.link" [href]="selectedNews.link" class="btn btn-red">{{
-        selectedNews.first_punjabi_link_explore}}</a>
+    <div class="fs-1 red-title py-3 fw-semibold text-center">
+      ਤਾਜ਼ਾ ਖ਼ਬਰਾਂ ਅਤੇ ਘਟਨਾਵਾਂ
     </div>
-
-    <div class="col-md-4 py-2 d-none d-md-flex flex-column">
-      <div class="card my-4 flex-grow-1" *ngFor="let news of newsList" (click)="selectNews(news)">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-md-4">
-              <img [src]="news.imagePath" class="img-fluid" height="99px" width="117%">
-            </div>
-            <div class="col-md-8">
-              <button class="nav-link text-start fs-5 red-title fw-semibold"> {{
-                news.punjabi_title }}</button>
-              <button class="nav-link text-start "> {{ news.punjabi_description
-                }}</button>
-              <button target="_blank" class="nav-link" *ngIf="news.link">ਹੋਰ
-                ਪੜ੍ਹੋ../../../../assets/images/used/classes/15.webp</button>
-            </div>
-          </div>
+    <div class="col-md-6" style="height: 290px">
+      <div class="card h-50 text-dark flex-grow-1">
+        <img src="../../../../assets/images/used/building/1.webp" class="card-img" style="height: 278px;" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title">ਕਾਰਡ ਦਾ ਸਿਰਲੇਖ</h5>
+          <p class="card-text">ਇਹ ਵਾਧੂ ਲਈ ਕੁਦਰਤੀ ਲੀਡ-ਇਨ ਦੇ ਰੂਪ ਵਿੱਚ ਹੇਠਾਂ ਸਹਾਇਕ ਟੈਕਸਟ ਦੇ ਨਾਲ ਇੱਕ ਵਿਸ਼ਾਲ ਕਾਰਡ ਹੈ
+            ਸਮੱਗਰੀ| ਇਹ ਸਮੱਗਰੀ ਥੋੜੀ ਲੰਬੀ ਹੈ।</p>
+          <p class="card-text"><small>ਆਖਰੀ ਵਾਰ 3 ਮਿੰਟ ਪਹਿਲਾਂ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ</small></p>
         </div>
       </div>
     </div>
-  </div>
+    <div class="col-md-3" style="height: 290px">
+      <div class="card">
+        <img src="../../../../assets/images/used/building/1.webp" class="card-img-top mx-auto" style="height: 172px;"
+          alt="...">
+        <div class="card-body">
+          <p class="card-text">ਕਾਰਡ ਦੇ ਸਿਰਲੇਖ ਨੂੰ ਬਣਾਉਣ ਅਤੇ ਕਾਰਡ ਦੇ ਵੱਡੇ ਹਿੱਸੇ ਨੂੰ ਬਣਾਉਣ ਲਈ ਕੁਝ ਤੇਜ਼ ਉਦਾਹਰਨ ਟੈਕਸਟ
+            ਸਮੱਗਰੀ|</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3" style="height: 290px">
+      <div class="card">
+        <img src="../../../../assets/images/used/building/1.webp" class="card-img-top mx-auto" style="height: 172px;"
+          alt="...">
+        <div class="card-body">
+          <p class="card-text">ਕਾਰਡ ਦੇ ਸਿਰਲੇਖ ਨੂੰ ਬਣਾਉਣ ਅਤੇ ਕਾਰਡ ਦੇ ਵੱਡੇ ਹਿੱਸੇ ਨੂੰ ਬਣਾਉਣ ਲਈ ਕੁਝ ਤੇਜ਼ ਉਦਾਹਰਨ ਟੈਕਸਟ
+            ਸਮੱਗਰੀ|</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3" style="height: 290px">
+      <div class="card">
+        <img src="../../../../assets/images/used/building/1.webp" class="card-img-top mx-auto" style="height: 172px;"
+          alt="...">
+        <div class="card-body">
+          <p class="card-text">ਕਾਰਡ ਦੇ ਸਿਰਲੇਖ ਨੂੰ ਬਣਾਉਣ ਅਤੇ ਕਾਰਡ ਦੇ ਵੱਡੇ ਹਿੱਸੇ ਨੂੰ ਬਣਾਉਣ ਲਈ ਕੁਝ ਤੇਜ਼ ਉਦਾਹਰਨ ਟੈਕਸਟ
+            ਸਮੱਗਰੀ|</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3" style="height: 290px">
+      <div class="card">
+        <img src="../../../../assets/images/used/building/1.webp" class="card-img-top mx-auto" style="height: 172px;"
+          alt="...">
+        <div class="card-body">
+          <p class="card-text">ਕਾਰਡ ਦੇ ਸਿਰਲੇਖ ਨੂੰ ਬਣਾਉਣ ਅਤੇ ਕਾਰਡ ਦੇ ਵੱਡੇ ਹਿੱਸੇ ਨੂੰ ਬਣਾਉਣ ਲਈ ਕੁਝ ਤੇਜ਼ ਉਦਾਹਰਨ ਟੈਕਸਟ
+            ਸਮੱਗਰੀ|</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6" style="height: 290px">
+      <div class="card h-50 text-dark flex-grow-1">
+        <img src="../../../../assets/images/used/building/1.webp" class="card-img" style="height: 278px;" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title">ਕਾਰਡ ਦਾ ਸਿਰਲੇਖ</h5>
+          <p class="card-text">ਇਹ ਵਾਧੂ ਲਈ ਕੁਦਰਤੀ ਲੀਡ-ਇਨ ਦੇ ਰੂਪ ਵਿੱਚ ਹੇਠਾਂ ਸਹਾਇਕ ਟੈਕਸਟ ਦੇ ਨਾਲ ਇੱਕ ਵਿਸ਼ਾਲ ਕਾਰਡ ਹੈ
+            ਸਮੱਗਰੀ| ਇਹ ਸਮੱਗਰੀ ਥੋੜੀ ਲੰਬੀ ਹੈ।</p>
+          <p class="card-text"><small>ਆਖਰੀ ਵਾਰ 3 ਮਿੰਟ ਪਹਿਲਾਂ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ</small></p>
+        </div>
+      </div>
+    </div>
 </div>
 
 <!-----hindi----->
 <div class="dark" [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'हिंदी'"
   [style.font-size.px]="getTextSize()">
-  <div class="fw-bold fs-2 red-title pt-3 border-bottom border-danger border-2">
-    {{ selectedNews.heading_hindi}}
-  </div>
-
   <div class="row">
-    <div class="col-md-8 py-2" *ngIf="selectedNews">
-      <img [src]="selectedNews.imagePath" class="card-img-top img-fluid" alt="m">
-      <h5 class>{{ selectedNews.hindi_title }}</h5>
-      <p class>{{ selectedNews.hindi_description }}</p>
-      <a *ngIf="selectedNews.link" [href]="selectedNews.link" class="btn btn-red">{{
-        selectedNews.first_hindi_link_explore}}</a>
+    <div class="fs-1 red-title py-3 fw-semibold text-center">
+      नवीनतम समाचार और घटनाएँ
     </div>
-
-    <div class="col-md-4 py-2 d-none d-md-flex flex-column">
-      <div class="card my-4 flex-grow-1" *ngFor="let news of newsList" (click)="selectNews(news)">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-md-4">
-              <img [src]="news.imagePath" class="img-fluid" height="50" width="50" alt="m">
-            </div>
-            <div class="col-md-8">
-              <button class="nav-link text-start fs-5 red-title fw-semibold"> {{
-                news.hindi_title }}</button>
-              <button target="_blank" class="nav-link" *ngIf="news.link">और
-                पढ़ें../../../../assets/images/used/classes/15.webp</button>
-            </div>
-          </div>
+    <div class="col-md-6" style="height: 290px">
+      <div class="card h-50 text-dark flex-grow-1">
+        <img src="../../../../assets/images/used/building/1.webp" class="card-img" style="height: 278px;" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title">कार्ड का शीर्षक</h5>
+          <p class="card-text">यह एक बड़ा कार्ड है जिसमें अतिरिक्त सामग्री के लिए स्वाभाविक रूप से नीचे सहायक पाठ है
+            सामग्री | यह सामग्री थोड़ी लंबी है|</p>
+          <p class="card-text"><small>अंतिम बार 3 मिनट पहले अपडेट किया गया</small></p>
         </div>
       </div>
     </div>
-  </div>
+    <div class="col-md-3" style="height: 290px">
+      <div class="card">
+        <img src="../../../../assets/images/used/building/1.webp" class="card-img-top mx-auto" style="height: 172px;"
+          alt="...">
+        <div class="card-body">
+          <p class="card-text">कार्ड का शीर्षक और कार्ड का मुख्य भाग बनाने के लिए कुछ त्वरित उदाहरण पाठ
+            सामग्री |</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3" style="height: 290px">
+      <div class="card">
+        <img src="../../../../assets/images/used/building/1.webp" class="card-img-top mx-auto" style="height: 172px;"
+          alt="...">
+        <div class="card-body">
+          <p class="card-text">कार्ड का शीर्षक और कार्ड का मुख्य भाग बनाने के लिए कुछ त्वरित उदाहरण पाठ
+            सामग्री |</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3" style="height: 290px">
+      <div class="card">
+        <img src="../../../../assets/images/used/building/1.webp" class="card-img-top mx-auto" style="height: 172px;"
+          alt="...">
+        <div class="card-body">
+          <p class="card-text">कार्ड का शीर्षक और कार्ड का मुख्य भाग बनाने के लिए कुछ त्वरित उदाहरण पाठ
+            सामग्री |</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3" style="height: 290px">
+      <div class="card">
+        <img src="../../../../assets/images/used/building/1.webp" class="card-img-top mx-auto" style="height: 172px;"
+          alt="...">
+        <div class="card-body">
+          <p class="card-text">कार्ड का शीर्षक और कार्ड का मुख्य भाग बनाने के लिए कुछ त्वरित उदाहरण पाठ
+            सामग्री |</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6" style="height: 290px">
+      <div class="card h-50 text-dark flex-grow-1">
+        <img src="../../../../assets/images/used/building/1.webp" class="card-img" style="height: 278px;" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title">कार्ड का शीर्षक</h5>
+          <p class="card-text">यह एक बड़ा कार्ड है जिसमें अतिरिक्त सामग्री के लिए स्वाभाविक रूप से नीचे सहायक पाठ है
+            सामग्री | यह सामग्री थोड़ी लंबी है|</p>
+          <p class="card-text"><small>अंतिम बार 3 मिनट पहले अपडेट किया गया</small></p>
+        </div>
+      </div>
+    </div>
