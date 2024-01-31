@@ -3,23 +3,24 @@ import { LanguageService } from '../../services/language/language.service';
 import { ThemeService } from '../../services/theme/theme.service';
 import { TextSizeService } from '../../services/text-size/text-size.service';
 import { CommonModule } from '@angular/common';
-import { NewsComponent } from "../news-section/news/news.component";
+import { NewsComponent } from '../news-section/news/news.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
-    selector: 'app-main-area',
-    standalone: true,
-    templateUrl: './main-area.component.html',
-    styleUrl: './main-area.component.scss',
-    imports: [CommonModule, NewsComponent]
+  selector: 'app-main-area',
+  standalone: true,
+  templateUrl: './main-area.component.html',
+  styleUrl: './main-area.component.scss',
+  imports: [CommonModule, NewsComponent, RouterLink],
 })
 export class MainAreaComponent {
+  scrollToTopAndCloseNavbar() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
   isDarkMode = false;
   showFixedBottomDiv = false;
-  languageOptions: string[] = ['English', 'ਪੰਜਾਬੀ','हिंदी'];
+  languageOptions: string[] = ['English', 'ਪੰਜਾਬੀ', 'हिंदी'];
   selectedNews: string = 'first_news';
-
-
- 
 
   constructor(
     private textSizeService: TextSizeService,

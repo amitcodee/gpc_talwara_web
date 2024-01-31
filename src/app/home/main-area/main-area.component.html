@@ -15,7 +15,9 @@
         industry have led to growing complexity of industrial activity.
       </div>
       <div class="py-3">
-        <img src="../../../assets/images/used/web-use/poly.webp" class="img-fluid shadow rounded" alt="">
+        <img
+          src="https://img.freepik.com/free-vector/flat-university-concept-background_23-2148192575.jpg?w=740&t=st=1706192155~exp=1706192755~hmac=06766e6d3be5156390ebc145a043b24a832c4ca26a19145a250f8a3c42d4acca"
+          class="img-fluid shadow rounded" alt="">
       </div>
     </div>
   </div>
@@ -90,21 +92,29 @@
         Seven schools in which to pursue your passions
       </div>
       <div class="row py-3">
-        <div class="col-md-2 border-3 border-effect border-start border-end fs-3">CSE</div>
-        <div class="col-md-2 border-3 border-effect border-start border-end fs-3">EE</div>
-        <div class="col-md-2 border-3 border-effect border-start border-end fs-3">ECE </div>
-        <div class="col-md-2 border-3 border-effect border-start border-end fs-3">ME </div>
-        <div class="col-md-2 border-3 border-effect border-start border-end fs-3">CE </div>
-        <div class="col-md-2 border-3 border-effect border-start border-end fs-3">AS</div>
+        <a routerLink="/cse" (click)="scrollToTopAndCloseNavbar()"
+          class="col-md-2 border-3 border-effect border-start border-end fs-3">CSE</a>
+        <a routerLink="/ee" (click)="scrollToTopAndCloseNavbar()"
+          class="col-md-2 border-3 border-effect border-start border-end fs-3">EE</a>
+        <a routerLink="/ece" (click)="scrollToTopAndCloseNavbar()"
+          class="col-md-2 border-3 border-effect border-start border-end fs-3">ECE </a>
+        <a routerLink="/me" (click)="scrollToTopAndCloseNavbar()"
+          class="col-md-2 border-3 border-effect border-start border-end fs-3">ME </a>
+        <a routerLink="/ce" (click)="scrollToTopAndCloseNavbar()"
+          class="col-md-2 border-3 border-effect border-start border-end fs-3">CE </a>
+        <a routerLink="/as" (click)="scrollToTopAndCloseNavbar()"
+          class="col-md-2 border-3 border-effect border-start border-end fs-3">AS</a>
       </div>
-      <div class="btn btn-red btn-lg text-decoration-none my-3 px-5">More About Academics</div>
+      <a class="btn btn-red btn-lg text-decoration-none my-3 px-5" (click)="scrollToTopAndCloseNavbar()"
+        routerLink="/courses">More About Academics</a>
     </div>
   </div>
   <!-- acadmic -->
   <!-- overlay-img -->
   <div class="img-container">
     <img src="../../../assets/images/used/building/16.webp" class="img-fluid" alt="">
-    <div class="overlay-text">Your Text Here</div>
+    <div class="overlay-text text-center">Unwind in the verdant embrace of GPC Talwara, where nature paints serenity on
+      every canvas.</div>
   </div>
   <!-- overlay-img -->
   <!-- reserch -->
@@ -192,7 +202,7 @@
         Offering extraordinary freedom to explore, to collaborate, and to challenge yourself
       </div>
       <div class="py-3">
-        <img src="../../../assets/images/used/web-use/ragging.webp" class="img-fluid shadow rounded" alt="">
+        <img src="../../../assets/images/used/addmision/8.jpg" class="img-fluid shadow rounded" alt="">
       </div>
       <div class="row text-start">
         <div class="col-md-6">
@@ -214,7 +224,8 @@
           </div>
         </div>
       </div>
-      <div class="btn btn-red btn-lg text-decoration-none my-3 px-5">More About Academics</div>
+      <a routerLink="/admission-help" (click)="scrollToTopAndCloseNavbar()"
+        class="btn btn-red btn-lg text-decoration-none my-3 px-5">More About Admission</a>
     </div>
   </div>
   <!-- admission -->
