@@ -1,11 +1,11 @@
 <div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'English'" [style.font-size.px]="getTextSize()">
   <div class="container-fluid d-none d-lg-flex pt-2 mx-0 first-header">
     <div class="row align-items-center">
-      <div class="col-lg-7">
+      <div class="col-lg-12">
         <div class="row align-items-center">
           <div class="col-auto">
-            <img src="../../../assets/images/used/web-use/logo_college.webp" alt="College Logo" class="img-fluid" width="90"
-              height="90">
+            <img src="../../../assets/images/used/web-use/logo_college.webp" alt="College Logo" class="img-fluid"
+              width="90" height="90">
           </div>
           <div class="col">
             <a routerLink="" class="fw-bold fs-3 text-decoration-none text">S. Amarjeet Singh Sahi Government
@@ -16,7 +16,22 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-5">
+      <!-- <div class="col-lg-7">
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <img src="../../../assets/images/used/web-use/logo_college.webp" alt="College Logo" class="img-fluid"
+              width="90" height="90">
+          </div>
+          <div class="col">
+            <a routerLink="" class="fw-bold fs-3 text-decoration-none text">S. Amarjeet Singh Sahi Government
+              Polytechnic College, Talwara</a>
+            <p>
+              Approved by AICTE, Affiliated to PSBTE & IT, Punjab
+            </p>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="col-lg-5">
         <div class="row">
           <div class="col-lg-4">
             <div class="dropdown theme-toggle">
@@ -64,7 +79,7 @@
               <button type="button" class="btn btn-outline-secondary" (click)="decreaseTextSize()">A--</button>
             </div>
           </div>
-          <!-- <div class="col-lg-3">
+          <div class="col-lg-3">
           <div class="dropdown">
             <button class=" border border-4 rounded-circle dropdown-toggle p-2" type="button" data-bs-toggle="dropdown"
               aria-expanded="false">
@@ -74,9 +89,9 @@
               <li><a class="dropdown-item fw-semibold"  routerLink="">Logout</a></li>
             </ul>
           </div>
-        </div> -->
-        </div>
-      </div>
+        </div> 
+        </div> 
+      </div> -->
     </div>
   </div>
   <nav class="navbar navbar-expand-lg" [ngClass]="{'fixed-top': navbarScrolled, 'navbar-scrolled': navbarScrolled}">
@@ -97,7 +112,8 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto text-lg-center"> <!-- Center the navlinks in large screens -->
           <li class="nav-item">
-            <a class="nav-link fw-semibold" aria-current="page" routerLink="" (click)="scrollToTopAndCloseNavbar()">Home</a>
+            <a class="nav-link fw-semibold" aria-current="page" routerLink=""
+              (click)="scrollToTopAndCloseNavbar()">Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link fw-semibold dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
@@ -105,11 +121,15 @@
               About us
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/principal-message" (click)="scrollToTopAndCloseNavbar()">Principal Message</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/vision-mission" (click)="scrollToTopAndCloseNavbar()">Vision & Mission</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/mandatory-disclousure" (click)="scrollToTopAndCloseNavbar()">Mandatory Disclousure</a>
+              <li><a class="dropdown-item fw-semibold" routerLink="/principal-message"
+                  (click)="scrollToTopAndCloseNavbar()">Principal Message</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/vision-mission"
+                  (click)="scrollToTopAndCloseNavbar()">Vision & Mission</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/mandatory-disclousure"
+                  (click)="scrollToTopAndCloseNavbar()">Mandatory Disclousure</a>
               </li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/grievance-redressal-committee" (click)="scrollToTopAndCloseNavbar()">Grievance Redressal
+              <li><a class="dropdown-item fw-semibold" routerLink="/grievance-redressal-committee"
+                  (click)="scrollToTopAndCloseNavbar()">Grievance Redressal
                   Committee</a></li>
             </ul>
           </li>
@@ -119,11 +139,16 @@
               Academics
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/courses" (click)="scrollToTopAndCloseNavbar()">Courses</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/admission-intake" (click)="scrollToTopAndCloseNavbar()">Admission Intake</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/fees-structure" (click)="scrollToTopAndCloseNavbar()">Fees Structure</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/rules-discipline" (click)="scrollToTopAndCloseNavbar()"> Rules and Discipline</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/scholarship-schemes" (click)="scrollToTopAndCloseNavbar()">Scholarship Schemes</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/courses"
+                  (click)="scrollToTopAndCloseNavbar()">Courses</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/admission-intake"
+                  (click)="scrollToTopAndCloseNavbar()">Admission Intake</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/fees-structure"
+                  (click)="scrollToTopAndCloseNavbar()">Fees Structure</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/rules-discipline"
+                  (click)="scrollToTopAndCloseNavbar()"> Rules and Discipline</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/scholarship-schemes"
+                  (click)="scrollToTopAndCloseNavbar()">Scholarship Schemes</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -132,13 +157,20 @@
               Departments
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/cse" (click)="scrollToTopAndCloseNavbar()">Computer Science & Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ece" (click)="scrollToTopAndCloseNavbar()">Electronics & Comm. Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ce" (click)="scrollToTopAndCloseNavbar()">Civil Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ee" (click)="scrollToTopAndCloseNavbar()">Electrical Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/me" (click)="scrollToTopAndCloseNavbar()">Mechanical Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/as" (click)="scrollToTopAndCloseNavbar()">Applied Sciences</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ws" (click)="scrollToTopAndCloseNavbar()">Workshop</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/cse" (click)="scrollToTopAndCloseNavbar()">Computer
+                  Science & Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ece"
+                  (click)="scrollToTopAndCloseNavbar()">Electronics & Comm. Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ce" (click)="scrollToTopAndCloseNavbar()">Civil
+                  Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ee" (click)="scrollToTopAndCloseNavbar()">Electrical
+                  Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/me" (click)="scrollToTopAndCloseNavbar()">Mechanical
+                  Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/as" (click)="scrollToTopAndCloseNavbar()">Applied
+                  Sciences</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ws"
+                  (click)="scrollToTopAndCloseNavbar()">Workshop</a></li>
 
             </ul>
           </li>
@@ -149,14 +181,22 @@
               Our Faculty & Staff
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/cse-faculty" (click)="scrollToTopAndCloseNavbar()">Computer Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ece-faculty" (click)="scrollToTopAndCloseNavbar()">Electronics & Comm. Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ce-faculty" (click)="scrollToTopAndCloseNavbar()">Civil Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ee-faculty" (click)="scrollToTopAndCloseNavbar()">Electrical Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/me-faculty" (click)="scrollToTopAndCloseNavbar()">Mechanical Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/as-faculty" (click)="scrollToTopAndCloseNavbar()">Applied Sciences</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ws-faculty" (click)="scrollToTopAndCloseNavbar()">Workshop</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/supporting-staff" (click)="scrollToTopAndCloseNavbar()">Supporting Staff</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/cse-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">Computer Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ece-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">Electronics & Comm. Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ce-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">Civil Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ee-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">Electrical Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/me-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">Mechanical Engg.</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/as-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">Applied Sciences</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ws-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">Workshop</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/supporting-staff"
+                  (click)="scrollToTopAndCloseNavbar()">Supporting Staff</a></li>
 
 
             </ul>
@@ -168,9 +208,11 @@
               Placement
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/training-placement" (click)="scrollToTopAndCloseNavbar()">Training and Placement Cell</a>
+              <li><a class="dropdown-item fw-semibold" routerLink="/training-placement"
+                  (click)="scrollToTopAndCloseNavbar()">Training and Placement Cell</a>
               </li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/student-placed" (click)="scrollToTopAndCloseNavbar()">Student Placed</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/student-placed"
+                  (click)="scrollToTopAndCloseNavbar()">Student Placed</a></li>
             </ul>
           </li>
           <!-- <li class="nav-item dropdown">
@@ -194,9 +236,11 @@
               Media
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/events-picture" (click)="scrollToTopAndCloseNavbar()">College Life Memories</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/events-picture"
+                  (click)="scrollToTopAndCloseNavbar()">College Life Memories</a></li>
               <!-- <li><a class="dropdown-item fw-semibold" routerLink="/social-media-account">Videos</a></li> -->
-              <li><a class="dropdown-item fw-semibold" routerLink="/student-activites" (click)="scrollToTopAndCloseNavbar()">Press Clips</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/student-activites"
+                  (click)="scrollToTopAndCloseNavbar()">Press Clips</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -205,20 +249,26 @@
               Useful Links
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/right-to-information" (click)="scrollToTopAndCloseNavbar()">Right To Information</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/examination" (click)="scrollToTopAndCloseNavbar()">Examination</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/admission-help" (click)="scrollToTopAndCloseNavbar()">Admission Helpline</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/right-to-information"
+                  (click)="scrollToTopAndCloseNavbar()">Right To Information</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/examination"
+                  (click)="scrollToTopAndCloseNavbar()">Examination</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/admission-help"
+                  (click)="scrollToTopAndCloseNavbar()">Admission Helpline</a></li>
               <li><a class="dropdown-item fw-semibold"
                   href="https://docs.google.com/forms/d/e/1FAIpQLSeBsvstC_RDi1nY1pTz_qN-6Xa44yNXXh8bfVvxdnLAukdMug/viewform"
                   target="_blank"> Grievance Redressal Portal</a></li>
               <li><a class="dropdown-item fw-semibold" href="../../../assets/images/used/useful-link/aitce.pdf"
                   target="_blank">AICTE Approval</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/registration-portal" (click)="scrollToTopAndCloseNavbar()">Registration Portal</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/buddy-program" (click)="scrollToTopAndCloseNavbar()">Buddy Program</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/registration-portal"
+                  (click)="scrollToTopAndCloseNavbar()">Registration Portal</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/buddy-program"
+                  (click)="scrollToTopAndCloseNavbar()">Buddy Program</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold" routerLink="/contact-us" (click)="scrollToTopAndCloseNavbar()">Contact us</a>
+            <a class="nav-link fw-semibold" routerLink="/contact-us" (click)="scrollToTopAndCloseNavbar()">Contact
+              us</a>
           </li>
         </ul>
       </div>
@@ -232,11 +282,12 @@
       <div class="col-lg-6">
         <div class="row align-items-center">
           <div class="col-auto">
-            <img src="../../../assets/images/used/web-use/logo_college.webp" alt="ਕਾਲਜ ਦਾ ਲੋਗੋ" class="img-fluid" width="90"
-              height="90">
+            <img src="../../../assets/images/used/web-use/logo_college.webp" alt="ਕਾਲਜ ਦਾ ਲੋਗੋ" class="img-fluid"
+              width="90" height="90">
           </div>
           <div class="col">
-            <a routerLink="" class="fw-bold fs-3 text-decoration-none text">ਸ. ਅਮਰਜੀਤ ਸਿੰਘ ਸਾਹੀ ਸਰਕਾਰੀ ਬਹੁਤਕਨੀਕੀ ਕਾਲਜ, ਤਲਵਾੜਾ</a>
+            <a routerLink="" class="fw-bold fs-3 text-decoration-none text">ਸ. ਅਮਰਜੀਤ ਸਿੰਘ ਸਾਹੀ ਸਰਕਾਰੀ ਬਹੁਤਕਨੀਕੀ ਕਾਲਜ,
+              ਤਲਵਾੜਾ</a>
             <p>
               AICTE ਦੁਆਰਾ ਮਨਜੂਰ, PSBTE & IT, ਪੰਜਾਬ ਦੇ ਸਾਹਿਤ
             </p>
@@ -318,11 +369,15 @@
               ਸਾਡੇ ਬਾਰੇ
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/principal-message" (click)="scrollToTopAndCloseNavbar()">ਮੁੱਖ ਸੁਨੇਹੇ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/vision-mission" (click)="scrollToTopAndCloseNavbar()">ਵਿਜ਼ਨ ਅਤੇ ਮਿਸ਼ਨ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/mandatory-disclousure" (click)="scrollToTopAndCloseNavbar()">ਲਾਜ਼ਮੀ ਟੂਰ</a>
+              <li><a class="dropdown-item fw-semibold" routerLink="/principal-message"
+                  (click)="scrollToTopAndCloseNavbar()">ਮੁੱਖ ਸੁਨੇਹੇ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/vision-mission"
+                  (click)="scrollToTopAndCloseNavbar()">ਵਿਜ਼ਨ ਅਤੇ ਮਿਸ਼ਨ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/mandatory-disclousure"
+                  (click)="scrollToTopAndCloseNavbar()">ਲਾਜ਼ਮੀ ਟੂਰ</a>
               </li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/grievance-redressal-committee" (click)="scrollToTopAndCloseNavbar()">ਸ਼ਿਕਾਇਤ ਨਿਵਾਰਣ ਕਮੇਟੀ
+              <li><a class="dropdown-item fw-semibold" routerLink="/grievance-redressal-committee"
+                  (click)="scrollToTopAndCloseNavbar()">ਸ਼ਿਕਾਇਤ ਨਿਵਾਰਣ ਕਮੇਟੀ
                 </a></li>
             </ul>
           </li>
@@ -332,11 +387,16 @@
               ਵਿਦਿਅਕ
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/courses" (click)="scrollToTopAndCloseNavbar()">ਕੋਰਸ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/admission-intake" (click)="scrollToTopAndCloseNavbar()">ਦਾਖਲੇ ਦੇ ਅੰਕੜੇ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/fees-structure" (click)="scrollToTopAndCloseNavbar()">ਫੀਸ ਬਣਤਰ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/rules-discipline" (click)="scrollToTopAndCloseNavbar()">ਨਿਯਮ ਅਤੇ ਅਨੁਸ਼ਾਸਨ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/scholarship-schemes" (click)="scrollToTopAndCloseNavbar()">ਸਕਾਲਰਸ਼ਿਪ ਸਕੀਮਾਂ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/courses"
+                  (click)="scrollToTopAndCloseNavbar()">ਕੋਰਸ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/admission-intake"
+                  (click)="scrollToTopAndCloseNavbar()">ਦਾਖਲੇ ਦੇ ਅੰਕੜੇ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/fees-structure"
+                  (click)="scrollToTopAndCloseNavbar()">ਫੀਸ ਬਣਤਰ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/rules-discipline"
+                  (click)="scrollToTopAndCloseNavbar()">ਨਿਯਮ ਅਤੇ ਅਨੁਸ਼ਾਸਨ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/scholarship-schemes"
+                  (click)="scrollToTopAndCloseNavbar()">ਸਕਾਲਰਸ਼ਿਪ ਸਕੀਮਾਂ</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -345,13 +405,20 @@
               ਵਿਭਾਗ
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/cse" (click)="scrollToTopAndCloseNavbar()">ਕੰਪਿਊਟਰ ਸਾਇੰਸ ਅਤੇ ਇੰਜੀਨੀਅਰਿੰਗ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ece" (click)="scrollToTopAndCloseNavbar()">ਇਲੈਕਟ੍ਰਾਨਿਕਸ ਅਤੇ ਸੰਚਾਰ ਇੰਜੀਨੀਅਰਿੰਗ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ce" (click)="scrollToTopAndCloseNavbar()">ਸਿਵਲ ਇੰਜੀਨਿਅਰੀ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ee" (click)="scrollToTopAndCloseNavbar()">ਇਲੈਕਟ੍ਰਿਕਲ ਇੰਜਿਨੀਰਿੰਗ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/me" (click)="scrollToTopAndCloseNavbar()">ਜੰਤਰਿਕ ਇੰਜੀਨਿਅਰੀ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/as" (click)="scrollToTopAndCloseNavbar()">ਲਾਗੂ ਵਿਗਿਆਨ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ws" (click)="scrollToTopAndCloseNavbar()">ਵਰਕਸ਼ਾਪ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/cse" (click)="scrollToTopAndCloseNavbar()">ਕੰਪਿਊਟਰ
+                  ਸਾਇੰਸ ਅਤੇ ਇੰਜੀਨੀਅਰਿੰਗ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ece"
+                  (click)="scrollToTopAndCloseNavbar()">ਇਲੈਕਟ੍ਰਾਨਿਕਸ ਅਤੇ ਸੰਚਾਰ ਇੰਜੀਨੀਅਰਿੰਗ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ce" (click)="scrollToTopAndCloseNavbar()">ਸਿਵਲ
+                  ਇੰਜੀਨਿਅਰੀ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ee" (click)="scrollToTopAndCloseNavbar()">ਇਲੈਕਟ੍ਰਿਕਲ
+                  ਇੰਜਿਨੀਰਿੰਗ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/me" (click)="scrollToTopAndCloseNavbar()">ਜੰਤਰਿਕ
+                  ਇੰਜੀਨਿਅਰੀ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/as" (click)="scrollToTopAndCloseNavbar()">ਲਾਗੂ
+                  ਵਿਗਿਆਨ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ws"
+                  (click)="scrollToTopAndCloseNavbar()">ਵਰਕਸ਼ਾਪ</a></li>
 
             </ul>
           </li>
@@ -362,15 +429,23 @@
               ਸਾਡੇ ਅਧਿਆਪਕ ਅਤੇ ਸਟਾਫ
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/cse-faculty" (click)="scrollToTopAndCloseNavbar()">ਕੰਪਿਊਟਰ ਇੰਜੀਨੀਅਰਿੰਗ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ece-faculty" (click)="scrollToTopAndCloseNavbar()">ਇਲੈਕਟ੍ਰਾਨਿਕਸ ਅਤੇ ਸੰਚਾਰ ਇੰਜੀਨੀਅਰਿੰਗ</a>
+              <li><a class="dropdown-item fw-semibold" routerLink="/cse-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">ਕੰਪਿਊਟਰ ਇੰਜੀਨੀਅਰਿੰਗ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ece-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">ਇਲੈਕਟ੍ਰਾਨਿਕਸ ਅਤੇ ਸੰਚਾਰ ਇੰਜੀਨੀਅਰਿੰਗ</a>
               </li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ce-faculty" (click)="scrollToTopAndCloseNavbar()">ਸਿਵਲ ਇੰਜੀਨਿਅਰੀ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ee-faculty" (click)="scrollToTopAndCloseNavbar()">ਇਲੈਕਟ੍ਰਿਕਲ ਇੰਜਿਨੀਰਿੰਗ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/me-faculty" (click)="scrollToTopAndCloseNavbar()">ਜੰਤਰਿਕ ਇੰਜੀਨਿਅਰੀ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/as-faculty" (click)="scrollToTopAndCloseNavbar()">ਲਾਗੂ ਵਿਗਿਆਨ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ws-faculty" (click)="scrollToTopAndCloseNavbar()">ਵਰਕਸ਼ਾਪ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/supporting-staff" (click)="scrollToTopAndCloseNavbar()">ਸਹਾਇਕ ਸਟਾਫ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ce-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">ਸਿਵਲ ਇੰਜੀਨਿਅਰੀ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ee-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">ਇਲੈਕਟ੍ਰਿਕਲ ਇੰਜਿਨੀਰਿੰਗ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/me-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">ਜੰਤਰਿਕ ਇੰਜੀਨਿਅਰੀ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/as-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">ਲਾਗੂ ਵਿਗਿਆਨ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ws-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">ਵਰਕਸ਼ਾਪ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/supporting-staff"
+                  (click)="scrollToTopAndCloseNavbar()">ਸਹਾਇਕ ਸਟਾਫ</a></li>
 
 
             </ul>
@@ -382,9 +457,11 @@
               ਪਲੇਸਮੈਂਟ
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/training-placement" (click)="scrollToTopAndCloseNavbar()">ਸਿਖਲਾਈ ਅਤੇ ਟ੍ਰਾਂਸਫਰ ਸੈੱਲ</a>
+              <li><a class="dropdown-item fw-semibold" routerLink="/training-placement"
+                  (click)="scrollToTopAndCloseNavbar()">ਸਿਖਲਾਈ ਅਤੇ ਟ੍ਰਾਂਸਫਰ ਸੈੱਲ</a>
               </li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/student-placed" (click)="scrollToTopAndCloseNavbar()">ਵਿਦਿਆਰਥੀ ਦਾ ਤਬਾਦਲਾ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/student-placed"
+                  (click)="scrollToTopAndCloseNavbar()">ਵਿਦਿਆਰਥੀ ਦਾ ਤਬਾਦਲਾ</a></li>
             </ul>
           </li>
           <!-- <li class="nav-item dropdown">
@@ -408,9 +485,11 @@
               ਮੀਡੀਆ
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/events-picture" (click)="scrollToTopAndCloseNavbar()">ਕਾਲਜ ਜੀਵਨ ਦੀਆਂ ਯਾਦਾਂ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/events-picture"
+                  (click)="scrollToTopAndCloseNavbar()">ਕਾਲਜ ਜੀਵਨ ਦੀਆਂ ਯਾਦਾਂ</a></li>
               <!-- <li><a class="dropdown-item fw-semibold" routerLink="/social-media-account">वीडियो</a></li> -->
-              <li><a class="dropdown-item fw-semibold" routerLink="/student-activites" (click)="scrollToTopAndCloseNavbar()">ਕਲਿੱਪ ਦਬਾਓ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/student-activites"
+                  (click)="scrollToTopAndCloseNavbar()">ਕਲਿੱਪ ਦਬਾਓ</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -419,21 +498,27 @@
               ਉਪਯੋਗੀ ਲਿੰਕ
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/right-to-information" (click)="scrollToTopAndCloseNavbar()">ਸੂਚਨਾ ਦਾ ਅਧਿਕਾਰ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/examination" (click)="scrollToTopAndCloseNavbar()">ਇਮਤਿਹਾਨ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/admission-help" (click)="scrollToTopAndCloseNavbar()">ਦਾਖਲਾ ਹੈਲਪਲਾਈਨ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/right-to-information"
+                  (click)="scrollToTopAndCloseNavbar()">ਸੂਚਨਾ ਦਾ ਅਧਿਕਾਰ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/examination"
+                  (click)="scrollToTopAndCloseNavbar()">ਇਮਤਿਹਾਨ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/admission-help"
+                  (click)="scrollToTopAndCloseNavbar()">ਦਾਖਲਾ ਹੈਲਪਲਾਈਨ</a></li>
               <li><a class="dropdown-item fw-semibold"
                   href="https://docs.google.com/forms/d/e/1FAIpQLSeBsvstC_RDi1nY1pTz_qN-6Xa44yNXXh8bfVvxdnLAukdMug/viewform"
                   target="_blank" (click)="scrollToTopAndCloseNavbar()">ਸ਼ਿਕਾਇਤ ਨਿਵਾਰਨ ਪੋਰਟਲ</a></li>
               <li><a class="dropdown-item fw-semibold" href="../../../assets/images/used/useful-link/aitce.pdf"
                   target="_blank" (click)="scrollToTopAndCloseNavbar()">AICTE ਮਨਜ਼ੂਰੀ
                 </a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/registration-portal" (click)="scrollToTopAndCloseNavbar()">ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਪੋਰਟਲ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/buddy-program" (click)="scrollToTopAndCloseNavbar()">ਬੱਡੀ ਪ੍ਰੋਗਰਾਮ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/registration-portal"
+                  (click)="scrollToTopAndCloseNavbar()">ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਪੋਰਟਲ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/buddy-program"
+                  (click)="scrollToTopAndCloseNavbar()">ਬੱਡੀ ਪ੍ਰੋਗਰਾਮ</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold" routerLink="/contact-us" (click)="scrollToTopAndCloseNavbar()">ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ</a>
+            <a class="nav-link fw-semibold" routerLink="/contact-us" (click)="scrollToTopAndCloseNavbar()">ਸਾਡੇ ਨਾਲ
+              ਸੰਪਰਕ ਕਰੋ</a>
           </li>
         </ul>
       </div>
@@ -448,8 +533,8 @@
       <div class="col-lg-7">
         <div class="row align-items-center">
           <div class="col-auto">
-            <img src="../../../assets/images/used/web-use/logo_college.webp" alt="कॉलेज लोगो" class="img-fluid" width="90"
-              height="90">
+            <img src="../../../assets/images/used/web-use/logo_college.webp" alt="कॉलेज लोगो" class="img-fluid"
+              width="90" height="90">
           </div>
           <div class="col">
             <a routerLink="" class="fw-bold fs-3 text-decoration-none text">स. अमरजीत सिंह साही सरकारी पॉलिटेक्निक
@@ -525,7 +610,8 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto text-lg-center"> <!-- बड़े स्क्रीन्स में नैविगेशन लिंक्स को केंद्रीय करें -->
           <li class="nav-item">
-            <a class="nav-link fw-semibold" aria-current="page" routerLink="" (click)="scrollToTopAndCloseNavbar()">होम</a>
+            <a class="nav-link fw-semibold" aria-current="page" routerLink=""
+              (click)="scrollToTopAndCloseNavbar()">होम</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link fw-semibold dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
@@ -533,11 +619,15 @@
               हमारे बारे में
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/principal-message" (click)="scrollToTopAndCloseNavbar()">प्रमुख संदेश</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/vision-mission" (click)="scrollToTopAndCloseNavbar()">दृष्टि और मिशन</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/mandatory-disclousure" (click)="scrollToTopAndCloseNavbar()">अनिवार्य भ्रमण</a>
+              <li><a class="dropdown-item fw-semibold" routerLink="/principal-message"
+                  (click)="scrollToTopAndCloseNavbar()">प्रमुख संदेश</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/vision-mission"
+                  (click)="scrollToTopAndCloseNavbar()">दृष्टि और मिशन</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/mandatory-disclousure"
+                  (click)="scrollToTopAndCloseNavbar()">अनिवार्य भ्रमण</a>
               </li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/grievance-redressal-committee" (click)="scrollToTopAndCloseNavbar()">शिकायत समाधान
+              <li><a class="dropdown-item fw-semibold" routerLink="/grievance-redressal-committee"
+                  (click)="scrollToTopAndCloseNavbar()">शिकायत समाधान
                   समिति</a></li>
             </ul>
           </li>
@@ -547,11 +637,16 @@
               शैक्षिक
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/courses" (click)="scrollToTopAndCloseNavbar()">कोर्सेस</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/admission-intake" (click)="scrollToTopAndCloseNavbar()">प्रवेश सांख्यिकी</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/fees-structure" (click)="scrollToTopAndCloseNavbar()">शुल्क संरचना</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/rules-discipline" (click)="scrollToTopAndCloseNavbar()">नियम और अनुशासन</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/scholarship-schemes" (click)="scrollToTopAndCloseNavbar()">छात्रवृत्ति योजनाएँ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/courses"
+                  (click)="scrollToTopAndCloseNavbar()">कोर्सेस</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/admission-intake"
+                  (click)="scrollToTopAndCloseNavbar()">प्रवेश सांख्यिकी</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/fees-structure"
+                  (click)="scrollToTopAndCloseNavbar()">शुल्क संरचना</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/rules-discipline"
+                  (click)="scrollToTopAndCloseNavbar()">नियम और अनुशासन</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/scholarship-schemes"
+                  (click)="scrollToTopAndCloseNavbar()">छात्रवृत्ति योजनाएँ</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -560,13 +655,20 @@
               विभाग
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/cse" (click)="scrollToTopAndCloseNavbar()">कंप्यूटर साइंस और इंजीनियरिंग</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ece" (click)="scrollToTopAndCloseNavbar()">इलेक्ट्रॉनिक्स और संचार इंजीनियरिंग</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ce" (click)="scrollToTopAndCloseNavbar()">सिविल इंजीनियरिंग</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ee" (click)="scrollToTopAndCloseNavbar()">इलेक्ट्रिकल इंजीनियरिंग</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/me" (click)="scrollToTopAndCloseNavbar()">मैकेनिकल इंजीनियरिंग</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/as" (click)="scrollToTopAndCloseNavbar()">अनुप्रयुक्त विज्ञान</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ws" (click)="scrollToTopAndCloseNavbar()">कार्यशाला</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/cse" (click)="scrollToTopAndCloseNavbar()">कंप्यूटर
+                  साइंस और इंजीनियरिंग</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ece"
+                  (click)="scrollToTopAndCloseNavbar()">इलेक्ट्रॉनिक्स और संचार इंजीनियरिंग</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ce" (click)="scrollToTopAndCloseNavbar()">सिविल
+                  इंजीनियरिंग</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ee"
+                  (click)="scrollToTopAndCloseNavbar()">इलेक्ट्रिकल इंजीनियरिंग</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/me" (click)="scrollToTopAndCloseNavbar()">मैकेनिकल
+                  इंजीनियरिंग</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/as"
+                  (click)="scrollToTopAndCloseNavbar()">अनुप्रयुक्त विज्ञान</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ws"
+                  (click)="scrollToTopAndCloseNavbar()">कार्यशाला</a></li>
 
             </ul>
           </li>
@@ -577,15 +679,23 @@
               हमारा शिक्षक और कर्मचारी
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/cse-faculty" (click)="scrollToTopAndCloseNavbar()">कंप्यूटर इंजीनियरिंग</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ece-faculty" (click)="scrollToTopAndCloseNavbar()">इलेक्ट्रॉनिक्स और संचार इंजीनियरिंग</a>
+              <li><a class="dropdown-item fw-semibold" routerLink="/cse-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">कंप्यूटर इंजीनियरिंग</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ece-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">इलेक्ट्रॉनिक्स और संचार इंजीनियरिंग</a>
               </li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ce-faculty" (click)="scrollToTopAndCloseNavbar()">सिविल इंजीनियरिंग</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ee-faculty" (click)="scrollToTopAndCloseNavbar()">इलेक्ट्रिकल इंजीनियरिंग</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/me-faculty" (click)="scrollToTopAndCloseNavbar()">मैकेनिकल इंजीनियरिंग</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/as-faculty" (click)="scrollToTopAndCloseNavbar()">अनुप्रयुक्त विज्ञान</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ws-faculty" (click)="scrollToTopAndCloseNavbar()">कार्यशाला</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/supporting-staff" (click)="scrollToTopAndCloseNavbar()">समर्थन स्टाफ</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ce-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">सिविल इंजीनियरिंग</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ee-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">इलेक्ट्रिकल इंजीनियरिंग</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/me-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">मैकेनिकल इंजीनियरिंग</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/as-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">अनुप्रयुक्त विज्ञान</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ws-faculty"
+                  (click)="scrollToTopAndCloseNavbar()">कार्यशाला</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/supporting-staff"
+                  (click)="scrollToTopAndCloseNavbar()">समर्थन स्टाफ</a></li>
 
 
             </ul>
@@ -597,9 +707,11 @@
               स्थानांतरण
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/training-placement" (click)="scrollToTopAndCloseNavbar()">प्रशिक्षण और स्थानांतरण सेल</a>
+              <li><a class="dropdown-item fw-semibold" routerLink="/training-placement"
+                  (click)="scrollToTopAndCloseNavbar()">प्रशिक्षण और स्थानांतरण सेल</a>
               </li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/student-placed" (click)="scrollToTopAndCloseNavbar()">छात्र स्थानांतरित</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/student-placed"
+                  (click)="scrollToTopAndCloseNavbar()">छात्र स्थानांतरित</a></li>
             </ul>
           </li>
           <!-- <li class="nav-item dropdown">
@@ -623,9 +735,11 @@
               मीडिया
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/events-picture" (click)="scrollToTopAndCloseNavbar()">कॉलेज जीवन की यादें</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/events-picture"
+                  (click)="scrollToTopAndCloseNavbar()">कॉलेज जीवन की यादें</a></li>
               <!-- <li><a class="dropdown-item fw-semibold" routerLink="/social-media-account">वीडियो</a></li> -->
-              <li><a class="dropdown-item fw-semibold" routerLink="/student-activites" (click)="scrollToTopAndCloseNavbar()">प्रेस क्लिप्स</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/student-activites"
+                  (click)="scrollToTopAndCloseNavbar()">प्रेस क्लिप्स</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -634,20 +748,26 @@
               उपयोगी लिंक्स
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/right-to-information" (click)="scrollToTopAndCloseNavbar()">सूचना का अधिकार</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/examination" (click)="scrollToTopAndCloseNavbar()">परीक्षा</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/admission-help" (click)="scrollToTopAndCloseNavbar()">प्रवेश हेल्पलाइन</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/right-to-information"
+                  (click)="scrollToTopAndCloseNavbar()">सूचना का अधिकार</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/examination"
+                  (click)="scrollToTopAndCloseNavbar()">परीक्षा</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/admission-help"
+                  (click)="scrollToTopAndCloseNavbar()">प्रवेश हेल्पलाइन</a></li>
               <li><a class="dropdown-item fw-semibold"
                   href="https://docs.google.com/forms/d/e/1FAIpQLSeBsvstC_RDi1nY1pTz_qN-6Xa44yNXXh8bfVvxdnLAukdMug/viewform"
                   target="_blank" (click)="scrollToTopAndCloseNavbar()">शिकायत सुलझाने का पोर्टल</a></li>
               <li><a class="dropdown-item fw-semibold" href="../../../assets/images/used/useful-link/aitce.pdf"
                   target="_blank" (click)="scrollToTopAndCloseNavbar()">AICTE मंजूरी</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/registration-portal" (click)="scrollToTopAndCloseNavbar()">रजिस्ट्रेशन पोर्टल</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/buddy-program" (click)="scrollToTopAndCloseNavbar()">बडी प्रोग्राम</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/registration-portal"
+                  (click)="scrollToTopAndCloseNavbar()">रजिस्ट्रेशन पोर्टल</a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/buddy-program"
+                  (click)="scrollToTopAndCloseNavbar()">बडी प्रोग्राम</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold" routerLink="/contact-us" (click)="scrollToTopAndCloseNavbar()">हमसे संपर्क करें</a>
+            <a class="nav-link fw-semibold" routerLink="/contact-us" (click)="scrollToTopAndCloseNavbar()">हमसे संपर्क
+              करें</a>
           </li>
         </ul>
       </div>
