@@ -15,6 +15,11 @@ export class StudentActivitiesComponent {
   isDarkMode = false;
   showFixedBottomDiv = false;
  languageOptions: string[] = ['English', 'ਪੰਜਾਬੀ','हिंदी'];
+ clips = [
+  { src: '1', title: 'Title ', description: 'Description ' },
+  { src: '2', title: '4 ', description: 'Description ' },
+  // Add more clips as needed
+];
 
  constructor(
    private textSizeService: TextSizeService,
