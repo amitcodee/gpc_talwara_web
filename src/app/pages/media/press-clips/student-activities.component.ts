@@ -19,6 +19,8 @@ export class StudentActivitiesComponent {
   { src: '1', title: 'Title ', description: 'Description ' },
   { src: '2', title: '4 ', description: 'Description ' },
   // Add more clips as needed
+  { src: '10', title: '4 ', description: 'Description ' },
+
 ];
 
  constructor(
