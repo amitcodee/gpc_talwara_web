@@ -1,3 +1,15 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet,RouterLink } from '@angular/router';
+import { FooterComponent } from './header-footer/footer/footer.component';
+import { HeaderComponent } from './header-footer/header/header.component';
+import { ScrollButtonComponent } from './header-footer/scroll-button/scroll-button.component';
+import { HeroSectionComponent } from './home/hero-section/hero-section.component';
+import { NewsComponent } from "./home/news-section/news/news.component";
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AdmissionHelpdeskComponent } from './home/admission-helpdesk/admission-helpdesk.component';
+import { BuddyProgramComponent } from './home/buddy-program/buddy-program.component';
+import { ExamComponent } from './home/exam/exam.component';
 import { MainAreaComponent } from './home/main-area/main-area.component';
 import { RegistrationComponent } from './home/registration/registration.component';
 import { RightToInfoComponent } from './home/right-to-info/right-to-info.component';
