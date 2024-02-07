@@ -1,16 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { RouterOutlet,RouterLink } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { TitleService } from './services/title/title.service';
 
 
 @Component({
-    selector: 'app-root',
-    standalone: true,
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.scss',
-    imports: [CommonModule, RouterOutlet, RouterLink]
+  selector: 'app-root',
+  templateUrl: './front-end.component.html',
+  styleUrl: './front-end.component.scss'
 })
 export class AppComponent implements OnInit {
   title(title: any) {
