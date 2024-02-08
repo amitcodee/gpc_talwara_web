@@ -5,7 +5,6 @@ import { ThemeService } from '../../../services/theme/theme.service';
 
 @Component({
   selector: 'app-fees-structure',
-,
   templateUrl: './fees-structure.component.html',
   styleUrl: './fees-structure.component.scss'
 })

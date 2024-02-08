@@ -10,7 +10,7 @@ import { ThemeService } from '../services/theme/theme.service';
 })
 export class ContactUsComponent {
   isDarkMode = false;
-   showFixedBottomDiv = false;
+  showFixedBottomDiv = false;
   languageOptions: string[] = ['English', 'ਪੰਜਾਬੀ','हिंदी'];
 
   constructor(
