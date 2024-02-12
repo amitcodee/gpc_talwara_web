@@ -8,6 +8,7 @@ import { ThemeService } from './front-end/services/theme/theme.service';
 import { TitleService } from './front-end/services/title/title.service';
 import { FrontEndModule } from './front-end/front-end.module';
 import { AppRoutingModule } from './app.routes';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AppRoutingModule } from './app.routes';
   imports: [
     BrowserModule,
     FrontEndModule,
+    DashboardModule,
     AppRoutingModule
   ], // Add your module imports here
   exports: [], // Add your exports here

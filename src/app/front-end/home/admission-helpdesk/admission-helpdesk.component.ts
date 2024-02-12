@@ -11,7 +11,7 @@ import { TextSizeService } from '../../services/text-size/text-size.service';
 export class AdmissionHelpdeskComponent {
   isDarkMode = false;
   showFixedBottomDiv = false;
- languageOptions: string[] = ['English', 'ਪੰਜਾਬੀ','हिंदी'];
+  languageOptions: string[] = ['English', 'ਪੰਜਾਬੀ','हिंदी'];
 
  constructor(
    private textSizeService: TextSizeService,
