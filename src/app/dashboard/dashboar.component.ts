@@ -1,14 +1,32 @@
-import { Component } from '@angular/core';
+import {MediaMatcher} from '@angular/cdk/layout';
+import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
+import { RouteService } from './Services/route.service';
 
 @Component({
   selector: 'app-sidebar',
-  template: `
-  <app-dash-nabvbar></app-dash-nabvbar>
-  <app-dash-sidebar></app-dash-sidebar>
-  <router-outlet></router-outlet>
-  `,
+  templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
-export class DashboardComponent {
+export class DashboardComponent  implements OnDestroy, OnInit {
+  mobileQuery: MediaQueryList;
 
+  routeNav = [
+    {path: 'main',    displayName: 'Main',            icon: 'i'},
+    {path: 'student', label: "Student Details", icon: 'i'}
+  ];
+
+  private _mobileQueryListener: () => void;
+
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private getRoutes: RouteService) {
+    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.mobileQuery.addListener(this._mobileQueryListener);
+  }
+  ngOnInit(): void {
+    this.routeNav = this.getRoutes.getRoutes('admin');
+  }
+
+  ngOnDestroy(): void {
+    this.mobileQuery.removeListener(this._mobileQueryListener);
+  }
 }

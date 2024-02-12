@@ -2,10 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
+import {MatListModule} from '@angular/material/list';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar'
+import {MatCardModule} from '@angular/material/card';
+import {MatMenuModule} from '@angular/material/menu';
+
+import { DashboardRoutingModule } from './dashboard.routes';
+
+
+
 import { DashboardComponent } from './dashboar.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { NabvbarComponent } from './nabvbar/nabvbar.component';
-import { DashboardRoutingModule } from './dashboard.routing';
+import { MainDashComponent } from './main-dash/main-dash.component';
+import { StudentDetailComponent } from './student-detail/student-detail.component';
+import { RouteService } from './Services/route.service';
 
 
 
@@ -13,13 +25,26 @@ import { DashboardRoutingModule } from './dashboard.routing';
 @NgModule({
   declarations: [
     DashboardComponent,
-    SidebarComponent,
-    NabvbarComponent
+    MainDashComponent,
+    StudentDetailComponent
   ],
   imports: [
     CommonModule,
     RouterOutlet,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule,
+    MatCardModule,
+    MatMenuModule
+  ],
+  exports: [
+    DashboardComponent,
+  ],
+  providers: [
+    RouteService
   ]
 })
 export class DashboardModule { }

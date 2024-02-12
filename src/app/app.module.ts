@@ -9,6 +9,7 @@ import { TitleService } from './front-end/services/title/title.service';
 import { FrontEndModule } from './front-end/front-end.module';
 import { AppRoutingModule } from './app.routes';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
     ScrollService,
     TextSizeService,
     ThemeService,
-    TitleService
+    TitleService,
+    provideAnimationsAsync()
   ], // Add your services/providers here
   bootstrap: [AppComponent]
 })
