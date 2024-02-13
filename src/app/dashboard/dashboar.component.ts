@@ -3,7 +3,7 @@ import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
 import { RouteService } from './Services/route.service';
 
 @Component({
-  selector: 'app-sidebar',
+  selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
@@ -11,8 +11,7 @@ export class DashboardComponent  implements OnDestroy, OnInit {
   mobileQuery: MediaQueryList;
 
   routeNav = [
-    {path: 'main',    displayName: 'Main',            icon: 'i'},
-    {path: 'student', label: "Student Details", icon: 'i'}
+    {path: 'stdetail',    displayName: 'Main',            icon: 'i'},
   ];
 
   private _mobileQueryListener: () => void;

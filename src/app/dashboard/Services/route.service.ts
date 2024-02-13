@@ -8,7 +8,7 @@ export class RouteService {
     if (userRole === 'admin') {
       return [
         { path: 'main', displayName: 'Dashboard', icon: 'dashboard' },
-        { path: 'student', displayName: 'Users', icon: 'people' },
+        { path: 'stdetail', displayName: 'Users', icon: 'people' },
         { path: 'settings', displayName: 'Settings', icon: 'settings' }
       ];
     } else {

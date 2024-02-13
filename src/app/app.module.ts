@@ -10,6 +10,7 @@ import { FrontEndModule } from './front-end/front-end.module';
 import { AppRoutingModule } from './app.routes';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { StudentDetailsModule } from './dashboard/student-details/student-details.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     BrowserModule,
     FrontEndModule,
     DashboardModule,
+    StudentDetailsModule,
     AppRoutingModule
   ], // Add your module imports here
   exports: [], // Add your exports here

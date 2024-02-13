@@ -16,8 +16,9 @@ import { DashboardRoutingModule } from './dashboard.routes';
 
 import { DashboardComponent } from './dashboar.component';
 import { MainDashComponent } from './main-dash/main-dash.component';
-import { StudentDetailComponent } from './student-detail/student-detail.component';
 import { RouteService } from './Services/route.service';
+import { StudentDetailsModule } from './student-details/student-details.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 
@@ -26,19 +27,19 @@ import { RouteService } from './Services/route.service';
   declarations: [
     DashboardComponent,
     MainDashComponent,
-    StudentDetailComponent
   ],
   imports: [
     CommonModule,
-    RouterOutlet,
     DashboardRoutingModule,
+    StudentDetailsModule,
     MatSidenavModule,
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
     MatListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatFormFieldModule
   ],
   exports: [
     DashboardComponent,

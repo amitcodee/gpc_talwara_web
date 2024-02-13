@@ -1,5 +1,4 @@
 import { RouterModule, Routes } from '@angular/router';
-import { FrontEndComponent } from './front-end/front-end.component';
 import { NgModule } from '@angular/core';
 
 
