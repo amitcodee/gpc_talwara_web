@@ -21,7 +21,8 @@ import { StudentDetailsModule } from './dashboard/student-details/student-detail
     FrontEndModule,
     DashboardModule,
     StudentDetailsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
   ], // Add your module imports here
   exports: [], // Add your exports here
   providers: [

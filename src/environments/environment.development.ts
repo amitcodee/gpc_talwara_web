@@ -1,13 +1,11 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyDOe5BZQ7G-4rOAbZ1QLDqrxYmle8_Uj9g',
-    authDomain: 'college-gpc-talwara.firebaseapp.com',
-    databaseURL:
-      'https://college-gpc-talwara-default-rtdb.asia-southeast1.firebasedatabase.app',
-    projectId: 'college-gpc-talwara',
-    storageBucket: 'college-gpc-talwara.appspot.com',
-    messagingSenderId: '100986781588',
-    appId: '1:100986781588:web:e981cda00a1c749d24d981',
+    apiKey: 'AIzaSyDXcB87GzFWuo6bvLNVxGg59d3x5Ibkerk',
+    authDomain: 'gpc-talwara-b1d99.firebaseapp.com',
+    projectId: 'gpc-talwara-b1d99',
+    storageBucket: 'gpc-talwara-b1d99.appspot.com',
+    messagingSenderId: '832202478028',
+    appId: '1:832202478028:web:04246a681e3c3f86274d69',
   },
 };
