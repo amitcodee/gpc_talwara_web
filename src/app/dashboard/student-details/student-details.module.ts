@@ -18,13 +18,15 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { DisableControlDirective } from '../directives/disable-control.directive';
 
 
 @NgModule({
   declarations: [
     StudentDetailsComponent,
     AddStudentComponent,
-    EditStudentsComponent
+    EditStudentsComponent,
+    DisableControlDirective
   ],
   imports: [
     CommonModule,

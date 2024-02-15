@@ -1,48 +1,31 @@
-/* some.component.css */
-.full-width {
-  width: 100%;
-}
-
-.form-field {
-  margin-bottom: 20px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .form-field {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
-/* Button styling */
-button.mat-raised-button {
-  margin-top: 20px;
-}
-
-/* Layout adjustments */
 .form-row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-bottom: 20px; /* Adds space between each row */
+
+  .form-field {
+    flex: 1; /* Ensures each field takes equal space in the row */
+    padding: 0 10px; /* Adds some spacing between fields */
+    box-sizing: border-box; /* Includes padding in the element's total width and height */
+
+    @media (max-width: 768px) {
+      flex-basis: 100%; /* On smaller screens, fields take full width */
+      padding: 0; /* Removes padding on smaller screens for edge-to-edge fields */
+    }
+  }
 }
 
-.form-field {
-  padding-right: 15px;
-  padding-left: 15px;
-  flex: 1 1 50%; /* Adjust this to control the field width */
+mat-form-field {
+  width: 100%; /* Ensures Material form fields take up full width of their container */
 }
 
-/* Specific adjustments for different field widths */
-.form-field.half-width {
-  flex: 0 0 50%;
-  max-width: 50%;
+.radio-group, .checkbox-group {
+  width: 100%; /* Ensures custom group elements take up full width */
+  display: flex;
+  flex-direction: row; /* Aligns radio buttons and checkboxes vertically */
 }
 
-.form-field.full-width {
-  flex: 0 0 100%;
-  max-width: 100%;
+/* Adjustments for specific form controls if needed */
+input[matInput], textarea[matInput], mat-select {
+  width: 100%; /* Full width for all Material input elements */
 }
-
-/* You might want to add more specific classes for other widths */

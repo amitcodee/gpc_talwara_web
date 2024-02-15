@@ -15,6 +15,10 @@ export interface FormField {
   hideRequiredMarker?: boolean;
   floatLabel: 'always' | 'auto';
   hintLabel?: string; // New: Optional hint text for form fields
+  readonly? : boolean;
+  disabled? : boolean;
+  value? : string | number;
+  label? : string;
 }
 
 export interface SelectOption {
@@ -22,6 +26,12 @@ export interface SelectOption {
   label: string;
   checked?: boolean; // For checkboxes, to indicate if the option is initially checked
 }
+
+//
+// Config files for Student form
+//
+
+
 
 export class FormLayout {
   layout: FormRow[];
@@ -33,6 +43,7 @@ export class FormLayout {
   // Method to generate a FormGroup or FormArray based on the layout, including checkboxes
   generateFormGroup(fb: FormBuilder): FormGroup {
     const group: { [key: string]: any } = {};
+    console.log(this.layout);
     this.layout.forEach(row => {
       row.row.forEach(field => {
         if (field.type === 'checkbox') {
@@ -48,94 +59,3 @@ export class FormLayout {
     return fb.group(group);
   }
 }
-
-//
-// Config files for Student form
-//
-const genderOptions: SelectOption[] = [
-  { value: 'male', label: 'Male' },
-  { value: 'female', label: 'Female' },
-];
-
-const branchOptions: SelectOption[] = [
-  { value: 'cse', label: 'Computer Science' },
-  { value: 'ece', label: 'Electronics and Communication' },
-  { value: 'ee', label: 'Electrical' },
-  { value: 'mech', label: 'Mechanical' },
-  { value: 'civil', label: 'Civil' },
-];
-
-const SemesterOptions: SelectOption[] = [
-  { value: 1, label: '1st' },
-  { value: 2, label: '2nd' },
-  { value: 3, label: '3rd' },
-  { value: 4, label: '4th' },
-  { value: 5, label: '5th' },
-  { value: 6, label: '6th' },
-];
-const enrollmentStatusOptions: SelectOption[] = [
-  { value: 'active', label: 'Active' },
-  { value: 'DropOut', label: 'DropOut' },
-  { value: 'suspended', label: 'Suspended' },
-  { value: 'expelled', label: 'Expelled' },
-];
-
-const studentFormLayout: FormRow[] = [
-  {
-    row: [
-      { name: 'regNumber', type: 'input', validators: [Validators.required, Validators.pattern('^\d{12}$')], placeholder: 'Registration Number', floatLabel: 'always' },
-      { name: 'branch', type: 'select', validators: [Validators.required], placeholder: 'Branch', options: branchOptions, floatLabel: 'always' },
-      { name: 'semester', type: 'select', validators: [Validators.required, Validators.pattern('^\d{1,2}$')], options: SemesterOptions, placeholder: 'Semester', floatLabel: 'always' },
-      { name: 'admissionYear', type: 'input', validators: [Validators.required, Validators.pattern('^\d{4}$')], placeholder: 'Admission Year', floatLabel: 'always' },
-      { name: 'enrollmentStatus', type: 'select', validators: [Validators.required], placeholder: 'Enrollment Status', options: enrollmentStatusOptions, floatLabel: 'always' },
-      // Add other student fields similarly
-    ]
-  },
-  {
-    row: [
-      { name: 'firstName', type: 'input', validators: [Validators.required], placeholder: 'First Name', floatLabel: 'always' },
-      { name: 'lastName', type: 'input', validators: [Validators.required], placeholder: 'Last Name', floatLabel: 'always' },
-    ]
-  },
-  {
-    row: [
-      { name: 'firstName', type: 'input', validators: [Validators.required], placeholder: 'First Name', floatLabel: 'always' },
-      { name: 'lastName', type: 'input', validators: [Validators.required], placeholder: 'Last Name', floatLabel: 'always' },
-       // Add other student fields similarly
-      { name: 'gender', type: 'radio', validators: [Validators.required], placeholder: 'Gender', options: genderOptions, floatLabel: 'always' },
-    ]
-  },
-  {
-    row: [
-      { name: 'contactNumber', type: 'input', validators: [Validators.required, Validators.pattern('^\d{10}$')], placeholder: 'Contact Number', floatLabel: 'always' },
-      { name: 'email', type: 'input', validators: [Validators.required, Validators.email], placeholder: 'Email', floatLabel: 'always' },
-      { name: 'hobbies', type: 'checkbox', validators: [],
-      options: [
-        { value: 'reading', label: 'Reading', checked: false },
-        { value: 'traveling', label: 'Traveling', checked: false },
-        { value: 'cooking', label: 'Cooking', checked: false }
-      ], placeholder: 'Hobbies', floatLabel: 'auto' },
-
-    ]
-  },
-  // Address - Consider creating a separate sub-form or handling as individual fields
-  {
-    row: [
-      { name: 'address.street1', type: 'input', validators: [Validators.required], placeholder: 'Street 1', floatLabel: 'always' },
-      { name: 'address.city', type: 'input', validators: [Validators.required], placeholder: 'City', floatLabel: 'always' },
-      // Add other address fields similarly
-    ]
-  },
-  // Handling AcademicRecords as an array (FormArray) is more complex and might be dynamically managed
-];
-
-const studentForm : FormLayout = new FormLayout(studentFormLayout);
-
-function generateformInstance ( value: any) : FormLayout {
-  if (value === "student") {
-    return studentForm;
-  }
-  return studentForm;
-}
-
-

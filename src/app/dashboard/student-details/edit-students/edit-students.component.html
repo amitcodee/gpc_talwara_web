@@ -3,9 +3,18 @@
     <div *ngFor="let field of row.row" class="form-field">
 
       <!-- Input, Textarea, Select -->
-      <mat-form-field *ngIf="field.type === 'input' || field.type === 'textarea' || field.type === 'select'" appearance="fill" class="full-width" [hideRequiredMarker]="field.hideRequiredMarker" [floatLabel]="field.floatLabel">
+      <mat-form-field *ngIf="field.type === 'input' || field.type === 'textarea' || field.type === 'select'"
+      appearance="fill"
+      class="full-width"
+      [hideRequiredMarker]="field.hideRequiredMarker"
+      [floatLabel]="field.floatLabel"
+      >
         <mat-label>{{field.placeholder}}</mat-label>
-        <input *ngIf="field.type === 'input'" matInput [formControlName]="field.name">
+        <input *ngIf="field.type === 'input'"
+        matInput
+        [formControlName]="field.name"
+        [readonly]="field.readonly"
+        >
         <textarea *ngIf="field.type === 'textarea'" matInput [formControlName]="field.name"></textarea>
         <mat-select *ngIf="field.type === 'select'" [formControlName]="field.name">
           <mat-option *ngFor="let option of field.options" [value]="option.value">{{option.label}}</mat-option>
