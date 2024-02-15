@@ -84,7 +84,7 @@ studentFormLayout: FormRow[] = [
         floatLabel: 'always',
         hintLabel: 'Enter 12-digit registration number',
         readonly: false,
-        disabled: false,},
+        disabled: true,},
       { name: 'branch', type: 'select', validators: [Validators.required], placeholder: 'Branch', options: [
         { value: 'cse', label: 'Computer Science' },
         { value: 'ece', label: 'Electronics and Communication' },
@@ -112,8 +112,6 @@ studentFormLayout: FormRow[] = [
   },
   {
     row: [
-      { name: 'firstName', type: 'input', validators: [Validators.required], placeholder: 'First Name', floatLabel: 'always' },
-      { name: 'lastName', type: 'input', validators: [Validators.required], placeholder: 'Last Name', floatLabel: 'always' },
     ]
   },
   {
@@ -143,8 +141,8 @@ studentFormLayout: FormRow[] = [
   // Address - Consider creating a separate sub-form or handling as individual fields
   {
     row: [
-      { name: 'address.street1', type: 'input', validators: [Validators.required], placeholder: 'Street 1', floatLabel: 'always' },
-      { name: 'address.city', type: 'input', validators: [Validators.required], placeholder: 'City', floatLabel: 'always' },
+      { name: 'street1', type: 'input', validators: [Validators.required], placeholder: 'Street 1', floatLabel: 'always' },
+      { name: 'city', type: 'input', validators: [Validators.required], placeholder: 'City', floatLabel: 'always' },
       // Add other address fields similarly
     ]
   },

@@ -6,7 +6,7 @@ export interface FormRow {
 
 export interface FormField {
   name: string;
-  type: 'input' | 'textarea' | 'select' | 'radio' | 'checkbox';
+  type: 'input' | 'textarea' | 'select' | 'radio' | 'checkbox' | 'date';
   validators: ValidatorFn[];
   class?: string;
   styles?: { [key: string]: string | number };
@@ -15,10 +15,12 @@ export interface FormField {
   hideRequiredMarker?: boolean;
   floatLabel: 'always' | 'auto';
   hintLabel?: string; // New: Optional hint text for form fields
+  hintLabelNumber?: number; // New: Optional hint text for form fields
   readonly? : boolean;
   disabled? : boolean;
-  value? : string | number;
+  valueDisplay? : string | number;
   label? : string;
+  DOB? : string;
 }
 
 export interface SelectOption {

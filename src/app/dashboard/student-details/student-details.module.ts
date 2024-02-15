@@ -18,6 +18,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatNativeDateModule } from '@angular/material/core';
 import { DisableControlDirective } from '../directives/disable-control.directive';
 
 
@@ -43,7 +44,7 @@ import { DisableControlDirective } from '../directives/disable-control.directive
     MatRadioModule,
     MatCardModule,
     MatListModule,
-    MatCheckboxModule
+    MatCheckboxModule,
   ],
   exports: [
     StudentDetailsComponent,

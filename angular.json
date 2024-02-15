@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "college_website": {
+    "test-183e7": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/college_website",
+            "outputPath": "dist/test-183e7",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -77,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "college_website:build:production"
+              "buildTarget": "test-183e7:build:production"
             },
             "development": {
-              "buildTarget": "college_website:build:development"
+              "buildTarget": "test-183e7:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "college_website:build"
+            "buildTarget": "test-183e7:build"
           }
         },
         "test": {
@@ -110,6 +110,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "test-183e7:build:production",
+              "serveTarget": "test-183e7:serve:production"
+            },
+            "development": {
+              "buildTarget": "test-183e7:build:development",
+              "serveTarget": "test-183e7:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

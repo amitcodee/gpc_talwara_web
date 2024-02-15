@@ -1,51 +1,85 @@
-// student.model.ts
-export interface Student {
-  id?: number; // Optional ID for existing students
+interface StudentModel {
+  id: number; // Unique identifier for the student
   firstName: string;
   lastName: string;
-  middleName?: string;
+  fullName: string; // Optional calculated property for convenience
   dateOfBirth: Date;
-  gender: string;
-  contactNumber: string;
-  email: string;
-  address: Address;
-  branch: Branch;
-  semester: number;
-  admissionYear: number;
-  enrollmentStatus: string; // Active, Inactive, etc.
-  academicRecords?: AcademicRecord[]; // Array of past semester records
-  notes?: string;
+  regNumber: string;
+  demographics: {
+    gender: string;
+    ethnicity: string;
+    nationality: string;
+    // ...Other relevant demographics
+  };
+  address: {
+    streetAddress: string;
+    city: string;
+    state: string;
+    postalCode: string;
+    country: string;
+  };
+  contactInformation: {
+    phoneNumbers: string[]; // Array to accommodate multiple phone numbers
+    emailAddresses: string[]; // Array to accommodate multiple email addresses
+  };
+  fees: {
+    amount: number;
+    dueDate: Date;
+    paid: boolean;
+    paymentHistory: [{ date: Date; amount: number }]; // Track payment history
+  };
+  academicInformation: {
+    program: string;
+    yearOfStudy: number;
+    coursesEnrolled: string[]; // Array of course codes
+    grades: { [courseCode: string]: string }; // Map course codes to grades
+    // ...Other relevant academic details
+  };
+  additionalInformation: { [key: string]: any }; // Flexible field for custom data
 }
 
-export interface Address {
-  street1: string;
-  street2?: string;
-  city: string;
-  state: string;
-  postalCode: string;
-  country: string;
-}
+export class Student implements StudentModel {
+  fullName: StudentModel['fullName']; // Optional calculated property for convenience
+  constructor(
+    public id: number,
+    public firstName: string,
+    public lastName: string,
+    public dateOfBirth: Date,
+    public regNumber: string,
+    public demographics: {
+      gender: string;
+      ethnicity: string;
+      nationality: string;
+      // ...Other relevant demographics
+    },
+    public address: {
+      streetAddress: string;
+      city: string;
+      state: string;
+      postalCode: string;
+      country: string;
+    },
+    public contactInformation: {
+      phoneNumbers: string[];
+      emailAddresses: string[];
+    },
+    public fees: {
+      amount: number;
+      dueDate: Date;
+      paid: boolean;
+      paymentHistory: [{ date: Date; amount: number }];
+    },
+    public academicInformation: {
+      program: string;
+      yearOfStudy: number;
+      coursesEnrolled: string[];
+      grades: { [courseCode: string]: string };
+      // ...Other relevant academic details
+    },
+    public additionalInformation: { [key: string]: any } = {}
+  ) {
+    this.fullName = `${this.firstName} ${this.lastName}`;
+  }
 
-export interface Branch{
-  name: string;
-  abbreviation: string; // Optional for display
-}
-
-export interface AcademicRecord {
-  semester: number;
-  year: number;
-  averageGPA: number;
-  courses?: CourseRecord[]; // Array of courses taken in that semester
-}
-
-export interface CourseRecord {
-  name: string;
-  code: string;
-  credits: number;
-  grade: string;
-}
-
-// Getter to combine full name for display
-export function getFullName(student: Student): string {
-  return `${student.firstName} ${student.middleName ? student.middleName + ' ' : ''}${student.lastName}`;
+  // Custom methods as needed, e.g., for calculating fees breakdown, checking academic standing, etc.
 }

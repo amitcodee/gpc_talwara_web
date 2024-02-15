@@ -3,22 +3,36 @@
     <div *ngFor="let field of row.row" class="form-field">
 
       <!-- Input, Textarea, Select -->
-      <mat-form-field *ngIf="field.type === 'input' || field.type === 'textarea' || field.type === 'select'"
+      <mat-form-field *ngIf="field.type === 'input' || field.type === 'textarea' || field.type === 'select' || field.type === 'date'"
       appearance="fill"
       class="full-width"
       [hideRequiredMarker]="field.hideRequiredMarker"
-      [floatLabel]="field.floatLabel"
-      >
+      [floatLabel]="field.floatLabel">
         <mat-label>{{field.placeholder}}</mat-label>
-        <input *ngIf="field.type === 'input'"
-        matInput
-        [formControlName]="field.name"
-        [readonly]="field.readonly"
-        >
-        <textarea *ngIf="field.type === 'textarea'" matInput [formControlName]="field.name"></textarea>
-        <mat-select *ngIf="field.type === 'select'" [formControlName]="field.name">
+
+        @if(field.type === 'input'){
+          <input
+          matInput
+          #message
+          [formControlName]="field.name"
+          [readonly]="field.readonly">
+        }
+
+        @if (field.type === 'textarea'){
+          <textarea
+          matInput
+          #message
+          [formControlName]="field.name"></textarea>
+        }
+
+        @if(field.type === 'select'){
+          <mat-select
+          #message
+          [formControlName]="field.name">
           <mat-option *ngFor="let option of field.options" [value]="option.value">{{option.label}}</mat-option>
         </mat-select>
+        }
+
         <mat-error *ngIf="formGroup.get(field.name)?.invalid && formGroup.get(field.name)?.touched">
           {{field.placeholder}} is required
         </mat-error>
