@@ -47,6 +47,9 @@
 //     transform: translateY(-10px);
 //   }
 // }
+:host .red-title {
+  color: #b1040e;
+}
 @media (min-width: 992px) {
   .input-group {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
