@@ -3,6 +3,7 @@ interface StudentModel {
   firstName: string;
   lastName: string;
   fullName: string; // Optional calculated property for convenience
+  displayImage: string; // URL to the student's profile picture
   dateOfBirth: Date;
   regNumber: string;
   demographics: {
@@ -23,7 +24,7 @@ interface StudentModel {
     emailAddresses: string[]; // Array to accommodate multiple email addresses
   };
   fees: {
-    amount: number;
+    totalAmount: number;
     dueDate: Date;
     paid: boolean;
     paymentHistory: [{ date: Date; amount: number }]; // Track payment history
@@ -44,6 +45,7 @@ export class Student implements StudentModel {
     public id: number,
     public firstName: string,
     public lastName: string,
+    public displayImage: string,
     public dateOfBirth: Date,
     public regNumber: string,
     public demographics: {
@@ -64,7 +66,7 @@ export class Student implements StudentModel {
       emailAddresses: string[];
     },
     public fees: {
-      amount: number;
+      totalAmount: number;
       dueDate: Date;
       paid: boolean;
       paymentHistory: [{ date: Date; amount: number }];

@@ -20,6 +20,7 @@ import { MatListModule } from '@angular/material/list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatNativeDateModule } from '@angular/material/core';
 import { DisableControlDirective } from '../directives/disable-control.directive';
+import { ViewStudentsComponent } from './view-students/view-students.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { DisableControlDirective } from '../directives/disable-control.directive
     StudentDetailsComponent,
     AddStudentComponent,
     EditStudentsComponent,
-    DisableControlDirective
+    DisableControlDirective,
+    ViewStudentsComponent
   ],
   imports: [
     CommonModule,
@@ -45,6 +47,7 @@ import { DisableControlDirective } from '../directives/disable-control.directive
     MatCardModule,
     MatListModule,
     MatCheckboxModule,
+    MatNativeDateModule
   ],
   exports: [
     StudentDetailsComponent,

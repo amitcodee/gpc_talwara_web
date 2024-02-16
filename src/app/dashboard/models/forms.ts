@@ -20,7 +20,7 @@ export interface FormField {
   disabled? : boolean;
   valueDisplay? : string | number;
   label? : string;
-  DOB? : string;
+  DOB? : Date;
 }
 
 export interface SelectOption {

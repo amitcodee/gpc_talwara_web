@@ -1,6 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { FormField, FormLayout, FormRow } from '../../models/forms';
+import { exactCharacterCountAndNumeric } from '../../validators/validators';
 
 
 // Example usage within a component
@@ -79,10 +80,11 @@ studentFormLayout: FormRow[] = [
     row: [
       { name: 'regNumber',
         type: 'input',
-        validators: [Validators.required, Validators.pattern('^\d{12}$')],
+        validators: [Validators.required, exactCharacterCountAndNumeric],
         placeholder: 'Registration Number',
         floatLabel: 'always',
         hintLabel: 'Enter 12-digit registration number',
+        hintLabelNumber: 12,
         readonly: false,
         disabled: true,},
       { name: 'branch', type: 'select', validators: [Validators.required], placeholder: 'Branch', options: [
@@ -92,7 +94,7 @@ studentFormLayout: FormRow[] = [
         { value: 'mech', label: 'Mechanical' },
         { value: 'civil', label: 'Civil' },
       ], floatLabel: 'always' },
-      { name: 'semester', type: 'select', validators: [Validators.required, Validators.pattern('^\d{1,2}$')], options: [
+      { name: 'semester', type: 'select', validators: [Validators.required], options: [
         { value: 1, label: '1st' },
         { value: 2, label: '2nd' },
         { value: 3, label: '3rd' },
@@ -100,7 +102,7 @@ studentFormLayout: FormRow[] = [
         { value: 5, label: '5th' },
         { value: 6, label: '6th' },
       ], placeholder: 'Semester', floatLabel: 'always' },
-      { name: 'admissionYear', type: 'input', validators: [Validators.required, Validators.pattern('^\d{4}$')], placeholder: 'Admission Year', floatLabel: 'always' },
+      { name: 'admissionYear', type: 'input', validators: [Validators.required], placeholder: 'Admission Year', floatLabel: 'always' },
       { name: 'enrollmentStatus', type: 'select', validators: [Validators.required], placeholder: 'Enrollment Status', options: [
         { value: 'active', label: 'Active' },
         { value: 'DropOut', label: 'DropOut' },
@@ -112,6 +114,7 @@ studentFormLayout: FormRow[] = [
   },
   {
     row: [
+      { name: 'dob', type: 'date', validators: [Validators.required], placeholder: 'Date of Birth', floatLabel: 'always' },
     ]
   },
   {
@@ -127,7 +130,7 @@ studentFormLayout: FormRow[] = [
   },
   {
     row: [
-      { name: 'contactNumber', type: 'input', validators: [Validators.required, Validators.pattern('^\d{10}$')], placeholder: 'Contact Number', floatLabel: 'always' },
+      { name: 'contactNumber', type: 'input', validators: [Validators.required], placeholder: 'Contact Number', floatLabel: 'always' },
       { name: 'email', type: 'input', validators: [Validators.required, Validators.email], placeholder: 'Email', floatLabel: 'always' },
       { name: 'hobbies', type: 'checkbox', validators: [],
       options: [
@@ -161,9 +164,24 @@ ngOnInit() {
       console.log(this.formGroup.value);
       // Handle your form submission logic here
     } else {
+
       console.log('Form is not valid');
+      // Create a popup with the error message
+      alert('Form is not valid');
     }
   }
 
+  getFieldError(field: string, error: string): string | null {
+    const control = this.formGroup.get(field);
+    if (control && control.errors && control.errors[error]) {
+      // Access specific error property based on your validator implementation
+      if (error === 'exactCharacterCountAndNumeric') {
+        return `Field must be exactly ${control.errors['exactCharacterCountAndNumeric'].requiredLength} characters long and contain only numbers.`;
+      } else {
+        return `Field has error: ${error}`; // Handle other potential errors
+      }
+    }
+    return null;
+  }
 
 }

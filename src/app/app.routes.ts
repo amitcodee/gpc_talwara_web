@@ -4,12 +4,12 @@ import { RegisterComponent } from './register/register.component';
 
 
 export const routes: Routes = [
+  // {
+  //   path: '',
+  //   component: RegisterComponent,
+  // },
   {
     path: '',
-    component: RegisterComponent,
-  },
-  {
-    path: 'front',
     loadChildren: () => import('./front-end/front-end.module').then(m => m.FrontEndModule),
   },
   {
