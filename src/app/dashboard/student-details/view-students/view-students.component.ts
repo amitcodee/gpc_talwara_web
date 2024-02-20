@@ -6,9 +6,10 @@ import { MatTableDataSource } from '@angular/material/table';
 interface ColumnInterface {
   name: string;
   displayName: string;
+  type: 'text' | 'number' | 'date' | 'boolean' | 'action'; // Add more types as needed
+
   // Add any other optional column properties:
-  // - type: 'string' | 'number' | 'date' | etc.
-  // - format: Function to format data
+
   // - editable: boolean
   // - deletable: boolean
 }
@@ -25,7 +26,7 @@ export interface DataSourceInterface {
 })
 export class ViewStudentsComponent implements AfterViewInit {
   dataSource: DataSourceInterface[] = [];
-  olumns: ColumnInterface[] = [];
+  columns: ColumnInterface[] = [];
   isEditable = true;
   isDeletable = true;
   @ViewChild(MatPaginator) paginator!: MatPaginator;

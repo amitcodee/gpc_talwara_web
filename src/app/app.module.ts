@@ -21,6 +21,7 @@ import { getDatabase, provideDatabase } from '@angular/fire/database';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 const firebaseConfig = {
   // Your Firebase project configuration
@@ -36,7 +37,8 @@ const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ], // Add your component declarations here
   imports: [
     BrowserModule,
