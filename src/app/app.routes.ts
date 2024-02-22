@@ -1,13 +1,18 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 
 export const routes: Routes = [
-  // {
-  //   path: '',
-  //   component: RegisterComponent,
-  // },
+  {
+    path: 'register',
+    component: RegisterComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
   {
     path: '',
     loadChildren: () => import('./front-end/front-end.module').then(m => m.FrontEndModule),

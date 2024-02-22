@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -8,16 +10,18 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  email = '';
-  password = '';
+  signInForm : FormGroup = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [Validators.required, Validators.minLength(6)])
+  });
 
-  constructor(private afAuth: AngularFireAuth, private router: Router) {}
+  constructor(private _auth: AuthService, private router: Router ) {}
 
-  async login() {
+  login() {
     try {
-      const userCredential = await this.afAuth.signInWithEmailAndPassword(this.email, this.password);
-      console.log('Logged in:', userCredential.user);
-      this.router.navigate(['/protected-route']); // Or redirect to any other page
+      const userCredential = this._auth.logIn(this.signInForm.value.email,
+        this.signInForm.value.password);
+      console.log('Logged in:', userCredential);
     } catch (error) {
       console.error('Login error:', error);
       // Handle login errors appropriately (e.g., display user-friendly messages)

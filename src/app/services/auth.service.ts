@@ -19,11 +19,7 @@ interface User {
 export class AuthService {
   private currentUser: User | null = null;
 
-  private afAuth =  Inject(AngularFireAuth);
-  private afs =  Inject(AngularFirestore);
-  private router =  Inject(Router);
-
-  constructor(
+  constructor(private afAuth :AngularFireAuth, private afs: AngularFirestore, private router: Router
   ) {}
 
   async signUp(email: string, password: string) {
@@ -47,7 +43,7 @@ export class AuthService {
   async logIn(email: string, password: string) {
     try {
       const userCredential = await this.afAuth.signInWithEmailAndPassword(email, password);
-      this.router.navigate(['/home']); // Or redirect to a different page
+      this.router.navigate(['/dashboard']); // Or redirect to a different page
     } catch (error) {
       console.error(error);
       // Handle errors appropriately, e.g., display an error message to the user

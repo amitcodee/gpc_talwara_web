@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app.routes';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { StudentDetailsModule } from './dashboard/student-details/student-details.module';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { AngularFireModule } from '@angular/fire/compat';
@@ -22,6 +23,7 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { AuthService } from './services/auth.service';
 
 const firebaseConfig = {
   // Your Firebase project configuration
@@ -48,6 +50,7 @@ const firebaseConfig = {
     AppRoutingModule,
     ReactiveFormsModule,
     AngularFireModule,
+    MatProgressSpinnerModule,
     AngularFireModule.initializeApp(firebaseConfig),
   ], // Add your module imports here
   exports: [], // Add your exports here
@@ -57,6 +60,7 @@ const firebaseConfig = {
     TextSizeService,
     ThemeService,
     TitleService,
+    AuthService,
     provideAnimationsAsync()
   ], // Add your services/providers here
   bootstrap: [AppComponent]

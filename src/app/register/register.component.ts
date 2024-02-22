@@ -11,6 +11,7 @@ import { FormGroup } from '@angular/forms';
   styleUrl: './register.component.scss'
 })
 export class RegisterComponent implements OnInit {
+  signingIn: boolean = false;
   registrationForm : FormGroup = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required, Validators.minLength(6)])
