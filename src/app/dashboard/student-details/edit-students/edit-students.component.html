@@ -1,5 +1,6 @@
 <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
   <div *ngFor="let row of formLayoutInstance.layout" class="form-row">
+    {{row.title}}
     <div *ngFor="let field of row.row" class="form-field">
 
       <!-- Input, Textarea, Select -->

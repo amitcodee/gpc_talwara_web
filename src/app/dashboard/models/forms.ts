@@ -1,6 +1,7 @@
 import { ValidatorFn, FormArray, FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 export interface FormRow {
+  title: string;
   row: FormField[];
 }
 
