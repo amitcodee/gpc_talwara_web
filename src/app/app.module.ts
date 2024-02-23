@@ -13,6 +13,12 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { StudentDetailsModule } from './dashboard/student-details/student-details.module';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
+// for Router import:
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
+
+// for Core import:
+import { LoadingBarModule } from '@ngx-loading-bar/core';
+
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
@@ -52,6 +58,10 @@ const firebaseConfig = {
     AngularFireModule,
     MatProgressSpinnerModule,
     AngularFireModule.initializeApp(firebaseConfig),
+        // for Router use:
+    LoadingBarRouterModule,
+        // for Core use:
+    LoadingBarModule
   ], // Add your module imports here
   exports: [], // Add your exports here
   providers: [

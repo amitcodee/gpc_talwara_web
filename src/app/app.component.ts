@@ -12,6 +12,7 @@ import { TitleService } from './front-end/services/title/title.service';
     styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
+  height : Number = 4;
   title(title: any) {
     throw new Error('Method not implemented.');
   }
@@ -38,4 +39,6 @@ export class AppComponent implements OnInit {
 
     return 'SASS GPC Talwara';
   }
+
+
 }
