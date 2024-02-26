@@ -137,5 +137,21 @@ export class AuthService {
     }
   }
 
+  async updateEmail(newEmail: string): Promise<void> {
+    const user = await this.afAuth.currentUser;
+    if (user) {
+      try {
+        await user.updateEmail(newEmail);
+        // Optionally, update user data in Firestore
+      } catch (error) {
+        console.error('Error updating email:', error);
+      }
+    } else {
+      console.error('No user logged in to update email');
+    }
+  }
+
+
+
 
 }

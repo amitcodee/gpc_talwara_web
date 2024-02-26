@@ -15,10 +15,7 @@ import  {StudentFormConfig} from '../../models/student';
 export class EditStudentsComponent implements OnInit {
   formGroup!: FormGroup;
   formLayoutInstance!: FormLayout;
-
   constructor(private fb: FormBuilder, private studentFormConfig: StudentFormConfig) {
-
-
   }
 
 
@@ -29,10 +26,10 @@ ngOnInit() {
   this.formGroup = this.formLayoutInstance.generateFormGroup(this.fb);
 }
 
-
   onSubmit() {
     if (this.formGroup.valid) {
       console.log(this.formGroup.value.data);
+
       // Handle your form submission logic here
     } else {
 
