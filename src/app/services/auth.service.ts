@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
 import { GoogleAuthProvider } from '@firebase/auth';
+import { BehaviorSubject } from 'rxjs';
 
 interface User {
   uid: string;
@@ -17,6 +18,8 @@ interface User {
 })
 
 export class AuthService {
+  private isAuthenticatedSubject = new BehaviorSubject<boolean>(false);
+  isAuthenticated$ = this.isAuthenticatedSubject.asObservable();
   private currentUser: User | null = null;
 
   constructor(private afAuth :AngularFireAuth, private afs: AngularFirestore, private router: Router

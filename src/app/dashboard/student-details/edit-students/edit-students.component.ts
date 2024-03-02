@@ -1,7 +1,8 @@
 import { Component, OnInit} from '@angular/core';
-import {  FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {  FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FormLayout, FormRow } from '../../models/forms';
-import  {StudentFormConfig} from '../../models/student';
+import  {StudentFormConfig, Student} from '../../models/student';
+import {studentData} from '../../models/test-data';
 
 // Example usage within a component
 
@@ -15,6 +16,9 @@ import  {StudentFormConfig} from '../../models/student';
 export class EditStudentsComponent implements OnInit {
   formGroup!: FormGroup;
   formLayoutInstance!: FormLayout;
+  studentData = studentData[0]; // Assuming studentData is defined and imported
+
+
   constructor(private fb: FormBuilder, private studentFormConfig: StudentFormConfig) {
   }
 
@@ -24,12 +28,13 @@ ngOnInit() {
   // Initialize formLayoutInstance with studentFormLayout and generate the form group
   this.formLayoutInstance = new FormLayout(this.studentFormConfig.studentFormLayoutConfig); // Assuming studentFormLayout is defined and imported
   this.formGroup = this.formLayoutInstance.generateFormGroup(this.fb);
+  this.formGroup.setValue(this.studentData); // Assuming studentFormInitialData is defined and imported
 }
 
   onSubmit() {
     if (this.formGroup.valid) {
-      console.log(this.formGroup.value.data);
-
+      const student: Student = this.formGroup.value as Student;
+      console.log(student);
       // Handle your form submission logic here
     } else {
 
@@ -52,4 +57,8 @@ ngOnInit() {
     return null;
   }
 
+  addPhoneNumber() {
+    const studentDetails = this.formGroup.get('phoneNumbers') as FormArray;
+    studentDetails.push(this.fb.control(''));
+  }
 }

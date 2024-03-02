@@ -22,6 +22,7 @@ export interface FormField {
   valueDisplay? : string | number;
   label? : string;
   DOB? : Date;
+  extra? : true
 }
 
 export interface SelectOption {
