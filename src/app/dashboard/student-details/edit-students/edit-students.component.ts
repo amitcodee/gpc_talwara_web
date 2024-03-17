@@ -16,7 +16,7 @@ import {studentData} from '../../models/test-data';
 export class EditStudentsComponent implements OnInit {
   formGroup!: FormGroup;
   formLayoutInstance!: FormLayout;
-  studentData = studentData[0]; // Assuming studentData is defined and imported
+  student = studentData[0]; // Assuming studentData is defined and imported
 
 
   constructor(private fb: FormBuilder, private studentFormConfig: StudentFormConfig) {
@@ -28,7 +28,8 @@ ngOnInit() {
   // Initialize formLayoutInstance with studentFormLayout and generate the form group
   this.formLayoutInstance = new FormLayout(this.studentFormConfig.studentFormLayoutConfig); // Assuming studentFormLayout is defined and imported
   this.formGroup = this.formLayoutInstance.generateFormGroup(this.fb);
-  this.formGroup.setValue(this.studentData); // Assuming studentFormInitialData is defined and imported
+  this.formGroup.setValue(this.student);
+  console.log(this.formGroup) // Assuming studentFormInitialData is defined and imported
 }
 
   onSubmit() {

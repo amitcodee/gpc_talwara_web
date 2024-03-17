@@ -17,7 +17,9 @@
             matInput
             #message
             [formControlName]="field.name"
-            [readonly]="field.readonly">
+            [readonly]="field.readonly"
+            value=""
+            >
           }
 
           @if (field.type === 'textarea'){
@@ -98,3 +100,4 @@
   </div>
   <button mat-raised-button color="primary" type="submit">Submit</button>
 </form>
+
