@@ -2,6 +2,8 @@ import { ValidatorFn, FormArray, FormControl, FormBuilder, FormGroup, Validators
 
 export interface FormRow {
   title: string;
+  modelValue?: string;
+  modelValueBoolean?: boolean;
   row: FormField[];
 }
 

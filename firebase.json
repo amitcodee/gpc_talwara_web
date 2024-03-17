@@ -1,7 +1,7 @@
 {
   "hosting": [
     {
-      "target": "est-183e7",
+      "target": "test-183e7",
       "source": ".",
       "frameworksBackend": {}
     }

@@ -19,6 +19,7 @@ import { MainDashComponent } from './main-dash/main-dash.component';
 import { RouteService } from './Services/route.service';
 import { StudentDetailsModule } from './student-details/student-details.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { StudentService } from './Services/students.service';
 
 
 
@@ -45,7 +46,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     DashboardComponent,
   ],
   providers: [
-    RouteService
+    RouteService,
+    StudentService
   ]
 })
 export class DashboardModule { }

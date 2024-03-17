@@ -2,7 +2,7 @@ import { Validators } from '@angular/forms';
 import { FormRow } from './forms';
 
 interface StudentModel {
-  id: number; // Unique identifier for the student
+  id: string; // Unique identifier for the student
   enrollmentStatus: 'active' | 'DropOut' | 'suspended' | 'expelled'; // Current enrollment status
   personalInformation: {
     firstName: string;
@@ -14,16 +14,18 @@ interface StudentModel {
     familyIncome: number;
     dateOfBirth: Date;
     bloodGroup: 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
+    gender: string;
+    nationality: string;
+    displayImage: string; // URL to the student's profile picture
     // ...Other relevant personal details
   };
-  displayImage: string; // URL to the student's profile picture
-  regNumber: string;
-  gender: string;
-  nationality: string;
-  admissionDate: Date;
-  category: 'SC' | 'ST' | 'OBC' | 'General'; // Caste category for fee calculation
-  feeWaiver: boolean;
-  feeScheme: 'Below 60' | 'Between 60-70' | 'Between 70-80' | 'Between 80-90' | 'Above 90'; // Type of fee waiver
+  enrollmentInformation: {
+    regNumber: string;
+    admissionDate: Date;
+    category: 'SC' | 'ST' | 'OBC' | 'General'; // Caste category for fee calculation
+    feeWaiver: boolean;
+    feeScheme: 'Below 60' | 'Between 60-70' | 'Between 70-80' | 'Between 80-90' | 'Above 90'; // Type of fee waiver
+  }
   address: {
     streetAddress?: string;
     city: string;
@@ -55,8 +57,9 @@ interface StudentModel {
 }
 
 export class Student implements StudentModel {
+
   constructor(
-    public id: number,
+    public id: string,
     public enrollmentStatus: 'active' | 'DropOut' | 'suspended' | 'expelled',
     public personalInformation: {
       firstName: string;
@@ -68,15 +71,17 @@ export class Student implements StudentModel {
       familyIncome: number;
       dateOfBirth: Date;
       bloodGroup: 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
+      displayImage: string,
+      gender: string,
+      nationality: string,
     },
-    public displayImage: string,
-    public regNumber: string,
-    public gender: string,
-    public nationality: string,
-    public admissionDate: Date,
-    public category: 'SC' | 'ST' | 'OBC' | 'General',
-    public feeWaiver: boolean,
-    public feeScheme: 'Below 60' | 'Between 60-70' | 'Between 70-80' | 'Between 80-90' | 'Above 90',
+    public enrollmentInformation: {
+      regNumber: string,
+      admissionDate: Date,
+      category: 'SC' | 'ST' | 'OBC' | 'General',
+      feeWaiver: boolean,
+      feeScheme: 'Below 60' | 'Between 60-70' | 'Between 70-80' | 'Between 80-90' | 'Above 90',
+    },
     public address: {
       streetAddress?: string;
       city: string;
@@ -113,13 +118,15 @@ export class StudentFormConfig{
   studentFormLayout: FormRow[] = [
     {
       title: 'Personal Information',
+      modelValue: 'personalInformation',
+      modelValueBoolean: true,
       row: [
         {
           name: 'firstName',
           type: 'input',
           validators: [Validators.required],
           placeholder: 'First Name',
-          floatLabel: 'always',
+          floatLabel: 'auto',
         },
         {
           name: 'lastName',
@@ -141,12 +148,7 @@ export class StudentFormConfig{
           validators: [Validators.required],
           placeholder: 'Mother Name',
           floatLabel: 'always',
-        }
-      ],
-    },
-    {
-      title: 'Enrollment Information',
-      row: [
+        },
         {
           name: 'dateOfBirth',
           type: 'date',
@@ -186,9 +188,11 @@ export class StudentFormConfig{
           floatLabel: 'always',
         }
       ],
-      },
+    },
     {
-      title: 'Contact Information',
+      title: 'Enrollment Information',
+      modelValue: 'enrollmentInformation',
+      modelValueBoolean: true,
       row: [
         {
           name: 'category',
@@ -205,11 +209,8 @@ export class StudentFormConfig{
         },
         {
           name: 'feeWaiver',
-            type: 'checkbox',
+            type: 'input',
             validators: [],
-            options: [
-              { value: 'feeWaiver', label: 'Fee Waiver', checked: false },
-            ],
             placeholder: 'Fee Waiver',
             floatLabel: 'auto',
         },
@@ -227,10 +228,20 @@ export class StudentFormConfig{
           placeholder: 'Fee Scheme',
           floatLabel: 'always',
         },
+
+
+      ],
+      },
+    {
+      title: 'Contact Information',
+      row: [
+
       ]
     },
     {
       title: 'Address Information',
+      modelValue: 'address',
+      modelValueBoolean: true,
       row: [
         {
           name: 'streetAddress',
@@ -271,6 +282,8 @@ export class StudentFormConfig{
     },
     {
       title: 'Contact Information',
+      modelValue: 'contactInformation',
+      modelValueBoolean: true,
       row: [
         {
           name: 'phoneNumbers',
@@ -290,6 +303,8 @@ export class StudentFormConfig{
     },
     {
       title: 'Fees Information',
+      modelValue: 'fees',
+      modelValueBoolean: true,
       row: [
         {
           name: 'totalAmount',
@@ -307,11 +322,8 @@ export class StudentFormConfig{
         },
         {
           name: 'paid',
-          type: 'checkbox',
+          type: 'input',
           validators: [],
-          options: [
-            { value: 'paid', label: 'Paid', checked: false },
-          ],
           placeholder: 'Paid',
           floatLabel: 'auto',
         },
@@ -319,6 +331,8 @@ export class StudentFormConfig{
     },
     {
       title: 'Academic Information',
+      modelValue: 'academicInformation',
+      modelValueBoolean: true,
       row: [
         {
           name: 'tenth',
@@ -336,11 +350,8 @@ export class StudentFormConfig{
         },
         {
           name: 'LEET',
-          type: 'checkbox',
+          type: 'input',
           validators: [],
-          options: [
-            { value: 'LEET', label: 'LEET', checked: false },
-          ],
           placeholder: 'LEET',
           floatLabel: 'auto',
         },
