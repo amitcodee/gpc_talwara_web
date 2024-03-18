@@ -10,7 +10,7 @@ import { TitleService } from './front-end/services/title/title.service';
     styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-  height : string = '10';
+  height : string = '30';
   color = 'red';
   title(title: any) {
     throw new Error('Method not implemented.');
