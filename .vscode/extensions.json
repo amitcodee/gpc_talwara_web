@@ -5,6 +5,8 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "donjayamanne.git-extension-pack",
-    "editorconfig.editorconfig"
+    "editorconfig.editorconfig",
+    "ms-vscode.vscode-typescript-next",
+    "ms-vscode.vscode-typescript-tslint-plugin",
   ]
 }
