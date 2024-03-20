@@ -11,6 +11,11 @@ import { FormGroup } from '@angular/forms';
   styleUrl: './register.component.scss'
 })
 export class RegisterComponent implements OnInit {
+  showPassword = false;
+
+  togglePassword() {
+    this.showPassword = !this.showPassword;
+  }
   signingIn: boolean = false;
   registrationForm : FormGroup = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
