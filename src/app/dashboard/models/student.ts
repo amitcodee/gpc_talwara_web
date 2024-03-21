@@ -1,29 +1,31 @@
 import { Validators } from '@angular/forms';
 import { FormRow } from './forms';
 
-interface StudentModel {
+export interface StudentModel {
   id: number; // Unique identifier for the student
   enrollmentStatus: 'active' | 'DropOut' | 'suspended' | 'expelled'; // Current enrollment status
   personalInformation: {
     firstName: string;
     lastName: string;
-    fullName: string; // Optional calculated property for convenience
+    fullName?: string; // Optional calculated property for convenience
     fatherName: string;
     motherName: string;
     guardianOccupation: string;
     familyIncome: number;
     dateOfBirth: Date;
+    gender: 'Male' | 'Female' | 'Other' | 'Prefer not to say';
     bloodGroup: 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
     // ...Other relevant personal details
   };
   displayImage: string; // URL to the student's profile picture
   regNumber: string;
-  gender: string;
   nationality: string;
   admissionDate: Date;
   category: 'SC' | 'ST' | 'OBC' | 'General'; // Caste category for fee calculation
-  feeWaiver: boolean;
+  feeWaiver: 'Yes' | 'No';
   feeScheme: 'Below 60' | 'Between 60-70' | 'Between 70-80' | 'Between 80-90' | 'Above 90'; // Type of fee waiver
+  branch: 'CSE'| 'CE' | 'ME' | 'ECE' | 'EE';
+  batch: string;
   address: {
     streetAddress?: string;
     city: string;
@@ -38,82 +40,98 @@ interface StudentModel {
   fees: {
     totalAmount: number;
     dueDate: Date;
-    paid: boolean;
-    paymentHistory: [{ sem: number; date: Date; amount: number }]; // Track payment history
+    paid: 'Paid' | 'Not Paid';
+    paymentHistory?: [{ sem: string; date: Date; amount: number }]; // Track payment history
   };
   academicInformation: {
     tenth : number; // 10th grade percentage
     twelfth : number; // 12th grade percentage
-    LEET: boolean; // Whether the student joined through lateral entry
+    LEET: 'Yes'|'No'; // Whether the student joined through lateral entry
     percentage: number; // Academic performance percentage
-    branch: 'CSE'| 'CE' | 'ME' | 'ECE' | 'EE';
-    batch: number;
-    grades: { [courseCode: string]: string }; // Map course codes to grades
+    grades?: { [courseCode: string]: string }; // Map course codes to grades
     // ...Other relevant academic details
   };
-  additionalInformation: { [key: string]: any }; // Flexible field for custom data
+  additionalInformation?: { [key: string]: any }; // Flexible field for custom data
 }
 
 export class Student implements StudentModel {
-  constructor(
-    public id: number,
-    public enrollmentStatus: 'active' | 'DropOut' | 'suspended' | 'expelled',
-    public personalInformation: {
-      firstName: string;
-      lastName: string;
-      fullName: string;
-      fatherName: string;
-      motherName: string;
-      guardianOccupation: string;
-      familyIncome: number;
-      dateOfBirth: Date;
-      bloodGroup: 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
-    },
-    public displayImage: string,
-    public regNumber: string,
-    public gender: string,
-    public nationality: string,
-    public admissionDate: Date,
-    public category: 'SC' | 'ST' | 'OBC' | 'General',
-    public feeWaiver: boolean,
-    public feeScheme: 'Below 60' | 'Between 60-70' | 'Between 70-80' | 'Between 80-90' | 'Above 90',
-    public address: {
-      streetAddress?: string;
-      city: string;
-      state: string;
-      postalCode: string;
-      country: string;
-    },
-    public contactInformation: {
-      phoneNumbers: string[];
-      emailAddresses: string[];
-    },
-    public fees: {
-      totalAmount: number;
-      dueDate: Date;
-      paid: boolean;
-      paymentHistory: [{ sem: number; date: Date; amount: number }];
-    },
-    public academicInformation: {
-      tenth: number;
-      twelfth: number;
-      LEET: boolean;
-      percentage: number;
-      branch: 'CSE'| 'CE' | 'ME' | 'ECE' | 'EE';
-      batch: number;
-      grades: { [courseCode: string]: string };
-    },
-    public additionalInformation: { [key: string]: any } = {}
-  ) {}
+  public id: number = 0;
+  public enrollmentStatus: 'active' | 'DropOut' | 'suspended' | 'expelled' = 'active';
+  public personalInformation: {
+    firstName: string;
+    lastName: string;
+    fatherName: string;
+    motherName: string;
+    guardianOccupation: string;
+    familyIncome: number;
+    dateOfBirth: Date;
+    bloodGroup: 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
+    gender: 'Male' | 'Female' | 'Other' | 'Prefer not to say';
 
-  // Custom methods as needed, e.g., for calculating fees breakdown, checking academic standing, etc.
+  } = {} as any;
+  public displayImage: string = '';
+  public regNumber: string = '';
+  public nationality: string = '';
+  public admissionDate: Date = new Date();
+  public category: 'SC' | 'ST' | 'OBC' | 'General';
+  public feeWaiver: 'Yes' | 'No';
+  public feeScheme: 'Below 60' | 'Between 60-70' | 'Between 70-80' | 'Between 80-90' | 'Above 90' = 'Below 60';
+  public branch: 'CSE'| 'CE' | 'ME' | 'ECE' | 'EE';
+  public batch: string;
+  public address: {
+    streetAddress?: string;
+    city: string;
+    state: string;
+    postalCode: string;
+    country: string;
+  } = {} as any;
+  public contactInformation: {
+    phoneNumbers: string[];
+    emailAddresses: string[];
+  } = {} as any;
+  public fees: {
+    totalAmount: number;
+    dueDate: Date;
+    paid: 'Paid' | 'Not Paid';
+    paymentHistory?: [{ sem: string; date: Date; amount: number }];
+  } = {} as any;
+  public academicInformation: {
+    tenth : number;
+    twelfth : number;
+    LEET: 'Yes'|'No';
+    percentage: number;
+    grades?: { [courseCode: string]: string };
+  } = {} as any;
+  public additionalInformation?: { [key: string]: any } = {};
+
+  constructor(student: StudentModel) {
+    this.id = student.id;
+    this.enrollmentStatus = student.enrollmentStatus;
+    this.personalInformation = student.personalInformation;
+    this.displayImage = student.displayImage;
+    this.regNumber = student.regNumber;
+    this.nationality = student.nationality;
+    this.admissionDate = student.admissionDate;
+    this.category = student.category;
+    this.feeWaiver = student.feeWaiver;
+    this.feeScheme = student.feeScheme;
+    this.branch = student.branch;
+    this.batch = student.batch;
+    this.address = student.address;
+    this.contactInformation = student.contactInformation;
+    this.fees = student.fees;
+    this.academicInformation = student.academicInformation;
+    this.additionalInformation = student.additionalInformation;
+  }
 }
 
 export class StudentFormConfig{
   studentFormLayout: FormRow[] = [
     {
       title: 'Personal Information',
-      row: [
+      formGroupBoolean : true,
+      formGroupName: 'personalInformation',
+      groupRow: [
         {
           name: 'firstName',
           type: 'input',
@@ -141,12 +159,21 @@ export class StudentFormConfig{
           validators: [Validators.required],
           placeholder: 'Mother Name',
           floatLabel: 'always',
-        }
-      ],
-    },
-    {
-      title: 'Enrollment Information',
-      row: [
+        },
+        {
+          name: 'guardianOccupation',
+          type: 'input',
+          validators: [Validators.required],
+          placeholder: 'Guardian Occupation',
+          floatLabel: 'always',
+        },
+        {
+          name: 'familyIncome',
+          type: 'input',
+          validators: [Validators.required],
+          placeholder: 'Family Income',
+          floatLabel: 'always',
+        },
         {
           name: 'dateOfBirth',
           type: 'date',
@@ -172,24 +199,86 @@ export class StudentFormConfig{
           floatLabel: 'always',
         },
         {
-          name: 'familyIncome',
-          type: 'input',
+          name : 'gender',
+          type: 'select',
           validators: [Validators.required],
-          placeholder: 'Family Income',
-          floatLabel: 'always',
-        },
-        {
-          name: 'guardianOccupation',
-          type: 'input',
-          validators: [Validators.required],
-          placeholder: 'Guardian Occupation',
+          options: [
+            { value : 'Male', label :'Male'},
+            { value : 'Female', label :'Female'},
+            { value : 'Other', label :'Other'},
+            { value : 'Prefer not to say', label :'Prefer not to say'}
+          ],
+          placeholder: 'Gender',
           floatLabel: 'always',
         }
       ],
-      },
+    },
     {
-      title: 'Contact Information',
-      row: [
+      title: 'Enrollment Information',
+      formGroupBoolean : false,
+      groupRow: [
+        {
+          name: 'id',
+          type: 'input',
+          validators: [Validators.required],
+          placeholder: 'ID',
+          floatLabel: 'always',
+        },
+        {
+          name: 'regNumber',
+          type: 'input',
+          validators: [Validators.required],
+          placeholder: 'Registration Number',
+          floatLabel: 'always',
+        },
+        {
+          name: 'enrollmentStatus',
+          type: 'select',
+          validators: [Validators.required],
+          options: [
+            { value: 'active', label: 'Active' },
+            { value: 'DropOut', label: 'Drop Out' },
+            { value: 'suspended', label: 'Suspended' },
+            { value: 'expelled', label: 'Expelled' },
+          ],
+          placeholder: 'Enrollment Status',
+          floatLabel: 'always',
+        },
+        {
+          name: 'admissionDate',
+          type: 'date',
+          validators: [Validators.required],
+          placeholder: 'Admission Date',
+          floatLabel: 'always',
+        },
+        {
+          name: 'batch',
+          type: 'input',
+          validators: [Validators.required],
+          placeholder: 'Batch',
+          floatLabel: 'always',
+        },
+        {
+          name: 'branch',
+          type: 'select',
+          validators: [Validators.required],
+          options: [
+            { value: 'CSE', label: 'CSE' },
+            { value: 'CE', label: 'CE' },
+            { value: 'ME', label: 'ME' },
+            { value: 'ECE', label: 'ECE' },
+            { value: 'EE', label: 'EE' },
+          ],
+          placeholder: 'Branch',
+          floatLabel: 'always',
+        },
+        {
+          name: 'displayImage',
+          type: 'input',
+          validators: [Validators.required],
+          placeholder: 'Display Image',
+          floatLabel: 'always',
+        },
         {
           name: 'category',
           type: 'select',
@@ -205,13 +294,14 @@ export class StudentFormConfig{
         },
         {
           name: 'feeWaiver',
-            type: 'checkbox',
-            validators: [],
-            options: [
-              { value: 'feeWaiver', label: 'Fee Waiver', checked: false },
-            ],
-            placeholder: 'Fee Waiver',
-            floatLabel: 'auto',
+          type: 'select',
+          validators: [Validators.required],
+          options: [
+            { value: 'Yes', label: 'Yes' },
+            { value: 'No', label: 'No' },
+          ],
+          placeholder: 'Fee Waiver',
+          floatLabel: 'auto',
         },
         {
           name: 'feeScheme',
@@ -227,11 +317,41 @@ export class StudentFormConfig{
           placeholder: 'Fee Scheme',
           floatLabel: 'always',
         },
+        {
+          name: 'nationality',
+          type: 'input',
+          validators: [Validators.required],
+          placeholder: 'Nationality',
+          floatLabel: 'always',
+        }
+      ]
+      },
+    {
+      title: 'Contact Information',
+      formGroupBoolean : true,
+      formGroupName: 'contactInformation',
+      groupRow: [
+        {
+          name: 'phoneNumbers',
+          type: 'input',
+          validators: [Validators.required],
+          placeholder: 'Phone Numbers',
+          floatLabel: 'always',
+        },
+        {
+          name: 'emailAddresses',
+          type: 'input',
+          validators: [Validators.required],
+          placeholder: 'Email Addresses',
+          floatLabel: 'always',
+        },
       ]
     },
     {
       title: 'Address Information',
-      row: [
+      formGroupBoolean : true,
+      formGroupName: 'address',
+      groupRow: [
         {
           name: 'streetAddress',
           type: 'input',
@@ -270,27 +390,11 @@ export class StudentFormConfig{
       ]
     },
     {
-      title: 'Contact Information',
-      row: [
-        {
-          name: 'phoneNumbers',
-          type: 'input',
-          validators: [Validators.required],
-          placeholder: 'Phone Numbers',
-          floatLabel: 'always',
-        },
-        {
-          name: 'emailAddresses',
-          type: 'input',
-          validators: [Validators.required],
-          placeholder: 'Email Addresses',
-          floatLabel: 'always',
-        },
-      ]
-    },
-    {
       title: 'Fees Information',
-      row: [
+      formGroupBoolean : true,
+      formGroupName: 'fees',
+      formArrayBoolean: true,
+      groupRow: [
         {
           name: 'totalAmount',
           type: 'input',
@@ -307,19 +411,51 @@ export class StudentFormConfig{
         },
         {
           name: 'paid',
-          type: 'checkbox',
-          validators: [],
+          type: 'select',
+          validators: [Validators.required],
           options: [
-            { value: 'paid', label: 'Paid', checked: false },
+            { value: 'Paid', label: 'Paid' },
+            { value: 'Not Paid', label: 'Not Paid' },
           ],
           placeholder: 'Paid',
           floatLabel: 'auto',
         },
-      ]
+      ],
+      arrayRow:
+        {
+          title: 'Payment History',
+          formArrayBoolean : true,
+          formArrayName: 'paymentHistory',
+          rowInArray: [
+            {
+              name: 'sem',
+              type: 'input',
+              validators: [Validators.required],
+              placeholder: 'Semester',
+              floatLabel: 'always',
+            },
+            {
+              name: 'date',
+              type: 'date',
+              validators: [Validators.required],
+              placeholder: 'Date',
+              floatLabel: 'always',
+            },
+            {
+              name: 'amount',
+              type: 'input',
+              validators: [Validators.required],
+              placeholder: 'Amount',
+              floatLabel: 'always',
+            },
+          ]
+        }
     },
     {
       title: 'Academic Information',
-      row: [
+      formGroupBoolean : true,
+      formGroupName: 'academicInformation',
+      groupRow: [
         {
           name: 'tenth',
           type: 'input',
@@ -336,10 +472,11 @@ export class StudentFormConfig{
         },
         {
           name: 'LEET',
-          type: 'checkbox',
+          type: 'select',
           validators: [],
           options: [
-            { value: 'LEET', label: 'LEET', checked: false },
+            { value: 'Yes', label: 'Yes'},
+            { value: 'No', label: 'No'},
           ],
           placeholder: 'LEET',
           floatLabel: 'auto',
@@ -349,27 +486,6 @@ export class StudentFormConfig{
           type: 'input',
           validators: [Validators.required],
           placeholder: 'Percentage',
-          floatLabel: 'always',
-        },
-        {
-          name: 'branch',
-          type: 'select',
-          validators: [Validators.required],
-          options: [
-            { value: 'CSE', label: 'CSE' },
-            { value: 'CE', label: 'CE' },
-            { value: 'ME', label: 'ME' },
-            { value: 'ECE', label: 'ECE' },
-            { value: 'EE', label: 'EE' },
-          ],
-          placeholder: 'Branch',
-          floatLabel: 'always',
-        },
-        {
-          name: 'batch',
-          type: 'input',
-          validators: [Validators.required],
-          placeholder: 'Batch',
           floatLabel: 'always',
         },
       ]

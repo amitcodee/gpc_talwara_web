@@ -1,8 +1,9 @@
 <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
   <div *ngFor="let row of formLayoutInstance.layout" >
     <div class ="form-title">  {{row.title}} </div>
-    <div class="form-row">
-      <div *ngFor="let field of row.row" class="form-field">
+    @if (row.formGroupBoolean){
+      <div class="form-row" formGroupName="{{row.formGroupName}}">
+      <div *ngFor="let field of row.groupRow" class="form-field">
         <button *ngIf="field.extra" (click)="addPhoneNumber()">+</button>
         <!-- Input, Textarea, Select -->
         <mat-form-field *ngIf="field.type === 'input' || field.type === 'textarea'"
@@ -80,21 +81,178 @@
           </mat-error>
         </div>
 
-        <!-- Checkboxes (Multiple) -->
-        <div *ngIf="field.type === 'checkbox'">
-          <label>{{field.placeholder}}</label>
-          <!-- Use the "formArrayName" directive for binding FormArray within FormGroup -->
-          <div formArrayName="{{field.name}}" class="checkbox-group">
-            <mat-checkbox *ngFor="let option of field.options; let i = index" [formControlName]="i">{{option.label}}</mat-checkbox>
+
+      </div>
+      @if(row.formArrayBoolean){
+        <div class ="form-title">  {{row.arrayRow?.title}} </div>
+        <div class="form-row" formArrayName="{{row.arrayRow?.formArrayName}}">
+          <div *ngFor="let field of row.arrayRow?.rowInArray" class="form-field">
+            <button *ngIf="field.extra" (click)="addPhoneNumber()">+</button>
+            <!-- Input, Textarea, Select -->
+            <mat-form-field *ngIf="field.type === 'input' || field.type === 'textarea'"
+              appearance="fill"
+              class="full-width"
+              [hideRequiredMarker]="field.hideRequiredMarker"
+              [floatLabel]="field.floatLabel">
+              <mat-label>{{field.placeholder}}</mat-label>
+
+              @if(field.type === 'input'){
+                <input
+                matInput
+                #message
+                [formControlName]="field.name"
+                [readonly]="field.readonly">
+              }
+
+              @if (field.type === 'textarea'){
+                <textarea
+                matInput
+                #message
+                [formControlName]="field.name"></textarea>
+              }
+              <!-- Hint for input, textarea -->
+              <mat-hint *ngIf="field.hintLabel">{{field.hintLabel}}</mat-hint>
+
+              <!-- Handling error for input, textarea, select, date -->
+              <mat-error *ngIf="formGroup.get(field.name)?.invalid && formGroup.get(field.name)?.touched">
+                {{field.placeholder}} is required
+                <!-- {{ getFieldError(field.name, 'exactCharacterCountAndNumeric') || field.placeholder + ' is required' }} -->
+              </mat-error>
+            </mat-form-field>
+
+            <!--Select-->
+            @if(field.type === 'select'){
+              <mat-form-field
+              appearance="fill"
+              class="full-width"
+              [hideRequiredMarker]="field.hideRequiredMarker"
+              [floatLabel]="field.floatLabel">
+              <mat-label>{{field.placeholder}}</mat-label>
+              <mat-select
+                [formControlName]="field.name">
+                <mat-option *ngFor="let option of field.options" [value]="option.value">{{option.label}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            }
+
+            <!-- Date Picker -->
+            @if(field.type === 'date') {
+              <mat-form-field
+              appearance="fill"
+              class="full-width"
+              [hideRequiredMarker]="field.hideRequiredMarker"
+              [floatLabel]="field.floatLabel">
+              <mat-label>{{field.placeholder}}</mat-label>
+              <input  matInput [matDatepicker]="picker" [formControlName]="field.name">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error *ngIf="formGroup.get(field.name)?.invalid && formGroup.get(field.name)?.touched">
+                  {{field.placeholder}} is required
+                </mat-error>
+                </mat-form-field>
+            }
+
+            <!-- Radio Group -->
+            <div *ngIf="field.type === 'radio'" class="radio-group">
+              <mat-radio-group [formControlName]="field.name">
+                <mat-label>{{field.placeholder}}</mat-label>
+                <mat-radio-button *ngFor="let option of field.options" [value]="option.value">{{option.label}}</mat-radio-button>
+              </mat-radio-group>
+              <!-- Handling error outside mat-form-field for radio buttons -->
+              <mat-error *ngIf="formGroup.get(field.name)?.errors?.['required'] && formGroup.get(field.name)?.touched">
+                {{field.placeholder}} is required
+              </mat-error>
+            </div>
+
+
           </div>
-          <!-- Handling error for the entire checkbox group -->
+        </div>
+      }
+    </div>
+  }
+  @else{
+    <div class="form-row">
+      <div *ngFor="let field of row.groupRow" class="form-field">
+        <button *ngIf="field.extra" (click)="addPhoneNumber()">+</button>
+        <!-- Input, Textarea, Select -->
+        <mat-form-field *ngIf="field.type === 'input' || field.type === 'textarea'"
+          appearance="fill"
+          class="full-width"
+          [hideRequiredMarker]="field.hideRequiredMarker"
+          [floatLabel]="field.floatLabel">
+          <mat-label>{{field.placeholder}}</mat-label>
+
+          @if(field.type === 'input'){
+            <input
+            matInput
+            #message
+            [formControlName]="field.name"
+            [readonly]="field.readonly">
+          }
+
+          @if (field.type === 'textarea'){
+            <textarea
+            matInput
+            #message
+            [formControlName]="field.name"></textarea>
+          }
+          <!-- Hint for input, textarea -->
+          <mat-hint *ngIf="field.hintLabel">{{field.hintLabel}}</mat-hint>
+
+          <!-- Handling error for input, textarea, select, date -->
           <mat-error *ngIf="formGroup.get(field.name)?.invalid && formGroup.get(field.name)?.touched">
-            At least one {{field.placeholder}} option is required
+            {{field.placeholder}} is required
+            <!-- {{ getFieldError(field.name, 'exactCharacterCountAndNumeric') || field.placeholder + ' is required' }} -->
+          </mat-error>
+        </mat-form-field>
+
+        <!--Select-->
+        @if(field.type === 'select'){
+          <mat-form-field
+          appearance="fill"
+          class="full-width"
+          [hideRequiredMarker]="field.hideRequiredMarker"
+          [floatLabel]="field.floatLabel">
+          <mat-label>{{field.placeholder}}</mat-label>
+          <mat-select
+            [formControlName]="field.name">
+            <mat-option *ngFor="let option of field.options" [value]="option.value">{{option.label}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        }
+
+        <!-- Date Picker -->
+        @if(field.type === 'date') {
+          <mat-form-field
+          appearance="fill"
+          class="full-width"
+          [hideRequiredMarker]="field.hideRequiredMarker"
+          [floatLabel]="field.floatLabel">
+          <mat-label>{{field.placeholder}}</mat-label>
+          <input  matInput [matDatepicker]="picker" [formControlName]="field.name">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="formGroup.get(field.name)?.invalid && formGroup.get(field.name)?.touched">
+              {{field.placeholder}} is required
+            </mat-error>
+            </mat-form-field>
+        }
+
+        <!-- Radio Group -->
+        <div *ngIf="field.type === 'radio'" class="radio-group">
+          <mat-radio-group [formControlName]="field.name">
+            <mat-label>{{field.placeholder}}</mat-label>
+            <mat-radio-button *ngFor="let option of field.options" [value]="option.value">{{option.label}}</mat-radio-button>
+          </mat-radio-group>
+          <!-- Handling error outside mat-form-field for radio buttons -->
+          <mat-error *ngIf="formGroup.get(field.name)?.errors?.['required'] && formGroup.get(field.name)?.touched">
+            {{field.placeholder}} is required
           </mat-error>
         </div>
 
       </div>
-  </div>
+    </div>
+  }
   </div>
   <button mat-raised-button color="primary" type="submit">Submit</button>
 </form>

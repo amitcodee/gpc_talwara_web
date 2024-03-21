@@ -28,7 +28,9 @@ ngOnInit() {
   // Initialize formLayoutInstance with studentFormLayout and generate the form group
   this.formLayoutInstance = new FormLayout(this.studentFormConfig.studentFormLayoutConfig); // Assuming studentFormLayout is defined and imported
   this.formGroup = this.formLayoutInstance.generateFormGroup(this.fb);
+  console.log(this.formGroup);
   this.formGroup.setValue(this.studentData); // Assuming studentFormInitialData is defined and imported
+
 }
 
   onSubmit() {

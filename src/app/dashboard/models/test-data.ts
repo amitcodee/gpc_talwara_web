@@ -2,8 +2,6 @@ import {Student} from './student';
 
 export const studentData: Student[] =[
   {
-    id: 1,
-    enrollmentStatus: 'active',
     personalInformation: {
       firstName: 'John',
       lastName: 'Doe',
@@ -13,17 +11,21 @@ export const studentData: Student[] =[
       familyIncome: 55000,
       dateOfBirth: new Date(1999, 10, 25), // 25th November 1999
       bloodGroup: 'A+',
-      fullName: ''
+      gender: 'Male',
     },
-    displayImage: 'https://example.com/profile-images/john-doe.jpg',
+    id: 1,
     regNumber: '2023CSE001',
-    gender: 'Male',
-    nationality: 'Indian',
+    enrollmentStatus: 'active',
     admissionDate: new Date(2023, 6, 1), // 1st July 2023
+    batch: '2023',
+    branch: 'CSE',
+    displayImage: 'https://example.com/profile-images/john-doe.jpg',
     category: 'General',
-    feeWaiver: false,
+    feeWaiver: 'Yes',
     feeScheme: 'Between 70-80',
+    nationality: 'Indian',
     address: {
+      streetAddress: '123, ABC Street',
       city: 'New Delhi',
       state: 'Delhi',
       postalCode: '110011',
@@ -36,19 +38,21 @@ export const studentData: Student[] =[
     fees: {
       totalAmount: 50000,
       dueDate: new Date(2024, 0, 15), // 15th January 2024
-      paid: false,
-      paymentHistory: [{ sem: 0, date: new Date(), amount: 0 }]
+      paid: 'Paid',
+      paymentHistory: [
+        {
+          sem: '1st',
+          date: new Date(2023, 6, 1), // 1st July 2023
+          amount: 50000,
+        }
+      ]
     },
     academicInformation: {
       tenth: 85,
       twelfth: 89,
-      LEET: false,
-      percentage: 87.5,
-      branch: 'CSE',
-      batch: 2023,
-      grades: {} // Replace with actual grades for courses
+      LEET: 'Yes',
+      percentage: 87.5,// Replace with actual grades for courses
     },
-    additionalInformation: {}
   },
 ]
   // ... Add more student objects with similarly structured data

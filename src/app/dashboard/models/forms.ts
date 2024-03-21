@@ -1,9 +1,21 @@
-import { ValidatorFn, FormArray, FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ValidatorFn, FormArray, FormControl, FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
+
+export interface FormRowArray {
+  title: string;
+  formArrayBoolean? : boolean;
+  formArrayName?: string,
+  rowInArray: FormField[];
+}
 
 export interface FormRow {
   title: string;
-  row: FormField[];
+  formGroupBoolean: boolean;
+  formArrayBoolean? : boolean;
+  formGroupName?: string,
+  groupRow: FormField[];
+  arrayRow?: FormRowArray;
 }
+
 
 export interface FormField {
   name: string;
@@ -45,23 +57,63 @@ export class FormLayout {
   }
 
   // Method to generate a FormGroup or FormArray based on the layout, including checkboxes
+  // generateFormGroup(fb: FormBuilder): FormGroup {
+  //   const group = fb.group({});
+
+  //   this.layout.forEach(row => {
+  //     if (row.formGroup) {
+  //       // Nested group
+  //       const nestedGroup = fb.group(
+  //         row.row.reduce((acc, field) => {
+  //           acc[field.name as string] =  new FormControl(null, field.validators);
+  //           return acc;
+  //         }, {} as { [key: string]: AbstractControl })
+  //       );
+  //       group.addControl(row.formGroupName!, nestedGroup);
+  //     } else {
+  //       // Add fields directly to main group
+  //       row.row.forEach(field => {
+  //         group.addControl(field.name,  new FormControl(null, field.validators));
+  //       });
+  //     }
+  //   });
+  //   return group;
+  // }
+
   generateFormGroup(fb: FormBuilder): FormGroup {
-    const group: { [key: string]: any } = {};
-    console.log(this.layout);
+    const group = fb.group({});
+
     this.layout.forEach(row => {
-      row.row.forEach(field => {
-        if (field.type === 'checkbox') {
-          // Initialize FormArray for checkboxes with FormControl per option
-          const formControls = field.options?.map(option => new FormControl(option.checked || false)) || [];
-          group[field.name] = new FormArray(formControls);
-        } else {
-          // Initialize FormControl for other field types
-          group[field.name] = ['', field.validators];
-        }
-      });
+      if (row.formGroupBoolean && row.formArrayBoolean) {
+        // Nested group with FormArray
+        const nestedGroup = fb.group({});
+        row.groupRow.forEach(field => {
+          nestedGroup.addControl(field.name, new FormControl(null, field.validators));
+        });
+        // Create a single FormArray for all arrayRows
+        const formArray = fb.array([], [Validators.required]); // Apply any custom validators here
+        row.arrayRow!.rowInArray.forEach((field) => {
+            formArray.push(new FormControl('', field.validators));
+          });
+        nestedGroup.addControl( row.arrayRow!.formArrayName!, formArray); // Assign a consistent name for clarity
+        group.addControl(row.formGroupName!, nestedGroup);
+      } else if (row.formGroupBoolean) {
+        // Nested group
+        const nestedGroup = fb.group(
+          row.groupRow.reduce((acc, field) => {
+            acc[field.name as string] = new FormControl(null, field.validators);
+            return acc;
+          }, {} as { [key: string]: AbstractControl })
+        );
+        group.addControl(row.formGroupName!, nestedGroup);
+      } else {
+        // Add fields directly to main group
+        row.groupRow.forEach(field => {
+          group.addControl(field.name, new FormControl(null, field.validators));
+        });
+      }
     });
-    return fb.group(group);
+
+    return group;
   }
-
-
 }
