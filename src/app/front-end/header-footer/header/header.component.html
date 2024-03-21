@@ -1,5 +1,4 @@
-<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'English'"
-  [style.font-size.px]="getTextSize()">
+<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'English'" [style.font-size.px]="getTextSize()">
   <div class="container-fluid d-none d-lg-flex pt-2 mx-0 first-header">
     <div class="row align-items-center">
       <!--<div class="col-lg-12">
@@ -20,8 +19,7 @@
       <div class="col-lg-7">
         <div class="row align-items-center">
           <div class="col-auto">
-            <img src="../../../assets/images/used/web-use/logo_college.webp"
-              alt="College Logo" class="img-fluid"
+            <img src="../../../assets/images/used/web-use/logo_college.webp" alt="College Logo" class="img-fluid"
               width="90" height="90">
           </div>
           <div class="col">
@@ -38,16 +36,13 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="dropdown theme-toggle">
-              <button class="btn btn-light dropdown-toggle" type="button"
-                id="languageDropdown"
+              <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa-solid fa-language"></i> {{ getCurrentLanguage() }}
               </button>
               <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                <li *ngFor="let language of languageOptions"
-                  (click)="setLanguage(language)">
-                  <a class="dropdown-item" href="javascript:void(0)"
-                    style="cursor: grab;">{{ language }}</a>
+                <li *ngFor="let language of languageOptions" (click)="setLanguage(language)">
+                  <a class="dropdown-item" href="javascript:void(0)" style="cursor: grab;">{{ language }}</a>
                 </li>
               </ul>
             </div>
@@ -101,21 +96,17 @@
       </div> -->
     </div>
   </div>
-  <nav class="navbar navbar-expand-lg"
-    [ngClass]="{'fixed-top': navbarScrolled, 'navbar-scrolled': navbarScrolled}">
+  <nav class="navbar navbar-expand-lg" [ngClass]="{'fixed-top': navbarScrolled, 'navbar-scrolled': navbarScrolled}">
     <div class="container-fluid">
       <a class="navbar-brand d-lg-none fw-bold fs-3" routerLink>
-        <img src="../../../assets/images/used/web-use/logo_college.webp"
-          alt="College Logo" class="img-fluid" width="50"
+        <img src="../../../assets/images/used/web-use/logo_college.webp" alt="College Logo" class="img-fluid" width="50"
           height="50">
         SASS GPC Talwara
       </a>
 
       <!-- Navbar Toggle Button for Small Screens -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false"
-        aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -128,81 +119,66 @@
               (click)="scrollToTopAndCloseNavbar()">Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#"
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               About us
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/principal-message"
+              <li><a class="dropdown-item fw-semibold" routerLink="/principal-message"
                   (click)="scrollToTopAndCloseNavbar()">Principal
                   Message</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/vision-mission"
+              <li><a class="dropdown-item fw-semibold" routerLink="/vision-mission"
                   (click)="scrollToTopAndCloseNavbar()">Vision &
                   Mission</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/mandatory-disclousure"
+              <li><a class="dropdown-item fw-semibold" routerLink="/mandatory-disclousure"
                   (click)="scrollToTopAndCloseNavbar()">Mandatory
                   Disclousure</a>
               </li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/grievance-redressal-committee"
+
+              <li><a class="dropdown-item fw-semibold" routerLink="/grievance-redressal-committee"
                   (click)="scrollToTopAndCloseNavbar()">Grievance Redressal
                   Committee</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#"
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Academics
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item fw-semibold" routerLink="/courses"
                   (click)="scrollToTopAndCloseNavbar()">Courses</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/admission-intake"
+              <li><a class="dropdown-item fw-semibold" routerLink="/admission-intake"
                   (click)="scrollToTopAndCloseNavbar()">Admission
                   Intake</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/fees-structure"
+              <li><a class="dropdown-item fw-semibold" routerLink="/fees-structure"
                   (click)="scrollToTopAndCloseNavbar()">Fees Structure</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/rules-discipline"
+              <li><a class="dropdown-item fw-semibold" routerLink="/rules-discipline"
                   (click)="scrollToTopAndCloseNavbar()"> Rules and
                   Discipline</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/scholarship-schemes"
+              <li><a class="dropdown-item fw-semibold" routerLink="/scholarship-schemes"
                   (click)="scrollToTopAndCloseNavbar()">Scholarship
                   Schemes</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#"
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Departments
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/cse"
-                  (click)="scrollToTopAndCloseNavbar()">Computer
+              <li><a class="dropdown-item fw-semibold" routerLink="/cse" (click)="scrollToTopAndCloseNavbar()">Computer
                   Science & Engg.</a></li>
               <li><a class="dropdown-item fw-semibold" routerLink="/ece"
                   (click)="scrollToTopAndCloseNavbar()">Electronics & Comm.
                   Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ce"
-                  (click)="scrollToTopAndCloseNavbar()">Civil
+              <li><a class="dropdown-item fw-semibold" routerLink="/ce" (click)="scrollToTopAndCloseNavbar()">Civil
                   Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ee"
-                  (click)="scrollToTopAndCloseNavbar()">Electrical
+              <li><a class="dropdown-item fw-semibold" routerLink="/ee" (click)="scrollToTopAndCloseNavbar()">Electrical
                   Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/me"
-                  (click)="scrollToTopAndCloseNavbar()">Mechanical
+              <li><a class="dropdown-item fw-semibold" routerLink="/me" (click)="scrollToTopAndCloseNavbar()">Mechanical
                   Engg.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/as"
-                  (click)="scrollToTopAndCloseNavbar()">Applied
+              <li><a class="dropdown-item fw-semibold" routerLink="/as" (click)="scrollToTopAndCloseNavbar()">Applied
                   Sciences</a></li>
               <li><a class="dropdown-item fw-semibold" routerLink="/ws"
                   (click)="scrollToTopAndCloseNavbar()">Workshop</a></li>
@@ -211,8 +187,7 @@
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Our Faculty & Staff
             </a>
@@ -235,8 +210,7 @@
                   Sciences</a></li>
               <li><a class="dropdown-item fw-semibold" routerLink="/ws-faculty"
                   (click)="scrollToTopAndCloseNavbar()">Workshop</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/supporting-staff"
+              <li><a class="dropdown-item fw-semibold" routerLink="/supporting-staff"
                   (click)="scrollToTopAndCloseNavbar()">Supporting
                   Staff</a></li>
 
@@ -244,19 +218,16 @@
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Placement
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/training-placement"
+              <li><a class="dropdown-item fw-semibold" routerLink="/training-placement"
                   (click)="scrollToTopAndCloseNavbar()">Training and Placement
                   Cell</a>
               </li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/student-placed"
+              <li><a class="dropdown-item fw-semibold" routerLink="/student-placed"
                   (click)="scrollToTopAndCloseNavbar()">Student Placed</a></li>
             </ul>
           </li>
@@ -276,65 +247,53 @@
             </ul>
           </li> -->
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Media
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/events-picture"
+              <li><a class="dropdown-item fw-semibold" routerLink="/events-picture"
                   (click)="scrollToTopAndCloseNavbar()">College Gallary</a></li>
               <!-- <li><a class="dropdown-item fw-semibold" routerLink="/social-media-account">Videos</a></li> -->
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/student-activites"
+              <li><a class="dropdown-item fw-semibold" routerLink="/student-activites"
                   (click)="scrollToTopAndCloseNavbar()">Press Clips</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Useful Links
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/right-to-information"
+              <li><a class="dropdown-item fw-semibold" routerLink="/right-to-information"
                   (click)="scrollToTopAndCloseNavbar()">Right To
                   Information</a></li>
               <li><a class="dropdown-item fw-semibold" routerLink="/examination"
                   (click)="scrollToTopAndCloseNavbar()">Examination</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/admission-help"
+              <li><a class="dropdown-item fw-semibold" routerLink="/admission-help"
                   (click)="scrollToTopAndCloseNavbar()">Admission
                   Helpline</a></li>
               <li><a class="dropdown-item fw-semibold"
                   href="https://docs.google.com/forms/d/e/1FAIpQLSeBsvstC_RDi1nY1pTz_qN-6Xa44yNXXh8bfVvxdnLAukdMug/viewform"
                   target="_blank"> Grievance Redressal Portal</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  href="../../../assets/images/used/useful-link/aitce.pdf"
+              <li><a class="dropdown-item fw-semibold" href="../../../assets/images/used/useful-link/aitce.pdf"
                   target="_blank">AICTE Approval</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/registration-portal"
+              <li><a class="dropdown-item fw-semibold" routerLink="/registration-portal"
                   (click)="scrollToTopAndCloseNavbar()">Registration
                   Portal</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/buddy-program"
+              <li><a class="dropdown-item fw-semibold" routerLink="/buddy-program"
                   (click)="scrollToTopAndCloseNavbar()">Buddy Program</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold" routerLink="/contact-us"
-              (click)="scrollToTopAndCloseNavbar()">Contact
+            <a class="nav-link fw-semibold" routerLink="/contact-us" (click)="scrollToTopAndCloseNavbar()">Contact
               us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold" routerLink="/login"
-              (click)="scrollToTopAndCloseNavbar()">Login</a>
+            <a class="nav-link fw-semibold" routerLink="/login" (click)="scrollToTopAndCloseNavbar()">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold" routerLink="/register"
-              (click)="scrollToTopAndCloseNavbar()">Register</a>
+            <a class="nav-link fw-semibold" routerLink="/register" (click)="scrollToTopAndCloseNavbar()">Register</a>
           </li>
         </ul>
       </div>
@@ -342,8 +301,7 @@
   </nav>
 </div>
 <!-- ਪੰਜਾਬੀ -->
-<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'ਪੰਜਾਬੀ'"
-  [style.font-size.px]="getTextSize()">
+<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'ਪੰਜਾਬੀ'" [style.font-size.px]="getTextSize()">
   <div class="container-fluid d-none d-lg-flex pt-2 mx-0 first-header">
     <div class="row align-items-center">
       <!--<div class="col-lg-12">
@@ -364,8 +322,7 @@
       <div class="col-lg-7">
         <div class="row align-items-center">
           <div class="col-auto">
-            <img src="../../../assets/images/used/web-use/logo_college.webp"
-              alt="College Logo" class="img-fluid"
+            <img src="../../../assets/images/used/web-use/logo_college.webp" alt="College Logo" class="img-fluid"
               width="90" height="90">
           </div>
           <div class="col">
@@ -382,16 +339,13 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="dropdown theme-toggle">
-              <button class="btn btn-light dropdown-toggle" type="button"
-                id="languageDropdown"
+              <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa-solid fa-language"></i> {{ getCurrentLanguage() }}
               </button>
               <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                <li *ngFor="let language of languageOptions"
-                  (click)="setLanguage(language)">
-                  <a class="dropdown-item" href="javascript:void(0)"
-                    style="cursor: grab;">{{ language }}</a>
+                <li *ngFor="let language of languageOptions" (click)="setLanguage(language)">
+                  <a class="dropdown-item" href="javascript:void(0)" style="cursor: grab;">{{ language }}</a>
                 </li>
               </ul>
             </div>
@@ -445,21 +399,17 @@
       </div> -->
     </div>
   </div>
-  <nav class="navbar navbar-expand-lg"
-    [ngClass]="{'fixed-top': navbarScrolled, 'navbar-scrolled': navbarScrolled}">
+  <nav class="navbar navbar-expand-lg" [ngClass]="{'fixed-top': navbarScrolled, 'navbar-scrolled': navbarScrolled}">
     <div class="container-fluid">
       <a class="navbar-brand d-lg-none fw-bold fs-3" routerLink>
-        <img src="../../../assets/images/used/web-use/logo_college.webp"
-          alt="College Logo" class="img-fluid" width="50"
+        <img src="../../../assets/images/used/web-use/logo_college.webp" alt="College Logo" class="img-fluid" width="50"
           height="50">
         SASS GPC ਤਲਵਾੜਾ
       </a>
 
       <!-- Navbar Toggle Button for Small Screens -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false"
-        aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -468,95 +418,78 @@
         <ul class="navbar-nav mx-auto text-lg-center">
           <!-- Center the navlinks in large screens -->
           <li class="nav-item">
-            <a class="nav-link fw-semibold" aria-current="page" routerLink
-              (click)="scrollToTopAndCloseNavbar()">ਹੋਮ</a>
+            <a class="nav-link fw-semibold" aria-current="page" routerLink (click)="scrollToTopAndCloseNavbar()">ਹੋਮ</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#"
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               ਸਾਡੇ ਬਾਰੇ
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/principal-message"
+              <li><a class="dropdown-item fw-semibold" routerLink="/principal-message"
                   (click)="scrollToTopAndCloseNavbar()">ਪ੍ਰਿੰਸੀਪਲ
                   ਸੁਨੇਹਾ</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/vision-mission"
+              <li><a class="dropdown-item fw-semibold" routerLink="/vision-mission"
                   (click)="scrollToTopAndCloseNavbar()">ਦ੍ਰਿਸ਼ਟੀ ਅਤੇ
                   ਮਿਸ਼ਨ</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/mandatory-disclousure"
+              <li><a class="dropdown-item fw-semibold" routerLink="/mandatory-disclousure"
                   (click)="scrollToTopAndCloseNavbar()">ਲਾਜ਼ਮੀ
                   ਖੁਲਾਸਾ</a>
               </li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/grievance-redressal-committee"
+              <li><a class="dropdown-item fw-semibold" routerLink="/grievance-redressal-committee"
                   (click)="scrollToTopAndCloseNavbar()">ਸ਼ਿਕਾਇਤ ਨਿਵਾਰਣ
                   ਕਮੇਟੀ</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#"
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               ਅਕਾਦਮਿਕ
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item fw-semibold" routerLink="/courses"
                   (click)="scrollToTopAndCloseNavbar()">ਕੋਰਸ</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/admission-intake"
+              <li><a class="dropdown-item fw-semibold" routerLink="/admission-intake"
                   (click)="scrollToTopAndCloseNavbar()">ਦਾਖਲਾ
                   ਦਾਖਲਾ</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/fees-structure"
+              <li><a class="dropdown-item fw-semibold" routerLink="/fees-structure"
                   (click)="scrollToTopAndCloseNavbar()">ਫੀਸਾਂ ਦਾ ਢਾਂਚਾ</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/rules-discipline"
+              <li><a class="dropdown-item fw-semibold" routerLink="/rules-discipline"
                   (click)="scrollToTopAndCloseNavbar()"> ਨਿਯਮ ਅਤੇ
                   ਅਨੁਸ਼ਾਸਨ</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/scholarship-schemes"
+              <li><a class="dropdown-item fw-semibold" routerLink="/scholarship-schemes"
                   (click)="scrollToTopAndCloseNavbar()">ਸਕਾਲਰਸ਼ਿਪ
                   ਸਕੀਮਾਂ</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#"
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               ਵਿਭਾਗਾਂ
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/cse"
-                  (click)="scrollToTopAndCloseNavbar()">ਕੰਪਿਊਟਰ
+              <li><a class="dropdown-item fw-semibold" routerLink="/cse" (click)="scrollToTopAndCloseNavbar()">ਕੰਪਿਊਟਰ
                   ਵਿਗਿਆਨ ਅਤੇ ਇੰਜੀ.</a></li>
               <li><a class="dropdown-item fw-semibold" routerLink="/ece"
                   (click)="scrollToTopAndCloseNavbar()">ਇਲੈਕਟ੍ਰਾਨਿਕਸ ਅਤੇ ਕਮ.
                   ਇੰਜੀ.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ce"
-                  (click)="scrollToTopAndCloseNavbar()"> ਸਿਵਲ
+              <li><a class="dropdown-item fw-semibold" routerLink="/ce" (click)="scrollToTopAndCloseNavbar()"> ਸਿਵਲ
                   ਇੰਜੀ.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ee"
-                  (click)="scrollToTopAndCloseNavbar()"> ਇਲੈਕਟ੍ਰੀਕਲ
+              <li><a class="dropdown-item fw-semibold" routerLink="/ee" (click)="scrollToTopAndCloseNavbar()">
+                  ਇਲੈਕਟ੍ਰੀਕਲ
                   ਇੰਜੀ.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/me"
-                  (click)="scrollToTopAndCloseNavbar()"> ਮਕੈਨੀਕਲ
+              <li><a class="dropdown-item fw-semibold" routerLink="/me" (click)="scrollToTopAndCloseNavbar()"> ਮਕੈਨੀਕਲ
                   ਇੰਜੀ.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/as"
-                  (click)="scrollToTopAndCloseNavbar()"> ਲਾਗੂ ਕੀਤਾ
+              <li><a class="dropdown-item fw-semibold" routerLink="/as" (click)="scrollToTopAndCloseNavbar()"> ਲਾਗੂ ਕੀਤਾ
                   ਵਿਗਿਆਨ</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ws"
-                  (click)="scrollToTopAndCloseNavbar()">ਵਰਕਸ਼ਾਪ </a></li>
+              <li><a class="dropdown-item fw-semibold" routerLink="/ws" (click)="scrollToTopAndCloseNavbar()">ਵਰਕਸ਼ਾਪ
+                </a></li>
 
             </ul>
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               ਸਾਡੇ ਫੈਕਲਟੀ ਅਤੇ ਸਟਾਫ
             </a>
@@ -579,8 +512,7 @@
                   ਵਿਗਿਆਨ</a></li>
               <li><a class="dropdown-item fw-semibold" routerLink="/ws-faculty"
                   (click)="scrollToTopAndCloseNavbar()">ਵਰਕਸ਼ਾਪ</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/supporting-staff"
+              <li><a class="dropdown-item fw-semibold" routerLink="/supporting-staff"
                   (click)="scrollToTopAndCloseNavbar()">ਸਮਰਥਨ
                   ਸਟਾਫ</a></li>
 
@@ -588,19 +520,16 @@
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               ਪਲੇਸਮੈਂਟ
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/training-placement"
+              <li><a class="dropdown-item fw-semibold" routerLink="/training-placement"
                   (click)="scrollToTopAndCloseNavbar()">ਸਿਖਲਾਈ ਅਤੇ ਪਲੇਸਮੈਂਟ
                   ਸੈੱਲ</a>
               </li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/student-placed"
+              <li><a class="dropdown-item fw-semibold" routerLink="/student-placed"
                   (click)="scrollToTopAndCloseNavbar()">ਵਿਦਿਆਰਥੀ ਰੱਖਿਆ</a></li>
             </ul>
           </li>
@@ -620,56 +549,46 @@
             </ul>
           </li> -->
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               ਮੀਡੀਆ
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/events-picture"
+              <li><a class="dropdown-item fw-semibold" routerLink="/events-picture"
                   (click)="scrollToTopAndCloseNavbar()">ਕਾਲਜ ਗੈਲਰੀ</a></li>
               <!-- <li><a class="dropdown-item fw-semibold" routerLink="/social-media-account">Videos</a></li> -->
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/student-activites"
+              <li><a class="dropdown-item fw-semibold" routerLink="/student-activites"
                   (click)="scrollToTopAndCloseNavbar()">ਕਲਿੱਪ ਦਬਾਓ</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               ਉਪਯੋਗੀ ਲਿੰਕ
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/right-to-information"
+              <li><a class="dropdown-item fw-semibold" routerLink="/right-to-information"
                   (click)="scrollToTopAndCloseNavbar()">ਦਾ ਹੱਕ
                   ਜਾਣਕਾਰੀ</a></li>
               <li><a class="dropdown-item fw-semibold" routerLink="/examination"
                   (click)="scrollToTopAndCloseNavbar()">ਇਮਤਿਹਾਨ</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/admission-help"
+              <li><a class="dropdown-item fw-semibold" routerLink="/admission-help"
                   (click)="scrollToTopAndCloseNavbar()">ਦਾਖਲਾ
                   ਹੈਲਪਲਾਈਨ</a></li>
               <li><a class="dropdown-item fw-semibod"
                   href="https://docs.google.com/forms/d/e/1FAIpQLSeBsvstC_RDi1nY1pTz_qN-6Xa44yNXXh8bfVvxdnLAukdMug/viewform"
                   target="_blank"> ਸ਼ਿਕਾਇਤ ਨਿਵਾਰਨ ਪੋਰਟਲ</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  href="../../../assets/images/used/useful-link/aitce.pdf"
+              <li><a class="dropdown-item fw-semibold" href="../../../assets/images/used/useful-link/aitce.pdf"
                   target="_blank">AICTE ਪ੍ਰਵਾਨਗੀ</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/registration-portal"
+              <li><a class="dropdown-item fw-semibold" routerLink="/registration-portal"
                   (click)="scrollToTopAndCloseNavbar()">ਰਜਿਸਟ੍ਰੇਸ਼ਨ
                   ਪੋਰਟਲ</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/buddy-program"
+              <li><a class="dropdown-item fw-semibold" routerLink="/buddy-program"
                   (click)="scrollToTopAndCloseNavbar()">ਬੱਡੀ ਪ੍ਰੋਗਰਾਮ</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold" routerLink="/contact-us"
-              (click)="scrollToTopAndCloseNavbar()">ਸੰਪਰਕ ਕਰੋ
+            <a class="nav-link fw-semibold" routerLink="/contact-us" (click)="scrollToTopAndCloseNavbar()">ਸੰਪਰਕ ਕਰੋ
               ਸਾਨੂੰ</a>
           </li>
         </ul>
@@ -679,8 +598,7 @@
 </div>
 
 <!-- हिंदी -->
-<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'हिंदी'"
-  [style.font-size.px]="getTextSize()">
+<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'हिंदी'" [style.font-size.px]="getTextSize()">
   <div class="container-fluid d-none d-lg-flex pt-2 mx-0 first-header">
     <div class="row align-items-center">
       <!--<div class="col-lg-12">
@@ -701,8 +619,7 @@
       <div class="col-lg-7">
         <div class="row align-items-center">
           <div class="col-auto">
-            <img src="../../../assets/images/used/web-use/logo_college.webp"
-              alt="College Logo" class="img-fluid"
+            <img src="../../../assets/images/used/web-use/logo_college.webp" alt="College Logo" class="img-fluid"
               width="90" height="90">
           </div>
           <div class="col">
@@ -719,16 +636,13 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="dropdown theme-toggle">
-              <button class="btn btn-light dropdown-toggle" type="button"
-                id="languageDropdown"
+              <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa-solid fa-language"></i> {{ getCurrentLanguage() }}
               </button>
               <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                <li *ngFor="let language of languageOptions"
-                  (click)="setLanguage(language)">
-                  <a class="dropdown-item" href="javascript:void(0)"
-                    style="cursor: grab;">{{ language }}</a>
+                <li *ngFor="let language of languageOptions" (click)="setLanguage(language)">
+                  <a class="dropdown-item" href="javascript:void(0)" style="cursor: grab;">{{ language }}</a>
                 </li>
               </ul>
             </div>
@@ -782,21 +696,17 @@
       </div> -->
     </div>
   </div>
-  <nav class="navbar navbar-expand-lg"
-    [ngClass]="{'fixed-top': navbarScrolled, 'navbar-scrolled': navbarScrolled}">
+  <nav class="navbar navbar-expand-lg" [ngClass]="{'fixed-top': navbarScrolled, 'navbar-scrolled': navbarScrolled}">
     <div class="container-fluid">
       <a class="navbar-brand d-lg-none fw-bold fs-3" routerLink>
-        <img src="../../../assets/images/used/web-use/logo_college.webp"
-          alt="College Logo" class="img-fluid" width="50"
+        <img src="../../../assets/images/used/web-use/logo_college.webp" alt="College Logo" class="img-fluid" width="50"
           height="50">
         एसएएसएस जीपीसी तलवाड़ा
       </a>
 
       <!-- Navbar Toggle Button for Small Screens -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false"
-        aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -805,86 +715,69 @@
         <ul class="navbar-nav mx-auto text-lg-center">
           <!-- Center the navlinks in large screens -->
           <li class="nav-item">
-            <a class="nav-link fw-semibold" aria-current="page" routerLink
-              (click)="scrollToTopAndCloseNavbar()">होम</a>
+            <a class="nav-link fw-semibold" aria-current="page" routerLink (click)="scrollToTopAndCloseNavbar()">होम</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#"
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               हमारे बारे में
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/principal-message"
+              <li><a class="dropdown-item fw-semibold" routerLink="/principal-message"
                   (click)="scrollToTopAndCloseNavbar()">प्रधानाचार्य
                   संदेश</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/vision-mission"
+              <li><a class="dropdown-item fw-semibold" routerLink="/vision-mission"
                   (click)="scrollToTopAndCloseNavbar()">दृष्टि &
                   मिशन</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/mandatory-disclousure"
+              <li><a class="dropdown-item fw-semibold" routerLink="/mandatory-disclousure"
                   (click)="scrollToTopAndCloseNavbar()">अनिवार्य
                   खुलासा</a>
               </li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/grievance-redressal-committee"
+              <li><a class="dropdown-item fw-semibold" routerLink="/grievance-redressal-committee"
                   (click)="scrollToTopAndCloseNavbar()">शिकायत निवारण
                   समिति</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#"
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               शैक्षणिक
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item fw-semibold" routerLink="/courses"
                   (click)="scrollToTopAndCloseNavbar()">पाठ्यक्रम</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/admission-intake"
+              <li><a class="dropdown-item fw-semibold" routerLink="/admission-intake"
                   (click)="scrollToTopAndCloseNavbar()">प्रवेश
                   सेवन</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/fees-structure"
+              <li><a class="dropdown-item fw-semibold" routerLink="/fees-structure"
                   (click)="scrollToTopAndCloseNavbar()">फीस संरचना</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/rules-discipline"
+              <li><a class="dropdown-item fw-semibold" routerLink="/rules-discipline"
                   (click)="scrollToTopAndCloseNavbar()"> नियम और
                   अनुशासन</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/scholarship-schemes"
+              <li><a class="dropdown-item fw-semibold" routerLink="/scholarship-schemes"
                   (click)="scrollToTopAndCloseNavbar()">छात्रवृत्ति
                   योजनाएं</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#"
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               विभागों
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold" routerLink="/cse"
-                  (click)="scrollToTopAndCloseNavbar()">कंप्यूटर
+              <li><a class="dropdown-item fw-semibold" routerLink="/cse" (click)="scrollToTopAndCloseNavbar()">कंप्यूटर
                   विज्ञान एवं अभियांत्रिकी</a></li>
               <li><a class="dropdown-item fw-semibold" routerLink="/ece"
                   (click)="scrollToTopAndCloseNavbar()">इलेक्ट्रॉनिक्स एवं कॉम.
                   इंजी.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ce"
-                  (click)="scrollToTopAndCloseNavbar()">नागरिक
+              <li><a class="dropdown-item fw-semibold" routerLink="/ce" (click)="scrollToTopAndCloseNavbar()">नागरिक
                   इंजी.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/ee"
-                  (click)="scrollToTopAndCloseNavbar()">
+              <li><a class="dropdown-item fw-semibold" routerLink="/ee" (click)="scrollToTopAndCloseNavbar()">
                   विद्युतीय
                   इंजी.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/me"
-                  (click)="scrollToTopAndCloseNavbar()">यांत्रिक
+              <li><a class="dropdown-item fw-semibold" routerLink="/me" (click)="scrollToTopAndCloseNavbar()">यांत्रिक
                   इंजी.</a></li>
-              <li><a class="dropdown-item fw-semibold" routerLink="/as"
-                  (click)="scrollToTopAndCloseNavbar()">लागू
+              <li><a class="dropdown-item fw-semibold" routerLink="/as" (click)="scrollToTopAndCloseNavbar()">लागू
                   विज्ञान</a></li>
               <li><a class="dropdown-item fw-semibold" routerLink="/ws"
                   (click)="scrollToTopAndCloseNavbar()">कार्यशाला</a></li>
@@ -893,8 +786,7 @@
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               हमारे संकाय एवं कर्मचारी
             </a>
@@ -918,8 +810,7 @@
                   विज्ञान</a></li>
               <li><a class="dropdown-item fw-semibold" routerLink="/ws-faculty"
                   (click)="scrollToTopAndCloseNavbar()">कार्यशाला</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/supporting-staff"
+              <li><a class="dropdown-item fw-semibold" routerLink="/supporting-staff"
                   (click)="scrollToTopAndCloseNavbar()">सहायक
                   कर्मचारी</a></li>
 
@@ -927,19 +818,16 @@
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               प्लेसमेंट
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/training-placement"
+              <li><a class="dropdown-item fw-semibold" routerLink="/training-placement"
                   (click)="scrollToTopAndCloseNavbar()">प्रशिक्षण एवं प्लेसमेंट
                   सेल</a>
               </li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/student-placed"
+              <li><a class="dropdown-item fw-semibold" routerLink="/student-placed"
                   (click)="scrollToTopAndCloseNavbar()">छात्र को रखा
                   गया</a></li>
             </ul>
@@ -960,56 +848,46 @@
             </ul>
           </li> -->
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               मिडिया
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/events-picture"
+              <li><a class="dropdown-item fw-semibold" routerLink="/events-picture"
                   (click)="scrollToTopAndCloseNavbar()">कॉलेज गैलरी</a></li>
               <!-- <li><a class="dropdown-item fw-semibold" routerLink="/social-media-account">Videos</a></li> -->
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/student-activites"
+              <li><a class="dropdown-item fw-semibold" routerLink="/student-activites"
                   (click)="scrollToTopAndCloseNavbar()"> क्लिप्स दबाएं</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link fw-semibold dropdown-toggle" routerLink
-              role="button" data-bs-toggle="dropdown"
+            <a class="nav-link fw-semibold dropdown-toggle" routerLink role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               उपयोगी कड़ियां
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/right-to-information"
+              <li><a class="dropdown-item fw-semibold" routerLink="/right-to-information"
                   (click)="scrollToTopAndCloseNavbar()">अधिकार
                   जानकारी</a></li>
               <li><a class="dropdown-item fw-semibold" routerLink="/examination"
                   (click)="scrollToTopAndCloseNavbar()">परीक्षा</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/admission-help"
+              <li><a class="dropdown-item fw-semibold" routerLink="/admission-help"
                   (click)="scrollToTopAndCloseNavbar()">प्रवेश
                   हेल्पलाइन</a></li>
               <li><a class="dropdown-item fw-semibold"
                   href="https://docs.google.com/forms/d/e/1FAIpQLSeBsvstC_RDi1nY1pTz_qN-6Xa44yNXXh8bfVvxdnLAukdMug/viewform"
                   target="_blank"> शिकायत निवारण पोर्टल</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  href="../../../assets/images/used/useful-link/aitce.pdf"
+              <li><a class="dropdown-item fw-semibold" href="../../../assets/images/used/useful-link/aitce.pdf"
                   target="_blank">एआईसीटीई की मंजूरी</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/registration-portal"
+              <li><a class="dropdown-item fw-semibold" routerLink="/registration-portal"
                   (click)="scrollToTopAndCloseNavbar()">पंजीकरण
                   पोर्टल</a></li>
-              <li><a class="dropdown-item fw-semibold"
-                  routerLink="/buddy-program"
+              <li><a class="dropdown-item fw-semibold" routerLink="/buddy-program"
                   (click)="scrollToTopAndCloseNavbar()">बडी कार्यक्रम</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold" routerLink="/contact-us"
-              (click)="scrollToTopAndCloseNavbar()">संपर्क
+            <a class="nav-link fw-semibold" routerLink="/contact-us" (click)="scrollToTopAndCloseNavbar()">संपर्क
               हमें</a>
           </li>
         </ul>
