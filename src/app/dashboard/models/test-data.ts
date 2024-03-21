@@ -1,8 +1,6 @@
-import {Student} from './student';
-
-export const studentData: Student[] =[
+ export const studentTestData =
   {
-    'id': '1',
+    'id' : '1',
     'enrollmentStatus': 'active',
     'personalInformation': {
       'firstName': 'John',
@@ -52,6 +50,5 @@ export const studentData: Student[] =[
       'grades': {} // Replace with actual grades for courses
     },
     'additionalInformation': {}
-  },
-]
+  }
   // ... Add more student objects with similarly structured data

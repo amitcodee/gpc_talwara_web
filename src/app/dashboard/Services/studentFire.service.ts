@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Student } from '../models/student';
+import { StudentModel } from '../models/studentModel';
 
 
 @Injectable({ providedIn: 'root' })
@@ -12,9 +12,10 @@ export class StudentService {
 
   }
 
-  updateStudentData(student: Student) {
+  async updateStudentData(student: StudentModel) {
     try {
       this.afs.collection('students').doc(student.id).set(student);
+      console.log('Student data updated successfully');
     } catch (error) {
       console.error(error);
     }

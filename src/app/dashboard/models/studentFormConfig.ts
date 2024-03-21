@@ -1,206 +1,36 @@
 import { Validators } from '@angular/forms';
-import { FormRow } from './forms';
+import { FormRow } from './formModel';
 
-export class StudentUpdate {
-  student : StudentUpdated;
-
-  constructor(student: StudentUpdated) {
-    this.student = student;
-  }
-}
-
-export interface StudentUpdated {
-  id: string;
-  enrollmentStatus: EnrollmentStatus;
-  personalInformation: PersonalInformation;
-  enrollmentInformation: EnrollmentInformation;
-  address: Address;
-  contactInformation: ContactInformation;
-  fees: Fees;
-  academicInformation: AcademicInformation;
-  additionalInformation: { [key: string]: any };
-   // ... constructor logic
-}
-
-export interface PersonalInformation {
-  firstName: string;
-  lastName: string;
-  fullName?: string; // Optional calculated property
-  fatherName: string;
-  motherName: string;
-  guardianOccupation: string;
-  familyIncome: number;
-  dateOfBirth: Date;
-  bloodGroup: BloodGroup;
-  gender: string;
-  nationality: string;
-  displayImage: string; // URL to the student's profile picture
-  // ...Other relevant personal details
-}
-
-export interface EnrollmentInformation {
-  regNumber: string;
-  admissionDate: Date;
-  category: EnrollmentCategory;
-  feeWaiver: boolean;
-  feeScheme: FeeScheme; // Type of fee waiver
-}
-
-export interface Address {
-  streetAddress?: string;
-  city: string;
-  state: string;
-  postalCode: string;
-  country: string;
-}
-
-export interface ContactInformation {
-  phoneNumbers: string[]; // Array to accommodate multiple phone numbers
-  emailAddresses: string[]; // Array to accommodate multiple email addresses
-}
-
-export interface Fees {
-  totalAmount: number;
-  dueDate: Date;
-  paid: boolean;
-  paymentHistory: { sem: number; date: Date; amount: number }[]; // Track payment history
-}
-
-export interface AcademicInformation {
-  tenth: number; // 10th grade percentage
-  twelfth: number; // 12th grade percentage
-  LEET: boolean; // Whether the student joined through lateral entry
-  percentage: number; // Academic performance percentage
-  branch: Branch;
-  batch: number;
-  grades: { [courseCode: string]: string }; // Map course codes to grades
-  // ...Other relevant academic details
-}
-
-type EnrollmentStatus = 'active' | 'DropOut' | 'suspended' | 'expelled';
-type BloodGroup = 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
-type EnrollmentCategory = 'SC' | 'ST' | 'OBC' | 'General';
-type FeeScheme = 'Below 60' | 'Between 60-70' | 'Between 70-80' | 'Between 80-90' | 'Above 90';
-type Branch = 'CSE' | 'CE' | 'ME' | 'ECE' | 'EE';
-
-// Optional constructor parameter for partial data
-
-
-interface StudentModel {
-  id: string; // Unique identifier for the student
-  enrollmentStatus: 'active' | 'DropOut' | 'suspended' | 'expelled'; // Current enrollment status
-  personalInformation: {
-    firstName: string;
-    lastName: string;
-    fullName: string; // Optional calculated property for convenience
-    fatherName: string;
-    motherName: string;
-    guardianOccupation: string;
-    familyIncome: number;
-    dateOfBirth: Date;
-    bloodGroup: 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
-    gender: string;
-    nationality: string;
-    displayImage: string; // URL to the student's profile picture
-    // ...Other relevant personal details
-  };
-  enrollmentInformation: {
-    regNumber: string;
-    admissionDate: Date;
-    category: 'SC' | 'ST' | 'OBC' | 'General'; // Caste category for fee calculation
-    feeWaiver: boolean;
-    feeScheme: 'Below 60' | 'Between 60-70' | 'Between 70-80' | 'Between 80-90' | 'Above 90'; // Type of fee waiver
-  }
-  address: {
-    streetAddress?: string;
-    city: string;
-    state: string;
-    postalCode: string;
-    country: string;
-  };
-  contactInformation: {
-    phoneNumbers: string[]; // Array to accommodate multiple phone numbers
-    emailAddresses: string[]; // Array to accommodate multiple email addresses
-  };
-  fees: {
-    totalAmount: number;
-    dueDate: Date;
-    paid: boolean;
-    paymentHistory: [{ sem: number; date: Date; amount: number }]; // Track payment history
-  };
-  academicInformation: {
-    tenth : number; // 10th grade percentage
-    twelfth : number; // 12th grade percentage
-    LEET: boolean; // Whether the student joined through lateral entry
-    percentage: number; // Academic performance percentage
-    branch: 'CSE'| 'CE' | 'ME' | 'ECE' | 'EE';
-    batch: number;
-    grades: { [courseCode: string]: string }; // Map course codes to grades
-    // ...Other relevant academic details
-  };
-  additionalInformation: { [key: string]: any }; // Flexible field for custom data
-}
-
-export class Student implements StudentModel {
-
-  constructor(
-    public id: string,
-    public enrollmentStatus: 'active' | 'DropOut' | 'suspended' | 'expelled',
-    public personalInformation: {
-      firstName: string;
-      lastName: string;
-      fullName: string;
-      fatherName: string;
-      motherName: string;
-      guardianOccupation: string;
-      familyIncome: number;
-      dateOfBirth: Date;
-      bloodGroup: 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
-      displayImage: string,
-      gender: string,
-      nationality: string,
-    },
-    public enrollmentInformation: {
-      regNumber: string,
-      admissionDate: Date,
-      category: 'SC' | 'ST' | 'OBC' | 'General',
-      feeWaiver: boolean,
-      feeScheme: 'Below 60' | 'Between 60-70' | 'Between 70-80' | 'Between 80-90' | 'Above 90',
-    },
-    public address: {
-      streetAddress?: string;
-      city: string;
-      state: string;
-      postalCode: string;
-      country: string;
-    },
-    public contactInformation: {
-      phoneNumbers: string[];
-      emailAddresses: string[];
-    },
-    public fees: {
-      totalAmount: number;
-      dueDate: Date;
-      paid: boolean;
-      paymentHistory: [{ sem: number; date: Date; amount: number }];
-    },
-    public academicInformation: {
-      tenth: number;
-      twelfth: number;
-      LEET: boolean;
-      percentage: number;
-      branch: 'CSE'| 'CE' | 'ME' | 'ECE' | 'EE';
-      batch: number;
-      grades: { [courseCode: string]: string };
-    },
-    public additionalInformation: { [key: string]: any } = {}
-  ) {}
-
-  // Custom methods as needed, e.g., for calculating fees breakdown, checking academic standing, etc.
-}
 
 export class StudentFormConfig{
   studentFormLayout: FormRow[] = [
+    {
+      title: 'ID and Enrollment Status',
+      modelValue: '',
+      modelValueBoolean: false,
+      row: [
+        {
+          name: 'id',
+          type: 'input',
+          validators: [Validators.required],
+          placeholder: 'ID',
+          floatLabel: 'always',
+        },
+        {
+          name: 'enrollmentStatus',
+          type: 'select',
+          validators: [Validators.required],
+          options: [
+            { value: 'active', label: 'Active' },
+            { value: 'inactive', label: 'Inactive' },
+            { value: 'suspended', label: 'Suspended' },
+            { value: 'expelled', label: 'Expelled' },
+          ],
+          placeholder: 'Enrollment Status',
+          floatLabel: 'always',
+        },
+      ],
+    },
     {
       title: 'Personal Information',
       modelValue: 'personalInformation',

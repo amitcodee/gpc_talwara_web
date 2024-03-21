@@ -26,7 +26,7 @@ import { MatTableModule} from '@angular/material/table';
 
 import { DisableControlDirective } from '../directives/disable-control.directive';
 import { ViewStudentsComponent } from './view-students/view-students.component';
-import { StudentFormConfig } from '../models/student';
+import { StudentFormConfig } from '../models/studentFormConfig';
 
 
 @NgModule({

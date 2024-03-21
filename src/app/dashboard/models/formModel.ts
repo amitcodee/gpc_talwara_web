@@ -33,37 +33,10 @@ export interface SelectOption {
   checked?: boolean; // For checkboxes, to indicate if the option is initially checked
 }
 
-//
-// Config files for Student form
-//
-
-
-
 export class FormLayout {
   layout: FormRow[];
 
   constructor(layout: FormRow[]) {
     this.layout = layout;
   }
-
-  // Method to generate a FormGroup or FormArray based on the layout, including checkboxes
-  generateFormGroup(fb: FormBuilder): FormGroup {
-    const group: { [key: string]: any } = {};
-    console.log(this.layout);
-    this.layout.forEach(row => {
-      row.row.forEach(field => {
-        if (field.type === 'checkbox') {
-          // Initialize FormArray for checkboxes with FormControl per option
-          const formControls = field.options?.map(option => new FormControl(option.checked || false)) || [];
-          group[field.name] = new FormArray(formControls);
-        } else {
-          // Initialize FormControl for other field types
-          group[field.name] = ['', field.validators];
-        }
-      });
-    });
-    return fb.group(group);
-  }
-
-
 }

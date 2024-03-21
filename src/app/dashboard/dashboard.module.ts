@@ -16,10 +16,10 @@ import { DashboardRoutingModule } from './dashboard.routes';
 
 import { DashboardComponent } from './dashboar.component';
 import { MainDashComponent } from './main-dash/main-dash.component';
-import { RouteService } from './Services/route.service';
+import { RouteService } from './Services/dashRoute.service';
 import { StudentDetailsModule } from './student-details/student-details.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { StudentService } from './Services/students.service';
+import { StudentService } from './Services/studentFire.service';
 
 
 
