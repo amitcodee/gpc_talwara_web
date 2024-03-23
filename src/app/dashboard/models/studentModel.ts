@@ -162,7 +162,7 @@ export interface SimpleStudentModal {
   batch: string;
   name: string;
   fatherName: string;
-  dateOfBirth: Date;
+  dateOfBirth?: Date;
   displayImage: string;
   branch: Branch;
   contact: string;

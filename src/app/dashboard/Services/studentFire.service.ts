@@ -34,7 +34,6 @@ export class StudentService {
       id: student.id,
       name: student.personalInformation.firstName + ' ' + student.personalInformation.lastName,
       fatherName: student.personalInformation.fatherName,
-      dateOfBirth: student.personalInformation.dateOfBirth,
       regNumber: student.enrollmentInformation.regNumber,
       batch: student.academicInformation.batch,
       displayImage: student.personalInformation.displayImage,

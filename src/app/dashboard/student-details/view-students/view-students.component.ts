@@ -29,12 +29,11 @@ export interface DataSourceInterface {
 export class ViewStudentsComponent implements OnInit, AfterViewInit  {
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  displayedColumns: string[] = ['id', 'regNumber', 'batch', 'name', 'fatherName', 'dateOfBirth', 'displayImage', 'branch', 'contact'];
+  displayedColumns: string[] = ['id', 'regNumber', 'batch', 'name', 'fatherName', 'displayImage', 'branch', 'contact'];
   dataSource = new MatTableDataSource<any>();
 
   constructor(
     private studentService: StudentService,
-    private datePipe: DatePipe
     ) {}
 
   ngOnInit() {
@@ -42,7 +41,6 @@ export class ViewStudentsComponent implements OnInit, AfterViewInit  {
     this.studentService.getStudents().subscribe(data => {
       this.dataSource.data = data;
     })
-
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
   }
@@ -51,26 +49,6 @@ export class ViewStudentsComponent implements OnInit, AfterViewInit  {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
   }
-
-  convertFirestoreTimestampToDate(timestamp: any) {
-    if (!timestamp) {
-      return null; // Return null instead of an empty string
-    }
-    return new Date(timestamp.seconds * 1000);
-  }
-
-  formatDateForDisplay(date: Date | null | string): string {
-    if (this.isDate(date)) {
-      return this.datePipe.transform(date as Date, 'dd/MM/yyyy');
-    } else {
-      return '';
-    }
-  }
-
-  isDate(value: any): value is Date {
-    return value instanceof Date && !isNaN(value.getTime());
-  }
-
 
 
 

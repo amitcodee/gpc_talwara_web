@@ -6,13 +6,7 @@
 
   <ng-container matColumnDef="{{ column }}" *ngFor="let column of displayedColumns">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ column }} </th>
-    @if(column === 'actions'){
-      <td mat-cell *matCellDef="let element"> {{ formatDateForDisplay(convertFirestoreTimestampToDate(element[column])) }} </td>
-    }
-    @else{
-      <td mat-cell *matCellDef="let element"> {{ element[column] }} </td>
-    }
-
+    <td mat-cell *matCellDef="let element"> {{ element[column] }} </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
