@@ -43,6 +43,7 @@ export interface Fees {
 }
 
 export interface FeesDetailed {
+  id?: string;
   sem : number;
   date: Date;
   amount: number;
@@ -61,7 +62,7 @@ export interface AcademicInformation {
   LEET: boolean; // Whether the student joined through lateral entry
   percentage: number; // Academic performance percentage
   branch: Branch;
-  batch: number;
+  batch: string;
   grades: { [courseCode: string]: string }; // Map course codes to grades
   // ...Other relevant academic details
 }
@@ -146,10 +147,23 @@ export class StudentClass {
         LEET: false,
         percentage: 92,
         branch: "CSE",
-        batch: 2022,
+        batch: '2022',
         grades: { "COMP101": "A", "MATH101": "A-" },
       },
       additionalInformation: {}
     };
   }
+}
+
+
+export interface SimpleStudentModal {
+  id: string;
+  regNumber: string;
+  batch: string;
+  name: string;
+  fatherName: string;
+  dateOfBirth: Date;
+  displayImage: string;
+  branch: Branch;
+  contact: string;
 }

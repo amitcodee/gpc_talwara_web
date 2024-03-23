@@ -1,5 +1,5 @@
 import { Component,OnInit} from '@angular/core';
-import { StudentFormConfig} from '../../Config/studentFormConfig';
+import { StudentFormConfig} from '../../Config/student.formConfig';
 import { StudentModel } from '../../models/studentModel';
 import { StudentService } from '../../Services/studentFire.service';
 import { studentTestData} from '../../RandomData/test-data';
@@ -16,7 +16,10 @@ import { formService } from '../../Services/form.service';
 export class EditStudentsComponent {
   studentData = studentTestData as StudentModel;
 
-  constructor(public studentFormConfig: StudentFormConfig, private studentService: StudentService) {}
+  constructor(
+    public studentFormConfig: StudentFormConfig,
+    private studentService: StudentService
+    ) {}
 
   getFormData(data: any) {
     if (typeof data === 'object') {

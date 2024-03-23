@@ -3,7 +3,9 @@ import {StudentModel} from '../models/studentModel';
 @Injectable({
   providedIn: 'root'
 })
+
 export class RandomStudentDataService {
+  student!:  StudentModel[];
 
   constructor() { }
 
@@ -26,9 +28,9 @@ export class RandomStudentDataService {
         displayImage: ''
       },
       enrollmentInformation:{
-        regNumber: '',
+        regNumber: this.generateRegNumber(),
         admissionDate:  this.getRandomDate(0, 1),
-        category: this.getRandomEnumValue(['SC', 'ST', 'OBC', 'General']),,
+        category: this.getRandomEnumValue(['SC', 'ST', 'OBC', 'General']),
         feeWaiver: Math.random() < 0.1,
         feeScheme: this.getRandomEnumValue(['Below 60', 'Between 60-70', 'Between 70-80', 'Between 80-90', 'Above 90']),
       },
@@ -39,14 +41,19 @@ export class RandomStudentDataService {
         country: this.getRandomCountry()
       },
       contactInformation: {
-        phoneNumbers: [this.generatePhoneNumber()],
+        phoneNumbers: [this.getRandomInt(1000000000, 9999999999).toString()],
         emailAddresses: [this.generateEmail()]
       },
       fees: {
         totalAmount: this.getRandomInt(20000, 50000), // Adjust fee range
         dueDate: this.getNextMonthDate(),
         paid: Math.random() < 0.5, // 50% chance of being paid
-        paymentHistory: [{sem: 0, date: new Date(), amount: 0}]
+        paymentHistory: [{sem: 0,
+           date: new Date(),
+           amount: 5000 ,
+           session: "2023-24",
+           paid: true,
+           paymentMode: "Online"}]
       },
       academicInformation: {
         tenth: this.getRandomInt(60, 100),
@@ -54,7 +61,7 @@ export class RandomStudentDataService {
         LEET: Math.random() < 0.2, // 20% chance of joining through LEET
         percentage: (100/2) / 2,
         branch: this.getRandomEnumValue(['CSE', 'CE', 'ME', 'ECE', 'EE']),
-        batch: this.getCurrentYear(),
+        batch: this.getRandomEnumValue(['2021-22', '2020-21', '2016-17', '2018-19']),
         grades: {}, // Replace with actual grades generation logic
       },
       additionalInformation: {}

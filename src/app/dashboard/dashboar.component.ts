@@ -11,7 +11,7 @@ export class DashboardComponent  implements OnDestroy, OnInit {
   mobileQuery: MediaQueryList;
 
   routeNav = [
-    {path: 'stdetail',    displayName: 'Main',            icon: 'i'},
+    {path: 'stdetail', displayName: 'Main', icon: 'i'},
   ];
 
   private _mobileQueryListener: () => void;
@@ -26,6 +26,6 @@ export class DashboardComponent  implements OnDestroy, OnInit {
   }
 
   ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
+
   }
 }

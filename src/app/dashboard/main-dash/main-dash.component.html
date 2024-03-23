@@ -1,31 +1,46 @@
-<div class="card-container">
-  <mat-card *ngFor="let item of data">
-    <mat-card-header>
-      <mat-card-title>{{ item.title }}</mat-card-title>
-      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-        <mat-icon>more_vert</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <mat-icon>dialpad</mat-icon>
-          <span>Redial</span>
-        </button>
-        <button mat-menu-item disabled>
-          <mat-icon>voicemail</mat-icon>
-          <span>Check voice mail</span>
-        </button>
-        <button mat-menu-item>
-          <mat-icon>notifications_off</mat-icon>
-          <span>Disable alerts</span>
-        </button>
-      </mat-menu>
-      <mat-card-subtitle>{{ item.subtitle }}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      {{ item.content }}
-    </mat-card-content>
-    <mat-card-actions>
-      <span class="date">{{ item.date }}</span>
-    </mat-card-actions>
-  </mat-card>
+<!-- dashboard.component.html -->
+<div class="dashboard">
+  <h1>Welcome to the College Management System</h1>
+
+  <div class="card-container">
+    <div class="card">
+      <h2>Noticeboard</h2>
+      <ul>
+<!--         <li *ngFor="let notice of notices">{{ notice }}</li> -->
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Noticeboard</h2>
+      <ul>
+<!--         <li *ngFor="let notice of notices">{{ notice }}</li> -->
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Upcoming Events</h2>
+      <ul>
+<!--         <li *ngFor="let event of events">
+          <h3>{{ event.title }}</h3>
+          <p>{{ event.date }}</p>
+        </li> -->
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="#">Student Portal</a></li>
+        <li><a href="#">Staff Directory</a></li>
+        <li><a href="#">Course Catalog</a></li>
+        <li><a href="#">Campus Map</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="additional-info">
+    <h2>Additional Information</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec metus euismod, ultricies metus vel, malesuada velit. Fusce id felis libero.</p>
+  </div>
 </div>
+<button (click)="check()" class="btn">Click me</button>
+

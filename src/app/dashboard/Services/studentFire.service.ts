@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { StudentModel } from '../models/studentModel';
+import { StudentModel, SimpleStudentModal } from '../models/studentModel';
 
 
 @Injectable({ providedIn: 'root' })
@@ -29,12 +29,39 @@ export class StudentService {
     // Delete student data from Firestore
   }
 
-  addStudent(student: any) {
+  addStudent(student: StudentModel) {
+    const test: SimpleStudentModal = {
+      id: student.id,
+      name: student.personalInformation.firstName + ' ' + student.personalInformation.lastName,
+      fatherName: student.personalInformation.fatherName,
+      dateOfBirth: student.personalInformation.dateOfBirth,
+      regNumber: student.enrollmentInformation.regNumber,
+      batch: student.academicInformation.batch,
+      displayImage: student.personalInformation.displayImage,
+      branch: student.academicInformation.branch,
+      contact: student.contactInformation.phoneNumbers[0],
+    }
+    console.log(test);
     // Add student data to Firestore
+    try {
+      this.afs.collection('students').doc(student.id).set(student);
+      console.log('Student data updated successfully');
+    } catch (error) {
+      console.error(error);
+    }
+
+    try
+    {
+      this.afs.collection('simpleStudents').doc(student.id).set(test);
+      console.log('Simple student data updated successfully');
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   getStudents() {
-    // Fetch all student data from Firestore
+
+    return this.afs.collection('simpleStudents').valueChanges();    // Fetch all student data from Firestore
   }
 
 }

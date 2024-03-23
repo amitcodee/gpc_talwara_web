@@ -1,4 +1,6 @@
- export const studentTestData =
+import { StudentModel } from "../models/studentModel";
+
+ export const studentTestData: StudentModel =
   {
     'id' : '1',
     'enrollmentStatus': 'active',
@@ -38,7 +40,7 @@
       'totalAmount': 50000,
       'dueDate': new Date(2024, 0, 15), // 15th January 2024
       'paid': false,
-      'paymentHistory': [{ sem: 0, date: new Date(), amount: 0 }]
+      'paymentHistory': [{ sem: 0, date: new Date(), amount: 0 , session: '', paid: false, paymentMode: ''}]
     },
     'academicInformation': {
       'tenth': 85,
@@ -46,7 +48,7 @@
       'LEET': false,
       'percentage': 87.5,
       'branch': 'CSE',
-      'batch': 2023,
+      'batch': '2023',
       'grades': {} // Replace with actual grades for courses
     },
     'additionalInformation': {}
