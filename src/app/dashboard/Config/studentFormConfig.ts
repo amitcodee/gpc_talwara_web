@@ -1,5 +1,5 @@
 import { Validators } from '@angular/forms';
-import { FormRow } from './formModel';
+import { FormRow } from '../models/formModel';
 
 
 export class StudentFormConfig{
@@ -31,6 +31,63 @@ export class StudentFormConfig{
         },
       ],
     },
+    {
+      title: 'Enrollment Information',
+      modelValue: 'enrollmentInformation',
+      modelValueBoolean: true,
+      row: [
+        {
+          name: 'admissionDate',
+          type: 'date',
+          validators: [Validators.required],
+          placeholder: 'Admission Date',
+          floatLabel: 'always',
+        },
+        {
+          name: 'regNumber',
+          type: 'input',
+          validators: [Validators.required],
+          placeholder: 'Registration Number',
+          floatLabel: 'always',
+        },
+        {
+          name: 'category',
+          type: 'select',
+          validators: [Validators.required],
+          options: [
+            { value: 'SC', label: 'SC' },
+            { value: 'ST', label: 'ST' },
+            { value: 'OBC', label: 'OBC' },
+            { value: 'General', label: 'General' },
+          ],
+          placeholder: 'Category',
+          floatLabel: 'always',
+        },
+        {
+          name: 'feeWaiver',
+            type: 'input',
+            validators: [],
+            placeholder: 'Fee Waiver',
+            floatLabel: 'auto',
+        },
+        {
+          name: 'feeScheme',
+          type: 'select',
+          validators: [Validators.required],
+          options: [
+            { value: 'Below 60', label: 'Below 60' },
+            { value: 'Between 60-70', label: 'Between 60-70' },
+            { value: 'Between 70-80', label: 'Between 70-80' },
+            { value: 'Between 80-90', label: 'Between 80-90' },
+            { value: 'Above 90', label: 'Above 90' },
+          ],
+          placeholder: 'Fee Scheme',
+          floatLabel: 'always',
+        },
+
+
+      ],
+      },
     {
       title: 'Personal Information',
       modelValue: 'personalInformation',
@@ -72,6 +129,31 @@ export class StudentFormConfig{
           floatLabel: 'always',
         },
         {
+          name: 'guardianOccupation',
+          type: 'input',
+          validators: [Validators.required],
+          placeholder: 'Guardian Occupation',
+          floatLabel: 'always',
+        },
+        {
+          name: 'familyIncome',
+          type: 'input',
+          validators: [Validators.required],
+          placeholder: 'Family Income',
+          floatLabel: 'always',
+        },
+        {
+          name: 'gender',
+          type: 'select',
+          validators: [Validators.required],
+          options: [
+            { value: 'Male', label: 'Male' },
+            {value: 'Female', label: 'Female'}
+          ],
+          placeholder: 'Gender',
+          floatLabel: 'always',
+        },
+        {
           name: 'bloodGroup',
           type: 'select',
           validators: [Validators.required],
@@ -89,69 +171,13 @@ export class StudentFormConfig{
           floatLabel: 'always',
         },
         {
-          name: 'familyIncome',
+          name: 'nationality',
           type: 'input',
           validators: [Validators.required],
-          placeholder: 'Family Income',
-          floatLabel: 'always',
+          placeholder:'Nationality',
+          floatLabel:'always',
         },
-        {
-          name: 'guardianOccupation',
-          type: 'input',
-          validators: [Validators.required],
-          placeholder: 'Guardian Occupation',
-          floatLabel: 'always',
-        }
       ],
-    },
-    {
-      title: 'Enrollment Information',
-      modelValue: 'enrollmentInformation',
-      modelValueBoolean: true,
-      row: [
-        {
-          name: 'category',
-          type: 'select',
-          validators: [Validators.required],
-          options: [
-            { value: 'SC', label: 'SC' },
-            { value: 'ST', label: 'ST' },
-            { value: 'OBC', label: 'OBC' },
-            { value: 'General', label: 'General' },
-          ],
-          placeholder: 'Category',
-          floatLabel: 'always',
-        },
-        {
-          name: 'feeWaiver',
-            type: 'input',
-            validators: [],
-            placeholder: 'Fee Waiver',
-            floatLabel: 'auto',
-        },
-        {
-          name: 'feeScheme',
-          type: 'select',
-          validators: [Validators.required],
-          options: [
-            { value: 'Below 60', label: 'Below 60' },
-            { value: 'Between 60-70', label: 'Between 60-70' },
-            { value: 'Between 70-80', label: 'Between 70-80' },
-            { value: 'Between 80-90', label: 'Between 80-90' },
-            { value: 'Above 90', label: 'Above 90' },
-          ],
-          placeholder: 'Fee Scheme',
-          floatLabel: 'always',
-        },
-
-
-      ],
-      },
-    {
-      title: 'Contact Information',
-      row: [
-
-      ]
     },
     {
       title: 'Address Information',

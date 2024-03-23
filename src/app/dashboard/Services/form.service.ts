@@ -69,9 +69,8 @@ export class formService {
   // function to map  from form data to student nodel
   // Only valid for students
   mapFormToStudent(formData: any ): StudentModel {
-
-    this.student.student.id = '123';
-    this.student.student.enrollmentStatus = 'active';
+    this.student.student.id = formData.id || '12345';
+    this.student.student.enrollmentStatus = formData.enrollmentStatus;
     this.student.student.contactInformation = {
       phoneNumbers: formData.phoneNumbers,
       emailAddresses: formData.emailAddresses,
@@ -92,8 +91,8 @@ export class formService {
 
     };
     this.student.student.enrollmentInformation = {
-      regNumber: '12345',
-      admissionDate:  new Date(),
+      regNumber: formData.regNumber,
+      admissionDate:  formData.admissionDate,
       category: formData.category,
       feeWaiver: formData.feeWaiver,
       feeScheme: formData.feeScheme,
@@ -109,7 +108,15 @@ export class formService {
       totalAmount: formData.totalAmount,
       dueDate: new Date(formData.dueDate),
       paid: formData.paid,
-      paymentHistory: [{ sem: 0, date: new Date(), amount: 0 }]
+      paymentHistory: [
+        {
+          sem: 0,
+          date: new Date(),
+          amount: 0 ,
+          session: '',
+          paid: false,
+        }
+        ]
     };
     this.student.student.academicInformation = {
       tenth: formData.tenth,

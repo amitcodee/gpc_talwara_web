@@ -1,0 +1,36 @@
+.form-title {
+  margin-bottom: 20px;
+  display: flex;
+  font-weight: 500; /* Adds space between the title and the form */
+}
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px; /* Adds space between each row */
+
+  .form-field {
+    flex: 1; /* Ensures each field takes equal space in the row */
+    padding: 0 10px; /* Adds some spacing between fields */
+    box-sizing: border-box; /* Includes padding in the element's total width and height */
+
+    @media (max-width: 768px) {
+      flex-basis: 100%; /* On smaller screens, fields take full width */
+      padding: 0; /* Removes padding on smaller screens for edge-to-edge fields */
+    }
+  }
+}
+
+mat-form-field {
+width: 100%; /* Ensures Material form fields take up full width of their container */
+}
+
+.radio-group, .checkbox-group {
+width: 100%; /* Ensures custom group elements take up full width */
+display: flex;
+flex-direction: row; /* Aligns radio buttons and checkboxes vertically */
+}
+
+/* Adjustments for specific form controls if needed */
+input[matInput], textarea[matInput], mat-select {
+width: 100%; /* Full width for all Material input elements */
+}

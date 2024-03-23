@@ -39,7 +39,20 @@ export interface Fees {
   totalAmount: number;
   dueDate: Date;
   paid: boolean;
-  paymentHistory: { sem: number; date: Date; amount: number }[]; // Track payment history
+  paymentHistory: FeesDetailed[]; // Track payment history
+}
+
+export interface FeesDetailed {
+  sem : number;
+  date: Date;
+  amount: number;
+  session: string;
+  paid: boolean;
+  paymentMode?: string;
+  transactionId?: string;
+  paymentStatus?: string;
+  paymentReceipt?: string;
+  // ...Other relevant fee details
 }
 
 export interface AcademicInformation {
@@ -116,7 +129,16 @@ export class StudentClass {
         totalAmount: 20000,
         dueDate: new Date('2024-03-01'),
         paid: false,
-        paymentHistory: [{ sem: 1, date: new Date('2023-01-01'), amount: 5000 }],
+        paymentHistory: [
+          {
+            sem: 1,
+            date: new Date('2023-01-01'),
+            amount: 5000 ,
+            session: "2023-24",
+            paid: true,
+            paymentMode: "Online"
+          }
+        ],
       },
       academicInformation: {
         tenth: 95,
