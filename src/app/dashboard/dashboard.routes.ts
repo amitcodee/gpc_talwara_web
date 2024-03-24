@@ -11,7 +11,7 @@ const routes: Routes = [
     children: [
       {
         path: "stdetail",
-        loadChildren: () => import("./student-details/student-details.module").then(m => m.StudentDetailsModule),
+        loadChildren: () => import("../student-details/student-details.module").then(m => m.StudentDetailsModule),
       },
       {
         path: "main",

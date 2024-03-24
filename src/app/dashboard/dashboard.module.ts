@@ -17,7 +17,7 @@ import { DashboardRoutingModule } from './dashboard.routes';
 import { DashboardComponent } from './dashboar.component';
 import { MainDashComponent } from './main-dash/main-dash.component';
 import { RouteService } from './Services/dashRoute.service';
-import { StudentDetailsModule } from './student-details/student-details.module';
+import { StudentDetailsModule } from '../student-details/student-details.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { StudentService } from './Services/studentFire.service';
 import { RandomStudentDataService } from './RandomData/randomData';

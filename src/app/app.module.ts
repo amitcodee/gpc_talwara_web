@@ -10,7 +10,7 @@ import { FrontEndModule } from './front-end/front-end.module';
 import { AppRoutingModule } from './app.routes';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { StudentDetailsModule } from './dashboard/student-details/student-details.module';
+import { StudentDetailsModule } from './student-details/student-details.module';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 // for Router import:

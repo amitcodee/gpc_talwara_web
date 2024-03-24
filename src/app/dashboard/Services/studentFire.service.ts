@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { StudentModel, SimpleStudentModal, Fees, FeesAcademicSection, FeesDetailed } from '../models/studentModel';
+import { map, Timestamp } from 'rxjs';
 
 
 @Injectable({ providedIn: 'root' })
@@ -260,5 +261,17 @@ export class StudentService {
       paymentDate: new Date(), // Set payment date if paid
       // ...Other relevant details to be mapped
     }));
+  }
+
+  getStudentFees(){
+    let test = this.afs.collection('feesAcademicSection').snapshotChanges().pipe(
+      map(actions => {
+        return actions.map(a => {
+          const data = a.payload.doc.data() as FeesAcademicSection;
+          return { ...data };
+        });
+      })
+    );
+    return test
   }
 }

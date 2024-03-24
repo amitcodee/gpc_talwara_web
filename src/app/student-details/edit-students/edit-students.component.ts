@@ -1,9 +1,9 @@
 import { Component,OnInit} from '@angular/core';
-import { StudentFormConfig} from '../../Config/student.formConfig';
-import { StudentModel } from '../../models/studentModel';
-import { StudentService } from '../../Services/studentFire.service';
-import { studentTestData} from '../../RandomData/test-data';
-import { formService } from '../../Services/form.service';
+import { StudentFormConfig} from '../../dashboard/Config/student.formConfig';
+import { StudentModel } from '../../dashboard/models/studentModel';
+import { StudentService } from '../../dashboard/Services/studentFire.service';
+import { studentTestData} from '../../dashboard/RandomData/test-data';
+import { formService } from '../../dashboard/Services/form.service';
 
 // Example usage within a component
 @Component({

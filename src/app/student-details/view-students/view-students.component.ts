@@ -2,19 +2,8 @@ import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { StudentService } from '../../Services/studentFire.service';
-import { DatePipe } from '@angular/common';
+import { StudentService } from '../../dashboard/Services/studentFire.service';
 
-interface ColumnInterface {
-  name: string;
-  displayName: string;
-  type: 'text' | 'number' | 'date' | 'boolean' | 'action'; // Add more types as needed
-
-  // Add any other optional column properties:
-
-  // - editable: boolean
-  // - deletable: boolean
-}
 
 export interface DataSourceInterface {
   [key: string]: any; // Use a generic type to accommodate diverse data sources
