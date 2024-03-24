@@ -1,45 +1,61 @@
-/* dashboard.component.css */
-.dashboard {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.card-container {
+.container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background-color: #f4f4f4;
+  grid-gap: 20px;
   padding: 20px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-.card h2 {
+.widget {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+.widget:hover {
+  transform: translateY(-5px);
+}
+.widget h2 {
   margin-top: 0;
+  color: #4a4a4a;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
-
-.card ul {
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.stat-label {
+  font-weight: bold;
+  color: #4a4a4a;
+}
+.stat-value {
+  font-size: 24px;
+  color: #6c63ff;
+}
+.upcoming-events ul,
+.announcements ul,
+.quick-links ul,
+.courses ul,
+.assignments ul {
   list-style-type: none;
   padding: 0;
 }
-
-.card li {
+.upcoming-events li,
+.announcements li,
+.quick-links li,
+.courses li,
+.assignments li {
   margin-bottom: 10px;
+  color: #4a4a4a;
 }
-
-.additional-info {
-  margin-top: 30px;
+.quick-links a {
+  text-decoration: none;
+  color: #6c63ff;
 }
-
-.additional-info h2 {
-  margin-top: 0;
+@media screen and (max-width: 768px) {
+  .container {
+      grid-template-columns: 1fr;
+  }
 }

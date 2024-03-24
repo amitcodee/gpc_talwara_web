@@ -10,6 +10,7 @@ interface User {
   email: string;
   displayName?: string;
   photoURL?: string;
+  role?: string;
   // Include other relevant user data
 }
 
@@ -45,8 +46,27 @@ export class AuthService {
 
   async logIn(email: string, password: string) {
     try {
-      const userCredential = await this.afAuth.signInWithEmailAndPassword(email, password);
-      this.router.navigate(['/dashboard']); // Or redirect to a different page
+      const userCredential = await this.afAuth.signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          if (userCredential.user) {
+            this.currentUser = {
+              uid: userCredential.user.uid,
+              email: userCredential.user.email || '',
+              displayName: userCredential.user.displayName || '',
+              photoURL: userCredential.user.photoURL || '',
+              role: this.getRoleOfUser(),
+              // Include other user data
+            };
+          }
+        });
+
+
+      this.router.navigate(['/dashboard']).then(
+        () => {
+          window.location.reload();
+        }
+
+      ); // Or redirect to a different page
     } catch (error) {
       console.error(error);
       // Handle errors appropriately, e.g., display an error message to the user
