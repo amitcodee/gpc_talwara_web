@@ -46,14 +46,13 @@ export class RandomStudentDataService {
       },
       fees: {
         totalAmount: this.getRandomInt(20000, 50000), // Adjust fee range
-        dueDate: this.getNextMonthDate(),
-        paid: Math.random() < 0.5, // 50% chance of being paid
-        paymentHistory: [{sem: 0,
-           date: new Date(),
-           amount: 5000 ,
-           session: "2023-24",
-           paid: true,
-           paymentMode: "Online"}]
+        paymentHistory: [{
+          sem: 0,
+          amount: 5000,
+          session: "2023-24",
+          paid: true,
+          feesID: ''
+        }]
       },
       academicInformation: {
         tenth: this.getRandomInt(60, 100),

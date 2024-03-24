@@ -2,6 +2,12 @@ import {MediaMatcher} from '@angular/cdk/layout';
 import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
 import { RouteService } from './Services/dashRoute.service';
 
+interface User {
+  name: string;
+  email: string;
+  // ... other user details
+}
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

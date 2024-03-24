@@ -38,9 +38,7 @@ import { StudentModel } from "../models/studentModel";
     },
     'fees': {
       'totalAmount': 50000,
-      'dueDate': new Date(2024, 0, 15), // 15th January 2024
-      'paid': false,
-      'paymentHistory': [{ sem: 0, date: new Date(), amount: 0 , session: '', paid: false, paymentMode: ''}]
+      'paymentHistory': [{ feesID: '12345', sem: 0,  amount: 0 , session: '', paid: false,}]
     },
     'academicInformation': {
       'tenth': 85,

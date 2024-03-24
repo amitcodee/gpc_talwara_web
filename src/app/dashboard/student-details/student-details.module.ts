@@ -28,6 +28,7 @@ import { DisableControlDirective } from '../directives/disable-control.directive
 import { ViewStudentsComponent } from './view-students/view-students.component';
 import { StudentFormConfig } from '../Config/student.formConfig';
 import { EditDetailsComponent } from '../shared/edit-details/edit-details.component';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -56,6 +57,7 @@ import { EditDetailsComponent } from '../shared/edit-details/edit-details.compon
     MatListModule,
     MatCheckboxModule,
     MatNativeDateModule,
+    MatIconModule,
     MatTableModule, MatSortModule, MatPaginatorModule
   ],
   exports: [

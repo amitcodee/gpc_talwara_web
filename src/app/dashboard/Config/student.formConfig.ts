@@ -254,20 +254,6 @@ export class StudentFormConfig{
           placeholder: 'Total Amount',
           floatLabel: 'always',
         },
-        {
-          name: 'dueDate',
-          type: 'date',
-          validators: [Validators.required],
-          placeholder: 'Due Date',
-          floatLabel: 'always',
-        },
-        {
-          name: 'paid',
-          type: 'input',
-          validators: [],
-          placeholder: 'Paid',
-          floatLabel: 'auto',
-        },
       ]
     },
     {

@@ -20,6 +20,7 @@ import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 import { LoadingBarModule } from '@ngx-loading-bar/core';
 
 import { AngularFireModule } from '@angular/fire/compat';
+import { getDatabase, provideDatabase } from '@angular/fire/database'
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
@@ -52,6 +53,8 @@ const firebaseConfig = {
     AngularFireModule,
     MatProgressSpinnerModule,
     AngularFireModule.initializeApp(firebaseConfig),
+    provideDatabase(() => getDatabase()),
+
         // for Router use:
     LoadingBarRouterModule,
         // for Core use:
@@ -65,7 +68,7 @@ const firebaseConfig = {
     ThemeService,
     TitleService,
     AuthService,
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
   ], // Add your services/providers here
   bootstrap: [AppComponent]
 })

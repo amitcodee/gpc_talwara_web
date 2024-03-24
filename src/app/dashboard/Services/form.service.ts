@@ -106,15 +106,13 @@ export class formService {
     };
     this.student.student.fees = {
       totalAmount: formData.totalAmount,
-      dueDate: new Date(formData.dueDate),
-      paid: formData.paid,
       paymentHistory: [
         {
           sem: 0,
-          date: new Date(),
-          amount: 0 ,
+          amount: 0,
           session: '',
           paid: false,
+          feesID: ""
         }
         ]
     };

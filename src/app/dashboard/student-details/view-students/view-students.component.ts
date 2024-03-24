@@ -29,7 +29,7 @@ export interface DataSourceInterface {
 export class ViewStudentsComponent implements OnInit, AfterViewInit  {
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  displayedColumns: string[] = ['id', 'regNumber', 'batch', 'name', 'fatherName', 'displayImage', 'branch', 'contact'];
+  displayedColumns: string[] = ['id', 'regNumber', 'batch', 'name', 'fatherName', 'displayImage', 'branch', 'contact']
   dataSource = new MatTableDataSource<any>();
 
   constructor(
@@ -40,6 +40,7 @@ export class ViewStudentsComponent implements OnInit, AfterViewInit  {
     // Get student data from Firebase using your service
     this.studentService.getStudents().subscribe(data => {
       this.dataSource.data = data;
+
     })
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;

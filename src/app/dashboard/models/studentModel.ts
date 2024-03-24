@@ -35,27 +35,6 @@ export interface ContactInformation {
   emailAddresses: string[]; // Array to accommodate multiple email addresses
 }
 
-export interface Fees {
-  totalAmount: number;
-  dueDate: Date;
-  paid: boolean;
-  paymentHistory: FeesDetailed[]; // Track payment history
-}
-
-export interface FeesDetailed {
-  id?: string;
-  sem : number;
-  date: Date;
-  amount: number;
-  session: string;
-  paid: boolean;
-  paymentMode?: string;
-  transactionId?: string;
-  paymentStatus?: string;
-  paymentReceipt?: string;
-  // ...Other relevant fee details
-}
-
 export interface AcademicInformation {
   tenth: number; // 10th grade percentage
   twelfth: number; // 12th grade percentage
@@ -65,6 +44,32 @@ export interface AcademicInformation {
   batch: string;
   grades: { [courseCode: string]: string }; // Map course codes to grades
   // ...Other relevant academic details
+}
+
+export interface Fees {
+  totalAmount: number;
+  paymentHistory: FeesDetailed[]; // Track payment history
+}
+
+export interface FeesDetailed {
+  feesID: string;
+  sem : number;
+  amount: number;
+  session: string;
+  paid: boolean;
+  // ...Other relevant fee details
+}
+
+export interface FeesAcademicSection extends FeesDetailed{
+  regNumber: string;
+  branch: Branch;
+  batch: string;
+  paymentStatus: string;
+  paymentMode?: string;
+  paymentDate: Date;
+  paymentReference?: string;
+
+  // ...Other relevant fee details
 }
 
 type EnrollmentStatus = 'active' | 'DropOut' | 'suspended' | 'expelled';
@@ -128,16 +133,13 @@ export class StudentClass {
       },
       fees: {
         totalAmount: 20000,
-        dueDate: new Date('2024-03-01'),
-        paid: false,
         paymentHistory: [
           {
+            feesID: "FEE123456",
             sem: 1,
-            date: new Date('2023-01-01'),
             amount: 5000 ,
             session: "2023-24",
             paid: true,
-            paymentMode: "Online"
           }
         ],
       },
