@@ -10,6 +10,11 @@ import { AuthService } from '../services/auth.service';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
+  showPassword = false;
+
+  togglePassword() {
+    this.showPassword = !this.showPassword;
+  }
   signInForm : FormGroup = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required, Validators.minLength(6)])

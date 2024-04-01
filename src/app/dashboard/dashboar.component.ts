@@ -1,6 +1,12 @@
 import {MediaMatcher} from '@angular/cdk/layout';
 import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
-import { RouteService } from './Services/route.service';
+import { RouteService } from './Services/dashRoute.service';
+
+interface User {
+  name: string;
+  email: string;
+  // ... other user details
+}
 
 @Component({
   selector: 'app-dashboard',
@@ -11,7 +17,7 @@ export class DashboardComponent  implements OnDestroy, OnInit {
   mobileQuery: MediaQueryList;
 
   routeNav = [
-    {path: 'stdetail',    displayName: 'Main',            icon: 'i'},
+    {path: 'stdetail', displayName: 'Main', icon: 'i'},
   ];
 
   private _mobileQueryListener: () => void;
@@ -26,6 +32,6 @@ export class DashboardComponent  implements OnDestroy, OnInit {
   }
 
   ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
+
   }
 }

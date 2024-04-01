@@ -9,7 +9,7 @@ export class RouteService {
       return [
         { path: 'main', displayName: 'Dashboard', icon: 'dashboard' },
         { path: 'stdetail', displayName: 'Users', icon: 'people' },
-        { path: 'settings', displayName: 'Settings', icon: 'settings' }
+        { path: 'noticeboard', displayName: 'Notice Board', icon: 'settings' }
       ];
     } else {
       return [

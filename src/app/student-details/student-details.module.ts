@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { RouterModule } from "@angular/router";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -17,16 +17,20 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatCheckboxModule} from '@angular/material/checkbox';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatPaginatorModule} from '@angular/material/paginator';
 import { MatSortModule} from '@angular/material/sort';
 import { MatTableModule} from '@angular/material/table';
+import { MatDialogModule} from '@angular/material/dialog';
 
 
-import { DisableControlDirective } from '../directives/disable-control.directive';
+import { DisableControlDirective } from '../dashboard/directives/disable-control.directive';
 import { ViewStudentsComponent } from './view-students/view-students.component';
-import { StudentFormConfig } from '../models/student';
+import { StudentFormConfig } from '../dashboard/Config/student.formConfig';
+import { EditDetailsComponent } from '../dashboard//shared/edit-details/edit-details.component';
+import { MatIconModule } from '@angular/material/icon';
+import { FeeDetailsComponent } from './fee-details/fee-details.component';
 
 
 @NgModule({
@@ -34,6 +38,8 @@ import { StudentFormConfig } from '../models/student';
     StudentDetailsComponent,
     AddStudentComponent,
     EditStudentsComponent,
+    EditDetailsComponent,
+    FeeDetailsComponent,
     DisableControlDirective,
     ViewStudentsComponent,
   ],
@@ -54,13 +60,18 @@ import { StudentFormConfig } from '../models/student';
     MatListModule,
     MatCheckboxModule,
     MatNativeDateModule,
-    MatTableModule, MatSortModule, MatPaginatorModule
+    MatIconModule,
+    MatTableModule, MatSortModule, MatPaginatorModule,
+    MatDialogModule
   ],
   exports: [
     StudentDetailsComponent,
     StudentRoutingModule
 
   ],
-  providers: [StudentFormConfig],
+  providers: [
+    StudentFormConfig,
+    DatePipe
+  ],
 })
 export class StudentDetailsModule { }

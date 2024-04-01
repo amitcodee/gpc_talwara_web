@@ -1,31 +1,78 @@
-<div class="card-container">
-  <mat-card *ngFor="let item of data">
-    <mat-card-header>
-      <mat-card-title>{{ item.title }}</mat-card-title>
-      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-        <mat-icon>more_vert</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <mat-icon>dialpad</mat-icon>
-          <span>Redial</span>
-        </button>
-        <button mat-menu-item disabled>
-          <mat-icon>voicemail</mat-icon>
-          <span>Check voice mail</span>
-        </button>
-        <button mat-menu-item>
-          <mat-icon>notifications_off</mat-icon>
-          <span>Disable alerts</span>
-        </button>
-      </mat-menu>
-      <mat-card-subtitle>{{ item.subtitle }}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      {{ item.content }}
-    </mat-card-content>
-    <mat-card-actions>
-      <span class="date">{{ item.date }}</span>
-    </mat-card-actions>
-  </mat-card>
+<div class="container">
+  <div class="widget student-stats">
+      <h2>Student Statistics</h2>
+      <div class="stat-item">
+          <p class="stat-label">Total Students</p>
+          <p class="stat-value">2,500</p>
+      </div>
+      <div class="stat-item">
+          <p class="stat-label">New Admissions</p>
+          <p class="stat-value">500</p>
+      </div>
+      <div class="stat-item">
+          <p class="stat-label">Graduating Students</p>
+          <p class="stat-value">400</p>
+      </div>
+  </div>
+  <div class="widget faculty-stats">
+      <h2>Faculty Statistics</h2>
+      <div class="stat-item">
+          <p class="stat-label">Total Faculty</p>
+          <p class="stat-value">150</p>
+      </div>
+      <div class="stat-item">
+          <p class="stat-label">Departments</p>
+          <p class="stat-value">10</p>
+      </div>
+      <div class="stat-item">
+          <p class="stat-label">Research Projects</p>
+          <p class="stat-value">50</p>
+      </div>
+  </div>
+  <div class="widget upcoming-events">
+      <h2>Upcoming Events</h2>
+      <ul>
+          <li>Seminar on Artificial Intelligence - May 15</li>
+          <li>Sports Day - June 10</li>
+          <li>Cultural Festival - July 20</li>
+      </ul>
+  </div>
+  <div class="widget announcements">
+      <h2>Announcements</h2>
+      <ul>
+          <li>Registration for next semester begins on August 1</li>
+          <li>Library will be closed for renovation from July 1 to July 15</li>
+          <li>Last date to submit project reports is June 30</li>
+      </ul>
+  </div>
+  <div class="widget quick-links">
+      <h2>Quick Links</h2>
+      <ul>
+          <li><a href="#">Student Portal</a></li>
+          <li><a href="#">Faculty Portal</a></li>
+          <li><a href="#">Examination Section</a></li>
+          <li><a href="#">Placement Cell</a></li>
+      </ul>
+  </div>
+  <div class="widget calendar">
+      <h2>Calendar</h2>
+      <!-- Add a calendar component or plugin here -->
+  </div>
+  <div class="widget courses">
+      <h2>Popular Courses</h2>
+      <ul>
+          <li>Computer Science</li>
+          <li>Electrical Engineering</li>
+          <li>Business Administration</li>
+          <li>Psychology</li>
+      </ul>
+  </div>
+  <div class="widget assignments">
+      <h2>Upcoming Assignments</h2>
+      <ul>
+          <li>CS101 - Programming Fundamentals: Due June 5</li>
+          <li>MKT201 - Marketing Principles: Due June 12</li>
+          <li>ENG301 - English Literature: Due June 20</li>
+      </ul>
+  </div>
 </div>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+
 
 import {MatListModule} from '@angular/material/list';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -16,9 +16,11 @@ import { DashboardRoutingModule } from './dashboard.routes';
 
 import { DashboardComponent } from './dashboar.component';
 import { MainDashComponent } from './main-dash/main-dash.component';
-import { RouteService } from './Services/route.service';
-import { StudentDetailsModule } from './student-details/student-details.module';
+import { RouteService } from './Services/dashRoute.service';
+import { StudentDetailsModule } from '../student-details/student-details.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { StudentService } from './Services/studentFire.service';
+import { RandomStudentDataService } from './RandomData/randomData';
 
 
 
@@ -45,7 +47,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     DashboardComponent,
   ],
   providers: [
-    RouteService
+    RouteService,
+    StudentService,
+    RandomStudentDataService
   ]
 })
 export class DashboardModule { }

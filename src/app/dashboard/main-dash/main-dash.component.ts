@@ -1,4 +1,6 @@
 import { Component, ChangeDetectorRef  } from '@angular/core';
+import { RandomStudentDataService } from '../RandomData/randomData';
+import { StudentService } from '../Services/studentFire.service';
 
 interface CardData {
   title: string;
@@ -27,7 +29,15 @@ export class MainDashComponent {
     // ...
   ];
 
-  constructor(private cd: ChangeDetectorRef) {}
+  constructor(
+    private cd: ChangeDetectorRef,
+    private randData: RandomStudentDataService,
+    private studentService: StudentService
+    ) {}
+
+  check() {
+   this.studentService.addStudent(this.randData.generateRandomStudent());
+  }
 
   // refreshCard(item: CardData) {
   //   // Call your refreshData() function to get new data

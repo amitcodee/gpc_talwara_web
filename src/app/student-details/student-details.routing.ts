@@ -4,6 +4,7 @@ import { StudentDetailsComponent } from "./student-details.component";
 import { AddStudentComponent } from "./add-student/add-student.component";
 import { EditStudentsComponent } from "./edit-students/edit-students.component";
 import { ViewStudentsComponent } from "./view-students/view-students.component";
+import { FeeDetailsComponent } from "./fee-details/fee-details.component";
 
 const routes: Routes = [
   {
@@ -13,6 +14,7 @@ const routes: Routes = [
       { path: "add", component: AddStudentComponent},
       { path: "edit", component: EditStudentsComponent},
       { path: "view", component: ViewStudentsComponent},
+      { path: "fees", component: FeeDetailsComponent},
       { path: "", redirectTo: "add", pathMatch: "full"}
     ],
   }

@@ -12,6 +12,8 @@
   position: fixed;
   /* Make sure the toolbar will stay on top of the content as it scrolls past. */
   z-index: 2;
+  box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+
 }
 
 h1.example-app-name {
@@ -31,5 +33,9 @@ h1.example-app-name {
   /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
      `<body>` to be our scrolling element for mobile layouts. */
   flex: 1 0 auto;
+}
+
+.spacer {
+  flex: 1 1 auto;  /* Creates a flexible spacer element */
 }
 

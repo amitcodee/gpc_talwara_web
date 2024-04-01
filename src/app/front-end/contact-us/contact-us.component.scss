@@ -22,14 +22,14 @@
   }
   .contact-form .label {
     position: absolute;
-    bottom: 25px;
+    bottom: 28px;
     transition: -webkit-transform .2s ease-in-out;
     transition: transform .2s ease-in-out;
-    transition: transform .2s ease-in-out, 
+    transition: transform .2s ease-in-out,
     -webkit-transform .2s ease-in-out;
   }
 
-  
+
   :host .btn-red, .dark-mode .btn-red {
     background-color: #b1040e;
     color: #fff;

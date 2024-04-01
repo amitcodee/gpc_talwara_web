@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
-import {Student} from './student';
+import {StudentModel} from '../models/studentModel';
 @Injectable({
   providedIn: 'root'
 })
+
 export class RandomStudentDataService {
+  student!:  StudentModel[];
 
   constructor() { }
 
-  generateRandomStudent(): Student {
+  generateRandomStudent(): StudentModel {
     return {
-      id: this.getRandomInt(1000, 9999), // Replace with desired ID range
+      id: this.getRandomInt(1000, 9999).toString(), // Replace with desired ID range
       enrollmentStatus: this.getRandomEnumValue(['active', 'DropOut', 'suspended', 'expelled']),
       personalInformation: {
         firstName: this.getRandomName('firstName'),
@@ -20,16 +22,18 @@ export class RandomStudentDataService {
         familyIncome: this.getRandomInt(20000, 100000), // Adjust income range
         dateOfBirth: this.getRandomDate(18, 22), // Adjust age range
         bloodGroup: this.getRandomEnumValue(['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-']),
-        fullName: ''
+        fullName: '',
+        gender: this.getRandomEnumValue(['Male', 'Female']),
+        nationality: this.getRandomCountry(),
+        displayImage: ''
       },
-      displayImage: 'https://picsum.photos/200', // Placeholder image
-      regNumber: this.generateRegNumber(),
-      gender: this.getRandomEnumValue(['Male', 'Female']),
-      nationality: this.getRandomCountry(),
-      admissionDate: this.getRandomDate(0, 1), // Adjust for recent admission
-      category: this.getRandomEnumValue(['SC', 'ST', 'OBC', 'General']),
-      feeWaiver: Math.random() < 0.1, // 10% chance of having a fee waiver
-      feeScheme: this.getRandomEnumValue(['Below 60', 'Between 60-70', 'Between 70-80', 'Between 80-90', 'Above 90']),
+      enrollmentInformation:{
+        regNumber: this.generateRegNumber(),
+        admissionDate:  this.getRandomDate(0, 1),
+        category: this.getRandomEnumValue(['SC', 'ST', 'OBC', 'General']),
+        feeWaiver: Math.random() < 0.1,
+        feeScheme: this.getRandomEnumValue(['Below 60', 'Between 60-70', 'Between 70-80', 'Between 80-90', 'Above 90']),
+      },
       address: {
         city: this.getRandomCity(),
         state: this.getRandomState(),
@@ -37,14 +41,18 @@ export class RandomStudentDataService {
         country: this.getRandomCountry()
       },
       contactInformation: {
-        phoneNumbers: [this.generatePhoneNumber()],
+        phoneNumbers: [this.getRandomInt(1000000000, 9999999999).toString()],
         emailAddresses: [this.generateEmail()]
       },
       fees: {
         totalAmount: this.getRandomInt(20000, 50000), // Adjust fee range
-        dueDate: this.getNextMonthDate(),
-        paid: Math.random() < 0.5, // 50% chance of being paid
-        paymentHistory: [{sem: 0, date: new Date(), amount: 0}]
+        paymentHistory: [{
+          sem: 0,
+          amount: 5000,
+          session: "2023-24",
+          paid: true,
+          feesID: ''
+        }]
       },
       academicInformation: {
         tenth: this.getRandomInt(60, 100),
@@ -52,7 +60,7 @@ export class RandomStudentDataService {
         LEET: Math.random() < 0.2, // 20% chance of joining through LEET
         percentage: (100/2) / 2,
         branch: this.getRandomEnumValue(['CSE', 'CE', 'ME', 'ECE', 'EE']),
-        batch: this.getCurrentYear(),
+        batch: this.getRandomEnumValue(['2021-22', '2020-21', '2016-17', '2018-19']),
         grades: {}, // Replace with actual grades generation logic
       },
       additionalInformation: {}

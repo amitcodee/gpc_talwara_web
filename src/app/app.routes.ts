@@ -21,6 +21,9 @@ export const routes: Routes = [
     path: 'dashboard',
     canActivate: [],
     loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
+    data: {
+      expectedRole: 'admin',
+    }
 
   },
   {
