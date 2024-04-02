@@ -9,6 +9,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar'
 import {MatCardModule} from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatTabsModule} from '@angular/material/tabs';
 
 import { DashboardRoutingModule } from './dashboard.routes';
 
@@ -21,6 +22,7 @@ import { StudentDetailsModule } from '../student-details/student-details.module'
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { StudentService } from './Services/studentFire.service';
 import { RandomStudentDataService } from './RandomData/randomData';
+import { NoticeBoardComponent } from './notice-board/notice-board.component';
 
 
 
@@ -29,6 +31,7 @@ import { RandomStudentDataService } from './RandomData/randomData';
   declarations: [
     DashboardComponent,
     MainDashComponent,
+    NoticeBoardComponent
   ],
   imports: [
     CommonModule,
@@ -41,7 +44,8 @@ import { RandomStudentDataService } from './RandomData/randomData';
     MatListModule,
     MatCardModule,
     MatMenuModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatTabsModule
   ],
   exports: [
     DashboardComponent,
