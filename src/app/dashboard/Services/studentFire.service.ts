@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { StudentModel, SimpleStudentModal, Fees, FeesAcademicSection, FeesDetailed } from '../models/studentModel';
+import { StudentModel, SimpleStudentModal, Fees, FeesAcademicSection, FeesDetailed } from '../../shared/models/studentModel';
 import { map, Timestamp } from 'rxjs';
 
 

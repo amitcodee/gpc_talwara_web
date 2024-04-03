@@ -1,10 +1,10 @@
 import { Component, EventEmitter, Input,OnInit, Output} from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormLayout, FormRow } from '../models/formModel';
+import { formService } from '../services/form.service';
 
-import { FormLayout, FormRow } from '../../models/formModel';
-import { StudentModel } from '../../models/studentModel';
+type formType = 'Student' | 'Notice' | 'Staff' | 'Fees' | 'Empty';
 
-import { formService } from '../../Services/form.service';
 
 @Component({
   selector: 'app-edit-details',
@@ -14,7 +14,9 @@ import { formService } from '../../Services/form.service';
 
 export class EditDetailsComponent {
   @Input() formConfig! : FormRow[]; //getting the formConfig Input from Outside
-  @Input() formData!: any; //getting the formData Input from Outside
+  @Input() formData?: any; //getting the formData Input from Outside
+  @Input() setValueBoolean?: boolean = false; //to set the value of the form
+  @Input() formTypeOf : formType = 'Empty'; //getting the formType Input from Outside
   @Output() formValue = new EventEmitter<any>(); //sending the formValue Output to Outside
   @Output() formType = new EventEmitter<any>(); //sending the formValue Output to Outside
 
@@ -36,19 +38,23 @@ export class EditDetailsComponent {
 
     // using the service to create a formgroup
     this.formGroup = this.formService.generateFormGroup(this.formConfig, this.fb);
-    this.formGroup
+    // Populate the form with the initial data
+    if (this.setValueBoolean) {
+      this.formGroup
         .setValue(
           this.formService.populateFormGroup(
                this.formData,
               this.formConfig
           )
-          ) // Assuming studentFormInitialData is defined and imported
+          )
+    }
+     // Assuming studentFormInitialData is defined and imported
   }
 
   onSubmit() {
     if (this.formGroup.valid) {
-      this.formType.emit('student');
-      this.formValue.emit(this.formService.mapFormToStudent(this.formGroup.value))
+      this.formType.emit(this.formTypeOf);
+      this.formValue.emit(this.formService.mapData(this.formTypeOf, this.formGroup.value))
       // Handle your form submission logic here
     } else {
       console.log('Form is not valid');

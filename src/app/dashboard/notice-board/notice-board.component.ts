@@ -1,59 +1,68 @@
-import { Component, OnInit } from '@angular/core';
-
-
-interface Notice {
-  id: number;
-  title: string;
-  content: string;
-}
+import { Component } from '@angular/core';
+import {animate, state, style, transition, trigger} from '@angular/animations';
+import { NoticeBoardFormConfig } from '../../shared/Config/noticeboard.config';
+import { Notice } from '../../shared/models/noticeMode';
 
 @Component({
   selector: 'app-notice-board',
   templateUrl: './notice-board.component.html',
-  styleUrl: './notice-board.component.scss'
+  styleUrl: './notice-board.component.scss',
+  animations: [
+    trigger('detailExpand', [
+      state('collapsed,void', style({height: '0px', minHeight: '0'})),
+      state('expanded', style({height: '*'})),
+      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
+    ]),
+  ],
 })
 
-export class NoticeBoardComponent implements OnInit {
-  notices: Notice[] = [];
-  selectedNotice: Notice = { id: 0, title: '', content: '' };
-  formTitle: string = 'Add Notice';
-  formButtonText: string = 'Add';
-
-  ngOnInit() {
-    // Fetch notices from server or initialize with sample data
-    this.notices = [
-      { id: 1, title: 'Notice 1', content: 'Content of Notice 1' },
-      { id: 2, title: 'Notice 2', content: 'Content of Notice 2' }
-    ];
-  }
-
-  editNotice(notice: Notice) {
-    this.selectedNotice = { ...notice };
-    this.formTitle = 'Edit Notice';
-    this.formButtonText = 'Update';
-  }
-
-  deleteNotice(notice: Notice) {
-    // Delete notice from server or remove from local array
-    this.notices = this.notices.filter(n => n.id !== notice.id);
-  }
-
-  onSubmit() {
-    if (this.selectedNotice.id) {
-      // Update existing notice
-      const index = this.notices.findIndex(n => n.id === this.selectedNotice.id);
-      this.notices[index] = this.selectedNotice;
-    } else {
-      // Add new notice
-      this.selectedNotice.id = Date.now();
-      this.notices.push(this.selectedNotice);
+export class NoticeBoardComponent {
+  dataSource : Notice[] = [
+    {
+      title: 'Notice 1',
+      content: 'This is the first notice',
+      createdby: 'Admin',
+      createdDate: new Date(),
+      modifiedby: 'Admin1'
+    },
+    {
+      title: 'Notice 2',
+      content: 'This is the second notice',
+      createdby: 'Admin',
+      createdDate: new Date(),
+      modifiedby: 'Admin1'
     }
-    this.resetForm();
+  ];
+
+  columnsToDisplay = ['title', 'createdBy', 'createdDate', 'modifiedby'];
+  columnsToDisplayWithExpand = [...this.columnsToDisplay, 'expand'];
+  expandedElement!: Notice | null;
+
+  constructor( public noticeBoardFormConfig: NoticeBoardFormConfig){
+
   }
 
-  resetForm() {
-    this.selectedNotice = { id: 0, title: '', content: '' };
-    this.formTitle = 'Add Notice';
-    this.formButtonText = 'Add';
+  getFormData(data: any) {
+    if (typeof data === 'object') {
+      console.log(data);
+      this.dataSource.push(data);
+    }
+    else {
+      console.log('Error: data is not an object');
+    }
   }
+
+  getFormType(type: any) {
+    if (typeof type === 'string') {
+      console.log(type);
+    }
+    else {
+      console.log('Error: type is not a string');
+    }
+  }
+
+
+
 }
+
+

@@ -5,11 +5,12 @@
 }
 .form-row {
   display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px; /* Adds space between each row */
+  flex-flow: row wrap;
+  margin-bottom: 20px;
+  align-content: space-around; /* Adds space between each row */
 
   .form-field {
-    flex: 1; /* Ensures each field takes equal space in the row */
+    flex: 50%; /* Ensures each field takes equal space in the row */
     padding: 0 10px; /* Adds some spacing between fields */
     box-sizing: border-box; /* Includes padding in the element's total width and height */
 

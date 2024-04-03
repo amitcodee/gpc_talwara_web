@@ -1,9 +1,8 @@
 import { Component,OnInit} from '@angular/core';
-import { StudentFormConfig} from '../../dashboard/Config/student.formConfig';
-import { StudentModel } from '../../dashboard/models/studentModel';
-import { StudentService } from '../../dashboard/Services/studentFire.service';
-import { studentTestData} from '../../dashboard/RandomData/test-data';
-import { formService } from '../../dashboard/Services/form.service';
+import { StudentModel } from '../../shared/models/studentModel';
+import { StudentFormConfig } from '../../shared/Config/student.formConfig';
+import { studentTestData } from '../../shared/RandomData/test-data';
+
 
 // Example usage within a component
 @Component({
@@ -18,7 +17,6 @@ export class EditStudentsComponent {
 
   constructor(
     public studentFormConfig: StudentFormConfig,
-    private studentService: StudentService
     ) {}
 
   getFormData(data: any) {

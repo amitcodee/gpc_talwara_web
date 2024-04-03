@@ -23,7 +23,10 @@ export class AuthService {
   isAuthenticated$ = this.isAuthenticatedSubject.asObservable();
   private currentUser: User | null = null;
 
-  constructor(private afAuth :AngularFireAuth, private afs: AngularFirestore, private router: Router
+  constructor(
+    private afAuth :AngularFireAuth,
+    private afs: AngularFirestore,
+    private router: Router,
   ) {}
 
   async signUp(email: string, password: string) {

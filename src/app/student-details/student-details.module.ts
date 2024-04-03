@@ -1,36 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule, DatePipe } from '@angular/common';
 import { RouterModule } from "@angular/router";
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-import {MatSidenavModule} from '@angular/material/sidenav';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatSelectModule} from '@angular/material/select';
-import {MatInputModule} from '@angular/material/input';
 
 import { AddStudentComponent } from './add-student/add-student.component';
 import { StudentDetailsComponent } from './student-details.component';
 import { StudentRoutingModule } from './student-details.routing';
 import { EditStudentsComponent } from './edit-students/edit-students.component';
-import { MatButtonModule } from '@angular/material/button';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatCardModule } from '@angular/material/card';
-import { MatListModule } from '@angular/material/list';
-import { MatCheckboxModule} from '@angular/material/checkbox';
-import { MatNativeDateModule } from '@angular/material/core';
-import { MatPaginatorModule} from '@angular/material/paginator';
-import { MatSortModule} from '@angular/material/sort';
-import { MatTableModule} from '@angular/material/table';
-import { MatDialogModule} from '@angular/material/dialog';
 
-
-import { DisableControlDirective } from '../dashboard/directives/disable-control.directive';
 import { ViewStudentsComponent } from './view-students/view-students.component';
-import { StudentFormConfig } from '../dashboard/Config/student.formConfig';
-import { EditDetailsComponent } from '../dashboard//shared/edit-details/edit-details.component';
-import { MatIconModule } from '@angular/material/icon';
 import { FeeDetailsComponent } from './fee-details/fee-details.component';
+import { MaterialModule } from '../material.module';
+import { SharedModule } from '../shared/shared.module';
+
 
 
 @NgModule({
@@ -38,40 +19,20 @@ import { FeeDetailsComponent } from './fee-details/fee-details.component';
     StudentDetailsComponent,
     AddStudentComponent,
     EditStudentsComponent,
-    EditDetailsComponent,
     FeeDetailsComponent,
-    DisableControlDirective,
     ViewStudentsComponent,
   ],
   imports: [
     CommonModule,
     StudentRoutingModule,
     RouterModule,
-    MatSidenavModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatDatepickerModule,
-    MatSelectModule,
-    MatInputModule,
-    MatButtonModule,
-    MatRadioModule,
-    MatCardModule,
-    MatListModule,
-    MatCheckboxModule,
-    MatNativeDateModule,
-    MatIconModule,
-    MatTableModule, MatSortModule, MatPaginatorModule,
-    MatDialogModule
+    MaterialModule,
+    SharedModule
   ],
   exports: [
-    StudentDetailsComponent,
-    StudentRoutingModule
-
   ],
   providers: [
-    StudentFormConfig,
-    DatePipe
+    DatePipe,
   ],
 })
 export class StudentDetailsModule { }

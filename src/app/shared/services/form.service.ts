@@ -3,6 +3,7 @@ import { FormLayout, FormRow } from "../models/formModel";
 
 import { StudentClass, StudentModel } from "../models/studentModel";
 import { FormArray, FormBuilder, FormControl, FormGroup } from "@angular/forms";
+import { Notice } from "../models/noticeMode";
 
 @Injectable({
   providedIn: 'root'
@@ -67,6 +68,38 @@ export class formService {
   }
 
   // function to map  from form data to student nodel
+
+  mapData(formType: string, formData: any): StudentModel | Notice | any{
+    switch(formType) {
+      case 'Student': {
+        return this.mapFormToStudent(formData);
+      }
+      case 'Notice': {
+        return this.mapFormToNotice(formData);
+      }
+      case 'Staff': {
+        return formData;
+      }
+      case 'Fees': {
+        return formData;
+      }
+      default: {
+        return formData;
+      }
+    }
+  }
+
+  mapFormToNotice(formData: any):Notice {
+    const notice : Notice = {
+      title: formData.title,
+      content: formData.content,
+      createdby: formData.createdby,
+      createdDate: formData.createdDate,
+      modifiedby: formData.modifiedby,
+    };
+    return notice;
+  }
+
   // Only valid for students
   mapFormToStudent(formData: any ): StudentModel {
     this.student.student.id = formData.id || '12345';

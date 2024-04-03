@@ -1,6 +1,7 @@
 import { Component, ChangeDetectorRef  } from '@angular/core';
-import { RandomStudentDataService } from '../RandomData/randomData';
+
 import { StudentService } from '../Services/studentFire.service';
+import { RandomStudentDataService } from '../../shared/RandomData/randomData';
 
 interface CardData {
   title: string;
