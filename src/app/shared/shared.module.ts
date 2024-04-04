@@ -1,25 +1,29 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
-import { EditDetailsComponent } from "./edit-details/edit-details.component";
+
 import { MaterialModule } from "../material.module";
 import { NoticeBoardFormConfig } from "./Config/noticeboard.config";
 import { StudentFormConfig } from "./Config/student.formConfig";
 import { formService } from "./services/form.service";
 import { RandomStudentDataService } from "./RandomData/randomData";
+import { DialogComponent } from "./components/dialog/dialog.component";
+import { EditDetailsComponent } from "./components/edit-details/edit-details.component";
 
 
 
 @NgModule({
   declarations: [
-    EditDetailsComponent
+    EditDetailsComponent,
+    DialogComponent
   ],
   imports: [
     CommonModule,
     MaterialModule
   ],
   exports: [
-    EditDetailsComponent
+    EditDetailsComponent,
+    DialogComponent
   ],
   providers: [
     formService,

@@ -5,6 +5,7 @@ export interface Notice {
   createdby : string;
   createdDate : Date;
   modifiedby : string;
+  link?: string[];
 }
 
 export interface Column {

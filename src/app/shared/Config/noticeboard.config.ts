@@ -17,13 +17,6 @@ export class NoticeBoardFormConfig{
           floatLabel: 'always',
         },
         {
-          name: 'content',
-          type: 'textarea',
-          validators: [Validators.required],
-          placeholder: 'Content',
-          floatLabel: 'always',
-        },
-        {
           name: 'createdDate',
           type: 'date',
           validators: [Validators.required],
@@ -41,9 +34,16 @@ export class NoticeBoardFormConfig{
           name: 'modifiedby',
           type: 'input',
           validators: [Validators.required],
-          placeholder: 'Created by',
+          placeholder: 'Modified by',
           floatLabel: 'always',
-        }
+        },
+        {
+          name: 'content',
+          type: 'textarea',
+          validators: [Validators.required],
+          placeholder: 'Content',
+          floatLabel: 'always',
+        },
       ]
     }
   ]

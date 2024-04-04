@@ -3,7 +3,8 @@ import { NoticeBoardFormConfig } from '../../shared/Config/noticeboard.config';
 import { Column, Notice } from '../../shared/models/noticeMode';
 import { MatAccordionTogglePosition } from '@angular/material/expansion';
 import {MatDialog} from '@angular/material/dialog';
-import { DialogContentExampleDialog } from './dialog.component';
+import { DialogComponent } from '../../shared/components/dialog/dialog.component';
+
 
 
 @Component({
@@ -28,7 +29,7 @@ export class NoticeBoardComponent {
 
   notices : Notice[] = [
     {
-      id:  1,
+      id:  0,
       title: 'Notice 1',
       content: 'This is the first notice',
       createdby: 'Admin',
@@ -36,7 +37,7 @@ export class NoticeBoardComponent {
       modifiedby: 'Admin1'
     },
     {
-      id: 2,
+      id: 1,
       title: 'Notice 2',
       content: 'This is the second notice',
       createdby: 'Admin',
@@ -47,11 +48,11 @@ export class NoticeBoardComponent {
 
   newNotice: Notice = {
     id:0,
-    title: '',
-    content: '',
-    createdby: '',
+    title: 'test',
+    content: 'this is test',
+    createdby: 'Admin',
     createdDate: new Date(),
-    modifiedby: '',
+    modifiedby: 'Admin',
   };
 
   constructor(
@@ -61,11 +62,21 @@ export class NoticeBoardComponent {
 
   }
 
-  openDialog() {
-    const dialogRef = this.dialog.open(DialogContentExampleDialog);
+  openDialog(data: number) {
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: '80vh',
+      data: {
+        formConfig: this.noticeBoardFormConfig.noticeFormLayout,
+        formConfigData: this.notices[data],
+      }
+      });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      console.log(`Dialog result: ${result as Notice}`);
+      result.map((notice: Notice) => {
+
+      })
+
     });
   }
 
@@ -88,40 +99,6 @@ export class NoticeBoardComponent {
     }
   }
 
-  addColumn() {
-    if (this.newColumn.label && this.newColumn.property) {
-      this.columns.push({ ...this.newColumn });
-      this.newColumn = { label: '', property: '' };
-    }
-  }
-
-  deleteColumn(column: Column) {
-    this.columns = this.columns.filter(c => c !== column);
-  }
-
-  addNotice() {
-    if (Object.values(this.newNotice).every(value => value)) {
-      this.notices.push({ ...this.newNotice });
-      this.newNotice = {
-        id: 0,
-        title: '',
-        content: '',
-        createdby: '',
-        createdDate: new Date(),
-        modifiedby: '',
-      };
-    }
-  }
-
-  editNotice(notice: Notice) {
-    // Implement the logic to edit the selected notice
-    console.log('Edit notice:', notice);
-  }
-
-  deleteNotice(notice: Notice) {
-    // Implement the logic to delete the selected notice
-    console.log('Delete notice:', notice);
-  }
 
   }
 

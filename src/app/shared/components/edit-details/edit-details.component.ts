@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input,OnInit, Output} from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { FormLayout, FormRow } from '../models/formModel';
-import { formService } from '../services/form.service';
+import { FormLayout, FormRow } from '../../models/formModel';
+import { formService } from '../../services/form.service';
 
 type formType = 'Student' | 'Notice' | 'Staff' | 'Fees' | 'Empty';
 
@@ -54,7 +54,9 @@ export class EditDetailsComponent {
   onSubmit() {
     if (this.formGroup.valid) {
       this.formType.emit(this.formTypeOf);
-      this.formValue.emit(this.formService.mapData(this.formTypeOf, this.formGroup.value))
+      this.formValue.emit(this.formService.mapData(this.formTypeOf, this.formGroup.value));
+      this.formGroup.reset();
+      this.formGroup.setErrors(null);
       // Handle your form submission logic here
     } else {
       console.log('Form is not valid');

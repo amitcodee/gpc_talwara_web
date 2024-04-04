@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>Install Angular</h2>
+<mat-dialog-content>
+<app-edit-details [formConfig] = "data.formConfig"
+                  [formTypeOf]="'Notice'"
+                  [formData] = "data.formConfigData"
+                  [setValueBoolean]="true"
+                  (formValue)="getData($event)">
+</app-edit-details>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <!--[mat-dialog-close] is used to send data outside the Dialog  -->
+  <button mat-button [mat-dialog-close]="value" cdkFocusInitial>Install</button>
+</mat-dialog-actions>
