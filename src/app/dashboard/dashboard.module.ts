@@ -13,6 +13,7 @@ import { NoticeBoardComponent } from './notice-board/notice-board.component';
 
 import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../material.module';
+import { DialogContentExampleDialog } from './notice-board/dialog.component';
 
 
 
@@ -22,6 +23,7 @@ import { MaterialModule } from '../material.module';
     DashboardComponent,
     MainDashComponent,
     NoticeBoardComponent,
+    DialogContentExampleDialog
   ],
   imports: [
     CommonModule,

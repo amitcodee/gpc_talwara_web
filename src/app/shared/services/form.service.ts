@@ -91,6 +91,7 @@ export class formService {
 
   mapFormToNotice(formData: any):Notice {
     const notice : Notice = {
+      id: 0,
       title: formData.title,
       content: formData.content,
       createdby: formData.createdby,
