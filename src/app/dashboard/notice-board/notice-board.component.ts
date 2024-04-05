@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { NoticeBoardFormConfig } from '../../shared/Config/noticeboard.config';
-import { Column, Notice } from '../../shared/models/noticeMode';
+import { Notice } from '../../shared/models/noticeModel';
 import { MatAccordionTogglePosition } from '@angular/material/expansion';
 import {MatDialog} from '@angular/material/dialog';
 import { DialogComponent } from '../../shared/components/dialog/dialog.component';
+import { NoticeService } from '../Services/fireNotice.service';
+import { DatePipe } from '@angular/common';
 
 
 
@@ -17,73 +19,56 @@ export class NoticeBoardComponent {
   panelOpenState = false;
   togglePosition : MatAccordionTogglePosition = 'before';
 
-  columns: Column[] = [
-    { label: 'Title', property: 'title' },
-    { label: 'Content', property: 'content' }
-  ];
-
-  newColumn: Column = {
-    label: '',
-    property: ''
-  };
-
-  notices : Notice[] = [
-    {
-      id:  0,
-      title: 'Notice 1',
-      content: 'This is the first notice',
-      createdby: 'Admin',
-      createdDate: new Date(),
-      modifiedby: 'Admin1'
-    },
-    {
-      id: 1,
-      title: 'Notice 2',
-      content: 'This is the second notice',
-      createdby: 'Admin',
-      createdDate: new Date(),
-      modifiedby: 'Admin1'
-    }
-  ];
-
-  newNotice: Notice = {
-    id:0,
-    title: 'test',
-    content: 'this is test',
-    createdby: 'Admin',
-    createdDate: new Date(),
-    modifiedby: 'Admin',
-  };
+  notices! : Notice[];
 
   constructor(
     public noticeBoardFormConfig: NoticeBoardFormConfig,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private noticeService: NoticeService,
+    public datePipe: DatePipe
     ){
-
+      this.noticeService.getInitialNotices().subscribe(
+        (response) => {
+          console.log('Initial notices:', response);
+          this.notices = response;
+        },
+        (error) => {
+          console.error('Error getting initial notices:', error);
+        }
+      );
   }
 
   openDialog(data: number) {
+    const notice = this.notices.find((notice) => notice.id === data);
     const dialogRef = this.dialog.open(DialogComponent, {
       width: '80vh',
       data: {
         formConfig: this.noticeBoardFormConfig.noticeFormLayout,
-        formConfigData: this.notices[data],
+        formConfigData: notice,
       }
       });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result as Notice}`);
-      result.map((notice: Notice) => {
-
-      })
+      result.id = data;
+      console.log('Notice updated:', result);
+      this.noticeService.updateNotice(result as Notice).subscribe(
+        (response) => {
+          console.log('Notice updated:', response);
+        },
+        (error) => {
+          console.error('Error updating notice:', error);
+        }
+      );
 
     });
   }
 
-  getFormData(data: any) {
+  getFormData(data: Notice) {
     if (typeof data === 'object') {
       console.log(data);
       this.notices.push(data);
+      this.noticeService.createNotice(data);
     }
     else {
       console.log('Error: data is not an object');
@@ -99,9 +84,20 @@ export class NoticeBoardComponent {
     }
   }
 
+  deleteNotice(idNumber: number) {
+    this.noticeService.deleteNotice(idNumber).subscribe(
+      (response) => {
+        console.log('Notice deleted:', response);
+        this.notices = this.notices.filter((notice) => notice.id !== idNumber);
+      },
+      (error) => {
+        console.error('Error deleting notice:', error);
+      }
+    );
+
 
   }
-
+}
 
 
 

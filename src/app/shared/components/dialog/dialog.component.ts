@@ -6,7 +6,7 @@ import { Component, Inject} from "@angular/core";
 
 import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material/dialog";
 import { FormRow } from "../../models/formModel";
-import { Notice } from "../../models/noticeMode";
+import { Notice } from "../../models/noticeModel";
 @Component({
   selector: 'dialog-content-example-dialog',
   templateUrl: './dialog-content.html',
@@ -18,9 +18,11 @@ export class DialogComponent {
     public dialogRef: MatDialogRef<DialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: dialogData) { }
 
-  getData(value: Notice) {
-    this.value = value;
+  getData(value_form: Notice) {
+    this.value = value_form;
     console.log(this.value);
+    return this.value
   }
+
 
 }

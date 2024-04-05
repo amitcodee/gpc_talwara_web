@@ -3,7 +3,7 @@ import { FormLayout, FormRow } from "../models/formModel";
 
 import { StudentClass, StudentModel } from "../models/studentModel";
 import { FormArray, FormBuilder, FormControl, FormGroup } from "@angular/forms";
-import { Notice } from "../models/noticeMode";
+import { Notice } from "../models/noticeModel";
 
 @Injectable({
   providedIn: 'root'

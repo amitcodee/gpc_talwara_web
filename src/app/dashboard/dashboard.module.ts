@@ -13,6 +13,7 @@ import { NoticeBoardComponent } from './notice-board/notice-board.component';
 
 import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../material.module';
+import { NoticeService } from './Services/fireNotice.service';
 
 
 
@@ -35,6 +36,7 @@ import { MaterialModule } from '../material.module';
   providers: [
     RouteService,
     StudentService,
+    NoticeService
   ]
 })
 export class DashboardModule { }

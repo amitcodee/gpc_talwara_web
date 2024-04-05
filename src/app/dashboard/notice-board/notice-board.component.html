@@ -15,7 +15,7 @@
           {{notice.createdby}}
         </mat-panel-description>
         <mat-panel-description>
-          {{notice.createdDate| date}}
+          <!-- {{notice.createdDate.toDate() | date:'dd/mm/yyyy'}} -->
         </mat-panel-description>
         <mat-panel-description>
         </mat-panel-description>
@@ -29,7 +29,7 @@
           edit
         </mat-icon>
       </button>
-      <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+      <button mat-icon-button color="primary" (click)="deleteNotice(notice.id)" aria-label="Example icon button with a home icon">
         <mat-icon>
           delete
         </mat-icon>

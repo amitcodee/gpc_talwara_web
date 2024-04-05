@@ -6,6 +6,8 @@ export interface Notice {
   createdDate : Date;
   modifiedby : string;
   link?: string[];
+  status?: string;
+  action?: string;
 }
 
 export interface Column {
