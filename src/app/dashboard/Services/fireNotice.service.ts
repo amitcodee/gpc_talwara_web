@@ -1,37 +1,40 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection,  } from '@angular/fire/compat/firestore';
-import { Observable, throwError } from 'rxjs';
-import { catchError, map, switchMap } from 'rxjs/operators';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { from, Observable, throwError } from 'rxjs';
+import { catchError, map, mapTo, switchMap } from 'rxjs/operators';
 import { Notice } from '../../shared/models/noticeModel';
-import { from } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
 })
-
 export class NoticeService {
-  private noticesCollection: AngularFirestoreCollection<Notice>;
   private limit = 10; // Limit for initial load and load more
-
+  noticesCollection: AngularFirestoreCollection<Notice>;
   constructor(private db: AngularFirestore) {
-    this.noticesCollection = this.db.collection<Notice>('notices');
+    this.noticesCollection = db.collection<Notice>('notices');
   }
 
   // Get the first 10 notices
   getInitialNotices(): Observable<Notice[]> {
-    return this.noticesCollection.get().pipe(
-      map((notices) => notices.docs.map((notice) => notice.data() as Notice)),
-      catchError((error) => {
-        console.error('Error getting initial notices:', error);
-        return error.value;
-      })
-    ) as Observable<Notice[]>;
+    // Correctly handling the Observable<QuerySnapshot<Notice>>
+    return from(this.noticesCollection.ref.limit(this.limit).get()).pipe(
+      map(querySnapshot => {
+        // Ensure we are mapping over a QuerySnapshot<Notice>
+        return querySnapshot.docs.map(doc => doc.data() as Notice);
+      }),
+      catchError(this.handleError<Notice[]>('getInitialNotices'))
+    );
   }
 
   // Load more notices (append to existing ones)
+  loadMoreNotices(lastVisibleNotice: Notice): Observable<Notice[]> {
+    return from(this.noticesCollection.ref.orderBy('id').startAfter(lastVisibleNotice.id).limit(this.limit).get()).pipe(
+      map(querySnapshot => querySnapshot.docs.map(doc => doc.data() as Notice)),
+      catchError(this.handleError<Notice[]>('loadMoreNotices'))
+    );
+  }
 
-
-  // Create a new notice
   createNotice(notice: Notice): Observable<any> {
     // Generate a unique ID (implement your preferred method)
     notice.id = this.generateUniqueId();
@@ -43,41 +46,41 @@ export class NoticeService {
     );
   }
 
-  // Get a notice by ID
-  getNotice(id: number): Observable<Notice> {
-    return this.noticesCollection.doc<Notice>(id.toString()).valueChanges().pipe(
-      catchError((error) => {
-        console.error('Error getting notice by ID:', error);
-        return error;
-      }),
-      map((notice) => notice || {} as Notice)
-    ) as Observable<Notice>;
-  }
-
-  // Update a notice
-  updateNotice(notice: Notice): Observable<any> {
+  updateNotice(notice: Notice): Observable<void> {
     return from(this.noticesCollection.doc<Notice>(notice.id.toString()).update(notice)).pipe(
-      catchError((error) => {
-        console.error('Error updating notice:', error);
-        return error;
-      })
+      catchError(this.handleError<void>('updateNotice'))
     );
   }
 
-  // Delete a notice by ID
-  deleteNotice(id: number): Observable<any> {
-    return from(this.noticesCollection.doc<Notice>(id.toString()).delete());
+  deleteMultipleNotices(ids: string[]): Observable<void> {
+    const batch = this.db.firestore.batch();
+    ids.forEach(id => {
+      const docRef = this.noticesCollection.doc(id).ref;
+      batch.delete(docRef);
+    });
+    return from(batch.commit()).pipe(
+      mapTo(undefined),
+      catchError(this.handleError<void>('deleteMultipleNotices'))
+    );
   }
 
-  // Delete multiple notices (implement based on your needs)
-  deleteMultipleNotices(ids: number[]): Observable<any> {
-    // Implement logic to delete notices based on provided IDs (batch delete, loop, etc.)
-    // Use a transaction or batch write for efficiency if deleting a large number.
-    throw new Error('Not implemented yet. Implement logic for deleting multiple notices.');
+  deleteNotice(id: number): Observable<void> {
+    return from(this.noticesCollection.doc<Notice>(id.toString()).delete()).pipe(
+      mapTo(undefined),
+      catchError(this.handleError<void>('deleteNotice'))
+    );
   }
 
-  // Generate a unique ID (replace with your preferred method)
-  private generateUniqueId(): number {
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(`${operation} failed: ${error.message}`);
+      // Use throwError as a function to defer error construction
+      return throwError(() => new Error(`${operation} failed: ${error.message}`));
+    };
+  }
+
+   // Generate a unique ID (replace with your preferred method)
+   private generateUniqueId(): number {
     // Implement your logic for generating a unique ID (e.g., incrementing counter, UUID)
     return Math.floor(Math.random() * Date.now());
   }

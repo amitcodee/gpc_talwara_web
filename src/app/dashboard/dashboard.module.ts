@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard.routes';
 
@@ -36,7 +36,8 @@ import { NoticeService } from './Services/fireNotice.service';
   providers: [
     RouteService,
     StudentService,
-    NoticeService
+    NoticeService,
+    DatePipe
   ]
 })
 export class DashboardModule { }

@@ -6,6 +6,7 @@ import {MatDialog} from '@angular/material/dialog';
 import { DialogComponent } from '../../shared/components/dialog/dialog.component';
 import { NoticeService } from '../Services/fireNotice.service';
 import { DatePipe } from '@angular/common';
+import { FirebaseTimestampPipe } from '../../shared/pipes/firbaseTimeStamp';
 
 
 
@@ -25,44 +26,23 @@ export class NoticeBoardComponent {
     public noticeBoardFormConfig: NoticeBoardFormConfig,
     public dialog: MatDialog,
     private noticeService: NoticeService,
-    public datePipe: DatePipe
-    ){
-      this.noticeService.getInitialNotices().subscribe(
-        (response) => {
-          console.log('Initial notices:', response);
-          this.notices = response;
-        },
-        (error) => {
-          console.error('Error getting initial notices:', error);
-        }
-      );
-  }
+    public datePipe: FirebaseTimestampPipe
+      ){
+        this.noticeService.getInitialNotices().subscribe(
+          (response) => {
+            console.log('Initial notices:', response);
+            this.notices = response.map((notice) => {
+              notice.createdDate = new Date(this.datePipe.transform(notice.createdDate));
+              return notice;
+            });
+          },
+          (error) => {
+            console.error('Error getting initial notices:', error);
+          }
+        );
+    }
 
-  openDialog(data: number) {
-    const notice = this.notices.find((notice) => notice.id === data);
-    const dialogRef = this.dialog.open(DialogComponent, {
-      width: '80vh',
-      data: {
-        formConfig: this.noticeBoardFormConfig.noticeFormLayout,
-        formConfigData: notice,
-      }
-      });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result as Notice}`);
-      result.id = data;
-      console.log('Notice updated:', result);
-      this.noticeService.updateNotice(result as Notice).subscribe(
-        (response) => {
-          console.log('Notice updated:', response);
-        },
-        (error) => {
-          console.error('Error updating notice:', error);
-        }
-      );
-
-    });
-  }
 
   getFormData(data: Notice) {
     if (typeof data === 'object') {
@@ -94,8 +74,34 @@ export class NoticeBoardComponent {
         console.error('Error deleting notice:', error);
       }
     );
+  }
 
 
+  //editing the notice
+  openDialog(data: number) {
+    const notice = this.notices.find((notice) => notice.id === data);
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: '80vh',
+      data: {
+        formConfig: this.noticeBoardFormConfig.noticeFormLayout,
+        formConfigData: notice,
+      }
+      });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result as Notice}`);
+      result.id = data;
+      console.log('Notice updated:', result);
+      this.noticeService.updateNotice(result as Notice).subscribe(
+        (response) => {
+          console.log('Notice updated:', response);
+        },
+        (error) => {
+          console.error('Error updating notice:', error);
+        }
+      );
+
+    });
   }
 }
 

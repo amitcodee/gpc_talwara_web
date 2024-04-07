@@ -9,13 +9,15 @@ import { formService } from "./services/form.service";
 import { RandomStudentDataService } from "./RandomData/randomData";
 import { DialogComponent } from "./components/dialog/dialog.component";
 import { EditDetailsComponent } from "./components/edit-details/edit-details.component";
+import { FirebaseTimestampPipe } from "./pipes/firbaseTimeStamp";
 
 
 
 @NgModule({
   declarations: [
     EditDetailsComponent,
-    DialogComponent
+    DialogComponent,
+    FirebaseTimestampPipe
   ],
   imports: [
     CommonModule,
@@ -23,13 +25,15 @@ import { EditDetailsComponent } from "./components/edit-details/edit-details.com
   ],
   exports: [
     EditDetailsComponent,
-    DialogComponent
+    DialogComponent,
+    FirebaseTimestampPipe
   ],
   providers: [
     formService,
     RandomStudentDataService,
     NoticeBoardFormConfig,
     StudentFormConfig,
+    FirebaseTimestampPipe
   ],
 })
 export class SharedModule {}
