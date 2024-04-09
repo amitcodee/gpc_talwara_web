@@ -21,6 +21,8 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [],
@@ -45,7 +47,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatNativeDateModule,
     MatProgressSpinnerModule,
     MatExpansionModule,
-    MatDialogModule
+    MatDialogModule,
+    MatProgressBarModule,
+    MatTooltipModule
   ],
   exports: [
     // Export Material modules here
@@ -68,7 +72,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatNativeDateModule,
     MatProgressSpinnerModule,
     MatExpansionModule,
-    MatDialogModule
+    MatDialogModule,
+    MatProgressBarModule,
+    MatTooltipModule
   ],
   providers: []
 })

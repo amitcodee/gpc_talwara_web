@@ -52,6 +52,7 @@ export class AuthService {
       const userCredential = await this.afAuth.signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
           if (userCredential.user) {
+            console.log(userCredential.user);
             this.currentUser = {
               uid: userCredential.user.uid,
               email: userCredential.user.email || '',

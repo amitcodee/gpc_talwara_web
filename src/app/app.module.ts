@@ -25,6 +25,7 @@ import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './services/auth.service';
+import { MaterialModule } from './material.module';
 
 const firebaseConfig = {
   // Your Firebase project configuration
@@ -58,7 +59,8 @@ const firebaseConfig = {
         // for Router use:
     LoadingBarRouterModule,
         // for Core use:
-    LoadingBarModule
+    LoadingBarModule,
+    MaterialModule
   ], // Add your module imports here
   exports: [], // Add your exports here
   providers: [

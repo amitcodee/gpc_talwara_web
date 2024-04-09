@@ -1,11 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NoticeBoardFormConfig } from '../../shared/Config/noticeboard.config';
 import { Notice } from '../../shared/models/noticeModel';
 import { MatAccordionTogglePosition } from '@angular/material/expansion';
 import {MatDialog} from '@angular/material/dialog';
 import { DialogComponent } from '../../shared/components/dialog/dialog.component';
 import { NoticeService } from '../Services/fireNotice.service';
-import { DatePipe } from '@angular/common';
 import { FirebaseTimestampPipe } from '../../shared/pipes/firbaseTimeStamp';
 
 
@@ -16,7 +15,7 @@ import { FirebaseTimestampPipe } from '../../shared/pipes/firbaseTimeStamp';
   styleUrl: './notice-board.component.scss',
 })
 
-export class NoticeBoardComponent {
+export class NoticeBoardComponent implements OnInit{
   panelOpenState = false;
   togglePosition : MatAccordionTogglePosition = 'before';
 
@@ -28,21 +27,23 @@ export class NoticeBoardComponent {
     private noticeService: NoticeService,
     public datePipe: FirebaseTimestampPipe
       ){
-        this.noticeService.getInitialNotices().subscribe(
-          (response) => {
-            console.log('Initial notices:', response);
-            this.notices = response.map((notice) => {
-              notice.createdDate = new Date(this.datePipe.transform(notice.createdDate));
-              return notice;
-            });
-          },
-          (error) => {
-            console.error('Error getting initial notices:', error);
-          }
-        );
+
     }
 
-
+  ngOnInit(): void {
+    this.noticeService.getInitialNotices().subscribe(
+      (response) => {
+        console.log('Initial notices:', response);
+        this.notices = response.map((notice) => {
+          notice.createdDate = new Date(this.datePipe.transform(notice.createdDate));
+          return notice;
+        });
+      },
+      (error) => {
+        console.error('Error getting initial notices:', error);
+      }
+    );
+  }
 
   getFormData(data: Notice) {
     if (typeof data === 'object') {
@@ -77,7 +78,7 @@ export class NoticeBoardComponent {
   }
 
 
-  //editing the notice
+  //editing the notice dialog
   openDialog(data: number) {
     const notice = this.notices.find((notice) => notice.id === data);
     const dialogRef = this.dialog.open(DialogComponent, {
@@ -85,6 +86,7 @@ export class NoticeBoardComponent {
       data: {
         formConfig: this.noticeBoardFormConfig.noticeFormLayout,
         formConfigData: notice,
+        typeOfForm: 'Notice'
       }
       });
 
@@ -92,6 +94,14 @@ export class NoticeBoardComponent {
       console.log(`Dialog result: ${result as Notice}`);
       result.id = data;
       console.log('Notice updated:', result);
+      // locally updating the notice
+      this.notices = this.notices.map((notice) => {
+        if (notice.id === data) {
+          return result as Notice;
+        }
+        return notice;
+      });
+      // updating the notice in the database
       this.noticeService.updateNotice(result as Notice).subscribe(
         (response) => {
           console.log('Notice updated:', response);

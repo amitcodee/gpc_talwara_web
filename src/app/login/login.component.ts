@@ -11,6 +11,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class LoginComponent {
   showPassword = false;
+  signingIn: boolean = false;
 
   togglePassword() {
     this.showPassword = !this.showPassword;
@@ -25,6 +26,7 @@ export class LoginComponent {
     private router: Router,) {}
 
   login() {
+    this.signingIn = true;
     try {
      this._auth.logIn(
         this.signInForm.value.email,

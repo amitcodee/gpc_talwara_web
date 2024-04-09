@@ -79,6 +79,9 @@
       <div class="text-center">
         <Button type="button" value="Submit Your Registration" class="btn fw-semibold btn-outline-success px-3"
           (click)="signup()">Create Your Account </Button>
+          @if(signingIn){
+            <mat-spinner class="mat-spinner"></mat-spinner>
+          }
       </div>
       <div class="text-end my-2">
         <a class="text-decoration-none" routerLink="/login">Already Have An Account?</a>

@@ -12,11 +12,12 @@ import { FormGroup } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   showPassword = false;
+  signingIn: boolean = false;
 
   togglePassword() {
     this.showPassword = !this.showPassword;
   }
-  signingIn: boolean = false;
+
   registrationForm : FormGroup = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required, Validators.minLength(6)])
@@ -30,6 +31,7 @@ export class RegisterComponent implements OnInit {
 
   async signup() {
     if (this.registrationForm.valid) { // Check form validity before proceeding
+      this.signingIn = true;
       try {
         const userCredential = await this.afAuth.createUserWithEmailAndPassword(
           this.registrationForm.value.email,

@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { FormLayout, FormRow } from '../../models/formModel';
 import { formService } from '../../services/form.service';
 
-type formType = 'Student' | 'Notice' | 'Staff' | 'Fees' | 'Empty';
+export type formType = 'Student' | 'Notice' | 'Staff' | 'Fees' | 'Empty';
 
 
 @Component({

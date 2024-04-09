@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { StudentModel, SimpleStudentModal, Fees, FeesAcademicSection, FeesDetailed } from '../../shared/models/studentModel';
-import { map, Timestamp } from 'rxjs';
+import { from, map, Observable, Timestamp } from 'rxjs';
 
 
 @Injectable({ providedIn: 'root' })
@@ -39,12 +39,19 @@ export class StudentService {
   }
 
   getStudents() {
-
-    return this.afs.collection('simpleStudents').valueChanges();    // Fetch all student data from Firestore
+    return this.afs.collection('simpleStudents').valueChanges().pipe(
+      map((students: unknown[]) => students as SimpleStudentModal[])
+    );    // Fetch all student data from Firestore
   }
 
   getStudentByID(studentId: string) {
-    return this.afs.collection('students').doc(studentId).valueChanges();    // Fetch all student data from Firestore
+    return from(this.afs.collection('students').doc(studentId).valueChanges().pipe(
+      map((student: unknown) => {
+        const typedStudent = student as StudentModel;
+        typedStudent.personalInformation.dateOfBirth = (typedStudent.personalInformation.dateOfBirth as any).toDate();
+        return typedStudent;
+      })
+    ));    // Fetch student data from Firestore
   }
 
   createSimpleStudent(student: StudentModel) {
@@ -263,16 +270,10 @@ export class StudentService {
     }));
   }
 
-  getStudentFees(){
-    let test = this.afs.collection('feesAcademicSection').snapshotChanges().pipe(
-      map(actions => {
-        return actions.map(a => {
-          const data = a.payload.doc.data() as FeesAcademicSection;
-          return { ...data };
-        });
-      })
+  getStudentFees(): Observable<FeesAcademicSection[]> {
+    return this.afs.collection('feesAcademicSection').snapshotChanges().pipe(
+      map(actions => actions.map(a => (a.payload.doc.data() as FeesAcademicSection)))
     );
-    return test
   }
 
 

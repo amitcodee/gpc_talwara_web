@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
 import { FormLayout, FormRow } from "../models/formModel";
 
-import { StudentClass, StudentModel } from "../models/studentModel";
+import { StudentClass, StudentModel, FeesAcademicSection } from "../models/studentModel";
+
 import { FormArray, FormBuilder, FormControl, FormGroup } from "@angular/forms";
 import { Notice } from "../models/noticeModel";
 
@@ -81,13 +82,33 @@ export class formService {
         return formData;
       }
       case 'Fees': {
-        return formData;
+        return this.mapFormToFees(formData);
       }
       default: {
         return formData;
       }
     }
   }
+
+  mapFormToFees (formData: any): any {
+    const feesDetails: FeesAcademicSection = {
+      feesID: formData.feesID,
+      regNumber: formData.regNumber,
+      batch: formData.batch,
+      branch: formData.branch,
+      session: formData.session,
+      sem: formData.sem,
+      amount: formData.amount,
+      paymentStatus: formData.paymentStatus,
+      paymentDate: formData.paymentDate,
+      paymentMode: formData.paymentMode,
+      paymentReference: formData.paymentReference,
+      paid: false
+    };
+
+    return feesDetails;
+  }
+
 
   mapFormToNotice(formData: any):Notice {
     const notice : Notice = {

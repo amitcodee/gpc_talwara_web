@@ -6,8 +6,8 @@
 <table mat-table [dataSource]="dataSource" matSort matSortActive="name" matSortDirection="asc">
   <ng-container matColumnDef="{{ column }}" *ngFor="let column of displayedColumns">
     @if(column === 'paymentDate'){
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ column }} </th>
-      <td mat-cell *matCellDef="let element"> {{ element[column].toDate() | date:'dd/mm/yyyy'}} </td>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ column.toUpperCase() }} </th>
+      <td mat-cell *matCellDef="let element"> {{ element[column] | date : 'dd/MM/YYYY HH:MM'}} </td>
     } @else if (column === 'edit') {
       <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ column }} </th>
       <td mat-cell *matCellDef="let element">
@@ -16,7 +16,7 @@
       </button>
     </td>
     } @else {
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ column }} </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ column.toUpperCase() }} </th>
       <td mat-cell *matCellDef="let element"> {{ element[column] }} </td>
     }
   </ng-container>

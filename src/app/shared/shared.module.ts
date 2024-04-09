@@ -10,6 +10,7 @@ import { RandomStudentDataService } from "./RandomData/randomData";
 import { DialogComponent } from "./components/dialog/dialog.component";
 import { EditDetailsComponent } from "./components/edit-details/edit-details.component";
 import { FirebaseTimestampPipe } from "./pipes/firbaseTimeStamp";
+import { FeesFormConfig } from "./Config/fees.config";
 
 
 
@@ -33,6 +34,7 @@ import { FirebaseTimestampPipe } from "./pipes/firbaseTimeStamp";
     RandomStudentDataService,
     NoticeBoardFormConfig,
     StudentFormConfig,
+    FeesFormConfig,
     FirebaseTimestampPipe
   ],
 })

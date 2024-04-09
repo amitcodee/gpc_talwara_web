@@ -56,7 +56,7 @@ export interface FeesDetailed {
   sem : number;
   amount: number;
   session: string;
-  paid: boolean;
+  paid?: boolean;
   // ...Other relevant fee details
 }
 
