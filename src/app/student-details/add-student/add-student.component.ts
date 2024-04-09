@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { StudentModel } from '../../shared/models/studentModel';
+import { MatDialog } from '@angular/material/dialog';
 
 interface StudentField {
   name: string;
@@ -14,45 +16,40 @@ interface StudentField {
   styleUrl: './add-student.component.scss'
 })
 
-export class AddStudentComponent  implements OnInit {
-  studentForm: FormGroup = new FormGroup({});
+export class AddStudentComponent{
+uploadedStudents: StudentModel[] = [];
 
-  // Replace with your actual student profile fields
-  studentFields: StudentField[] = [
-    { name: 'firstName', type: 'text', required: true },
-    { name: 'lastName', type: 'text', required: true },
-    { name: 'email', type: 'email', required: true },
-    { name: 'enrollmentDate', type: 'date', required: true },
-    { name: 'program', type: 'text', required: true },
-    { name: 'gpa', type: 'number', required: true, validation: (value: number) => value >= 0 && value <= 4.0 ? true : 'GPA must be between 0 and 4.0' },
-    // Add more fields as needed
-  ];
+constructor(private dialog: MatDialog) {}
 
-  constructor(private fb: FormBuilder) {
-    this.studentForm = this.fb.group({});
-  }
+openAddStudentDialog() {
+  // this.dialog.open(AddStudentDialogComponent);
+}
 
-  ngOnInit() {
-    const formControls: any = {}; // Object to hold dynamic form controls
-
-    this.studentFields.forEach(field => {
-      formControls[field.name] = [
-        '',
-        field.required ? Validators.required : null,
-        field.validation ? field.validation : null
-      ];
-    });
-
-    this.studentForm = this.fb.group(formControls);
-  }
-
-  onSubmit() {
-    if (this.studentForm.valid) {
-      console.log('Form submitted:', this.studentForm.value); // Submit form data here
-      this.studentForm.reset(); // Optional: Reset form after submission
-    } else {
-      console.error('Form is invalid.');
-      // Highlight or display errors to the user
-    }
+handleFileUpload(files: any) {
+  if (files && files.length > 0) {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      if (e.target) {
+        const csvData = e.target.result as string;
+        this.uploadedStudents = this.parseCSV(csvData);
+      }
+    };
+    reader.readAsText(files[0]);
   }
 }
+
+parseCSV(csvData: string): StudentModel[] {
+  const students: StudentModel[] = [];
+  const lines = csvData.split('\n');
+  for (let i = 1; i < lines.length; i++) { // Skip header row
+    const studentData = lines[i].split(',');
+    // const student: StudentModel = {
+    //   // name: studentData[0], // Assuming first column is name, adjust based on your CSV format
+    //   // Add logic to parse other student properties from CSV columns
+    // };
+    // students.push(student);
+  }
+  return students;
+}
+}
+

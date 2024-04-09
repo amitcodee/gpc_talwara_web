@@ -1,0 +1,17 @@
+<div class="card-container">
+  <mat-card (click)="openAddStudentDialog()">
+    <h2>Add Student</h2>
+    <p>Add a new student one by one.</p>
+  </mat-card>
+  <mat-card>
+    <h2>Add Students in Batch</h2>
+    <p>Upload a CSV file to add multiple students.</p>
+    <input type="file" (change)="handleFileUpload($event)">
+    <div *ngIf="uploadedStudents.length > 0">
+      <h3>Uploaded Students:</h3>
+      <ul>
+        <li *ngFor="let student of uploadedStudents">{{ student }}</li>
+      </ul>
+    </div>
+  </mat-card>
+</div>
