@@ -8,7 +8,7 @@ import { Component, Inject} from "@angular/core";
 import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material/dialog";
 import { FormRow } from "../../models/formModel";
 import { Notice } from "../../models/noticeModel";
-import { formType } from "../edit-details/edit-details.component";
+import { formType } from "../formCreation/form-creation.component";
 @Component({
   selector: 'dialog-content-example-dialog',
   templateUrl: './dialog-content.html',
@@ -16,6 +16,7 @@ import { formType } from "../edit-details/edit-details.component";
 
 export class DialogComponent {
   value!: Notice;
+  getFormValues: boolean = false;
   constructor(
     public dialogRef: MatDialogRef<DialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: dialogData) { }
@@ -23,11 +24,17 @@ export class DialogComponent {
   getData(value_form: Notice) {
     this.value = value_form;
     console.log(this.value);
-    return this.value
+    this.dialogRef.close(value_form);
   }
   onNoClick(): void {
     this.dialogRef.close();
   }
+
+  test() {
+    this.getFormValues = true;
+  }
+
+
 
 
 }

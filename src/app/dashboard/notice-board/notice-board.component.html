@@ -1,9 +1,10 @@
  <div class="container-notice">
-  <app-edit-details [formConfig] = "this.noticeBoardFormConfig.noticeFormLayout"
+  <app-form-creation [formConfig] = "this.noticeBoardFormConfig.noticeFormLayout"
                   [formTypeOf]="'Notice'"
+                  [getValues]="false"
                   (formValue) = "getFormData($event)"
                   (formType) = "getFormType($event)">
-  </app-edit-details>
+  </app-form-creation>
 <div class="gap"></div>
   <mat-accordion>
     <mat-expansion-panel *ngFor="let notice of notices" [togglePosition] = "togglePosition">

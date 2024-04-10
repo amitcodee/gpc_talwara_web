@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input,OnInit, Output} from '@angular/core';
+import { Component, EventEmitter, Input,OnInit, Output, SimpleChanges} from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { FormLayout, FormRow } from '../../models/formModel';
 import { formService } from '../../services/form.service';
@@ -7,16 +7,17 @@ export type formType = 'Student' | 'Notice' | 'Staff' | 'Fees' | 'Empty';
 
 
 @Component({
-  selector: 'app-edit-details',
-  templateUrl: './edit-details.component.html',
-  styleUrl: './edit-details.component.scss'
+  selector: 'app-form-creation',
+  templateUrl: './form-creation.component.html',
+  styleUrl: './form-creation.component.scss'
 })
 
-export class EditDetailsComponent {
+export class FormCreationComponent {
   @Input() formConfig! : FormRow[]; //getting the formConfig Input from Outside
   @Input() formData?: any; //getting the formData Input from Outside
-  @Input() setValueBoolean?: boolean = false; //to set the value of the form
+  @Input() setValueBoolean?: boolean = false; //to set the Svalue of the form
   @Input() formTypeOf : formType = 'Empty'; //getting the formType Input from Outside
+  @Input()  getValues?: boolean = false; //getting the getValues Input from Outside
   @Output() formValue = new EventEmitter<any>(); //sending the formValue Output to Outside
   @Output() formType = new EventEmitter<any>(); //sending the formValue Output to Outside
 
@@ -62,6 +63,17 @@ export class EditDetailsComponent {
       console.log('Form is not valid');
       // Create a popup with the error message
       alert('Form is not valid');
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
+    //Add '${implements OnChanges}' to the class.
+    //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
+    //Add '${implements OnChanges}' to the class.
+    changes['getValues'].currentValue;
+    if (  changes['getValues'].currentValue === true) {
+      this.formValue.emit(this.formService.mapData(this.formTypeOf, this.formGroup.value));
     }
   }
 }

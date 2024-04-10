@@ -2,9 +2,19 @@
   color: #b1040e;
 }
 
-.mat-spinner {
-  margin: 0 auto;
-  display: block;
-  z-index: 9999;
-  background: rgba(255, 255, 255, 0.5);
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3); /* Optional: Set backdrop color */
+  display: flex;
+  flex-direction: column;
+  z-index: 999; /* Ensure spinner is above content */
+}
+
+.loading-center {
+  justify-content: center;
+  align-items: center;
 }

@@ -8,7 +8,7 @@ import { StudentFormConfig } from "./Config/student.formConfig";
 import { formService } from "./services/form.service";
 import { RandomStudentDataService } from "./RandomData/randomData";
 import { DialogComponent } from "./components/dialog/dialog.component";
-import { EditDetailsComponent } from "./components/edit-details/edit-details.component";
+import { FormCreationComponent } from "./components/formCreation/form-creation.component";
 import { FirebaseTimestampPipe } from "./pipes/firbaseTimeStamp";
 import { FeesFormConfig } from "./Config/fees.config";
 
@@ -16,7 +16,7 @@ import { FeesFormConfig } from "./Config/fees.config";
 
 @NgModule({
   declarations: [
-    EditDetailsComponent,
+    FormCreationComponent,
     DialogComponent,
     FirebaseTimestampPipe
   ],
@@ -25,7 +25,7 @@ import { FeesFormConfig } from "./Config/fees.config";
     MaterialModule
   ],
   exports: [
-    EditDetailsComponent,
+    FormCreationComponent,
     DialogComponent,
     FirebaseTimestampPipe
   ],
