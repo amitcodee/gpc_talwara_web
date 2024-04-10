@@ -17,13 +17,6 @@ export class NoticeBoardFormConfig{
           floatLabel: 'always',
         },
         {
-          name: 'createdDate',
-          type: 'date',
-          validators: [Validators.required],
-          placeholder: 'Date',
-          floatLabel: 'always',
-        },
-        {
           name: 'createdby',
           type: 'input',
           validators: [Validators.required],

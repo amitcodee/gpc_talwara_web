@@ -48,6 +48,7 @@ export class NoticeBoardComponent implements OnInit{
   getFormData(data: Notice) {
     if (typeof data === 'object') {
       console.log(data);
+      data.createdDate = new Date();
       this.notices.push(data);
       this.noticeService.createNotice(data);
     }

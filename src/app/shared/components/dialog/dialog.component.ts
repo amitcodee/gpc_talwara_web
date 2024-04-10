@@ -30,7 +30,7 @@ export class DialogComponent {
     this.dialogRef.close();
   }
 
-  test() {
+  submit() {
     this.getFormValues = true;
   }
 
