@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { StudentModel } from '../../shared/models/studentModel';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute, Router } from '@angular/router';
 
 interface StudentField {
   name: string;
@@ -19,10 +20,15 @@ interface StudentField {
 export class AddStudentComponent{
 uploadedStudents: StudentModel[] = [];
 
-constructor(private dialog: MatDialog) {}
+constructor(
+  private dialog: MatDialog,
+  private router : Router,
+  private route : ActivatedRoute
+) {
+}
 
 openAddStudentDialog() {
-  // this.dialog.open(AddStudentDialogComponent);
+  this.router.navigate(['/dashboard/stdetail/edit']);
 }
 
 handleFileUpload(files: any) {
