@@ -2,6 +2,7 @@ import { Component,OnInit} from '@angular/core';
 import { StudentModel } from '../../shared/models/studentModel';
 import { StudentFormConfig } from '../../shared/Config/student.formConfig';
 import { studentTestData } from '../../shared/RandomData/test-data';
+import { HttpClient } from '@angular/common/http';
 
 
 // Example usage within a component
@@ -14,6 +15,9 @@ import { studentTestData } from '../../shared/RandomData/test-data';
 
 export class EditStudentsComponent {
   studentData = studentTestData as StudentModel;
+  selectedFiles: FileList | null = null;
+  uploading = false;
+
 
   constructor(
     public studentFormConfig: StudentFormConfig,
@@ -37,4 +41,13 @@ export class EditStudentsComponent {
     }
   }
 
+  onFileSelected(event: any) {
+    this.selectedFiles = event.target.files;
+    console.log(this.selectedFiles); // Optional for debugging
+  }
+
+  onUploadClick() {
+    this.uploading = true;
+
+  }
 }
