@@ -1,18 +1,25 @@
 {
-  "hosting": {
-    "public": "n",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
-  },
+  "hosting": [
+    {
+      "public": "n",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "target": "test-183e7",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ],
   "emulators": {
     "auth": {
       "port": 9099

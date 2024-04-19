@@ -1,8 +1,8 @@
-import { Component,OnInit} from '@angular/core';
+import { Component} from '@angular/core';
 import { StudentModel } from '../../shared/models/studentModel';
 import { StudentFormConfig } from '../../shared/Config/student.formConfig';
 import { studentTestData } from '../../shared/RandomData/test-data';
-import { HttpClient } from '@angular/common/http';
+
 
 
 // Example usage within a component
@@ -15,8 +15,32 @@ import { HttpClient } from '@angular/common/http';
 
 export class EditStudentsComponent {
   studentData = studentTestData as StudentModel;
-  selectedFiles: FileList | null = null;
-  uploading = false;
+  selectedFile: File | null = null;
+  previewUrl: string | null = null;
+
+  onFileSelected(event: any) {
+    this.selectedFile = event.target.files[0] || null;
+
+    if (this.selectedFile) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.previewUrl = reader.result as string;
+      };
+      reader.readAsDataURL(this.selectedFile);
+    } else {
+      this.previewUrl = null;
+    }
+  }
+
+  onDeleteImage() {
+    this.selectedFile = null;
+    this.previewUrl = null;
+    // Clear the input value as well
+  }
+
+  get fileName(): string | null {
+    return this.selectedFile ? this.selectedFile.name : null;
+  }
 
 
   constructor(
@@ -41,13 +65,4 @@ export class EditStudentsComponent {
     }
   }
 
-  onFileSelected(event: any) {
-    this.selectedFiles = event.target.files;
-    console.log(this.selectedFiles); // Optional for debugging
-  }
-
-  onUploadClick() {
-    this.uploading = true;
-
-  }
 }

@@ -1,0 +1,31 @@
+.image-upload {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1rem;
+
+}
+
+.image-upload label {
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: #f0f0f0; /* Adjust background color as desired */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-upload label:hover {
+  background-color: #e0e0e0; /* Adjust hover color as desired */
+}
+
+.image-upload input[type="file"] {
+  display: none;
+}
+
+.image-upload img {
+  width: 200px;
+  height: 200px;
+  object-fit: scale-down;
+  margin-top: 1rem;
+}

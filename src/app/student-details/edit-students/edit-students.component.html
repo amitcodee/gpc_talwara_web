@@ -1,6 +1,16 @@
-
+<div class="image-upload">
+  <label for="fileInput">
+    <input type="file" id="fileInput" accept="image/*" (change)="onFileSelected($event)">
+    Choose File
+  </label>
+  <button mat-raised-button color="primary" *ngIf="selectedFile" (click)="onDeleteImage()">Delete Image</button>
+  <img *ngIf="previewUrl" src="{{ previewUrl }}" alt="Image Preview">
+  <p *ngIf="!selectedFile && !fileName">No image selected</p>
+</div>
 <app-form-creation [formConfig] = "this.studentFormConfig.studentFormLayoutConfig"
                   [formData] = "this.studentData"
+                  [formTypeOf]="'Student'"
                   (formValue) = "getFormData($event)"
                   (formType) = "getFormType($event)"></app-form-creation>
-
+<!-- this is the code for the form creation component which is used to create the form for the student details
+It gives the formConfig and formData as input and emits the formValue and formType as output -->

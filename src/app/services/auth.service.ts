@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { GoogleAuthProvider } from '@firebase/auth';
 import { BehaviorSubject } from 'rxjs';
 
-interface User {
+export interface User {
   uid: string;
   email: string;
   displayName?: string;
@@ -67,7 +67,6 @@ export class AuthService {
 
       this.router.navigate(['/dashboard']).then(
         () => {
-          window.location.reload();
         }
 
       ); // Or redirect to a different page

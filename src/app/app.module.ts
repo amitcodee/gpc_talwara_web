@@ -26,6 +26,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './services/auth.service';
 import { MaterialModule } from './material.module';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getAuth, provideAuth } from '@angular/fire/auth';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { getStorage, provideStorage } from '@angular/fire/storage';
 
 const firebaseConfig = {
   // Your Firebase project configuration
@@ -60,7 +64,11 @@ const firebaseConfig = {
     LoadingBarRouterModule,
         // for Core use:
     LoadingBarModule,
-    MaterialModule
+    MaterialModule,
+    provideFirebaseApp(() => initializeApp({"projectId":"test-183e7","appId":"1:623710803667:web:f90f78747116f30f7fe626","storageBucket":"test-183e7.appspot.com","apiKey":"AIzaSyBdvU9YtJXAK3P_Ujpga21cP--uA4PR8ag","authDomain":"test-183e7.firebaseapp.com","messagingSenderId":"623710803667","measurementId":"G-NGVYP15BG7"})),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage())
   ], // Add your module imports here
   exports: [], // Add your exports here
   providers: [

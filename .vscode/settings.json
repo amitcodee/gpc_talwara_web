@@ -1,6 +1,9 @@
 {
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
+  "editor.guides.indentation": true,
+  "editor.guides.activeIndentation": true,
+  "editor.guides.indentationSize": 2,
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
   "typescript.inlayHints.parameterNames.enabled": "all",
@@ -11,4 +14,5 @@
   "editor.inlayHints.enabled": "on",
   "editor.inlayHints.fontSize": 10,
   "editor.inlayHints.fontFamily": "Fira Code",
+
 }

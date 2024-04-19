@@ -8,5 +8,13 @@
     "editorconfig.editorconfig",
     "ms-vscode.vscode-typescript-next",
     "ms-vscode.vscode-typescript-tslint-plugin",
+    "aaron-bond.better-comments",
+    "alexiv.vscode-angular2-files",
+    "formulahendry.auto-rename-tag",
+    "mrmlnc.vscode-scss",
+    "christian-kohler.path-intellisense",
+    "mariusalchimavicius.json-to-ts",
+    "zignd.html-css-class-completion",
+    "visualstudioexptteam.vscodeintellicode",
   ]
 }

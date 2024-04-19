@@ -71,9 +71,13 @@ export class FormCreationComponent {
     //Add '${implements OnChanges}' to the class.
     //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
     //Add '${implements OnChanges}' to the class.
-    changes['getValues'].currentValue;
-    if (  changes['getValues'].currentValue === true) {
-      this.formValue.emit(this.formService.mapData(this.formTypeOf, this.formGroup.value));
-    }
-  }
+    if (!this.formData)
+      {
+        changes['getValues'].currentValue;
+        if ( changes['getValues'].currentValue === true) {
+          this.formValue.emit(this.formService.mapData(this.formTypeOf, this.formGroup.value));
+        }
+      }
+      }
+
 }

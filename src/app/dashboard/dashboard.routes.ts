@@ -1,8 +1,10 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+
 import { DashboardComponent } from "./dashboar.component";
 import { MainDashComponent } from "./main-dash/main-dash.component";
 import { NoticeBoardComponent } from "./notice-board/notice-board.component";
+import { DetailsGuardService } from "./DetailsGuard.service";
 
 const routesstaff: Routes = [
   {
@@ -12,6 +14,7 @@ const routesstaff: Routes = [
       {
         path: "stdetail",
         loadChildren: () => import("../student-details/student-details.module").then(m => m.StudentDetailsModule),
+        canActivate: [DetailsGuardService],
       },
       {
         path: "main",
@@ -36,10 +39,6 @@ const routesStudents: Routes = [
     component: DashboardComponent,
     children: [
       {
-        path: "profile",
-        loadChildren: () => import("../student-details/student-details.module").then(m => m.StudentDetailsModule),
-      },
-      {
         path: "main",
         component: MainDashComponent,
       },
@@ -56,9 +55,12 @@ const routesStudents: Routes = [
   }
 ];
 
+
 @NgModule({
   imports: [RouterModule.forChild(routesstaff)],
   exports: [RouterModule]
 })
 
-export class DashboardRoutingModule { }
+export class DashboardRoutingModule {
+
+}

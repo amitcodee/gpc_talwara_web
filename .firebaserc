@@ -2,7 +2,7 @@
   "targets": {
     "test-183e7": {
       "hosting": {
-        "est-183e7": [
+        "test-183e7": [
           "test-183e7"
         ]
       }
