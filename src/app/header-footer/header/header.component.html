@@ -68,34 +68,50 @@
             </div>
           </div>
 
-     <div class="col-lg-4">
+          <div class="col-lg-4">
             <div class="dropdown">
-              <button class="btn btn-light dropdown-toggle" type="button" id="darkModeDropdown" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i class="fas {{ selectedDarkModeOption.icon }}"></i> {{ selectedDarkModeOption.label }} Mode
+              <button
+                class="btn btn-light dropdown-toggle"
+                type="button"
+                id="darkModeDropdown"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="fas {{ selectedDarkModeOption.icon }}"></i>
+                {{ selectedDarkModeOption.label }} Mode
               </button>
 
               <div class="dropdown-menu" aria-labelledby="darkModeDropdown">
-
-                <a style="cursor: grab;" class="dropdown-item"
-                  (click)="setDarkMode({ label: 'Default', icon: 'fa-adjust' })">
+                <a
+                  style="cursor: grab"
+                  class="dropdown-item"
+                  (click)="setDarkMode({ label: 'Default', icon: 'fa-adjust' })"
+                >
                   <i class="fas fa-adjust"></i> Default Mode
-                </a> <a style="cursor: grab;" class="dropdown-item"
-                  (click)="setDarkMode({ label: 'Light', icon: 'fa-sun' })">
+                </a>
+                <a
+                  style="cursor: grab"
+                  class="dropdown-item"
+                  (click)="setDarkMode({ label: 'Light', icon: 'fa-sun' })"
+                >
                   <i class="fas fa-sun"></i> Light Mode
                 </a>
-                <a style="cursor: grab;" class="dropdown-item"
-                  (click)="setDarkMode({ label: 'Dark', icon: 'fa-solid fa-moon' })">
+                <a
+                  style="cursor: grab"
+                  class="dropdown-item"
+                  (click)="
+                    setDarkMode({ label: 'Dark', icon: 'fa-solid fa-moon' })
+                  "
+                >
                   <i class="fas fa-solid fa-moon"></i> Dark Mode
                 </a>
-
               </div>
             </div>
-
           </div>
         </div>
       </div>
-         <!--  <div class="col-lg-4">
+      <!--  <div class="col-lg-4">
             <div class="btn-group" role="group" aria-label="First group">
               <button type="button" class="btn btn-outline-secondary" (click)="increaseTextSize()">A++</button>
               <button type="button" class="btn btn-outline-secondary" (click)="decreaseTextSize()">A--</button>
