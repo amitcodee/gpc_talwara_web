@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { TitleService } from './services/title/title.service';
-import { RouterOutlet,RouterLink } from '@angular/router';
+import { ThemeService } from './services/theme/theme.service';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './header-footer/footer/footer.component';
 import { HeaderComponent } from './header-footer/header/header.component';
@@ -16,11 +17,13 @@ import { NewsComponent } from "./home/news-section/news/news.component";
     styleUrl: './app.component.scss',
     imports: [CommonModule, RouterOutlet, RouterLink, HeaderComponent, HeroSectionComponent, FooterComponent, ScrollButtonComponent, NewsComponent]
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   title(title: any) {
     throw new Error('Method not implemented.');
   }
-  constructor(private router: Router, private titleService: TitleService) {}
+  isDarkMode: boolean = false;
+
+  constructor(private router: Router, private titleService: TitleService, private themeService: ThemeService) {}
 
   ngOnInit() {
     this.router.events
@@ -29,6 +32,27 @@ export class AppComponent implements OnInit {
         const title = this.getTitle(this.router.routerState.root);
         this.titleService.setTitle(title);
       });
+
+    // Update theme based on signal
+    this.updateTheme();
+    // Check for saved theme preference
+    const savedMode = localStorage.getItem('darkMode');
+    if (savedMode) {
+      this.themeService.setDarkMode(JSON.parse(savedMode) ? 'dark' : 'light');
+    }
+  }
+
+  updateTheme() {
+    this.isDarkMode = this.themeService.getDarkMode();
+    if (this.isDarkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }
+
+  ngOnDestroy() {
+    // No subscription to unsubscribe when using signals
   }
 
   private getTitle(route: ActivatedRoute): string {

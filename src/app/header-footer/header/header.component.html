@@ -260,10 +260,11 @@
               <li>
                 <a
                   class="dropdown-item fw-semibold"
-                  routerLink="/rules-discipline"
-                  (click)="scrollToTopAndCloseNavbar()"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeBsvstC_RDi1nY1pTz_qN-6Xa44yNXXh8bfVvxdnLAukdMug/viewform"
+                  target="_blank"
+                  rel="noopener"
                 >
-                  Rules and Discipline</a
+                  ਸ਼ਿਕਾਇਤ ਨਿਵਾਰਨ ਪੋਰਟਲ</a
                 >
               </li>
               <li>
@@ -536,10 +537,11 @@
               <li>
                 <a
                   class="dropdown-item fw-semibold"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSeBsvstC_RDi1nY1pTz_qN-6Xa44yNXXh8bfVvxdnLAukdMug/viewform"
+                  href="../../../assets/images/used/useful-link/aitce.pdf"
                   target="_blank"
+                  rel="noopener"
                 >
-                  Grievance Redressal Portal</a
+                  AICTE ਪ੍ਰਵਾਨਗੀ</a
                 >
               </li>
               <li>
@@ -649,6 +651,44 @@
                   >
                 </li>
               </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="dropdown">
+              <button
+                class="btn btn-light dropdown-toggle"
+                type="button"
+                id="darkModeDropdown"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="fas {{ selectedDarkModeOption.icon }}"></i>
+                {{ selectedDarkModeOption.label }} ਮੋਡ
+              </button>
+              <div class="dropdown-menu" aria-labelledby="darkModeDropdown">
+                <a
+                  style="cursor: grab"
+                  class="dropdown-item"
+                  (click)="setDarkMode({ label: 'Default', icon: 'fa-adjust' })"
+                >
+                  <i class="fas fa-adjust"></i> ਡਿਫਾਲਟ ਮੋਡ
+                </a>
+                <a
+                  style="cursor: grab"
+                  class="dropdown-item"
+                  (click)="setDarkMode({ label: 'Light', icon: 'fa-sun' })"
+                >
+                  <i class="fas fa-sun"></i> ਲਾਈਟ ਮੋਡ
+                </a>
+                <a
+                  style="cursor: grab"
+                  class="dropdown-item"
+                  (click)="setDarkMode({ label: 'Dark', icon: 'fa-solid fa-moon' })"
+                >
+                  <i class="fas fa-solid fa-moon"></i> ਡਾਰਕ ਮੋਡ
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -827,10 +867,11 @@
               <li>
                 <a
                   class="dropdown-item fw-semibold"
-                  routerLink="/rules-discipline"
-                  (click)="scrollToTopAndCloseNavbar()"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeBsvstC_RDi1nY1pTz_qN-6Xa44yNXXh8bfVvxdnLAukdMug/viewform"
+                  target="_blank"
+                  rel="noopener"
                 >
-                  ਨਿਯਮ ਅਤੇ ਅਨੁਸ਼ਾਸਨ</a
+                  ਸ਼ਿਕਾਇਤ ਨਿਵਾਰਨ ਪੋਰਟਲ</a
                 >
               </li>
               <li>
@@ -1106,9 +1147,10 @@
               </li>
               <li>
                 <a
-                  class="dropdown-item fw-semibod"
+                  class="dropdown-item fw-semibold"
                   href="https://docs.google.com/forms/d/e/1FAIpQLSeBsvstC_RDi1nY1pTz_qN-6Xa44yNXXh8bfVvxdnLAukdMug/viewform"
                   target="_blank"
+                  rel="noopener"
                 >
                   ਸ਼ਿਕਾਇਤ ਨਿਵਾਰਨ ਪੋਰਟਲ</a
                 >
@@ -1694,6 +1736,7 @@
                   class="dropdown-item fw-semibold"
                   href="https://docs.google.com/forms/d/e/1FAIpQLSeBsvstC_RDi1nY1pTz_qN-6Xa44yNXXh8bfVvxdnLAukdMug/viewform"
                   target="_blank"
+                  rel="noopener"
                 >
                   शिकायत निवारण पोर्टल</a
                 >
@@ -1703,7 +1746,9 @@
                   class="dropdown-item fw-semibold"
                   href="../../../assets/images/used/useful-link/aitce.pdf"
                   target="_blank"
-                  >एआईसीटीई की मंजूरी</a
+                  rel="noopener"
+                >
+                  एआईसीटीई की मंजूरी</a
                 >
               </li>
               <li>

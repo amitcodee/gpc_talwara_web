@@ -25,9 +25,7 @@ link: any;
   ) {}
 
   ngOnInit() {
-    this.themeService.isDarkMode$.subscribe((darkMode: boolean) => {
-      this.isDarkMode = darkMode;
-    });
+    this.isDarkMode = this.themeService.getDarkMode();
 
     this.selectedNews = this.newsList[0];
   }

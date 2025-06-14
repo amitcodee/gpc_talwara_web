@@ -21,11 +21,8 @@ export class FeesStructureComponent {
     private themeService: ThemeService
   ) {}
 
-  ngOnInit() {
-    this.themeService.isDarkMode$.subscribe((darkMode: boolean) => {
-      this.isDarkMode = darkMode;
-      // Update component styles or perform other actions based on darkMode
-    });
+ ngOnInit() {
+    this.isDarkMode = this.themeService.getDarkMode();
   }
 
   getTextSize(): number {

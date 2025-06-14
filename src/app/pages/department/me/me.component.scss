@@ -1,29 +1,449 @@
 ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
 :host .red-title {
   color: #b1040e;
 }
 
-.dark-mode .red-title {
-  color: #fff;
-}
-
-.dark-mode {
-  color: #fff;
-}
-
-.dark-mode th,
-.dark-mode td {
-  background-color: #333;
-  color: #fff;
-}
-
 .dark-mode .border-danger {
   border-color: #fff !important;
 }
 
-.img {
-  height: 500px !important;
+.dark-mode .red-title {
+  color: #fff;
+}
+
+.dark-mode .container {
+  color: #fff;
+}
+
+.dark-mode .text-dark {
+  color: #fff !important;
+}
+
+.dark-mode .card {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .stat-card {
+  background-color: #444;
+  color: #fff;
+}
+
+.department-container {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.department-banner {
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.banner-container:hover .department-banner {
+  transform: scale(1.05);
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.banner-overlay:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.stat-card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.department-lab {
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-container:hover .department-lab {
+  transform: scale(1.05);
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+.dark-mode .text-muted {
+  color: #adb5bd;
+}
+
+@media (max-width: 768px) {
+  .department-banner, .department-lab {
+    height: 300px;
+  }
+
+  .row.align-items-center {
+    text-align: center;
+  }
+
+  .row.align-items-center .col-md-5, .row.align-items-center .col-md-7 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Animation classes from Animate.css */
+.animate__animated {
+  animation-duration: 1s;
+}
+
+.animate__fadeIn {
+  animation-name: fadeIn;
+}
+
+.animate__fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.animate__zoomIn {
+  animation-name: zoomIn;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.dark-mode .card {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .stat-card {
+  background-color: #444;
+  color: #fff;
+}
+
+.dark-mode .text-muted {
+  color: #bbb !important;
+}
+
+.department-container {
+  padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.department-banner {
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.banner-container:hover .department-banner {
+  transform: scale(1.05);
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.banner-overlay:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.stat-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.transition-scale {
+  transition: transform 0.5s ease;
+}
+
+.image-container:hover .transition-scale {
+  transform: scale(1.05);
+}
+
+.department-lab {
+  height: 400px;
+  object-fit: cover;
+}
+
+.rounded-lg {
+  border-radius: 15px !important;
+}
+
+/* Animation classes from Animate.css */
+.animate__animated {
+  animation-duration: 1s;
+}
+
+.animate__fadeIn {
+  animation-name: fadeIn;
+}
+
+.animate__fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.animate__zoomIn {
+  animation-name: zoomIn;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .department-banner, .department-lab {
+    height: 300px;
+  }
+
+  .banner-overlay {
+    padding: 1rem;
+  }
+
+  .banner-overlay h4 {
+    font-size: 1.25rem;
+  }
+
+  .stat-card {
+    padding: 1.5rem !important;
+  }
+
+  .display-5 {
+    font-size: 2rem;
+  }
+
+  .display-6 {
+    font-size: 1.75rem;
+  }
+}
+
+.dark-mode a.text-dark {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.dark-mode a.text-dark:hover {
+  color: #fff !important;
+}
+
+.department-container {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.department-banner {
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.banner-container:hover .department-banner {
+  transform: scale(1.05);
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.stat-card {
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .stat-card {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .hover-effect:hover {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.department-lab {
+  height: 350px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-container:hover .department-lab {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .department-banner, .department-lab {
+    height: 250px;
+  }
+
+  h1.display-5 {
+    font-size: 2.5rem;
+  }
+
+  h2.display-6 {
+    font-size: 2rem;
+  }
 }

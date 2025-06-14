@@ -1,9 +1,45 @@
 // @import 'aos/dist/aos.css';
-:host{
+:host {
     background-color: #fff;
-
 }
 
-.dark-mode{
+.dark-mode {
     background-color: #333;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjustments for mobile devices */
+    body {
+        font-size: 14px;
+    }
+    .container {
+        padding: 10px;
+    }
+    /* Add more mobile-specific styles as needed */
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Adjustments for tablets */
+    body {
+        font-size: 16px;
+    }
+    .container {
+        padding: 20px;
+    }
+    /* Add more tablet-specific styles as needed */
+}
+
+@media (min-width: 1025px) {
+    /* Adjustments for desktops */
+    body {
+        font-size: 18px;
+    }
+    .container {
+        padding: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    /* Add more desktop-specific styles as needed */
 }

@@ -1,538 +1,459 @@
 <div class="dark" [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'English'"
   [style.font-size.px]="getTextSize()">
-  <div class="container">
-    <div class="fw-bold fs-1 red-title pt-3 border-bottom border-danger border-2  border-bottom border-danger border-2">
-      Electrical Engineering
-    </div>
-    <div class="fs-4 lh-lg fw-lighter text-center">
-      <div class="py-3">
-        <p>
-          Power Up Your Future: Master electrical engineering to spark innovation, from smart grids to renewable energy
-          and intelligent machines. Design the electrifying world of tomorrow.
+  <div class="container department-container">
+    <!-- Header Section -->
+    <section class="section py-5 border-bottom border-danger border-2 animate__animated animate__fadeIn">
+      <h1 class="fw-bold red-title mb-0 display-5 text-center">Electrical Engineering</h1>
+      <p class="fs-5 fw-lighter text-center mt-3 lead">
+        Power Up Your Future: Master electrical engineering to spark innovation, from smart grids to renewable energy and intelligent machines. Design the electrifying world of tomorrow.
+      </p>
+    </section>
+
+    <!-- Banner Image Section -->
+    <section class="section my-5 animate__animated animate__zoomIn">
+      <div class="banner-container position-relative text-center overflow-hidden rounded shadow-lg">
+        <img src="../../../../assets/images/used/department/ee/class/ee.webp" class="img-fluid w-100 department-banner" alt="Electrical Engineering Banner">
+        <div class="banner-overlay p-4 d-flex align-items-center justify-content-center">
+          <p class="text-white fw-lighter h4 m-0">Powering the future with innovative solutions.</p>
+        </div>
       </div>
-      <div class="mb-5">
-        <img src="../../../../assets/images/used/department/ee/class/ee.webp" class="img-fluid shadow" alt="">
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="section my-5 border-bottom border-top border-danger py-5 border-2 animate__animated animate__fadeInUp">
+      <div class="row text-center g-4">
+        <div class="col-md-4">
+          <div class="stat-card shadow-sm p-4 rounded">
+            <div class="fw-semibold display-6 text-danger">2,304</div>
+            <div class="mt-2">
+              <a href="#" class="text-decoration-none text-dark h5">Faculty Members</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card shadow-sm p-4 rounded">
+            <div class="fw-semibold display-6 text-danger">2,304</div>
+            <div class="mt-2">
+              <a href="#" class="text-decoration-none text-dark h5">Faculty Members</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card shadow-sm p-4 rounded">
+            <div class="fw-semibold display-6 text-danger">2,304</div>
+            <div class="mt-2">
+              <a href="#" class="text-decoration-none text-dark h5">Faculty Members</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="my-3">
-        <div class="border-bottom border-top border-danger py-3">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="fw-semibold">2,304
-              </div>
-              <div>
-                <a href="" class="text-decoration-none text-dark"> Faculty members</a>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="section my-5 animate__animated animate__fadeIn">
+      <h2 class="fw-semibold red-title display-6 mb-5 text-center">Electrical Engineering in a Nutshell</h2>
+      <div class="row row-cols-1 row-cols-md-2 g-4 text-start">
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <h5 class="fw-semibold mb-3 h4">Fundamental Concepts in Electrical Systems</h5>
+              <p class="card-text text-muted">Electrical Engineering at our college emphasizes a solid foundation in principles such as circuit analysis, electromagnetism, and power systems.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <h5 class="fw-semibold mb-3 h4">Practical Skills Development</h5>
+              <p class="card-text text-muted">The program ensures hands-on application through labs and projects, allowing students to translate theoretical knowledge into real-world solutions.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <h5 class="fw-semibold mb-3 h4">Emphasis on Sustainable Practices</h5>
+              <p class="card-text text-muted">Our electrical engineering curriculum integrates renewable energy systems, preparing students to address global energy challenges with innovative and sustainable solutions.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <h5 class="fw-semibold mb-3 h4">Keeping Pace with Technological Advancements</h5>
+              <p class="card-text text-muted">Students engage with cutting-edge technologies, including smart grids, IoT, and automation, ensuring they are equipped for the evolving landscape of electrical engineering.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="card shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <h5 class="fw-semibold mb-3 h4">Integration with Other Engineering Disciplines</h5>
+              <p class="card-text text-muted">Electrical Engineering students collaborate across disciplines, fostering a holistic approach to problem-solving and preparing them for diverse career paths in technology and innovation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Labs Section -->
+    <section class="section my-5 animate__animated animate__fadeIn">
+      <h2 class="fw-semibold red-title display-6 mb-5 text-center">Our Labs</h2>
+      <div class="row row-cols-1 g-4">
+        <div class="col">
+          <div class="card shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-md-5">
+                  <img src="../../../../assets/images/used/department/ee/lab/18.webp" class="img-fluid rounded shadow" alt="Project Labs">
+                </div>
+                <div class="col-md-7">
+                  <h5 class="fw-semibold mb-3 h4">Project Labs</h5>
+                  <p class="card-text text-muted">A project lab in a college computer science department is a dedicated space where students work on hands-on projects, typically as part of a course or program. These projects can be individual or group-based and involve various aspects of computer science.</p>
+                </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="fw-semibold">2,304
-              </div>
-              <div>
-                <a href="" class="text-decoration-none text-dark"> Faculty members</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-md-7">
+                  <h5 class="fw-semibold mb-3 h4">RDBMS and Programming Labs</h5>
+                  <p class="card-text text-muted">Both RDBMS and Programming labs offer valuable learning experiences for students pursuing careers in computer science, IT, and related fields. RDBMS labs equip students with data management skills, while Programming labs hone their software development abilities.</p>
+                </div>
+                <div class="col-md-5">
+                  <img src="../../../../assets/images/used/department/ee/lab/15.webp" class="img-fluid rounded shadow" alt="RDBMS and Programming Labs">
+                </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="fw-semibold">2,304
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-md-5">
+                  <img src="../../../../assets/images/used/department/ee/lab/13.webp" class="img-fluid rounded shadow" alt="Project Labs">
+                </div>
+                <div class="col-md-7">
+                  <h5 class="fw-semibold mb-3 h4">Project Labs</h5>
+                  <p class="card-text text-muted">A project lab in a college computer science department is a dedicated space where students work on hands-on projects, typically as part of a course or program. These projects can be individual or group-based and involve various aspects of computer science.</p>
+                </div>
               </div>
-              <div>
-                <a href="" class="text-decoration-none text-dark"> Faculty members</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-md-7">
+                  <h5 class="fw-semibold mb-3 h4">Project Labs</h5>
+                  <p class="card-text text-muted">Within the walls of a college computer science project lab, theory sheds its textbook veneer and transforms into tangible solutions. Students collaborate in this dedicated space, fueled by passion and diverse perspectives, to tackle hands-on projects - solo or team-based - that delve into various aspects of the field. They aren't just learning computer science; they're living it, navigating real-world challenges and pushing the boundaries of technology.</p>
+                </div>
+                <div class="col-md-5">
+                  <img src="../../../../assets/images/used/department/ee/lab/12.webp" class="img-fluid rounded shadow" alt="Project Labs">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="fw-semibold red-title fs-2"> Electrical Engineering in a Nutshell</div>
-      <div class="text-start my-3">
-        <ul>
-          <li>
-            <i class="fa-regular fa-hand-point-right">
-            </i>
-            <span class="fw-semibold"> Fundamental concepts in electrical systems:</span> Electrical Engineering at our
-            college emphasizes a solid foundation in principles such as circuit analysis, electromagnetism, and power
-            systems.
-          </li>
-          <li>
-            <i class="fa-regular fa-hand-point-right">
-            </i>
-            <span class="fw-semibold">Practical skills development:</span> The program ensures hands-on application
-            through labs and projects, allowing students to translate theoretical knowledge into real-world solutions.
-          </li>
-          <li>
-            <i class="fa-regular fa-hand-point-right">
-            </i>
-            <span class="fw-semibold">Emphasis on sustainable practices:</span> Our electrical engineering curriculum
-            integrates renewable energy systems, preparing students to address global energy challenges with innovative
-            and sustainable solutions.
-          </li>
-          <li>
-            <i class="fa-regular fa-hand-point-right">
-            </i>
-            <span class="fw-semibold">Keeping pace with technological advancements:</span>Students engage with
-            cutting-edge technologies, including smart grids, IoT, and automation, ensuring they are equipped for the
-            evolving landscape of electrical engineering.
-          </li>
-          <li>
-            <i class="fa-regular fa-hand-point-right">
-            </i>
-            <span class="fw-semibold">Integration with other engineering disciplines:</span>Electrical Engineering
-            students collaborate across disciplines, fostering a holistic approach to problem-solving and preparing them
-            for diverse career paths in technology and innovation.
-          </li>
-        </ul>
+    </section>
+
+    <!-- Lab/Facility Image Section -->
+    <section class="section my-5 animate__animated animate__zoomIn">
+      <div class="image-container overflow-hidden rounded shadow-lg">
+        <img src="../../../../assets/images/used/department/ee/lab/1.webp" class="img-fluid w-100 department-lab transition-scale" alt="Electrical Engineering Lab">
       </div>
-      <div class="fw-semibold red-title fs-2 my-3">
-        Our Labs</div>
-      <div class="card my-3">
-        <div class="card-body">
-          <div class="row">
-            <div class="fw-semibold fs-3">
-              Project Labs</div>
-            <div class="col-md-5">
-              <img src="../../../../assets/images/used/department/ee/lab/18.webp" class="img-fluid shadow" alt>
-            </div>
-            <div class="col-md-7">
-              <div class="my-3 fs-5">
-                A project lab in a college computer science department is a
-                dedicated space where
-                students work
-                on hands-on projects, typically as part of a course or program.
-                These projects can be
-                individual
-                or group-based and involve various aspects of computer science
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card my-3">
-        <div class="card-body">
-          <div class="row">
-            <div class="fw-semibold fs-3">
-              RDBMS and Programming Labs</div>
-            <div class="col-md-7">
-              <div class="my-3 fs-5">
-                Both RDBMS and Programming labs offer valuable learning
-                experiences for students
-                pursuing careers in computer science, IT, and related fields.
-                RDBMS labs equip students
-                with data management skills, while Programming labs hone their
-                software development
-                abilities.
-              </div>
-            </div>
-            <div class="col-md-5">
-              <img src="../../../../assets/images/used/department/ee/lab/15.webp" class="img-fluid shadow" alt>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card my-3">
-        <div class="card-body">
-          <div class="row">
-            <div class="fw-semibold fs-3">
-              Project Labs</div>
-            <div class="col-md-5">
-              <img src="../../../../assets/images/used/department/ee/lab/13.webp" class="img-fluid shadow" alt>
-            </div>
-            <div class="col-md-7">
-              <div class="my-3 fs-5">
-                A project lab in a college computer science department is a
-                dedicated space where
-                students work
-                on hands-on projects, typically as part of a course or program.
-                These projects can be
-                individual
-                or group-based and involve various aspects of computer science
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card my-3">
-        <div class="card-body">
-          <div class="row">
-            <div class="fw-semibold fs-3">
-              Project Labs</div>
-            <div class="col-md-7">
-              <div class="my-3 fs-5">
-                Within the walls of a college computer science project lab,
-                theory sheds its textbook veneer and transforms into tangible
-                solutions. Students collaborate in this dedicated space, fueled
-                by passion and diverse perspectives, to tackle hands-on projects
-                - solo or team-based - that delve into various aspects of the
-                field. They aren't just learning computer science; they're
-                living it, navigating real-world challenges and pushing the
-                boundaries of technology.
-              </div>
-            </div>
-            <div class="col-md-5">
-              <img src="../../../../assets/images/used/department/ee/lab/12.webp" class="img-fluid shadow" alt>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="">
-    <img src="../../../../assets/images/used/department/ee/lab/1.webp" class="img-fluid" alt="">
+    </section>
   </div>
 </div>
 
 <div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'ਪੰਜਾਬੀ'" [style.font-size.px]="getTextSize()">
-  <div class="container">
-    <div class="fw-bold fs-1 red-title pt-3 border-bottom border-danger border-2  border-bottom border-danger border-2">
-      ਇਲੈਕਟ੍ਰਿਕਲ ਇੰਜਿਨੀਰਿੰਗ
-    </div>
-    <div class="fs-4 lh-lg fw-lighter text-center">
-      <div class="py-3">
-        <p>
-        ਆਪਣੇ ਭਵਿੱਖ ਨੂੰ ਮਜ਼ਬੂਤ ​​ਕਰੋ: ਸਮਾਰਟ ਗਰਿੱਡ ਤੋਂ ਨਵਿਆਉਣਯੋਗ ਊਰਜਾ ਤੱਕ, ਨਵੀਨਤਾ ਨੂੰ ਚਮਕਾਉਣ ਲਈ ਇਲੈਕਟ੍ਰੀਕਲ ਇੰਜੀਨੀਅਰਿੰਗ ਵਿੱਚ ਮਾਸਟਰ ਕਰੋ
-          ਅਤੇ ਬੁੱਧੀਮਾਨ ਮਸ਼ੀਨਾਂ। ਕੱਲ੍ਹ ਦੀ ਬਿਜਲੀ ਦੀ ਦੁਨੀਆ ਨੂੰ ਡਿਜ਼ਾਈਨ ਕਰੋ।
-          </p>
+  <div class="container department-container">
+    <!-- Header Section -->
+    <section class="section py-5 border-bottom border-danger border-2 animate__animated animate__fadeIn">
+      <h1 class="fw-bold red-title mb-0 display-5 text-center">ਇਲੈਕਟ੍ਰਿਕਲ ਇੰਜਿਨੀਰਿੰਗ</h1>
+      <p class="fs-5 fw-lighter text-center mt-3 lead">
+        ਆਪਣੇ ਭਵਿੱਖ ਨੂੰ ਮਜ਼ਬੂਤ ​​ਕਰੋ: ਸਮਾਰਟ ਗਰਿੱਡ ਤੋਂ ਨਵਿਆਉਣਯੋਗ ਊਰਜਾ ਤੱਕ, ਨਵੀਨਤਾ ਨੂੰ ਚਮਕਾਉਣ ਲਈ ਇਲੈਕਟ੍ਰੀਕਲ ਇੰਜੀਨੀਅਰਿੰਗ ਵਿੱਚ ਮਾਸਟਰ ਕਰੋ ਅਤੇ ਬੁੱਧੀਮਾਨ ਮਸ਼ੀਨਾਂ। ਕੱਲ੍ਹ ਦੀ ਬਿਜਲੀ ਦੀ ਦੁਨੀਆ ਨੂੰ ਡਿਜ਼ਾਈਨ ਕਰੋ।
+      </p>
+    </section>
+
+    <!-- Banner Image Section -->
+    <section class="section my-5 animate__animated animate__zoomIn">
+      <div class="banner-container position-relative text-center overflow-hidden rounded shadow-lg">
+        <img src="../../../../assets/images/used/department/ee/class/ee.webp" class="img-fluid w-100 department-banner" alt="ਇਲੈਕਟ੍ਰਿਕਲ ਇੰਜਿਨੀਰਿੰਗ ਬੈਨਰ">
+        <div class="banner-overlay p-4 d-flex align-items-center justify-content-center">
+          <p class="text-white fw-lighter h4 m-0">ਨਵੀਨਤਾਕਾਰੀ ਹੱਲਾਂ ਨਾਲ ਭਵਿੱਖ ਨੂੰ ਸ਼ਕਤੀ ਪ੍ਰਦਾਨ ਕਰਨਾ।</p>
+        </div>
       </div>
-      <div class="mb-5">
-        <img src="../../../../assets/images/used/department/ee/class/ee.webp" class="img-fluid shadow" alt="">
-      </div>
-      <div class="my-3">
-        <div class="border-bottom border-top border-danger py-3">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="fw-semibold">2,304
-              </div>
-              <div>
-                <a href="" class="text-decoration-none text-dark"> ਫੈਕਲਟੀ ਮੈਂਬਰ</a>
-              </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="section my-5 border-bottom border-top border-danger py-5 border-2 animate__animated animate__fadeInUp">
+      <div class="row text-center g-4">
+        <div class="col-md-4">
+          <div class="stat-card shadow-sm p-4 rounded">
+            <div class="fw-semibold display-6 text-danger">2,304</div>
+            <div class="mt-2">
+              <a href="#" class="text-decoration-none text-dark h5">ਫੈਕਲਟੀ ਮੈਂਬਰ</a>
             </div>
-            <div class="col-md-4">
-              <div class="fw-semibold">2,304
-              </div>
-              <div>
-                <a href="" class="text-decoration-none text-dark"> ਫੈਕਲਟੀ ਮੈਂਬਰ</a>
-              </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card shadow-sm p-4 rounded">
+            <div class="fw-semibold display-6 text-danger">2,304</div>
+            <div class="mt-2">
+              <a href="#" class="text-decoration-none text-dark h5">ਫੈਕਲਟੀ ਮੈਂਬਰ</a>
             </div>
-            <div class="col-md-4">
-              <div class="fw-semibold">2,304
-              </div>
-              <div>
-                <a href="" class="text-decoration-none text-dark"> ਫੈਕਲਟੀ ਮੈਂਬਰ</a>
-              </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card shadow-sm p-4 rounded">
+            <div class="fw-semibold display-6 text-danger">2,304</div>
+            <div class="mt-2">
+              <a href="#" class="text-decoration-none text-dark h5">ਫੈਕਲਟੀ ਮੈਂਬਰ</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="fw-semibold red-title fs-2"> ਇੱਕ ਸੰਖੇਪ ਵਿੱਚ ਇਲੈਕਟ੍ਰੀਕਲ ਇੰਜੀਨੀਅਰਿੰਗ</div>
-      <div class="text-start my-3">
-        <ul>
-          <li>
-            <i class="fa-regular fa-hand-point-right">
-            </i>
-            <span class="fw-semibold">ਬਿਜਲਈ ਪ੍ਰਣਾਲੀਆਂ ਵਿੱਚ ਬੁਨਿਆਦੀ ਧਾਰਨਾਵਾਂ:</span> ਸਾਡੇ ਵਿਖੇ ਇਲੈਕਟ੍ਰੀਕਲ ਇੰਜੀਨੀਅਰਿੰਗ
-            ਕਾਲਜ ਸਰਕਟ ਵਿਸ਼ਲੇਸ਼ਣ, ਇਲੈਕਟ੍ਰੋਮੈਗਨੈਟਿਜ਼ਮ, ਅਤੇ ਸ਼ਕਤੀ ਵਰਗੇ ਸਿਧਾਂਤਾਂ ਵਿੱਚ ਇੱਕ ਠੋਸ ਬੁਨਿਆਦ 'ਤੇ ਜ਼ੋਰ ਦਿੰਦਾ ਹੈ
-            ਸਿਸਟਮ।
-          </li>
-          <li>
-            <i class="fa-regular fa-hand-point-right">
-            </i>
-            <span class="fw-semibold">
-              ਵਿਹਾਰਕ ਹੁਨਰ ਵਿਕਾਸ:</span> ਪ੍ਰੋਗਰਾਮ ਹੱਥਾਂ ਨਾਲ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਯਕੀਨੀ ਬਣਾਉਂਦਾ ਹੈ
-                          ਪ੍ਰਯੋਗਸ਼ਾਲਾਵਾਂ ਅਤੇ ਪ੍ਰੋਜੈਕਟਾਂ ਰਾਹੀਂ, ਵਿਦਿਆਰਥੀਆਂ ਨੂੰ ਸਿਧਾਂਤਕ ਗਿਆਨ ਦਾ ਅਸਲ-ਸੰਸਾਰ ਹੱਲਾਂ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਦਿੰਦਾ ਹੈ।
-                        </li>
-          <li>
-            <i class="fa-regular fa-hand-point-right">
-            </i>
-            <span class="fw-semibold">
-              ਟਿਕਾਊ ਅਭਿਆਸਾਂ 'ਤੇ ਜ਼ੋਰ:</span> ਸਾਡਾ ਇਲੈਕਟ੍ਰੀਕਲ ਇੰਜੀਨੀਅਰਿੰਗ ਪਾਠਕ੍ਰਮ
-                          ਨਵਿਆਉਣਯੋਗ ਊਰਜਾ ਪ੍ਰਣਾਲੀਆਂ ਨੂੰ ਏਕੀਕ੍ਰਿਤ ਕਰਦਾ ਹੈ, ਵਿਦਿਆਰਥੀਆਂ ਨੂੰ ਨਵੀਨਤਾਕਾਰੀ ਨਾਲ ਵਿਸ਼ਵ ਊਰਜਾ ਚੁਣੌਤੀਆਂ ਨੂੰ ਹੱਲ ਕਰਨ ਲਈ ਤਿਆਰ ਕਰਦਾ ਹੈ
-                          ਅਤੇ ਟਿਕਾਊ ਹੱਲ।
-                        </li>
-          <li>
-            <i class="fa-regular fa-hand-point-right">
-            </i>
-            <span class="fw-semibold">ਤਕਨੀਕੀ ਤਰੱਕੀ ਦੇ ਨਾਲ ਰਫਤਾਰ ਜਾਰੀ ਰੱਖਣਾ:</span>ਵਿਦਿਆਰਥੀ ਇਸ ਨਾਲ ਜੁੜਦੇ ਹਨ
-            ਸਮਾਰਟ ਗਰਿੱਡ, ਆਈਓਟੀ, ਅਤੇ ਆਟੋਮੇਸ਼ਨ ਸਮੇਤ ਅਤਿ-ਆਧੁਨਿਕ ਤਕਨਾਲੋਜੀਆਂ, ਇਹ ਯਕੀਨੀ ਬਣਾਉਂਦੀਆਂ ਹਨ ਕਿ ਉਹ ਇਸ ਲਈ ਲੈਸ ਹਨ।
-            ਇਲੈਕਟ੍ਰੀਕਲ ਇੰਜੀਨੀਅਰਿੰਗ ਦਾ ਵਿਕਾਸਸ਼ੀਲ ਲੈਂਡਸਕੇਪ।
-          </li>
-          <li>
-            <i class="fa-regular fa-hand-point-right">
-            </i>
-            <span class="fw-semibold">ਹੋਰ ਇੰਜੀਨੀਅਰਿੰਗ ਵਿਸ਼ਿਆਂ ਨਾਲ ਏਕੀਕਰਣ:</span>ਇਲੈਕਟ੍ਰਿਕਲ ਇੰਜੀਨੀਅਰਿੰਗ
-            ਵਿਦਿਆਰਥੀ ਅਨੁਸ਼ਾਸਨ ਵਿੱਚ ਸਹਿਯੋਗ ਕਰਦੇ ਹਨ, ਸਮੱਸਿਆ-ਹੱਲ ਕਰਨ ਅਤੇ ਉਹਨਾਂ ਨੂੰ ਤਿਆਰ ਕਰਨ ਲਈ ਇੱਕ ਸੰਪੂਰਨ ਪਹੁੰਚ ਨੂੰ ਉਤਸ਼ਾਹਿਤ ਕਰਦੇ ਹਨ
-            ਤਕਨਾਲੋਜੀ ਅਤੇ ਨਵੀਨਤਾ ਵਿੱਚ ਵਿਭਿੰਨ ਕੈਰੀਅਰ ਮਾਰਗਾਂ ਲਈ।
-          </li>
-        </ul>
-      </div>
-      <div class="fw-semibold red-title fs-2 my-3">
-        Our Labs</div>
-      <div class="card my-3">
-        <div class="card-body">
-          <div class="row">
-            <div class="fw-semibold fs-3">
-              ਪ੍ਰੋਜੈਕਟ ਲੈਬਾਂ</div>
-            <div class="col-md-5">
-              <img src="../../../../assets/images/used/department/ee/lab/18.webp" class="img-fluid shadow" alt>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="section my-5 animate__animated animate__fadeIn">
+      <h2 class="fw-semibold red-title display-6 mb-5 text-center">ਸੰਖੇਪ ਵਿੱਚ ਇਲੈਕਟ੍ਰੀਕਲ ਇੰਜੀਨੀਅਰਿੰਗ</h2>
+      <div class="row row-cols-1 row-cols-md-2 g-4 text-start">
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <h5 class="fw-semibold mb-3 h4">ਬਿਜਲਈ ਪ੍ਰਣਾਲੀਆਂ ਵਿੱਚ ਬੁਨਿਆਦੀ ਧਾਰਨਾਵਾਂ</h5>
+              <p class="card-text text-muted">ਸਾਡੇ ਕਾਲਜ ਵਿਖੇ ਇਲੈਕਟ੍ਰੀਕਲ ਇੰਜੀਨੀਅਰਿੰਗ ਸਰਕਟ ਵਿਸ਼ਲੇਸ਼ਣ, ਇਲੈਕਟ੍ਰੋਮੈਗਨੈਟਿਜ਼ਮ, ਅਤੇ ਸ਼ਕਤੀ ਸਿਸਟਮ ਵਰਗੇ ਸਿਧਾਂਤਾਂ ਵਿੱਚ ਇੱਕ ਠੋਸ ਬੁਨਿਆਦ 'ਤੇ ਜ਼ੋਰ ਦਿੰਦਾ ਹੈ।</p>
             </div>
-            <div class="col-md-7">
-              <div class="my-3 fs-5">
-                ਕਾਲਜ ਦੇ ਕੰਪਿਊਟਰ ਸਾਇੰਸ ਵਿਭਾਗ ਵਿੱਚ ਇੱਕ ਪ੍ਰੋਜੈਕਟ ਲੈਬ ਹੈ
-                ਸਮਰਪਿਤ ਸਪੇਸ ਜਿੱਥੇ
-                ਵਿਦਿਆਰਥੀ ਕੰਮ ਕਰਦੇ ਹਨ
-                ਹੈਂਡ-ਆਨ ਪ੍ਰੋਜੈਕਟਾਂ 'ਤੇ, ਖਾਸ ਤੌਰ 'ਤੇ ਕੋਰਸ ਜਾਂ ਪ੍ਰੋਗਰਾਮ ਦੇ ਹਿੱਸੇ ਵਜੋਂ।
-                ਇਹ ਪ੍ਰੋਜੈਕਟ ਹੋ ਸਕਦੇ ਹਨ
-                ਵਿਅਕਤੀਗਤ
-                ਜਾਂ ਸਮੂਹ-ਆਧਾਰਿਤ ਅਤੇ ਕੰਪਿਊਟਰ ਵਿਗਿਆਨ ਦੇ ਵੱਖ-ਵੱਖ ਪਹਿਲੂਆਂ ਨੂੰ ਸ਼ਾਮਲ ਕਰਦਾ ਹੈ
-              </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <h5 class="fw-semibold mb-3 h4">ਵਿਹਾਰਕ ਹੁਨਰ ਵਿਕਾਸ</h5>
+              <p class="card-text text-muted">ਪ੍ਰੋਗਰਾਮ ਪ੍ਰਯੋਗਸ਼ਾਲਾਵਾਂ ਅਤੇ ਪ੍ਰੋਜੈਕਟਾਂ ਰਾਹੀਂ ਹੱਥਾਂ ਨਾਲ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਯਕੀਨੀ ਬਣਾਉਂਦਾ ਹੈ, ਵਿਦਿਆਰਥੀਆਂ ਨੂੰ ਸਿਧਾਂਤਕ ਗਿਆਨ ਦਾ ਅਸਲ-ਸੰਸਾਰ ਹੱਲਾਂ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਦਿੰਦਾ ਹੈ।</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <h5 class="fw-semibold mb-3 h4">ਟਿਕਾਊ ਅਭਿਆਸਾਂ 'ਤੇ ਜ਼ੋਰ</h5>
+              <p class="card-text text-muted">ਸਾਡਾ ਇਲੈਕਟ੍ਰੀਕਲ ਇੰਜੀਨੀਅਰਿੰਗ ਪਾਠਕ੍ਰਮ ਨਵਿਆਉਣਯੋਗ ਊਰਜਾ ਪ੍ਰਣਾਲੀਆਂ ਨੂੰ ਏਕੀਕ੍ਰਿਤ ਕਰਦਾ ਹੈ, ਵਿਦਿਆਰਥੀਆਂ ਨੂੰ ਨਵੀਨਤਾਕਾਰੀ ਅਤੇ ਟਿਕਾਊ ਹੱਲਾਂ ਨਾਲ ਵਿਸ਼ਵ ਊਰਜਾ ਚੁਣੌਤੀਆਂ ਨੂੰ ਹੱਲ ਕਰਨ ਲਈ ਤਿਆਰ ਕਰਦਾ ਹੈ।</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <h5 class="fw-semibold mb-3 h4">ਤਕਨੀਕੀ ਤਰੱਕੀ ਦੇ ਨਾਲ ਰਫਤਾਰ ਜਾਰੀ ਰੱਖਣਾ</h5>
+              <p class="card-text text-muted">ਵਿਦਿਆਰਥੀ ਸਮਾਰਟ ਗਰਿੱਡ, ਆਈਓਟੀ, ਅਤੇ ਆਟੋਮੇਸ਼ਨ ਸਮੇਤ ਅਤਿ-ਆਧੁਨਿਕ ਤਕਨਾਲੋਜੀਆਂ ਨਾਲ ਜੁੜਦੇ ਹਨ, ਇਹ ਯਕੀਨੀ ਬਣਾਉਂਦੇ ਹਨ ਕਿ ਉਹ ਇਲੈਕਟ੍ਰੀਕਲ ਇੰਜੀਨੀਅਰਿੰਗ ਦੇ ਵਿਕਾਸਸ਼ੀਲ ਲੈਂਡਸਕੇਪ ਲਈ ਲੈਸ ਹਨ।</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="card shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <h5 class="fw-semibold mb-3 h4">ਹੋਰ ਇੰਜੀਨੀਅਰਿੰਗ ਵਿਸ਼ਿਆਂ ਨਾਲ ਏਕੀਕਰਣ</h5>
+              <p class="card-text text-muted">ਇਲੈਕਟ੍ਰਿਕਲ ਇੰਜੀਨੀਅਰਿੰਗ ਵਿਦਿਆਰਥੀ ਅਨੁਸ਼ਾਸਨਾਂ ਵਿੱਚ ਸਹਿਯੋਗ ਕਰਦੇ ਹਨ, ਸਮੱਸਿਆ-ਹੱਲ ਕਰਨ ਲਈ ਇੱਕ ਸੰਪੂਰਨ ਪਹੁੰਚ ਨੂੰ ਉਤਸ਼ਾਹਿਤ ਕਰਦੇ ਹਨ ਅਤੇ ਉਹਨਾਂ ਨੂੰ ਤਕਨਾਲੋਜੀ ਅਤੇ ਨਵੀਨਤਾ ਵਿੱਚ ਵਿਭਿੰਨ ਕੈਰੀਅਰ ਮਾਰਗਾਂ ਲਈ ਤਿਆਰ ਕਰਦੇ ਹਨ।</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="card my-3">
-        <div class="card-body">
-          <div class="row">
-            <div class="fw-semibold fs-3">
-              RDBMS ਅਤੇ ਪ੍ਰੋਗਰਾਮਿੰਗ ਲੈਬ</div>
-            <div class="col-md-7">
-              <div class="my-3 fs-5">
-                RDBMS ਅਤੇ ਪ੍ਰੋਗਰਾਮਿੰਗ ਲੈਬਾਂ ਦੋਵੇਂ ਕੀਮਤੀ ਸਿੱਖਣ ਦੀ ਪੇਸ਼ਕਸ਼ ਕਰਦੀਆਂ ਹਨ
-                ਵਿਦਿਆਰਥੀਆਂ ਲਈ ਅਨੁਭਵ
-                ਕੰਪਿਊਟਰ ਵਿਗਿਆਨ, ਆਈ.ਟੀ. ਅਤੇ ਸੰਬੰਧਿਤ ਖੇਤਰਾਂ ਵਿੱਚ ਕਰੀਅਰ ਬਣਾਉਣਾ।
-                RDBMS ਲੈਬਾਂ ਵਿਦਿਆਰਥੀਆਂ ਨੂੰ ਲੈਸ ਕਰਦੀਆਂ ਹਨ
-                ਡਾਟਾ ਪ੍ਰਬੰਧਨ ਹੁਨਰ ਦੇ ਨਾਲ, ਜਦੋਂ ਕਿ ਪ੍ਰੋਗਰਾਮਿੰਗ ਲੈਬਾਂ ਉਹਨਾਂ ਨੂੰ ਨਿਖਾਰਦੀਆਂ ਹਨ
-                ਸਾਫਟਵੇਅਰ ਵਿਕਾਸ
-                ਯੋਗਤਾਵਾਂ|
-              </div>
-            </div>
-            <div class="col-md-5">
-              <img src="../../../../assets/images/used/department/ee/lab/15.webp" class="img-fluid shadow" alt>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card my-3">
-        <div class="card-body">
-          <div class="row">
-            <div class="fw-semibold fs-3">
-              ਪ੍ਰੋਜੈਕਟ ਲੈਬਾਂ</div>
-            <div class="col-md-5">
-              <img src="../../../../assets/images/used/department/ee/lab/13.webp" class="img-fluid shadow" alt>
-            </div>
-            <div class="col-md-7">
-              <div class="my-3 fs-5">
-                ਕਾਲਜ ਦੇ ਕੰਪਿਊਟਰ ਸਾਇੰਸ ਵਿਭਾਗ ਵਿੱਚ ਇੱਕ ਪ੍ਰੋਜੈਕਟ ਲੈਬ ਹੈ
-                ਸਮਰਪਿਤ ਸਪੇਸ ਜਿੱਥੇ
-                ਵਿਦਿਆਰਥੀ ਕੰਮ ਕਰਦੇ ਹਨ
-                ਹੈਂਡ-ਆਨ ਪ੍ਰੋਜੈਕਟਾਂ 'ਤੇ, ਖਾਸ ਤੌਰ 'ਤੇ ਕੋਰਸ ਜਾਂ ਪ੍ਰੋਗਰਾਮ ਦੇ ਹਿੱਸੇ ਵਜੋਂ।
-                ਇਹ ਪ੍ਰੋਜੈਕਟ ਹੋ ਸਕਦੇ ਹਨ
-                ਵਿਅਕਤੀਗਤ
-                ਜਾਂ ਸਮੂਹ-ਆਧਾਰਿਤ ਅਤੇ ਕੰਪਿਊਟਰ ਵਿਗਿਆਨ ਦੇ ਵੱਖ-ਵੱਖ ਪਹਿਲੂਆਂ ਨੂੰ ਸ਼ਾਮਲ ਕਰਦਾ ਹੈ
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card my-3">
-        <div class="card-body">
-          <div class="row">
-            <div class="fw-semibold fs-3">
-              Project Labs</div>
-            <div class="col-md-7">
-              <div class="my-3 fs-5">
-                ਕਾਲਜ ਕੰਪਿਊਟਰ ਸਾਇੰਸ ਪ੍ਰੋਜੈਕਟ ਲੈਬ ਦੀਆਂ ਕੰਧਾਂ ਦੇ ਅੰਦਰ,
-                ਥਿਊਰੀ ਆਪਣੀ ਪਾਠ-ਪੁਸਤਕ ਵਿਨੀਅਰ ਨੂੰ ਵਹਾਉਂਦੀ ਹੈ ਅਤੇ ਠੋਸ ਵਿੱਚ ਬਦਲ ਜਾਂਦੀ ਹੈ
-                ਹੱਲ. ਵਿਦਿਆਰਥੀ ਇਸ ਸਮਰਪਿਤ ਸਪੇਸ ਵਿੱਚ ਸਹਿਯੋਗ ਕਰਦੇ ਹਨ, ਬਾਲਣ
-                ਜਨੂੰਨ ਅਤੇ ਵਿਭਿੰਨ ਦ੍ਰਿਸ਼ਟੀਕੋਣਾਂ ਦੁਆਰਾ, ਹੈਂਡ-ਆਨ ਪ੍ਰੋਜੈਕਟਾਂ ਨਾਲ ਨਜਿੱਠਣ ਲਈ
-                - ਇਕੱਲੇ ਜਾਂ ਟੀਮ-ਆਧਾਰਿਤ - ਜੋ ਕਿ ਦੇ ਵੱਖ-ਵੱਖ ਪਹਿਲੂਆਂ ਦੀ ਖੋਜ ਕਰਦੇ ਹਨ
-                ਖੇਤਰ. ਉਹ ਸਿਰਫ਼ ਕੰਪਿਊਟਰ ਵਿਗਿਆਨ ਹੀ ਨਹੀਂ ਸਿੱਖ ਰਹੇ; ਉਹ ਹਨ
-                ਇਸ ਨੂੰ ਜੀਉਣਾ, ਅਸਲ-ਸੰਸਾਰ ਦੀਆਂ ਚੁਣੌਤੀਆਂ ਨੂੰ ਨੈਵੀਗੇਟ ਕਰਨਾ ਅਤੇ ਅੱਗੇ ਵਧਣਾ
-                ਤਕਨਾਲੋਜੀ ਦੀਆਂ ਸੀਮਾਵਾਂ|
-              </div>
-            </div>
-            <div class="col-md-5">
-              <img src="../../../../assets/images/used/department/ee/lab/12.webp" class="img-fluid shadow" alt>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="">
-    <img src="../../../../assets/images/used/department/ee/lab/1.webp" class="img-fluid" alt="">
-  </div>
-</div>
+    </section>
+
+    <!-- Labs Section -->
+    <section class="section my-5 animate__animated animate__fadeIn">
+      <h2 class="fw-semibold red-title display-6 mb-5 text-center">ਸਾਡੀਆਂ ਲੈਬਾਂ</h2>
+      <div class="row row-cols-1 g-4">
+        <div class="col">
+          <div class="card shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-md-5">
+                  <img src="../../../../assets/images/used/department/ee/lab/18.webp" class="img-fluid rounded shadow" alt="ਪ੍ਰੋਜੈਕਟ ਲੈਬਾਂ">
+                </div>
+                <div class="col-md-7">
+                  <h5 class="fw-semibold mb-3 h4">ਪ੍ਰੋਜੈਕਟ ਲੈਬਾਂ</h5>
+                  <p class="card-text text-muted">ਕਾਲਜ ਦੇ ਕੰਪਿਊਟਰ ਸਾਇੰਸ ਵਿਭਾਗ ਵਿੱਚ ਇੱਕ ਪ੍ਰੋਜੈਕਟ ਲੈਬ ਇੱਕ ਸਮਰਪਿਤ ਸ
 
 <!----hindi---->
 <div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'हिंदी'" [style.font-size.px]="getTextSize()">
-  <div class="container">
-    <div class="fw-bold fs-1 red-title pt-3 border-bottom border-danger border-2  border-bottom border-danger border-2">
-      विद्युत अभियन्त्रण
-    </div>
-    <div class="fs-4 lh-lg fw-lighter text-center">
-      <div class="py-3">
-        <p>
-          अपने भविष्य को सशक्त बनाएं: स्मार्ट ग्रिड से लेकर नवीकरणीय ऊर्जा तक नवाचार को बढ़ावा देने के लिए इलेक्ट्रिकल इंजीनियरिंग में महारत हासिल करें
-          और बुद्धिमान मशीनें। कल की विद्युतीकृत दुनिया को डिज़ाइन करें।
+  <div class="container department-container">
+    <!-- Header Section -->
+    <section class="section py-5 border-bottom border-danger border-2 animate__animated animate__fadeIn">
+      <h1 class="fw-bold red-title mb-0 display-5 text-center">विद्युत अभियन्त्रण</h1>
+      <p class="fs-5 fw-lighter text-center mt-3 lead">
+        अपने भविष्य को सशक्त बनाएं: स्मार्ट ग्रिड से लेकर नवीकरणीय ऊर्जा तक नवाचार को बढ़ावा देने के लिए इलेक्ट्रिकल इंजीनियरिंग में महारत हासिल करें और बुद्धिमान मशीनें। कल की विद्युतीकृत दुनिया को डिज़ाइन करें।
+      </p>
+    </section>
+
+    <!-- Banner Image Section -->
+    <section class="section my-5 animate__animated animate__zoomIn">
+      <div class="banner-container position-relative text-center overflow-hidden rounded shadow-lg">
+        <img src="../../../../assets/images/used/department/ee/class/ee.webp" class="img-fluid w-100 department-banner" alt="विद्युत अभियन्त्रण बैनर">
+        <div class="banner-overlay p-4 d-flex align-items-center justify-content-center">
+          <p class="text-white fw-lighter h4 m-0">नवीन समाधानों के साथ भविष्य को शक्ति प्रदान करना।</p>
+        </div>
       </div>
-      <div class="mb-5">
-        <img src="../../../../assets/images/used/department/ee/class/ee.webp" class="img-fluid shadow" alt="">
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="section my-5 border-bottom border-top border-danger py-5 border-2 animate__animated animate__fadeInUp">
+      <div class="row text-center g-4">
+        <div class="col-md-4">
+          <div class="stat-card shadow-sm p-4 rounded">
+            <div class="fw-semibold display-6 text-danger">2,304</div>
+            <div class="mt-2">
+              <a href="#" class="text-decoration-none text-dark h5">विश्वविद्यालय के विभाग के सदस्य</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card shadow-sm p-4 rounded">
+            <div class="fw-semibold display-6 text-danger">2,304</div>
+            <div class="mt-2">
+              <a href="#" class="text-decoration-none text-dark h5">विश्वविद्यालय के विभाग के सदस्य</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card shadow-sm p-4 rounded">
+            <div class="fw-semibold display-6 text-danger">2,304</div>
+            <div class="mt-2">
+              <a href="#" class="text-decoration-none text-dark h5">विश्वविद्यालय के विभाग के सदस्य</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="my-3">
-        <div class="border-bottom border-top border-danger py-3">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="fw-semibold">2,304
-              </div>
-              <div>
-                <a href="" class="text-decoration-none text-dark"> विश्वविद्यालय के विभाग के सदस्य</a>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="section my-5 animate__animated animate__fadeIn">
+      <h2 class="fw-semibold red-title display-6 mb-5 text-center">संक्षेप में इलेक्ट्रिकल इंजीनियरिंग</h2>
+      <div class="row row-cols-1 row-cols-md-2 g-4 text-start">
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <h5 class="fw-semibold mb-3 h4">विद्युत प्रणालियों में मौलिक अवधारणाएँ</h5>
+              <p class="card-text text-muted">हमारे कॉलेज में इलेक्ट्रिकल इंजीनियरिंग सर्किट विश्लेषण, विद्युत चुंबकत्व और शक्ति सिस्टम जैसे सिद्धांतों में एक ठोस आधार पर जोर देता है।</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <h5 class="fw-semibold mb-3 h4">व्यावहारिक कौशल विकास</h5>
+              <p class="card-text text-muted">कार्यक्रम प्रयोगशालाओं और परियोजनाओं के माध्यम से व्यावहारिक अनुप्रयोग सुनिश्चित करता है, छात्रों को सैद्धांतिक ज्ञान को वास्तविक दुनिया के समाधानों में अनुवाद करने की अनुमति देता है।</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <h5 class="fw-semibold mb-3 h4">टिकाऊ प्रथाओं पर जोर</h5>
+              <p class="card-text text-muted">हमारा इलेक्ट्रिकल इंजीनियरिंग पाठ्यक्रम नवीकरणीय ऊर्जा प्रणालियों को एकीकृत करता है, छात्रों को नवीन और स्थायी समाधानों के साथ वैश्विक ऊर्जा चुनौतियों का समाधान करने के लिए तैयार करता है।</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <h5 class="fw-semibold mb-3 h4">तकनीकी प्रगति के साथ तालमेल बनाए रखना</h5>
+              <p class="card-text text-muted">छात्र स्मार्ट ग्रिड, IoT और ऑटोमेशन सहित अत्याधुनिक प्रौद्योगिकियों के साथ संलग्न रहते हैं, यह सुनिश्चित करते हैं कि वे इलेक्ट्रिकल इंजीनियरिंग के विकसित परिदृश्य के लिए सुसज्जित हैं।</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="card shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <h5 class="fw-semibold mb-3 h4">अन्य इंजीनियरिंग विषयों के साथ एकीकरण</h5>
+              <p class="card-text text-muted">इलेक्ट्रिकल इंजीनियरिंग छात्र विभिन्न विषयों में सहयोग करते हैं, समस्या-समाधान के लिए समग्र दृष्टिकोण को बढ़ावा देते हैं और उन्हें प्रौद्योगिकी और नवाचार में विविध कैरियर पथों के लिए तैयार करते हैं।</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Labs Section -->
+    <section class="section my-5 animate__animated animate__fadeIn">
+      <h2 class="fw-semibold red-title display-6 mb-5 text-center">हमारी लैब्स</h2>
+      <div class="row row-cols-1 g-4">
+        <div class="col">
+          <div class="card shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-md-5">
+                  <img src="../../../../assets/images/used/department/ee/lab/18.webp" class="img-fluid rounded shadow" alt="प्रोजेक्ट लैब्स">
+                </div>
+                <div class="col-md-7">
+                  <h5 class="fw-semibold mb-3 h4">प्रोजेक्ट लैब्स</h5>
+                  <p class="card-text text-muted">एक कॉलेज के कंप्यूटर विज्ञान विभाग में एक प्रोजेक्ट लैब एक समर्पित स्थान है जहां छात्र व्यावहारिक परियोजनाओं पर काम करते हैं, आमतौर पर किसी पाठ्यक्रम या कार्यक्रम के हिस्से के रूप में। ये प्रोजेक्ट व्यक्तिगत या समूह-आधारित हो सकते हैं और कंप्यूटर विज्ञान के विभिन्न पहलुओं को शामिल करते हैं।</p>
+                </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="fw-semibold">2,304
-              </div>
-              <div>
-                <a href="" class="text-decoration-none text-dark"> विश्वविद्यालय के विभाग के सदस्य</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-md-7">
+                  <h5 class="fw-semibold mb-3 h4">आरडीबीएमएस और प्रोग्रामिंग लैब्स</h5>
+                  <p class="card-text text-muted">आरडीबीएमएस और प्रोग्रामिंग लैब दोनों ही कंप्यूटर विज्ञान, आईटी और संबंधित क्षेत्रों में करियर बनाने वाले छात्रों के लिए मूल्यवान सीखने के अनुभव प्रदान करते हैं। आरडीबीएमएस लैब्स छात्रों को डेटा प्रबंधन कौशल से लैस करते हैं, जबकि प्रोग्रामिंग लैब्स उनके सॉफ्टवेयर विकास क्षमताओं को निखारते हैं।</p>
+                </div>
+                <div class="col-md-5">
+                  <img src="../../../../assets/images/used/department/ee/lab/15.webp" class="img-fluid rounded shadow" alt="आरडीबीएमएस और प्रोग्रामिंग लैब्स">
+                </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="fw-semibold">2,304
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-md-5">
+                  <img src="../../../../assets/images/used/department/ee/lab/13.webp" class="img-fluid rounded shadow" alt="प्रोजेक्ट लैब्स">
+                </div>
+                <div class="col-md-7">
+                  <h5 class="fw-semibold mb-3 h4">प्रोजेक्ट लैब्स</h5>
+                  <p class="card-text text-muted">एक कॉलेज के कंप्यूटर विज्ञान विभाग में एक प्रोजेक्ट लैब एक समर्पित स्थान है जहां छात्र व्यावहारिक परियोजनाओं पर काम करते हैं, आमतौर पर किसी पाठ्यक्रम या कार्यक्रम के हिस्से के रूप में। ये प्रोजेक्ट व्यक्तिगत या समूह-आधारित हो सकते हैं और कंप्यूटर विज्ञान के विभिन्न पहलुओं को शामिल करते हैं।</p>
+                </div>
               </div>
-              <div>
-                <a href="" class="text-decoration-none text-dark">विश्वविद्यालय के विभाग के सदस्य</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-md-7">
+                  <h5 class="fw-semibold mb-3 h4">प्रोजेक्ट लैब्स</h5>
+                  <p class="card-text text-muted">एक कॉलेज कंप्यूटर विज्ञान परियोजना प्रयोगशाला की दीवारों के भीतर, सिद्धांत अपनी पाठ्यपुस्तक का आवरण उतार देता है और मूर्त समाधानों में परिवर्तित हो जाता है। छात्र इस समर्पित स्थान में सहयोग करते हैं, जुनून और विविध दृष्टिकोणों से प्रेरित होकर, व्यावहारिक परियोजनाओं से निपटते हैं - एकल या टीम-आधारित - जो क्षेत्र के विभिन्न पहलुओं की खोज करते हैं। वे सिर्फ कंप्यूटर विज्ञान नहीं सीख रहे हैं; वे इसे जी रहे हैं, वास्तविक दुनिया की चुनौतियों से निपट रहे हैं और प्रौद्योगिकी की सीमाओं को आगे बढ़ा रहे हैं।</p>
+                </div>
+                <div class="col-md-5">
+                  <img src="../../../../assets/images/used/department/ee/lab/12.webp" class="img-fluid rounded shadow" alt="प्रोजेक्ट लैब्स">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="fw-semibold red-title fs-2"> संक्षेप में इलेक्ट्रिकल इंजीनियरिंग</div>
-      <div class="text-start my-3">
-        <ul>
-          <li>
-            <i class="fa-regular fa-hand-point-right">
-            </i>
-            <span class="fw-semibold">विद्युत प्रणालियों में मौलिक अवधारणाएँ:</span> हमारे यहां इलेक्ट्रिकल इंजीनियरिंग
-            कॉलेज सर्किट विश्लेषण, विद्युत चुंबकत्व और शक्ति जैसे सिद्धांतों में एक ठोस आधार पर जोर देता है
-            सिस्टम|
-          </li>
-          <li>
-            <i class="fa-regular fa-hand-point-right">
-            </i>
-            <span class="fw-semibold">व्यावहारिक कौशल विकास:</span> कार्यक्रम व्यावहारिक अनुप्रयोग सुनिश्चित करता है
-            प्रयोगशालाओं और परियोजनाओं के माध्यम से, छात्रों को सैद्धांतिक ज्ञान को वास्तविक दुनिया के समाधानों में अनुवाद करने की अनुमति मिलती है।
-          </li>
-          <li>
-            <i class="fa-regular fa-hand-point-right">
-            </i>
-            <span class="fw-semibold">टिकाऊ प्रथाओं पर जोर:</span> हमारा इलेक्ट्रिकल इंजीनियरिंग पाठ्यक्रम
-            नवीकरणीय ऊर्जा प्रणालियों को एकीकृत करता है, छात्रों को नवीनता के साथ वैश्विक ऊर्जा चुनौतियों का समाधान करने के लिए तैयार करता है
-            और स्थायी समाधान।
-          </li>
-          <li>
-            <i class="fa-regular fa-hand-point-right">
-            </i>
-            <span class="fw-semibold">तकनीकी प्रगति के साथ तालमेल बनाए रखना:</span>छात्र संलग्न रहते हैं
-            स्मार्ट ग्रिड, IoT और ऑटोमेशन सहित अत्याधुनिक प्रौद्योगिकियाँ, यह सुनिश्चित करती हैं कि वे इसके लिए सुसज्जित हैं
-            इलेक्ट्रिकल इंजीनियरिंग का विकसित परिदृश्य।
-          </li>
-          <li>
-            <i class="fa-regular fa-hand-point-right">
-            </i>
-            <span class="fw-semibold">अन्य इंजीनियरिंग विषयों के साथ एकीकरण:</span>इलेक्ट्रिकल इंजीनियरिंग
-            छात्र विभिन्न विषयों में सहयोग करते हैं, समस्या-समाधान के लिए समग्र दृष्टिकोण को बढ़ावा देते हैं और उन्हें तैयार करते हैं
-            प्रौद्योगिकी और नवाचार में विविध कैरियर पथों के लिए।
-          </li>
-        </ul>
+    </section>
+
+    <!-- Lab/Facility Image Section -->
+    <section class="section my-5 animate__animated animate__zoomIn">
+      <div class="image-container overflow-hidden rounded shadow-lg">
+        <img src="../../../../assets/images/used/department/ee/lab/1.webp" class="img-fluid w-100 department-lab transition-scale" alt="विद्युत अभियन्त्रण लैब">
       </div>
-      <div class="fw-semibold red-title fs-2 my-3">
-        हमारी लैब्स</div>
-      <div class="card my-3">
-        <div class="card-body">
-          <div class="row">
-            <div class="fw-semibold fs-3">
-              प्रोजेक्ट लैब्स</div>
-            <div class="col-md-5">
-              <img src="../../../../assets/images/used/department/ee/lab/18.webp" class="img-fluid shadow" alt>
-            </div>
-            <div class="col-md-7">
-              <div class="my-3 fs-5">
-                एक कॉलेज के कंप्यूटर विज्ञान विभाग में एक प्रोजेक्ट लैब है
-                समर्पित स्थान जहां
-                छात्र काम करते हैं
-                व्यावहारिक परियोजनाओं पर, आमतौर पर किसी पाठ्यक्रम या कार्यक्रम के भाग के रूप में।
-                ये प्रोजेक्ट हो सकते हैं
-                व्यक्ति
-                या समूह-आधारित और कंप्यूटर विज्ञान के विभिन्न पहलुओं को शामिल करता है|
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card my-3">
-        <div class="card-body">
-          <div class="row">
-            <div class="fw-semibold fs-3">
-              आरडीबीएमएस और प्रोग्रामिंग लैब्स</div>
-            <div class="col-md-7">
-              <div class="my-3 fs-5">
-                आरडीबीएमएस और प्रोग्रामिंग लैब दोनों ही मूल्यवान शिक्षा प्रदान करते हैं
-                छात्रों के लिए अनुभव
-                कंप्यूटर विज्ञान, आईटी और संबंधित क्षेत्रों में करियर बनाना।
-                आरडीबीएमएस प्रयोगशालाएं छात्रों को सुसज्जित करती हैं
-                डेटा प्रबंधन कौशल के साथ, जबकि प्रोग्रामिंग प्रयोगशालाएँ उन्हें निखारती हैं
-                सॉफ्टवेयर डेवलपमेंट
-                क्षमताएं।
-              </div>
-            </div>
-            <div class="col-md-5">
-              <img src="../../../../assets/images/used/department/ee/lab/15.webp" class="img-fluid shadow" alt>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card my-3">
-        <div class="card-body">
-          <div class="row">
-            <div class="fw-semibold fs-3">
-              प्रोजेक्ट लैब्स</div>
-            <div class="col-md-5">
-              <img src="../../../../assets/images/used/department/ee/lab/13.webp" class="img-fluid shadow" alt>
-            </div>
-            <div class="col-md-7">
-              <div class="my-3 fs-5">
-                एक कॉलेज के कंप्यूटर विज्ञान विभाग में एक प्रोजेक्ट लैब है
-                समर्पित स्थान जहां
-                छात्र काम करते हैं
-                व्यावहारिक परियोजनाओं पर, आमतौर पर किसी पाठ्यक्रम या कार्यक्रम के हिस्से के रूप में।
-                ये प्रोजेक्ट हो सकते हैं
-                व्यक्ति
-                या समूह-आधारित और कंप्यूटर विज्ञान के विभिन्न पहलुओं को शामिल करता है|
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card my-3">
-        <div class="card-body">
-          <div class="row">
-            <div class="fw-semibold fs-3">
-              प्रोजेक्ट लैब्स</div>
-            <div class="col-md-7">
-              <div class="my-3 fs-5">
-                एक कॉलेज कंप्यूटर विज्ञान परियोजना प्रयोगशाला की दीवारों के भीतर,
-                सिद्धांत अपनी पाठ्यपुस्तक का आवरण उतार देता है और मूर्त रूप में परिवर्तित हो जाता है
-                समाधान। छात्र इस समर्पित स्थान में सहयोग करते हैं, ईंधन भरते हैं
-                व्यावहारिक परियोजनाओं से निपटने के लिए जुनून और विविध दृष्टिकोण से
-                - एकल या टीम-आधारित - जो कि विभिन्न पहलुओं पर प्रकाश डालता है
-                मैदान। वे सिर्फ कंप्यूटर विज्ञान नहीं सीख रहे हैं; वे
-                इसे जीना, वास्तविक दुनिया की चुनौतियों से निपटना और आगे बढ़ना
-                प्रौद्योगिकी की सीमाएँ|
-              </div>
-            </div>
-            <div class="col-md-5">
-              <img src="../../../../assets/images/used/department/ee/lab/12.webp" class="img-fluid shadow" alt>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="">
-    <img src="../../../../assets/images/used/department/ee/lab/1.webp" class="img-fluid" alt="">
+    </section>
   </div>
 </div>

@@ -24,10 +24,7 @@ export class HeroSectionComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.themeService.isDarkMode$.subscribe((darkMode: boolean) => {
-      this.isDarkMode = darkMode;
-      // Update component styles or perform other actions based on darkMode
-    });
+    this.isDarkMode = this.themeService.getDarkMode();
   }
 
   @HostListener('window:scroll', [])

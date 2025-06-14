@@ -5,25 +5,54 @@
 :host .btn-red {
   background-color: #b1040e;
   color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+:host .btn-red:hover {
+  background-color: #9e030c;
+}
+
+:host .dark-mode .btn-red {
+  background-color: #e6000d;
+  color: #fff;
+}
+
+:host .dark-mode .btn-red:hover {
+  background-color: #cc000b;
 }
 
 :host .card {
   background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.dark-mode .red-title {
-  color: #fff;
+
+:host .dark-mode .red-title {
+  color: #ff4d4d;
 }
-.dark-mode .card {
+
+:host .dark-mode .card {
   background-color: #333;
   color: #fff;
+  --bs-card-border-color: #fff !important;
 }
-.dark-mode .card{
-  --bs-card-border-color: #fff !important
+
+:host .hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
+
+:host .dark-mode .hover-effect:hover {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
 .border-effect {
   position: relative;
   display: inline-block;
   text-decoration: none;
+  color: #007BFF;
+  transition: color 0.3s ease;
 }
 
 .border-effect:before {
@@ -38,15 +67,28 @@
   transform: translate(10%, -10%);
 }
 
+.border-effect:hover {
+  color: #0056b3;
+}
+
 .border-effect:hover:before {
   width: 80%;
   left: 0;
+}
+
+:host .dark-mode .border-effect {
+  color: #4da6ff;
+}
+
+:host .dark-mode .border-effect:before {
+  background-color: #4da6ff; /* Lighter blue for visibility in dark mode */
 }
 
 .img-container {
   position: relative;
   overflow: hidden;
   display: inline-block;
+  width: 100%;
 }
 
 .img-container::before {
@@ -64,19 +106,119 @@
   background-color: rgba(92, 88, 88, 0.5); /* White tone on hover */
 }
 
+:host .dark-mode .img-container:hover::before {
+  background-color: rgba(200, 200, 200, 0.5); /* Lighter tone for dark mode */
+}
+
 .overlay-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #000; /* Text color */
-  font-size: 24px; /* Adjust font size */
+  font-size: 1.5rem; /* Adjust font size */
   font-weight: bold; /* Adjust font weight */
   opacity: 0; /* Initially hidden */
   transition: opacity 0.5s ease; /* Add transition for smooth effect */
+  z-index: 10;
 }
 
 .img-container:hover .overlay-text {
   opacity: 1; /* Show text on hover */
   color: #fff;
+}
+
+:host .dark-mode .overlay-text {
+  color: #ddd; /* Lighter text for dark mode */
+}
+
+:host .dark-mode .bg-body-tertiary {
+  background-color: #444 !important; /* Darker background for tertiary sections in dark mode */
+}
+
+:host .dark-mode a {
+  color: #4da6ff; /* Lighter link color for visibility in dark mode */
+}
+
+:host .dark-mode .container-fluid,
+:host .dark-mode .container,
+:host .dark-mode .fs-3,
+:host .dark-mode .fs-5,
+:host .dark-mode .card-text,
+:host .dark-mode .overlay-text {
+  color: #eee; /* Lighter text color for general content in dark mode */
+}
+
+/* Added spacing to reduce congestion */
+.container, .container-fluid {
+  padding: 2rem 1.5rem;
+}
+
+.card {
+  margin-bottom: 1.5rem;
+  padding: 0; /* Reset padding to avoid double padding */
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.row {
+  margin-bottom: 2rem;
+}
+
+.col, .col-md-4, .col-lg-3, .col-sm-6 {
+  padding: 0 1rem;
+}
+
+/* Section Styling */
+.section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.sub-title {
+  font-size: 1.75rem;
+  margin-top: 2rem;
+}
+
+.feature-box {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+:host .dark-mode .feature-box {
+  background-color: #444;
+}
+
+.closing-image {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1.1rem;
+  }
+
+  .overlay-text {
+    font-size: 1.2rem;
+  }
 }

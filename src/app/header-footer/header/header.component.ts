@@ -23,7 +23,7 @@ export class HeaderComponent {
   ];
   selectedDarkModeOption: { label: string, icon: string } = this.darkModeOptions[2]; // Default option
 
-  @HostListener('window:scroll') 
+  @HostListener('window:scroll')
   onWindowScroll() {
     if (window.pageYOffset > 100) {
       this.navbarScrolled = true;
@@ -53,13 +53,15 @@ export class HeaderComponent {
   setDarkMode(option: { label: string, icon: string }): void {
     this.selectedDarkModeOption = option;
     this.themeService.setDarkMode(option.label.toLowerCase());
+    this.updateTheme();
   }
 
   ngOnInit() {
-    this.themeService.isDarkMode$.subscribe((darkMode: boolean) => {
-      this.isDarkMode = darkMode;
-      // Update component styles or perform other actions based on darkMode
-    });
+    this.isDarkMode = this.themeService.getDarkMode();
+  }
+
+  updateTheme() {
+    this.isDarkMode = this.themeService.getDarkMode();
   }
 
   getTextSize(): number {

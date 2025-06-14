@@ -1,723 +1,591 @@
-<div class="dark" [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'English'"
-  [style.font-size.px]="getTextSize()">
-  <!-- academic -->
-  <div class="container-fluid">
-    <div class="container text-center py-5">
-      <div class="fs-1 red-title fw-semibold">
-        Academics
-      </div>
-      <div class="fs-3 lh-lg fw-lighter">
-        Preparing students to make meaningful contributions to society as engaged citizens and leaders in a complex
-        world
-      </div>
-      <div class="row py-3 g-3">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="../../../assets/images/used/student-teacher/18.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Empowering Tomorrow's Leaders</h5>
-              <p class="card-text">Shape your future, impact society. Develop critical thinking through real-world
-                projects and community partnerships, becoming an engaged leader.</p>
+<div class="main-content" [class.dark-mode]="isDarkMode" [style.font-size.px]="getTextSize()">
+  <!-- English Content -->
+  <div *ngIf="getCurrentLanguage() === 'English'">
+    <!-- Academics Section - Asymmetrical Card Layout -->
+    <section class="section academics-section">
+      <div class="container py-5">
+        <h2 class="section-title red-title fw-semibold mb-4 text-center">Academics</h2>
+        <p class="section-description fw-lighter mb-5 text-center">
+          Preparing students to make meaningful contributions to society as engaged citizens and leaders in a complex world.
+        </p>
+        <div class="row g-4 mb-5">
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0 hover-effect">
+              <img src="../../../assets/images/used/student-teacher/18.webp" class="card-img-top" alt="Empowering Leaders" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Empowering Tomorrow's Leaders</h5>
+                <p class="card-text">Shape your future, impact society. Develop critical thinking through real-world projects and community partnerships.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row g-4">
+              <div class="col-12">
+                <div class="card h-100 shadow-sm border-0 hover-effect">
+                  <img src="../../../assets/images/used/activites/3.webp" class="card-img-top" alt="Lifelong Learning" loading="lazy">
+                  <div class="card-body">
+                    <h5 class="card-title">Lifelong Learning Fuel</h5>
+                    <p class="card-text">Research opportunities, faculty mentorship, and engaging courses ignite your passion and nurture curiosity.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card h-100 shadow-sm border-0 hover-effect">
+                  <img src="../../../assets/images/used/activites/2.webp" class="card-img-top" alt="Future-Proof Skills" loading="lazy">
+                  <div class="card-body">
+                    <h5 class="card-title">Future-Proof Skills</h5>
+                    <p class="card-text">Spark your passion, cultivate curiosity beyond the classroom with hands-on learning experiences.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="../../../assets/images/used/activites/3.webp" loading="lazy" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Lifelong Learning Fuel</h5>
-              <p class="card-text"> Research opportunities, faculty mentorship, and engaging courses ignite your passion
-                and nurture intellectual curiosity. Go beyond the classroom.</p>
-            </div>
-          </div>
+        <h3 class="sub-title red-title fw-semibold mb-3 text-center">Six Departments to Pursue Your Passions</h3>
+        <div class="row row-cols-2 row-cols-md-6 g-2 mb-5">
+          <a routerLink="/cse" (click)="scrollToTopAndCloseNavbar()" class="col text-center border-effect py-2">CSE</a>
+          <a routerLink="/ee" (click)="scrollToTopAndCloseNavbar()" class="col text-center border-effect py-2">EE</a>
+          <a routerLink="/ece" (click)="scrollToTopAndCloseNavbar()" class="col text-center border-effect py-2">ECE</a>
+          <a routerLink="/me" (click)="scrollToTopAndCloseNavbar()" class="col text-center border-effect py-2">ME</a>
+          <a routerLink="/ce" (click)="scrollToTopAndCloseNavbar()" class="col text-center border-effect py-2">CE</a>
+          <a routerLink="/as" (click)="scrollToTopAndCloseNavbar()" class="col text-center border-effect py-2">AS</a>
         </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="../../../assets/images/used/activites/2.webp" loading="lazy" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title"> Future-Proof Skills</h5>
-              <p class="card-text"> Spark your passion, cultivate curiosity beyond the classroom. Research
-                opportunities, faculty mentorship, and engaging courses fuel your intellectual journey</p>
-            </div>
-          </div>
+        <div class="text-center">
+          <a class="btn btn-red btn-lg text-decoration-none px-5 py-3" (click)="scrollToTopAndCloseNavbar()" routerLink="/courses">More About Academics</a>
         </div>
       </div>
-      <div class="fs-1 red-title py-3 fw-semibold">
-        Six departments in which to pursue your passions
-      </div>
-      <div class="row py-3 g-2">
-        <a routerLink="/cse" (click)="scrollToTopAndCloseNavbar()"
-          class="col-md-2 border-3 border-effect border-start border-end fs-3">CSE</a>
-        <a routerLink="/ee" (click)="scrollToTopAndCloseNavbar()"
-          class="col-md-2 border-3 border-effect border-start border-end fs-3">EE</a>
-        <a routerLink="/ece" (click)="scrollToTopAndCloseNavbar()"
-          class="col-md-2 border-3 border-effect border-start border-end fs-3">ECE </a>
-        <a routerLink="/me" (click)="scrollToTopAndCloseNavbar()"
-          class="col-md-2 border-3 border-effect border-start border-end fs-3">ME </a>
-        <a routerLink="/ce" (click)="scrollToTopAndCloseNavbar()"
-          class="col-md-2 border-3 border-effect border-start border-end fs-3">CE </a>
-        <a routerLink="/as" (click)="scrollToTopAndCloseNavbar()"
-          class="col-md-2 border-3 border-effect border-start border-end fs-3">AS</a>
-      </div>
-      <a class="btn btn-red btn-lg text-decoration-none my-3 px-5" (click)="scrollToTopAndCloseNavbar()"
-        routerLink="/courses">More About Academics</a>
-    </div>
-  </div>
-  <!-- acadmic -->
-  <!-- poly-edu-start -->
-  <div class="container-fluid mx-auto bg-body-tertiary">
-    <div class="container text-center py-5">
-      <div class="fs-1 red-title fw-semibold">
-        Polytechnic Education
-      </div>
-      <div class="fs-3 lh-lg fw-lighter">
-        Polytechnic means giving instruction in a number of arts and sciences with special regard for their use in
-        making a living. Polytechnic is an institute in which technologies that are based on mathematical & scientific
-        basis such as engineering and other applied sciences are taught. Polytechnic education provides career based
-        education. The choice of a career is possibly one of the most critical decisions in one's life. It shapes the
-        future and determines the life style. The rapid race of technological development and its increasing adoption by
-        industry have led to growing complexity of industrial activity.
-      </div>
-      <div class="py-3">
-        <img src="../../../assets/images/used/activites/poly.png" loading="lazy" class="img-fluid shadow rounded"
-          alt="">
-      </div>
-    </div>
-  </div>
-  <!-- poly-edu-end -->
-  <!-- overlay-img -->
-  <div class="img-container">
-    <img src="../../../assets/images/used/building/batch_16.webp" loading="lazy" class="img-fluid" alt="">
-    <div class="overlay-text text-center">Unwind in the verdant embrace of Talwara, where nature paints serenity on
-      every canvas.</div>
-  </div>
-  <!-- overlay-img -->
-  <!-- anti-ragging -->
-  <div class="container text-center py-5">
-    <div class="fs-1 red-title fw-semibold">
-      Anti-Ragging
-    </div>
-    <div class="fs-3 lh-lg fw-lighter">
-      The college strictly prohibits ragging, including verbal or physical mistreatment of freshers. Offenders face
-      dismissal. Any disruptive activities causing annoyance, hardship, or harm, whether physical or psychological,
-      will result in disciplinary action. The college is committed to maintaining a safe and inclusive environment for
-      all students. <a href="https://www.antiragging.in/" target="_blank" class="text-decoration-none red-title"> For
-        More information</a>
-    </div>
-    <div class="py-3">
-      <img src="../../../assets/images/used/activites/anti-ragging.jpg" loading="lazy" class="img-fluid shadow rounded"
-        alt="">
-    </div>
-  </div>
-  <!-- anti-ragging -->
-  <!-- news -->
-  <!-- <div class="container-fluid bg-body-tertiary">
-    <app-news></app-news>
-  </div> -->
-  <!-- news -->
+    </section>
 
-
-  <!-- reserch -->
-  <div class="container-fluid bg-body-tertiary py-5">
-    <div class="container text-center ">
-      <div class="fs-1 red-title fw-semibold">
-        Research
-      </div>
-      <div class="fs-3 lh-lg fw-lighter py-3">
-        Fueling progress through groundbreaking research across health, tech, and knowledge.
-      </div>
-      <div class="border-bottom border-top border-danger py-3 border-2">
-        <div class="row g-3">
-          <div class="col-md-4">
-            <div class="fw-semibold fs-4">Revolutionize Your Future</div>
-            <div class="fs-5"> Forge discoveries with 15 cutting-edge research institutes at GPC Talwara. Shape the
-              world.</div>
+    <!-- Polytechnic Education Section - Full Width Banner -->
+    <section class="section bg-body-tertiary py-5">
+      <div class="container-fluid p-0">
+        <div class="banner-container text-center position-relative">
+          <img src="../../../assets/images/used/activites/poly.png" loading="lazy" class="img-fluid w-100 banner-image" alt="Polytechnic Education">
+          <div class="banner-overlay">
+            <h2 class="section-title red-title fw-semibold mb-3">Polytechnic Education</h2>
+            <p class="section-description fw-lighter mx-auto">
+              Polytechnic education provides career-based learning, focusing on technologies grounded in mathematical and scientific principles such as engineering and applied sciences. It prepares students for the complexities of industrial activity in a rapidly evolving technological landscape.
+            </p>
           </div>
-          <div class="col-md-4">
-            <div class="fw-semibold fs-4">Cross Boundaries, Change Lives</div>
-            <div class="fs-5"> GPC Talwara's research impacts health, tech, and beyond. Join the groundbreaking journey.
+        </div>
+      </div>
+    </section>
+
+    <!-- Scenic Overlay Image -->
+    <div class="img-container my-5">
+      <img src="../../../assets/images/used/building/batch_16.webp" loading="lazy" class="img-fluid w-100" alt="Talwara Scenic View">
+      <div class="overlay-text text-center">Unwind in the verdant embrace of Talwara, where nature paints serenity on every canvas.</div>
+    </div>
+
+    <!-- Anti-Ragging Section -->
+    <section class="section py-5">
+      <div class="container text-center">
+        <h2 class="section-title red-title fw-semibold mb-4">Anti-Ragging</h2>
+        <p class="section-description fw-lighter mb-5">
+          The college strictly prohibits ragging, including verbal or physical mistreatment of freshers. Offenders face dismissal. We are committed to maintaining a safe and inclusive environment for all students.
+          <a href="https://www.antiragging.in/" target="_blank" rel="noopener noreferrer" class="text-decoration-none red-title">For more information</a>.
+        </p>
+        <img src="../../../assets/images/used/activites/anti-ragging.jpg" loading="lazy" class="img-fluid shadow rounded w-75" alt="Anti-Ragging Campaign">
+      </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="section bg-body-tertiary py-5">
+      <div class="container text-center">
+        <h2 class="section-title red-title fw-semibold mb-4">Research</h2>
+        <p class="section-description fw-lighter mb-5">
+          Fueling progress through groundbreaking research across health, technology, and knowledge.
+        </p>
+        <div class="row row-cols-1 row-cols-md-3 g-4 border-bottom border-top border-danger py-4 border-2">
+          <div class="col">
+            <div class="feature-box p-3">
+              <h5 class="fw-semibold mb-2">Revolutionize Your Future</h5>
+              <p>Forge discoveries with 15 cutting-edge research institutes at GPC Talwara. Shape the world.</p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="fw-semibold fs-4">Fuel Your Innovation</div>
-            <div class="fs-5"> Dive into GPC Talwara's research. 15 diverse institutes: Your gateway to real-world
-              impact.</div>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="btn btn-red btn-lg text-decoration-none my-3 px-5">More About Research</div> -->
-    </div>
-  </div>
-  <!-- reserch -->
-  <!-- campus life -->
-  <div class="container text-center py-5">
-    <div class="fs-1 red-title  fw-semibold">
-      Campus Life
-    </div>
-    <div class="fs-3 lh-lg fw-lighter">
-      Dive into vibrant communities, ignite passions, explore beyond the classroom at GPC.
-    </div>
-    <div class="row py-3 g-3">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="../../../assets/images/used/activites/2.jpg" loading="lazy" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Explore, Ignite, Connect</h5>
-            <p class="card-text">30+ clubs fuel your passions, unleash hidden talents. Immerse in vibrant campus life.
-              Build lasting connections, shape your future at GPC.
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 ">
-        <div class="card">
-          <img src="../../../assets/images/used/building/17.jpg" loading="lazy" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Impact & Explore</h5>
-            <p class="card-text"> Talwara's beauty, weekend escapes, rich cultures await. Make a difference through
-              service. Shape your future, impact your community. Start at GPC.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="../../../assets/images/used/activites/9.jpg" loading="lazy" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Thrive & Grow</h5>
-            <p class="card-text"> Expert guidance, future planning, well-being support. Counselors, career experts,
-              healthcare, sports & library - your success network at GPC. </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <a routerLink="/events-picture" (click)="scrollToTopAndCloseNavbar()"
-      class="btn btn-red btn-lg text-decoration-none my-3 px-5">More About Campus Life</a>
-  </div>
-  <!-- campus life -->
-  <!-- admission -->
-  <div class="container-fluid bg-body-tertiary py-5">
-    <div class="container text-center">
-      <div class="fs-1 red-title fw-semibold">
-        Admission
-      </div>
-      <div class="fs-3 lh-lg fw-lighter">
-        Chart your course with GPC's cutting-edge programs and supportive community. Apply today.
-      </div>
-      <div class="py-3">
-        <img src="../../../assets/images/used/addmision/8.jpg" loading="lazy" class="img-fluid shadow rounded" alt="">
-      </div>
-      <div class="row text-start g-3">
-        <div class="col-md-6">
-          <div class="fw-semibold fs-4">
-            Unleash your potential at GPC Talwara.
-          </div>
-          <div class="fs-5">
-            Explore diverse fields, collaborate with passionate learners, and challenge yourself like never before. We
-            seek bright minds brimming with curiosity and ready to shape their future through hands-on learning and
-            real-world projects.
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="fw-semibold fs-4">
-            Chart your unique path at GPC Talwara.
-          </div>
-          <div class="fs-5">
-            Thrive on exploration, collaboration, and learning beyond textbooks. We welcome driven individuals to delve
-            into industry-relevant skills and push boundaries with our community.
-          </div>
-        </div>
-      </div>
-      <a routerLink="/admission-intake" (click)="scrollToTopAndCloseNavbar()"
-        class="btn btn-red btn-lg text-decoration-none my-3 px-5">More About Admission</a>
-    </div>
-  </div>
-  <!-- admission -->
-  <!-- last-img -->
-  <div>
-    <img src="../../../assets/images/used/activites/batch_20.jpg" loading="lazy" class="img-fluid" alt="">
-  </div>
-  <!-- last-img -->
-</div>
-
-<!-- punjabi -->
-<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'ਪੰਜਾਬੀ'" [style.font-size.px]="getTextSize()">
-  <!-- academic -->
-  <div class="container-fluid">
-    <div class="container text-center py-5">
-      <div class="fs-1 red-title fw-semibold">
-        ਅਕਾਦਮਿਕ
-      </div>
-      <div class="fs-3 lh-lg fw-lighter">
-        ਵਿਦਿਆਰਥੀਆਂ ਨੂੰ ਇੱਕ ਕੰਪਲੈਕਸ ਵਿੱਚ ਰੁੱਝੇ ਹੋਏ ਨਾਗਰਿਕਾਂ ਅਤੇ ਨੇਤਾਵਾਂ ਵਜੋਂ ਸਮਾਜ ਵਿੱਚ ਸਾਰਥਕ ਯੋਗਦਾਨ ਪਾਉਣ ਲਈ ਤਿਆਰ ਕਰਨਾ
-        ਸੰਸਾਰ
-      </div>
-      <div class="row py-3 g-3">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="../../../assets/images/used/student-teacher/18.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">ਕੱਲ੍ਹ ਦੇ ਨੇਤਾਵਾਂ ਨੂੰ ਸ਼ਕਤੀ ਪ੍ਰਦਾਨ ਕਰਨਾ</h5>
-              <p class="card-text">ਆਪਣਾ ਭਵਿੱਖ ਬਣਾਓ, ਸਮਾਜ ਨੂੰ ਪ੍ਰਭਾਵਿਤ ਕਰੋ। ਅਸਲ-ਸੰਸਾਰ ਦੁਆਰਾ ਆਲੋਚਨਾਤਮਕ ਸੋਚ ਦਾ ਵਿਕਾਸ ਕਰੋ
-                ਪ੍ਰੋਜੈਕਟ ਅਤੇ ਕਮਿਊਨਿਟੀ ਭਾਈਵਾਲੀ, ਇੱਕ ਰੁਝੇਵੇਂ ਵਾਲੇ ਨੇਤਾ ਬਣਨਾ।</p>
+          <div class="col">
+            <div class="feature-box p-3">
+              <h5 class="fw-semibold mb-2">Cross Boundaries, Change Lives</h5>
+              <p>GPC Talwara's research impacts health, tech, and beyond. Join the groundbreaking journey.</p>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="../../../assets/images/used/activites/3.webp" loading="lazy" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">ਜੀਵਨ ਭਰ ਸਿੱਖਣ ਦਾ ਬਾਲਣ</h5>
-              <p class="card-text"> ਖੋਜ ਦੇ ਮੌਕੇ, ਫੈਕਲਟੀ ਸਲਾਹਕਾਰ, ਅਤੇ ਦਿਲਚਸਪ ਕੋਰਸ ਤੁਹਾਡੇ ਜਨੂੰਨ ਨੂੰ ਜਗਾਉਂਦੇ ਹਨ
-                ਅਤੇ ਬੌਧਿਕ ਉਤਸੁਕਤਾ ਦਾ ਪਾਲਣ ਪੋਸ਼ਣ ਕਰੋ। ਕਲਾਸਰੂਮ ਤੋਂ ਪਰੇ ਜਾਓ।</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="../../../assets/images/used/activites/2.webp" loading="lazy" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title"> ਭਵਿੱਖ-ਸਬੂਤ ਹੁਨਰ</h5>
-              <p class="card-text"> ਆਪਣੇ ਜਨੂੰਨ ਨੂੰ ਜਗਾਓ, ਕਲਾਸਰੂਮ ਤੋਂ ਪਰੇ ਉਤਸੁਕਤਾ ਪੈਦਾ ਕਰੋ। ਖੋਜ
-                ਮੌਕੇ, ਫੈਕਲਟੀ ਸਲਾਹਕਾਰ, ਅਤੇ ਦਿਲਚਸਪ ਕੋਰਸ ਤੁਹਾਡੀ ਬੌਧਿਕ ਯਾਤਰਾ ਨੂੰ ਵਧਾਉਂਦੇ ਹਨ</p>
+          <div class="col">
+            <div class="feature-box p-3">
+              <h5 class="fw-semibold mb-2">Fuel Your Innovation</h5>
+              <p>Dive into GPC Talwara's research. 15 diverse institutes: Your gateway to real-world impact.</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="fs-1 red-title py-3 fw-semibold">
-        ਛੇ ਵਿਭਾਗ ਜਿਨ੍ਹਾਂ ਵਿੱਚ ਤੁਹਾਡੇ ਜਨੂੰਨ ਦਾ ਪਿੱਛਾ ਕਰਨਾ ਹੈ
-      </div>
-      <div class="row py-3 g-2">
-        <a routerLink="/cse" (click)="scrollToTopAndCloseNavbar()"
-          class="col-md-2 border-3 border-effect border-start border-end fs-3">CSE</a>
-        <a routerLink="/ee" (click)="scrollToTopAndCloseNavbar()"
-          class="col-md-2 border-3 border-effect border-start border-end fs-3">EE</a>
-        <a routerLink="/ece" (click)="scrollToTopAndCloseNavbar()"
-          class="col-md-2 border-3 border-effect border-start border-end fs-3">ECE </a>
-        <a routerLink="/me" (click)="scrollToTopAndCloseNavbar()"
-          class="col-md-2 border-3 border-effect border-start border-end fs-3">ME </a>
-        <a routerLink="/ce" (click)="scrollToTopAndCloseNavbar()"
-          class="col-md-2 border-3 border-effect border-start border-end fs-3">CE </a>
-        <a routerLink="/as" (click)="scrollToTopAndCloseNavbar()"
-          class="col-md-2 border-3 border-effect border-start border-end fs-3">AS</a>
-      </div>
-      <a class="btn btn-red btn-lg text-decoration-none my-3 px-5" (click)="scrollToTopAndCloseNavbar()"
-        routerLink="/courses">ਅਕਾਦਮਿਕ ਬਾਰੇ ਹੋਰ</a>
-    </div>
-  </div>
-  <!-- acadmic -->
-  <!-- poly-edu-start -->
-  <div class="container-fluid mx-auto bg-body-tertiary">
-    <div class="container text-center py-5">
-      <div class="fs-1 red-title fw-semibold">
-        ਪੌਲੀਟੈਕਨਿਕ ਸਿੱਖਿਆ
-      </div>
-      <div class="fs-3 lh-lg fw-lighter">
-        ਪੌਲੀਟੈਕਨਿਕ ਦਾ ਅਰਥ ਹੈ ਕਈ ਕਲਾਵਾਂ ਅਤੇ ਵਿਗਿਆਨਾਂ ਵਿੱਚ ਉਹਨਾਂ ਦੀ ਵਰਤੋਂ ਲਈ ਵਿਸ਼ੇਸ਼ ਧਿਆਨ ਦੇ ਨਾਲ ਹਦਾਇਤਾਂ ਦੇਣਾ
-        ਇੱਕ ਜੀਵਤ ਬਣਾਉਣਾ. ਪੌਲੀਟੈਕਨਿਕ ਇੱਕ ਸੰਸਥਾ ਹੈ ਜਿਸ ਵਿੱਚ ਗਣਿਤ ਅਤੇ ਵਿਗਿਆਨਕ 'ਤੇ ਆਧਾਰਿਤ ਤਕਨੀਕ
-        ਇੰਜਨੀਅਰਿੰਗ ਅਤੇ ਹੋਰ ਅਪਲਾਈਡ ਸਾਇੰਸਜ਼ ਵਰਗੇ ਆਧਾਰਾਂ ਨੂੰ ਪੜ੍ਹਾਇਆ ਜਾਂਦਾ ਹੈ। ਪੌਲੀਟੈਕਨਿਕ ਸਿੱਖਿਆ ਕੈਰੀਅਰ ਅਧਾਰਤ ਪ੍ਰਦਾਨ ਕਰਦੀ ਹੈ
-        ਸਿੱਖਿਆ ਕਰੀਅਰ ਦੀ ਚੋਣ ਸੰਭਵ ਤੌਰ 'ਤੇ ਕਿਸੇ ਦੇ ਜੀਵਨ ਦੇ ਸਭ ਤੋਂ ਮਹੱਤਵਪੂਰਨ ਫੈਸਲਿਆਂ ਵਿੱਚੋਂ ਇੱਕ ਹੈ। ਇਹ ਆਕਾਰ ਦਿੰਦਾ ਹੈ
-        ਭਵਿੱਖ ਅਤੇ ਜੀਵਨ ਸ਼ੈਲੀ ਨੂੰ ਨਿਰਧਾਰਤ ਕਰਦਾ ਹੈ। ਟੈਕਨੋਲੋਜੀਕਲ ਵਿਕਾਸ ਦੀ ਤੇਜ਼ ਦੌੜ ਅਤੇ ਇਸਦੀ ਵੱਧ ਰਹੀ ਗੋਦ
-        ਉਦਯੋਗ ਨੇ ਉਦਯੋਗਿਕ ਗਤੀਵਿਧੀ ਦੀ ਵਧ ਰਹੀ ਗੁੰਝਲਤਾ ਨੂੰ ਅਗਵਾਈ ਕੀਤੀ ਹੈ|
-      </div>
-      <div class="py-3">
-        <img src="../../../assets/images/used/activites/poly.png" loading="lazy" class="img-fluid shadow rounded"
-          alt="">
-      </div>
-    </div>
-  </div>
-  <!-- poly-edu-end -->
-  <!-- overlay-img -->
-  <div class="img-container">
-    <img src="../../../assets/images/used/building/batch_16.webp" loading="lazy" class="img-fluid" alt="">
-    <div class="overlay-text text-center">ਤਲਵਾੜਾ ਦੇ ਹਰੇ ਭਰੇ ਗਲੇ ਵਿੱਚ ਆਰਾਮ ਕਰੋ, ਜਿੱਥੇ ਕੁਦਰਤ ਸ਼ਾਂਤੀ ਨੂੰ ਰੰਗ ਦਿੰਦੀ ਹੈ
-      ਹਰ ਕੈਨਵਸ।</div>
-  </div>
-  <!-- overlay-img -->
-  <!-- anti-ragging -->
-  <div class="container text-center py-5">
-    <div class="fs-1 red-title fw-semibold">
-      ਐਂਟੀ-ਰੈਗਿੰਗ
-    </div>
-    <div class="fs-3 lh-lg fw-lighter">
-      ਕਾਲਜ ਰੈਗਿੰਗ ਦੀ ਸਖ਼ਤੀ ਨਾਲ ਮਨਾਹੀ ਕਰਦਾ ਹੈ, ਜਿਸ ਵਿੱਚ ਫਰੈਸ਼ਰਾਂ ਨਾਲ ਜ਼ੁਬਾਨੀ ਜਾਂ ਸਰੀਰਕ ਦੁਰਵਿਵਹਾਰ ਸ਼ਾਮਲ ਹੈ। ਅਪਰਾਧੀਆਂ ਦਾ ਸਾਹਮਣਾ ਕਰਨਾ
-      ਬਰਖਾਸਤਗੀ ਕੋਈ ਵੀ ਵਿਘਨਕਾਰੀ ਗਤੀਵਿਧੀਆਂ ਜੋ ਪਰੇਸ਼ਾਨੀ, ਮੁਸ਼ਕਲ ਜਾਂ ਨੁਕਸਾਨ ਦਾ ਕਾਰਨ ਬਣਦੀਆਂ ਹਨ, ਭਾਵੇਂ ਸਰੀਰਕ ਜਾਂ ਮਨੋਵਿਗਿਆਨਕ,
-      ਅਨੁਸ਼ਾਸਨੀ ਕਾਰਵਾਈ ਦਾ ਨਤੀਜਾ ਹੋਵੇਗਾ। ਕਾਲਜ ਲਈ ਇੱਕ ਸੁਰੱਖਿਅਤ ਅਤੇ ਸਮਾਵੇਸ਼ੀ ਮਾਹੌਲ ਬਣਾਈ ਰੱਖਣ ਲਈ ਵਚਨਬੱਧ ਹੈ
-      ਸਾਰੇ ਵਿਦਿਆਰਥੀ।<a href="https://www.antiragging.in/" target="_blank" class="text-decoration-none red-title">ਲਈ
-        ਹੋਰ ਜਾਣਕਾਰੀ</a>
-    </div>
-    <div class="py-3">
-      <img src="../../../assets/images/used/activites/anti-ragging.jpg" loading="lazy" class="img-fluid shadow rounded"
-        alt="">
-    </div>
-  </div>
-  <!-- anti-ragging -->
-  <!-- news -->
-  <!-- <div class="container-fluid bg-body-tertiary">
-    <app-news></app-news>
-  </div> -->
-  <!-- news -->
+    </section>
 
-
-  <!-- reserch -->
-  <div class="container-fluid bg-body-tertiary py-5">
-    <div class="container text-center ">
-      <div class="fs-1 red-title fw-semibold">
-        ਖੋਜ
-      </div>
-      <div class="fs-3 lh-lg fw-lighter py-3">
-        ਸਿਹਤ, ਤਕਨੀਕ, ਅਤੇ ਗਿਆਨ ਵਿੱਚ ਜ਼ਮੀਨੀ ਖੋਜ ਦੁਆਰਾ ਤਰੱਕੀ ਨੂੰ ਤੇਜ਼ ਕਰਨਾ।
-      </div>
-      <div class="border-bottom border-top border-danger py-3 border-2">
-        <div class="row g-3">
-          <div class="col-md-4">
-            <div class="fw-semibold fs-4">ਆਪਣਾ ਭਵਿੱਖ ਬਦਲੋ</div>
-            <div class="fs-5"> GPC ਤਲਵਾੜਾ ਵਿਖੇ 15 ਅਤਿ-ਆਧੁਨਿਕ ਖੋਜ ਸੰਸਥਾਵਾਂ ਦੇ ਨਾਲ ਖੋਜਾਂ ਦਾ ਨਿਰਮਾਣ ਕਰੋ। ਨੂੰ ਆਕਾਰ ਦਿਓ
-              ਸੰਸਾਰ।</div>
-          </div>
-          <div class="col-md-4">
-            <div class="fw-semibold fs-4">ਹੱਦਾਂ ਪਾਰ ਕਰੋ, ਜੀਵਨ ਬਦਲੋ</div>
-            <div class="fs-5"> GPC ਤਲਵਾੜਾ ਦੀ ਖੋਜ ਸਿਹਤ, ਤਕਨੀਕ, ਅਤੇ ਇਸ ਤੋਂ ਇਲਾਵਾ ਹੋਰ ਵੀ ਪ੍ਰਭਾਵਿਤ ਕਰਦੀ ਹੈ। ਸ਼ੁਰੂਆਤੀ ਯਾਤਰਾ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ।
+    <!-- Campus Life Section - Staggered Grid Layout -->
+    <section class="section py-5">
+      <div class="container">
+        <h2 class="section-title red-title fw-semibold mb-4 text-center">Campus Life</h2>
+        <p class="section-description fw-lighter mb-5 text-center">
+          Dive into vibrant communities, ignite passions, and explore beyond the classroom at GPC.
+        </p>
+        <div class="row g-4 mb-5 staggered-grid">
+          <div class="col-md-4 staggered-item" style="margin-top: 0;">
+            <div class="card h-100 shadow-sm border-0 hover-effect">
+              <img src="../../../assets/images/used/activites/2.jpg" class="card-img-top" alt="Explore & Connect" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Explore, Ignite, Connect</h5>
+                <p class="card-text">30+ clubs fuel your passions, unleash hidden talents. Immerse in vibrant campus life and build lasting connections.</p>
+              </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="fw-semibold fs-4">ਤੁਹਾਡੀ ਨਵੀਨਤਾ ਨੂੰ ਵਧਾਓ</div>
-            <div class="fs-5"> ਜੀਪੀਸੀ ਤਲਵਾੜਾ ਦੀ ਖੋਜ ਵਿੱਚ ਡੁਬਕੀ ਮਾਰੋ। 15 ਵਿਭਿੰਨ ਸੰਸਥਾਵਾਂ: ਅਸਲ-ਸੰਸਾਰ ਲਈ ਤੁਹਾਡਾ ਗੇਟਵੇ
-              ਪ੍ਰਭਾਵ।</div>
+          <div class="col-md-4 staggered-item" style="margin-top: 2rem;">
+            <div class="card h-100 shadow-sm border-0 hover-effect">
+              <img src="../../../assets/images/used/building/17.jpg" class="card-img-top" alt="Impact & Explore" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Impact & Explore</h5>
+                <p class="card-text">Talwara's beauty, weekend escapes, and rich cultures await. Make a difference through service and shape your future.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 staggered-item" style="margin-top: 4rem;">
+            <div class="card h-100 shadow-sm border-0 hover-effect">
+              <img src="../../../assets/images/used/activites/9.jpg" class="card-img-top" alt="Thrive & Grow" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Thrive & Grow</h5>
+                <p class="card-text">Expert guidance, future planning, and well-being support. Counselors, career experts, and facilities for your success at GPC.</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- <div class="btn btn-red btn-lg text-decoration-none my-3 px-5">More About Research</div> -->
-    </div>
-  </div>
-  <!-- reserch -->
-  <!-- campus life -->
-  <div class="container text-center py-5">
-    <div class="fs-1 red-title  fw-semibold">
-      ਕੈਂਪਸ ਲਾਈਫ
-    </div>
-    <div class="fs-3 lh-lg fw-lighter">
-      ਜੀਪੀਸੀ 'ਤੇ ਜੀਵੰਤ ਭਾਈਚਾਰਿਆਂ ਵਿੱਚ ਡੁਬਕੀ ਲਗਾਓ, ਜਨੂੰਨ ਨੂੰ ਜਗਾਓ, ਕਲਾਸਰੂਮ ਤੋਂ ਬਾਹਰ ਦੀ ਪੜਚੋਲ ਕਰੋ।
-    </div>
-    <div class="row py-3 g-3">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="../../../assets/images/used/activites/2.jpg" loading="lazy" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">ਪੜਚੋਲ ਕਰੋ, ਇਗਨਾਈਟ ਕਰੋ, ਕਨੈਕਟ ਕਰੋ</h5>
-            <p class="card-text">30+ ਕਲੱਬ ਤੁਹਾਡੇ ਜਨੂੰਨ ਨੂੰ ਵਧਾਉਂਦੇ ਹਨ, ਲੁਕੀਆਂ ਹੋਈਆਂ ਪ੍ਰਤਿਭਾਵਾਂ ਨੂੰ ਬਾਹਰ ਕੱਢਦੇ ਹਨ। ਜੀਵੰਤ ਕੈਂਪਸ ਜੀਵਨ ਵਿੱਚ ਲੀਨ ਹੋਵੋ.
-              ਸਥਾਈ ਕਨੈਕਸ਼ਨ ਬਣਾਓ, GPC 'ਤੇ ਆਪਣਾ ਭਵਿੱਖ ਬਣਾਓ।
-          </div>
+        <div class="text-center">
+          <a routerLink="/events-picture" (click)="scrollToTopAndCloseNavbar()" class="btn btn-red btn-lg text-decoration-none px-5 py-3">More About Campus Life</a>
         </div>
       </div>
-      <div class="col-md-4 ">
-        <div class="card">
-          <img src="../../../assets/images/used/building/17.jpg" loading="lazy" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">ਪ੍ਰਭਾਵ ਅਤੇ ਪੜਚੋਲ</h5>
-            <p class="card-text"> ਤਲਵਾੜਾ ਦੀ ਸੁੰਦਰਤਾ, ਹਫਤੇ ਦੇ ਅਖੀਰਲੇ ਦਿਨ, ਅਮੀਰ ਸੱਭਿਆਚਾਰ ਉਡੀਕਦੇ ਹਨ। ਦੁਆਰਾ ਇੱਕ ਫਰਕ ਕਰੋ
-              ਸੇਵਾ। ਆਪਣਾ ਭਵਿੱਖ ਬਣਾਓ, ਆਪਣੇ ਭਾਈਚਾਰੇ ਨੂੰ ਪ੍ਰਭਾਵਿਤ ਕਰੋ। GPC ਤੋਂ ਸ਼ੁਰੂ ਕਰੋ।</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="../../../assets/images/used/activites/9.jpg" loading="lazy" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">ਪ੍ਰਫੁੱਲਤ ਅਤੇ ਵਧੋ</h5>
-            <p class="card-text"> ਮਾਹਰ ਮਾਰਗਦਰਸ਼ਨ, ਭਵਿੱਖ ਦੀ ਯੋਜਨਾਬੰਦੀ, ਤੰਦਰੁਸਤੀ ਸਹਾਇਤਾ. ਸਲਾਹਕਾਰ, ਕਰੀਅਰ ਮਾਹਿਰ,
-              ਸਿਹਤ ਸੰਭਾਲ, ਖੇਡਾਂ ਅਤੇ ਲਾਇਬ੍ਰੇਰੀ - GPC 'ਤੇ ਤੁਹਾਡਾ ਸਫਲਤਾ ਦਾ ਨੈੱਟਵਰਕ। </p>
-          </div>
-        </div>
-      </div>
+    </section>
 
-    </div>
-    <a routerLink="/events-picture" (click)="scrollToTopAndCloseNavbar()"
-      class="btn btn-red btn-lg text-decoration-none my-3 px-5">ਕੈਂਪਸ ਲਾਈਫ ਬਾਰੇ ਹੋਰ</a>
-  </div>
-  <!-- campus life -->
-  <!-- admission -->
-  <div class="container-fluid bg-body-tertiary py-5">
-    <div class="container text-center">
-      <div class="fs-1 red-title fw-semibold">
-        ਦਾਖਲਾ
-      </div>
-      <div class="fs-3 lh-lg fw-lighter">
-        GPC ਦੇ ਅਤਿ-ਆਧੁਨਿਕ ਪ੍ਰੋਗਰਾਮਾਂ ਅਤੇ ਸਹਾਇਕ ਭਾਈਚਾਰੇ ਦੇ ਨਾਲ ਆਪਣੇ ਕੋਰਸ ਨੂੰ ਚਾਰਟ ਕਰੋ। ਅੱਜ ਹੀ ਅਪਲਾਈ ਕਰੋ।
-      </div>
-      <div class="py-3">
-        <img src="../../../assets/images/used/addmision/8.jpg" loading="lazy" class="img-fluid shadow rounded" alt="">
-      </div>
-      <div class="row text-start g-3">
-        <div class="col-md-6">
-          <div class="fw-semibold fs-4">
-            ਜੀਪੀਸੀ ਤਲਵਾੜਾ ਵਿਖੇ ਆਪਣੀ ਸਮਰੱਥਾ ਨੂੰ ਉਜਾਗਰ ਕਰੋ।
+    <!-- Admission Section - Split Layout with Image on One Side -->
+    <section class="section bg-body-tertiary py-5">
+      <div class="container">
+        <h2 class="section-title red-title fw-semibold mb-4 text-center">Admission</h2>
+        <p class="section-description fw-lighter mb-5 text-center">
+          Chart your course with GPC's cutting-edge programs and supportive community. Apply today.
+        </p>
+        <div class="row g-4 mb-5 align-items-center">
+          <div class="col-md-6">
+            <img src="../../../assets/images/used/addmision/8.jpg" loading="lazy" class="img-fluid shadow rounded" alt="Admission">
           </div>
-          <div class="fs-5">
-            ਵਿਭਿੰਨ ਖੇਤਰਾਂ ਦੀ ਪੜਚੋਲ ਕਰੋ, ਜੋਸ਼ੀਲੇ ਸਿਖਿਆਰਥੀਆਂ ਨਾਲ ਸਹਿਯੋਗ ਕਰੋ, ਅਤੇ ਆਪਣੇ ਆਪ ਨੂੰ ਚੁਣੌਤੀ ਦਿਓ ਜਿਵੇਂ ਪਹਿਲਾਂ ਕਦੇ ਨਹੀਂ। ਅਸੀਂ
-            ਉਤਸੁਕਤਾ ਨਾਲ ਭਰੇ ਹੋਏ ਚਮਕਦਾਰ ਮਨਾਂ ਦੀ ਭਾਲ ਕਰੋ ਅਤੇ ਹੱਥਾਂ ਨਾਲ ਸਿੱਖਣ ਅਤੇ ਆਪਣੇ ਭਵਿੱਖ ਨੂੰ ਬਣਾਉਣ ਲਈ ਤਿਆਰ ਰਹੋ
-            ਅਸਲ-ਸੰਸਾਰ ਪ੍ਰੋਜੈਕਟ|
+          <div class="col-md-6 text-start">
+            <div class="feature-box p-4 mb-3">
+              <h5 class="fw-semibold mb-2">Unleash Your Potential at GPC Talwara</h5>
+              <p>Explore diverse fields, collaborate with passionate learners, and challenge yourself with hands-on learning and real-world projects.</p>
+            </div>
+            <div class="feature-box p-4">
+              <h5 class="fw-semibold mb-2">Chart Your Unique Path at GPC Talwara</h5>
+              <p>Thrive on exploration and learning beyond textbooks. We welcome driven individuals to delve into industry-relevant skills with our community.</p>
+            </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="fw-semibold fs-4">
-            GPC ਤਲਵਾੜਾ ਵਿਖੇ ਆਪਣਾ ਵਿਲੱਖਣ ਮਾਰਗ ਚਾਰਟ ਕਰੋ।
-          </div>
-          <div class="fs-5">
-            ਪਾਠ-ਪੁਸਤਕਾਂ ਤੋਂ ਪਰੇ ਪੜਚੋਲ, ਸਹਿਯੋਗ, ਅਤੇ ਸਿੱਖਣ 'ਤੇ ਤਰੱਕੀ ਕਰੋ। ਅਸੀਂ ਖੋਜ ਕਰਨ ਲਈ ਪ੍ਰੇਰਿਤ ਵਿਅਕਤੀਆਂ ਦਾ ਸੁਆਗਤ ਕਰਦੇ ਹਾਂ
-            ਉਦਯੋਗ-ਸੰਬੰਧਿਤ ਹੁਨਰ ਵਿੱਚ ਅਤੇ ਸਾਡੇ ਭਾਈਚਾਰੇ ਦੇ ਨਾਲ ਸੀਮਾਵਾਂ ਨੂੰ ਧੱਕੋ।
-          </div>
+        <div class="text-center">
+          <a routerLink="/admission-intake" (click)="scrollToTopAndCloseNavbar()" class="btn btn-red btn-lg text-decoration-none px-5 py-3">More About Admission</a>
         </div>
       </div>
-      <a routerLink="/admission-intake" (click)="scrollToTopAndCloseNavbar()"
-        class="btn btn-red btn-lg text-decoration-none my-3 px-5"> ਦਾਖਲੇ ਬਾਰੇ ਹੋਰ</a>
-    </div>
-  </div>
-  <!-- admission -->
-  <!-- last-img -->
-  <div>
-    <img src="../../../assets/images/used/activites/batch_20.jpg" loading="lazy" class="img-fluid" alt="">
-  </div>
-  <!-- last-img -->
-</div>
+    </section>
 
-<!---hindi--->
-<div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'हिंदी'" [style.font-size.px]="getTextSize()">
- <!-- academic -->
- <div class="container-fluid">
-  <div class="container text-center py-5">
-    <div class="fs-1 red-title fw-semibold">
-      शैक्षणिक
-    </div>
-    <div class="fs-3 lh-lg fw-lighter">
-      छात्रों को एक जटिल समूह में लगे हुए नागरिकों और नेताओं के रूप में समाज में सार्थक योगदान देने के लिए तैयार करना
-      दुनिया
-    </div>
-    <div class="row py-3 g-3">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="../../../assets/images/used/student-teacher/18.webp" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">कल के नेताओं को सशक्त बनाना</h5>
-            <p class="card-text">अपने भविष्य को आकार दें, समाज पर प्रभाव डालें। वास्तविक दुनिया के माध्यम से आलोचनात्मक सोच विकसित करें
-              परियोजनाओं और सामुदायिक भागीदारी, एक प्रतिबद्ध नेता बनना।</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="../../../assets/images/used/activites/3.webp" loading="lazy" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">आजीवन सीखने का ईंधन</h5>
-            <p class="card-text">अनुसंधान के अवसर, संकाय परामर्श और आकर्षक पाठ्यक्रम आपके जुनून को प्रज्वलित करते हैं
-              और बौद्धिक जिज्ञासा का पोषण करें। कक्षा से आगे बढ़ें।</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="../../../assets/images/used/activites/2.webp" loading="lazy" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title"> भविष्य-प्रूफ कौशल</h5>
-            <p class="card-text"> अपने जुनून को जगाएं, कक्षा से परे जिज्ञासा पैदा करें। अनुसंधान
-              अवसर, संकाय परामर्श और आकर्षक पाठ्यक्रम आपकी बौद्धिक यात्रा को बढ़ावा देते हैं।</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="fs-1 red-title py-3 fw-semibold">
-      अपने जुनून को आगे बढ़ाने के लिए छह विभाग
-    </div>
-    <div class="row py-3 g-2">
-      <a routerLink="/cse" (click)="scrollToTopAndCloseNavbar()"
-        class="col-md-2 border-3 border-effect border-start border-end fs-3">CSE</a>
-      <a routerLink="/ee" (click)="scrollToTopAndCloseNavbar()"
-        class="col-md-2 border-3 border-effect border-start border-end fs-3">EE</a>
-      <a routerLink="/ece" (click)="scrollToTopAndCloseNavbar()"
-        class="col-md-2 border-3 border-effect border-start border-end fs-3">ECE </a>
-      <a routerLink="/me" (click)="scrollToTopAndCloseNavbar()"
-        class="col-md-2 border-3 border-effect border-start border-end fs-3">ME </a>
-      <a routerLink="/ce" (click)="scrollToTopAndCloseNavbar()"
-        class="col-md-2 border-3 border-effect border-start border-end fs-3">CE </a>
-      <a routerLink="/as" (click)="scrollToTopAndCloseNavbar()"
-        class="col-md-2 border-3 border-effect border-start border-end fs-3">AS</a>
-    </div>
-    <a class="btn btn-red btn-lg text-decoration-none my-3 px-5" (click)="scrollToTopAndCloseNavbar()"
-      routerLink="/courses">शिक्षाविदों के बारे में अधिक जानकारी</a>
-  </div>
-</div>
-<!-- acadmic -->
-<!-- poly-edu-start -->
-<div class="container-fluid mx-auto bg-body-tertiary">
-  <div class="container text-center py-5">
-    <div class="fs-1 red-title fw-semibold">
-      पॉलिटेक्निक शिक्षा
-    </div>
-    <div class="fs-3 lh-lg fw-lighter">
-      पॉलिटेक्निक का अर्थ है विभिन्न कलाओं और विज्ञानों में उनके उपयोग पर विशेष ध्यान देते हुए शिक्षा देना
-      जीविका चलाना। पॉलिटेक्निक एक ऐसा संस्थान है जिसमें गणितीय और वैज्ञानिक आधार पर प्रौद्योगिकियाँ दी जाती हैं
-      इंजीनियरिंग और अन्य व्यावहारिक विज्ञान जैसे आधार पढ़ाए जाते हैं। पॉलिटेक्निक शिक्षा कैरियर आधारित शिक्षा प्रदान करती है
-      शिक्षा। करियर का चुनाव संभवतः किसी के जीवन के सबसे महत्वपूर्ण निर्णयों में से एक है। यह आकार देता है
-      भविष्य और जीवन शैली का निर्धारण करता है। तकनीकी विकास की तेज़ दौड़ और उसका बढ़ता अपनापन
-      उद्योग ने औद्योगिक गतिविधि की जटिलता को बढ़ा दिया है।
-    </div>
-    <div class="py-3">
-      <img src="../../../assets/images/used/activites/poly.png" loading="lazy" class="img-fluid shadow rounded"
-        alt="">
+    <!-- Closing Image -->
+    <div class="closing-image">
+      <img src="../../../assets/images/used/activites/batch_20.jpg" loading="lazy" class="img-fluid w-100" alt="Campus Batch">
     </div>
   </div>
-</div>
-<!-- poly-edu-end -->
-<!-- overlay-img -->
-<div class="img-container">
-  <img src="../../../assets/images/used/building/batch_16.webp" loading="lazy" class="img-fluid" alt="">
-  <div class="overlay-text text-center">तलवाड़ा के हरे-भरे आलिंगन में आराम करें, जहां प्रकृति शांति का रंग बिखेरती है
-    हर कैनवास|</div>
-</div>
-<!-- overlay-img -->
-<!-- anti-ragging -->
-<div class="container text-center py-5">
-  <div class="fs-1 red-title fw-semibold">
-    रैगिंग के विरोध
-  </div>
-  <div class="fs-3 lh-lg fw-lighter">
-    कॉलेज रैगिंग पर सख्ती से प्रतिबंध लगाता है, जिसमें नए छात्रों के साथ मौखिक या शारीरिक दुर्व्यवहार भी शामिल है। अपराधियों का सामना
-    बर्खास्तगी. कोई भी विघटनकारी गतिविधियाँ जो झुंझलाहट, कठिनाई या हानि पहुँचाती हैं, चाहे वह शारीरिक हो या मनोवैज्ञानिक,
-    अनुशासनात्मक कार्रवाई होगी. कॉलेज एक सुरक्षित और समावेशी वातावरण बनाए रखने के लिए प्रतिबद्ध है
-    सभी छात्र। <a href="https://www.antiragging.in/" target="_blank" class="text-decoration-none red-title"> के लिए
-      अधिक जानकारी</a>
-  </div>
-  <div class="py-3">
-    <img src="../../../assets/images/used/activites/anti-ragging.jpg" loading="lazy" class="img-fluid shadow rounded"
-      alt="">
-  </div>
-</div>
-<!-- anti-ragging -->
-<!-- news -->
-<!-- <div class="container-fluid bg-body-tertiary">
-  <app-news></app-news>
-</div> -->
-<!-- news -->
 
-
-<!-- reserch -->
-<div class="container-fluid bg-body-tertiary py-5">
-  <div class="container text-center ">
-    <div class="fs-1 red-title fw-semibold">
-      अनुसंधान
-    </div>
-    <div class="fs-3 lh-lg fw-lighter py-3">
-      स्वास्थ्य, तकनीक और ज्ञान में अभूतपूर्व अनुसंधान के माध्यम से प्रगति को बढ़ावा देना।
-    </div>
-    <div class="border-bottom border-top border-danger py-3 border-2">
-      <div class="row g-3">
-        <div class="col-md-4">
-          <div class="fw-semibold fs-4">अपने भविष्य में क्रांति लाएँ</div>
-          <div class="fs-5"> जीपीसी तलवाड़ा में 15 अत्याधुनिक अनुसंधान संस्थानों के साथ खोजें। आकार दें
-            विश्व.</div>
-        </div>
-        <div class="col-md-4">
-          <div class="fw-semibold fs-4">सीमाएं लांघें, जीवन बदलें</div>
-          <div class="fs-5"> जीपीसी तलवाड़ा का शोध स्वास्थ्य, तकनीक और उससे परे प्रभाव डालता है। अभूतपूर्व यात्रा में शामिल हों.
+  <!-- Punjabi Content -->
+  <div *ngIf="getCurrentLanguage() === 'ਪੰਜਾਬੀ'">
+    <!-- Similar structure as English but with Punjabi text -->
+    <!-- Academics Section - Asymmetrical Card Layout -->
+    <section class="section academics-section">
+      <div class="container py-5">
+        <h2 class="section-title red-title fw-semibold mb-4 text-center">ਅਕਾਦਮਿਕ</h2>
+        <p class="section-description fw-lighter mb-5 text-center">
+          ਵਿਦਿਆਰਥੀਆਂ ਨੂੰ ਇੱਕ ਕੰਪਲੈਕਸ ਸੰਸਾਰ ਵਿੱਚ ਰੁੱਝੇ ਹੋਏ ਨਾਗਰਿਕਾਂ ਅਤੇ ਨੇਤਾਵਾਂ ਵਜੋਂ ਸਮਾਜ ਵਿੱਚ ਸਾਰਥਕ ਯੋਗਦਾਨ ਪਾਉਣ ਲਈ ਤਿਆਰ ਕਰਨਾ।
+        </p>
+        <div class="row g-4 mb-5">
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0 hover-effect">
+              <img src="../../../assets/images/used/student-teacher/18.webp" class="card-img-top" alt="ਨੇਤਾਵਾਂ ਨੂੰ ਸ਼ਕਤੀ ਪ੍ਰਦਾਨ" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">ਕੱਲ੍ਹ ਦੇ ਨੇਤਾਵਾਂ ਨੂੰ ਸ਼ਕਤੀ ਪ੍ਰਦਾਨ ਕਰਨਾ</h5>
+                <p class="card-text">ਆਪਣਾ ਭਵਿੱਖ ਬਣਾਓ, ਸਮਾਜ ਨੂੰ ਪ੍ਰਭਾਵਿਤ ਕਰੋ। ਅਸਲ-ਸੰਸਾਰ ਪ੍ਰੋਜੈਕਟਾਂ ਅਤੇ ਕਮਿਊਨਿਟੀ ਭਾਈਵਾਲੀ ਦੁਆਰਾ ਆਲੋਚਨਾਤਮਕ ਸੋਚ ਵਿਕਸਿਤ ਕਰੋ।</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row g-4">
+              <div class="col-12">
+                <div class="card h-100 shadow-sm border-0 hover-effect">
+                  <img src="../../../assets/images/used/activites/3.webp" class="card-img-top" alt="ਜੀਵਨ ਭਰ ਸਿੱਖਣਾ" loading="lazy">
+                  <div class="card-body">
+                    <h5 class="card-title">ਜੀਵਨ ਭਰ ਸਿੱਖਣ ਦਾ ਬਾਲਣ</h5>
+                    <p class="card-text">ਖੋਜ ਮੌਕੇ, ਫੈਕਲਟੀ ਸਲਾਹਕਾਰ, ਅਤੇ ਦਿਲਚਸਪ ਕੋਰਸ ਤੁਹਾਡੇ ਜਨੂੰਨ ਨੂੰ ਜਗਾਉਂਦੇ ਹਨ ਅਤੇ ਉਤਸੁਕਤਾ ਦਾ ਪਾਲਣ ਕਰਦੇ ਹਨ।</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card h-100 shadow-sm border-0 hover-effect">
+                  <img src="../../../assets/images/used/activites/2.webp" class="card-img-top" alt="ਭਵਿੱਖ-ਸਬੂਤ ਹੁਨਰ" loading="lazy">
+                  <div class="card-body">
+                    <h5 class="card-title">ਭਵਿੱਖ-ਸਬੂਤ ਹੁਨਰ</h5>
+                    <p class="card-text">ਆਪਣੇ ਜਨੂੰਨ ਨੂੰ ਜਗਾਓ, ਕਲਾਸਰੂਮ ਤੋਂ ਪਰੇ ਉਤਸੁਕਤਾ ਪੈਦਾ ਕਰੋ ਅਤੇ ਹੱਥੀਂ ਸਿੱਖਣ ਦੇ ਤਜਰਬਿਆਂ ਨਾਲ।</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="fw-semibold fs-4">अपने नवप्रवर्तन को बढ़ावा दें</div>
-          <div class="fs-5"> जीपीसी तलवाड़ा के शोध में उतरें। 15 विविध संस्थान: वास्तविक दुनिया के लिए आपका प्रवेश द्वार
-            प्रभाव|</div>
+        <h3 class="sub-title red-title fw-semibold mb-3 text-center">ਤੁਹਾਡੇ ਜਨੂੰਨ ਦਾ ਪਿੱਛਾ ਕਰਨ ਲਈ ਛੇ ਵਿਭਾਗ</h3>
+        <div class="row row-cols-2 row-cols-md-6 g-2 mb-5">
+          <a routerLink="/cse" (click)="scrollToTopAndCloseNavbar()" class="col text-center border-effect py-2">CSE</a>
+          <a routerLink="/ee" (click)="scrollToTopAndCloseNavbar()" class="col text-center border-effect py-2">EE</a>
+          <a routerLink="/ece" (click)="scrollToTopAndCloseNavbar()" class="col text-center border-effect py-2">ECE</a>
+          <a routerLink="/me" (click)="scrollToTopAndCloseNavbar()" class="col text-center border-effect py-2">ME</a>
+          <a routerLink="/ce" (click)="scrollToTopAndCloseNavbar()" class="col text-center border-effect py-2">CE</a>
+          <a routerLink="/as" (click)="scrollToTopAndCloseNavbar()" class="col text-center border-effect py-2">AS</a>
+        </div>
+        <div class="text-center">
+          <a class="btn btn-red btn-lg text-decoration-none px-5 py-3" (click)="scrollToTopAndCloseNavbar()" routerLink="/courses">ਅਕਾਦਮਿਕ ਬਾਰੇ ਹੋਰ</a>
         </div>
       </div>
-    </div>
-    <!-- <div class="btn btn-red btn-lg text-decoration-none my-3 px-5">More About Research</div> -->
-  </div>
-</div>
-<!-- reserch -->
-<!-- campus life -->
-<div class="container text-center py-5">
-  <div class="fs-1 red-title  fw-semibold">
-    कैंपस की ज़िंदगी
-  </div>
-  <div class="fs-3 lh-lg fw-lighter">
-    जीवंत समुदायों में गोता लगाएँ, जुनून जगाएँ, GPC में कक्षा से परे अन्वेषण करें।
-  </div>
-  <div class="row py-3 g-3">
-    <div class="col-md-4">
-      <div class="card">
-        <img src="../../../assets/images/used/activites/2.jpg" loading="lazy" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">अन्वेषण करें, प्रज्वलित करें, कनेक्ट करें</h5>
-          <p class="card-text">30+ क्लब आपके जुनून को बढ़ावा देते हैं, छिपी हुई प्रतिभाओं को उजागर करते हैं। जीवंत परिसर जीवन में डूब जाएं।
-            स्थायी संबंध बनाएं, जीपीसी में अपना भविष्य बनाएं।
+    </section>
+
+    <!-- Polytechnic Education Section - Full Width Banner -->
+    <section class="section bg-body-tertiary py-5">
+      <div class="container-fluid p-0">
+        <div class="banner-container text-center position-relative">
+          <img src="../../../assets/images/used/activites/poly.png" loading="lazy" class="img-fluid w-100 banner-image" alt="ਪੌਲੀਟੈਕਨਿਕ ਸਿੱਖਿਆ">
+          <div class="banner-overlay">
+            <h2 class="section-title red-title fw-semibold mb-3">ਪੌਲੀਟੈਕਨਿਕ ਸਿੱਖਿਆ</h2>
+            <p class="section-description fw-lighter mx-auto">
+              ਪੌਲੀਟੈਕਨਿਕ ਸਿੱਖਿਆ ਕੈਰੀਅਰ-ਅਧਾਰਿਤ ਸਿੱਖਣ ਪ੍ਰਦਾਨ ਕਰਦੀ ਹੈ, ਜੋ ਗਣਿਤ ਅਤੇ ਵਿਗਿਆਨਕ ਸਿਧਾਂਤਾਂ ਜਿਵੇਂ ਕਿ ਇੰਜਨੀਅਰਿੰਗ ਅਤੇ ਅਪਲਾਈਡ ਸਾਇੰਸਜ਼ 'ਤੇ ਅਧਾਰਤ ਤਕਨੀਕਾਂ 'ਤੇ ਕੇਂਦ੍ਰਿਤ ਹੈ। ਇਹ ਵਿਦਿਆਰਥੀਆਂ ਨੂੰ ਤੇਜ਼ੀ ਨਾਲ ਵਿਕਸਤ ਹੋ ਰਹੇ ਤਕਨੀਕੀ ਲੈਂਡਸਕੇਪ ਵਿੱਚ ਉਦਯੋਗਿਕ ਗਤੀਵਿਧੀ ਦੀਆਂ ਗੁੰਝਲਤਾਵਾਂ ਲਈ ਤਿਆਰ ਕਰਦੀ ਹੈ।
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4 ">
-      <div class="card">
-        <img src="../../../assets/images/used/building/17.jpg" loading="lazy" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">प्रभाव एवं अन्वेषण</h5>
-          <p class="card-text"> तलवाड़ा की सुंदरता, सप्ताहांत का आनंद, समृद्ध संस्कृतियाँ प्रतीक्षारत हैं। के जरिये फर्क लायें
-            सेवा। अपने भविष्य को आकार दें, अपने समुदाय को प्रभावित करें। GPC से प्रारंभ करें.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <img src="../../../assets/images/used/activites/9.jpg" loading="lazy" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">बढ़ो और बढ़ो</h5>
-          <p class="card-text">
-            विशेषज्ञ मार्गदर्शन, भविष्य की योजना, कल्याण सहायता। परामर्शदाता, कैरियर विशेषज्ञ,
-                        स्वास्थ्य देखभाल, खेल और पुस्तकालय - जीपीसी पर आपका सफलता नेटवर्क। </p>
-                    </div>
-      </div>
+    </section>
+
+    <!-- Scenic Overlay Image -->
+    <div class="img-container my-5">
+      <img src="../../../assets/images/used/building/batch_16.webp" loading="lazy" class="img-fluid w-100" alt="ਤਲਵਾੜਾ ਦ੍ਰਿਸ਼">
+      <div class="overlay-text text-center">ਤਲਵਾੜਾ ਦੇ ਹਰੇ ਭਰੇ ਗਲੇ ਵਿੱਚ ਆਰਾਮ ਕਰੋ, ਜਿੱਥੇ ਕੁਦਰਤ ਸ਼ਾਂਤੀ ਨੂੰ ਰੰਗ ਦਿੰਦੀ ਹੈ ਹਰ ਕੈਨਵਸ 'ਤੇ।</div>
     </div>
 
-  </div>
-  <a routerLink="/events-picture" (click)="scrollToTopAndCloseNavbar()"
-    class="btn btn-red btn-lg text-decoration-none my-3 px-5">कैम्पस जीवन के बारे में अधिक जानकारी</a>
-  </div>
-<!-- campus life -->
-<!-- admission -->
-<div class="container-fluid bg-body-tertiary py-5">
-  <div class="container text-center">
-    <div class="fs-1 red-title fw-semibold">
-      प्रवेश
-    </div>
-    <div class="fs-3 lh-lg fw-lighter">
-      जीपीसी के अत्याधुनिक कार्यक्रमों और सहायक समुदाय के साथ अपना पाठ्यक्रम तैयार करें। आज लागू करें # आज आवेदन दें।
-    </div>
-    <div class="py-3">
-      <img src="../../../assets/images/used/addmision/8.jpg" loading="lazy" class="img-fluid shadow rounded" alt="">
-    </div>
-    <div class="row text-start g-3">
-      <div class="col-md-6">
-        <div class="fw-semibold fs-4">
-          जीपीसी तलवाड़ा में अपनी क्षमता को उजागर करें।
-        </div>
-        <div class="fs-5">
-          विविध क्षेत्रों का अन्वेषण करें, उत्साही शिक्षार्थियों के साथ सहयोग करें और अपने आप को पहले जैसी चुनौती दें। हम
-          जिज्ञासा से भरपूर और व्यावहारिक शिक्षा के माध्यम से अपने भविष्य को आकार देने के लिए तैयार उज्ज्वल दिमागों की तलाश करें
-          वास्तविक दुनिया की परियोजनाएँ।
+    <!-- Anti-Ragging Section -->
+    <section class="section py-5">
+      <div class="container text-center">
+        <h2 class="section-title red-title fw-semibold mb-4">ਐਂਟੀ-ਰੈਗਿੰਗ</h2>
+        <p class="section-description fw-lighter mb-5">
+          ਕਾਲਜ ਰੈਗਿੰਗ ਦੀ ਸਖ਼ਤੀ ਨਾਲ ਮਨਾਹੀ ਕਰਦਾ ਹੈ, ਜਿਸ ਵਿੱਚ ਫਰੈਸ਼ਰਾਂ ਨਾਲ ਜ਼ੁਬਾਨੀ ਜਾਂ ਸਰੀਰਕ ਦੁਰਵਿਵਹਾਰ ਸ਼ਾਮਲ ਹੈ। ਅਪਰਾਧੀਆਂ ਨੂੰ ਬਰਖਾਸਤਗੀ ਦਾ ਸਾਹਮਣਾ ਕਰਨਾ ਪੈਂਦਾ ਹੈ। ਅਸੀਂ ਸਾਰੇ ਵਿਦਿਆਰਥੀਆਂ ਲਈ ਸੁਰੱਖਿਅਤ ਅਤੇ ਸਮਾਵੇਸ਼ੀ ਮਾਹੌਲ ਬਣਾਈ ਰੱਖਣ ਲਈ ਵਚਨਬੱਧ ਹਾਂ।
+          <a href="https://www.antiragging.in/" target="_blank" rel="noopener noreferrer" class="text-decoration-none red-title">ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ</a>।
+        </p>
+        <img src="../../../assets/images/used/activites/anti-ragging.jpg" loading="lazy" class="img-fluid shadow rounded w-75" alt="ਐਂਟੀ-ਰੈਗਿੰਗ ਮੁਹਿੰਮ">
+      </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="section bg-body-tertiary py-5">
+      <div class="container text-center">
+        <h2 class="section-title red-title fw-semibold mb-4">ਖੋਜ</h2>
+        <p class="section-description fw-lighter mb-5">
+          ਸਿਹਤ, ਤਕਨੀਕ ਅਤੇ ਗਿਆਨ ਵਿੱਚ ਜ਼ਮੀਨੀ ਖੋਜ ਦੁਆਰਾ ਤਰੱਕੀ ਨੂੰ ਤੇਜ਼ ਕਰਨਾ।
+        </p>
+        <div class="row row-cols-1 row-cols-md-3 g-4 border-bottom border-top border-danger py-4 border-2">
+          <div class="col">
+            <div class="feature-box p-3">
+              <h5 class="fw-semibold mb-2">ਆਪਣਾ ਭਵਿੱਖ ਬਦਲੋ</h5>
+              <p>GPC ਤਲਵਾੜਾ ਵਿਖੇ 15 ਅਤਿ-ਆਧੁਨਿਕ ਖੋਜ ਸੰਸਥਾਵਾਂ ਦੇ ਨਾਲ ਖੋਜਾਂ ਦਾ ਨਿਰਮਾਣ ਕਰੋ। ਸੰਸਾਰ ਨੂੰ ਆਕਾਰ ਦਿਓ।</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-box p-3">
+              <h5 class="fw-semibold mb-2">ਹੱਦਾਂ ਪਾਰ ਕਰੋ, ਜੀਵਨ ਬਦਲੋ</h5>
+              <p>GPC ਤਲਵਾੜਾ ਦੀ ਖੋਜ ਸਿਹਤ, ਤਕਨੀਕ ਅਤੇ ਇਸ ਤੋਂ ਇਲਾਵਾ ਹੋਰ ਵੀ ਪ੍ਰਭਾਵਿਤ ਕਰਦੀ ਹੈ। ਸ਼ੁਰੂਆਤੀ ਯਾਤਰਾ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ।</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-box p-3">
+              <h5 class="fw-semibold mb-2">ਤੁਹਾਡੀ ਨਵੀਨਤਾ ਨੂੰ ਵਧਾਓ</h5>
+              <p>ਜੀਪੀਸੀ ਤਲਵਾੜਾ ਦੀ ਖੋਜ ਵਿੱਚ ਡੁਬਕੀ ਮਾਰੋ। 15 ਵਿਭਿੰਨ ਸੰਸਥਾਵਾਂ: ਅਸਲ-ਸੰਸਾਰ ਪ੍ਰਭਾਵ ਲਈ ਤੁਹਾਡਾ ਗੇਟਵੇ।</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="fw-semibold fs-4">
-          जीपीसी तलवाड़ा में अपने अनूठे पथ का चार्ट बनाएं।
+    </section>
+
+    <!-- Campus Life Section - Staggered Grid Layout -->
+    <section class="section py-5">
+      <div class="container">
+        <h2 class="section-title red-title fw-semibold mb-4 text-center">ਕੈਂਪਸ ਲਾਈਫ</h2>
+        <p class="section-description fw-lighter mb-5 text-center">
+          ਜੀਵੰਤ ਭਾਈਚਾਰਿਆਂ ਵਿੱਚ ਡੁਬਕੀ ਲਗਾਓ, ਜਨੂੰਨ ਜਗਾਓ, ਅਤੇ GPC 'ਤੇ ਕਲਾਸਰੂਮ ਤੋਂ ਬਾਹਰ ਦੀ ਪੜਚੋਲ ਕਰੋ।
+        </p>
+        <div class="row g-4 mb-5 staggered-grid">
+          <div class="col-md-4 staggered-item" style="margin-top: 0;">
+            <div class="card h-100 shadow-sm border-0 hover-effect">
+              <img src="../../../assets/images/used/activites/2.jpg" class="card-img-top" alt="ਪੜਚੋਲ ਅਤੇ ਕਨੈਕਟ" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">ਪੜਚੋਲ ਕਰੋ, ਇਗਨਾਈਟ ਕਰੋ, ਕਨੈਕਟ ਕਰੋ</h5>
+                <p class="card-text">30+ ਕਲੱਬ ਤੁਹਾਡੇ ਜਨੂੰਨ ਨੂੰ ਵਧਾਉਂਦੇ ਹਨ, ਲੁਕੀਆਂ ਹੋਈਆਂ ਪ੍ਰਤਿਭਾਵਾਂ ਨੂੰ ਬਾਹਰ ਕੱਢਦੇ ਹਨ। ਜੀਵੰਤ ਕੈਂਪਸ ਜੀਵਨ ਵਿੱਚ ਲੀਨ ਹੋਵੋ ਅਤੇ ਸਥਾਈ ਕਨੈਕਸ਼ਨ ਬਣਾਓ।</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 staggered-item" style="margin-top: 2rem;">
+            <div class="card h-100 shadow-sm border-0 hover-effect">
+              <img src="../../../assets/images/used/building/17.jpg" class="card-img-top" alt="ਪ੍ਰਭਾਵ ਅਤੇ ਪੜਚੋਲ" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">ਪ੍ਰਭਾਵ ਅਤੇ ਪੜਚੋਲ</h5>
+                <p class="card-text">ਤਲਵਾੜਾ ਦੀ ਸੁੰਦਰਤਾ, ਹਫਤੇ ਦੇ ਅਖੀਰਲੇ ਦਿਨ, ਅਤੇ ਅਮੀਰ ਸੱਭਿਆਚਾਰ ਉਡੀਕਦੇ ਹਨ। ਸੇਵਾ ਦੁਆਰਾ ਫਰਕ ਕਰੋ ਅਤੇ ਆਪਣਾ ਭਵਿੱਖ ਬਣਾਓ।</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 staggered-item" style="margin-top: 4rem;">
+            <div class="card h-100 shadow-sm border-0 hover-effect">
+              <img src="../../../assets/images/used/activites/9.jpg" class="card-img-top" alt="ਪ੍ਰਫੁੱਲਤ ਅਤੇ ਵਧੋ" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">ਪ੍ਰਫੁੱਲਤ ਅਤੇ ਵਧੋ</h5>
+                <p class="card-text">ਮਾਹਰ ਮਾਰਗਦਰਸ਼ਨ, ਭਵਿੱਖ ਦੀ ਯੋਜਨਾਬੰਦੀ, ਅਤੇ ਤੰਦਰੁਸਤੀ ਸਹਾਇਤਾ। ਸਲਾਹਕਾਰ, ਕਰੀਅਰ ਮਾਹਿਰ, ਅਤੇ GPC 'ਤੇ ਤੁਹਾਡੀ ਸਫਲਤਾ ਲਈ ਸਹੂਲਤਾਂ।</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="fs-5">
-          पाठ्यपुस्तकों से परे अन्वेषण, सहयोग और सीखने पर जोर दें। हम गहराई में जाने के लिए प्रेरित व्यक्तियों का स्वागत करते हैं
-          उद्योग-प्रासंगिक कौशल में प्रवेश करें और हमारे समुदाय के साथ सीमाओं को आगे बढ़ाएं।
+        <div class="text-center">
+          <a routerLink="/events-picture" (click)="scrollToTopAndCloseNavbar()" class="btn btn-red btn-lg text-decoration-none px-5 py-3">ਕੈਂਪਸ ਲਾਈਫ ਬਾਰੇ ਹੋਰ</a>
         </div>
       </div>
+    </section>
+
+    <!-- Admission Section - Split Layout with Image on One Side -->
+    <section class="section bg-body-tertiary py-5">
+      <div class="container">
+        <h2 class="section-title red-title fw-semibold mb-4 text-center">ਦਾਖਲਾ</h2>
+        <p class="section-description fw-lighter mb-5 text-center">
+          GPC ਦੇ ਅਤਿ-ਆਧੁਨਿਕ ਪ੍ਰੋਗਰਾਮਾਂ ਅਤੇ ਸਹਾਇਕ ਭਾਈਚਾਰੇ ਦੇ ਨਾਲ ਆਪਣੇ ਕੋਰਸ ਨੂੰ ਚਾਰਟ ਕਰੋ। ਅੱਜ ਹੀ ਅਪਲਾਈ ਕਰੋ।
+        </p>
+        <div class="row g-4 mb-5 align-items-center">
+          <div class="col-md-6">
+            <img src="../../../assets/images/used/addmision/8.jpg" loading="lazy" class="img-fluid shadow rounded" alt="ਦਾਖਲਾ">
+          </div>
+          <div class="col-md-6 text-start">
+            <div class="feature-box p-4 mb-3">
+              <h5 class="fw-semibold mb-2">ਜੀਪੀਸੀ ਤਲਵਾੜਾ ਵਿਖੇ ਆਪਣੀ ਸਮਰੱਥਾ ਨੂੰ ਉਜਾਗਰ ਕਰੋ</h5>
+              <p>ਵਿਭਿੰਨ ਖੇਤਰਾਂ ਦੀ ਪੜਚੋਲ ਕਰੋ, ਜੋਸ਼ੀਲੇ ਸਿਖਿਆਰਥੀਆਂ ਨਾਲ ਸਹਿਯੋਗ ਕਰੋ, ਅਤੇ ਹੱਥਾਂ ਨਾਲ ਸਿੱਖਣ ਅਤੇ ਅਸਲ-ਸੰਸਾਰ ਪ੍ਰੋਜੈਕਟਾਂ ਨਾਲ ਆਪਣੇ ਆਪ ਨੂੰ ਚੁਣੌਤੀ ਦਿਓ।</p>
+            </div>
+            <div class="feature-box p-4">
+              <h5 class="fw-semibold mb-2">GPC ਤਲਵਾੜਾ ਵਿਖੇ ਆਪਣਾ ਵਿਲੱਖਣ ਮਾਰਗ ਚਾਰਟ ਕਰੋ</h5>
+              <p>ਪਾਠ-ਪੁਸਤਕਾਂ ਤੋਂ ਪਰੇ ਪੜਚੋਲ ਅਤੇ ਸਿੱਖਣ 'ਤੇ ਤਰੱਕੀ ਕਰੋ। ਅਸੀਂ ਉਦਯੋਗ-ਸੰਬੰਧਿਤ ਹੁਨਰ ਵਿੱਚ ਡੁਬਕੀ ਮਾਰਨ ਅਤੇ ਸਾਡੇ ਭਾਈਚਾਰੇ ਨਾਲ ਸੀਮਾਵਾਂ ਨੂੰ ਧੱਕਣ ਲਈ ਪ੍ਰੇਰਿਤ ਵਿਅਕਤੀਆਂ ਦਾ ਸੁਆਗਤ ਕਰਦੇ ਹਾਂ।</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <a routerLink="/admission-intake" (click)="scrollToTopAndCloseNavbar()" class="btn btn-red btn-lg text-decoration-none px-5 py-3">ਦਾਖਲੇ ਬਾਰੇ ਹੋਰ</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing Image -->
+    <div class="closing-image">
+      <img src="../../../assets/images/used/activites/batch_20.jpg" loading="lazy" class="img-fluid w-100" alt="ਕੈਂਪਸ ਬੈਚ">
     </div>
-    <a routerLink="/admission-intake" (click)="scrollToTopAndCloseNavbar()"
-      class="btn btn-red btn-lg text-decoration-none my-3 px-5">प्रवेश के बारे में अधिक जानकारी</a>
+  </div>
+
+  <!-- Hindi Content -->
+  <div *ngIf="getCurrentLanguage() === 'हिंदी'">
+    <!-- Similar structure as English but with Hindi text -->
+    <!-- Academics Section - Asymmetrical Card Layout -->
+    <section class="section academics-section">
+      <div class="container py-5">
+        <h2 class="section-title red-title fw-semibold mb-4 text-center">शैक्षणिक</h2>
+        <p class="section-description fw-lighter mb-5 text-center">
+          छात्रों को एक जटिल दुनिया में लगे हुए नागरिकों और नेताओं के रूप में समाज में सार्थक योगदान देने के लिए तैयार करना।
+        </p>
+        <div class="row g-4 mb-5">
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0 hover-effect">
+              <img src="../../../assets/images/used/student-teacher/18.webp" class="card-img-top" alt="नेताओं को सशक्त बनाना" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">कल के नेताओं को सशक्त बनाना</h5>
+                <p class="card-text">अपने भविष्य को आकार दें, समाज पर प्रभाव डालें। वास्तविक दुनिया की परियोजनाओं और सामुदायिक भागीदारी के माध्यम से आलोचनात्मक सोच विकसित करें।</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row g-4">
+              <div class="col-12">
+                <div class="card h-100 shadow-sm border-0 hover-effect">
+                  <img src="../../../assets/images/used/activites/3.webp" class="card-img-top" alt="आजीवन सीखना" loading="lazy">
+                  <div class="card-body">
+                    <h5 class="card-title">आजीवन सीखने का ईंधन</h5>
+                    <p class="card-text">अनुसंधान के अवसर, संकाय परामर्श और आकर्षक पाठ्यक्रम आपके जुनून को प्रज्वलित करते हैं और जिज्ञासा का पोषण करते हैं।</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card h-100 shadow-sm border-0 hover-effect">
+                  <img src="../../../assets/images/used/activites/2.webp" class="card-img-top" alt="भविष्य-प्रूफ कौशल" loading="lazy">
+                  <div class="card-body">
+                    <h5 class="card-title">भविष्य-प्रूफ कौशल</h5>
+                    <p class="card-text">अपने जुनून को जगाएं, कक्षा से परे जिज्ञासा पैदा करें और व्यावहारिक सीखने के अनुभवों के साथ।</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3 class="sub-title red-title fw-semibold mb-3 text-center">अपने जुनून को आगे बढ़ाने के लिए छह विभाग</h3>
+        <div class="row row-cols-2 row-cols-md-6 g-2 mb-5">
+          <a routerLink="/cse" (click)="scrollToTopAndCloseNavbar()" class="col text-center border-effect py-2">CSE</a>
+          <a routerLink="/ee" (click)="scrollToTopAndCloseNavbar()" class="col text-center border-effect py-2">EE</a>
+          <a routerLink="/ece" (click)="scrollToTopAndCloseNavbar()" class="col text-center border-effect py-2">ECE</a>
+          <a routerLink="/me" (click)="scrollToTopAndCloseNavbar()" class="col text-center border-effect py-2">ME</a>
+          <a routerLink="/ce" (click)="scrollToTopAndCloseNavbar()" class="col text-center border-effect py-2">CE</a>
+          <a routerLink="/as" (click)="scrollToTopAndCloseNavbar()" class="col text-center border-effect py-2">AS</a>
+        </div>
+        <div class="text-center">
+          <a class="btn btn-red btn-lg text-decoration-none px-5 py-3" (click)="scrollToTopAndCloseNavbar()" routerLink="/courses">शिक्षाविदों के बारे में अधिक जानकारी</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Polytechnic Education Section - Full Width Banner -->
+    <section class="section bg-body-tertiary py-5">
+      <div class="container-fluid p-0">
+        <div class="banner-container text-center position-relative">
+          <img src="../../../assets/images/used/activites/poly.png" loading="lazy" class="img-fluid w-100 banner-image" alt="पॉलिटेक्निक शिक्षा">
+          <div class="banner-overlay">
+            <h2 class="section-title red-title fw-semibold mb-3">पॉलिटेक्निक शिक्षा</h2>
+            <p class="section-description fw-lighter mx-auto">
+              पॉलिटेक्निक शिक्षा कैरियर-आधारित सीखने प्रदान करती है, जो गणितीय और वैज्ञानिक सिद्धांतों जैसे कि इंजीनियरिंग और व्यावहारिक विज्ञानों पर आधारित प्रौद्योगिकियों पर केंद्रित है। यह छात्रों को तेजी से विकसित हो रहे तकनीकी परिदृश्य में औद्योगिक गतिविधि की जटिलताओं के लिए तैयार करता है।
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scenic Overlay Image -->
+    <div class="img-container my-5">
+      <img src="../../../assets/images/used/building/batch_16.webp" loading="lazy" class="img-fluid w-100" alt="तलवाड़ा दृश्य">
+      <div class="overlay-text text-center">तलवाड़ा के हरे-भरे आलिंगन में आराम करें, जहां प्रकृति हर कैनवास पर शांति का रंग बिखेरती है।</div>
     </div>
-</div>
-<!-- admission -->
-<!-- last-img -->
-<div>
-  <img src="../../../assets/images/used/activites/batch_20.jpg" loading="lazy" class="img-fluid" alt="">
-</div>
-<!-- last-img -->
+
+    <!-- Anti-Ragging Section -->
+    <section class="section py-5">
+      <div class="container text-center">
+        <h2 class="section-title red-title fw-semibold mb-4">रैगिंग के विरोध</h2>
+        <p class="section-description fw-lighter mb-5">
+          कॉलेज रैगिंग पर सख्ती से प्रतिबंध लगाता है, जिसमें नए छात्रों के साथ मौखिक या शारीरिक दुर्व्यवहार भी शामिल है। अपराधियों को बर्खास्तगी का सामना करना पड़ता है। हम सभी छात्रों के लिए एक सुरक्षित और समावेशी वातावरण बनाए रखने के लिए प्रतिबद्ध हैं।
+          <a href="https://www.antiragging.in/" target="_blank" rel="noopener noreferrer" class="text-decoration-none red-title">अधिक जानकारी के लिए</a>।
+        </p>
+        <img src="../../../assets/images/used/activites/anti-ragging.jpg" loading="lazy" class="img-fluid shadow rounded w-75" alt="रैगिंग विरोधी अभियान">
+      </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="section bg-body-tertiary py-5">
+      <div class="container text-center">
+        <h2 class="section-title red-title fw-semibold mb-4">अनुसंधान</h2>
+        <p class="section-description fw-lighter mb-5">
+          स्वास्थ्य, तकनीक और ज्ञान में अभूतपूर्व अनुसंधान के माध्यम से प्रगति को बढ़ावा देना।
+        </p>
+        <div class="row row-cols-1 row-cols-md-3 g-4 border-bottom border-top border-danger py-4 border-2">
+          <div class="col">
+            <div class="feature-box p-3">
+              <h5 class="fw-semibold mb-2">अपने भविष्य में क्रांति लाएँ</h5>
+              <p>जीपीसी तलवाड़ा में 15 अत्याधुनिक अनुसंधान संस्थानों के साथ खोजें। विश्व को आकार दें।</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-box p-3">
+              <h5 class="fw-semibold mb-2">सीमाएं लांघें, जीवन बदलें</h5>
+              <p>जीपीसी तलवाड़ा का शोध स्वास्थ्य, तकनीक और उससे परे प्रभाव डालता है। अभूतपूर्व यात्रा में शामिल हों।</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feature-box p-3">
+              <h5 class="fw-semibold mb-2">अपने नवप्रवर्तन को बढ़ावा दें</h5>
+              <p>जीपीसी तलवाड़ा के शोध में उतरें। 15 विविध संस्थान: वास्तविक दुनिया के प्रभाव के लिए आपका प्रवेश द्वार।</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Campus Life Section - Staggered Grid Layout -->
+    <section class="section py-5">
+      <div class="container">
+        <h2 class="section-title red-title fw-semibold mb-4 text-center">कैंपस की ज़िंदगी</h2>
+        <p class="section-description fw-lighter mb-5 text-center">
+          जीवंत समुदायों में गोता लगाएँ, जुनून जगाएँ, और GPC में कक्षा से परे अन्वेषण करें।
+        </p>
+        <div class="row g-4 mb-5 staggered-grid">
+          <div class="col-md-4 staggered-item" style="margin-top: 0;">
+            <div class="card h-100 shadow-sm border-0 hover-effect">
+              <img src="../../../assets/images/used/activites/2.jpg" class="card-img-top" alt="अन्वेषण और कनेक्ट" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">अन्वेषण करें, प्रज्वलित करें, कनेक्ट करें</h5>
+                <p class="card-text">30+ क्लब आपके जुनून को बढ़ावा देते हैं, छिपी हुई प्रतिभाओं को उजागर करते हैं। जीवंत परिसर जीवन में डूब जाएं और स्थायी संबंध बनाएं।</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 staggered-item" style="margin-top: 2rem;">
+            <div class="card h-100 shadow-sm border-0 hover-effect">
+              <img src="../../../assets/images/used/building/17.jpg" class="card-img-top" alt="प्रभाव और अन्वेषण" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">प्रभाव एवं अन्वेषण</h5>
+                <p class="card-text">तलवाड़ा की सुंदरता, सप्ताहांत का आनंद, और समृद्ध संस्कृतियाँ प्रतीक्षारत हैं। सेवा के जरिए फर्क लाएं और अपने भविष्य को आकार दें।</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 staggered-item" style="margin-top: 4rem;">
+            <div class="card h-100 shadow-sm border-0 hover-effect">
+              <img src="../../../assets/images/used/activites/9.jpg" class="card-img-top" alt="बढ़ो और बढ़ो" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">बढ़ो और बढ़ो</h5>
+                <p class="card-text">विशेषज्ञ मार्गदर्शन, भविष्य की योजना, और कल्याण सहायता। परामर्शदाता, कैरियर विशेषज्ञ, और GPC पर आपकी सफलता के लिए सुविधाएँ।</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <a routerLink="/events-picture" (click)="scrollToTopAndCloseNavbar()" class="btn btn-red btn-lg text-decoration-none px-5 py-3">कैम्पस जीवन के बारे में अधिक जानकारी</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admission Section - Split Layout with Image on One Side -->
+    <section class="section bg-body-tertiary py-5">
+      <div class="container">
+        <h2 class="section-title red-title fw-semibold mb-4 text-center">प्रवेश</h2>
+        <p class="section-description fw-lighter mb-5 text-center">
+          जीपीसी के अत्याधुनिक कार्यक्रमों और सहायक समुदाय के साथ अपना पाठ्यक्रम तैयार करें। आज आवेदन दें।
+        </p>
+        <div class="row g-4 mb-5 align-items-center">
+          <div class="col-md-6">
+            <img src="../../../assets/images/used/addmision/8.jpg" loading="lazy" class="img-fluid shadow rounded" alt="प्रवेश">
+          </div>
+          <div class="col-md-6 text-start">
+            <div class="feature-box p-4 mb-3">
+              <h5 class="fw-semibold mb-2">जीपीसी तलवाड़ा में अपनी क्षमता को उजागर करें</h5>
+              <p>विविध क्षेत्रों का अन्वेषण करें, उत्साही शिक्षार्थियों के साथ सहयोग करें, और व्यावहारिक शिक्षा और वास्तविक दुनिया की परियोजनाओं के साथ अपने आप को चुनौती दें।</p>
+            </div>
+            <div class="feature-box p-4">
+              <h5 class="fw-semibold mb-2">जीपीसी तलवाड़ा में अपने अनूठे पथ का चार्ट बनाएं</h5>
+              <p>पाठ्यपुस्तकों से परे अन्वेषण और सीखने पर जोर दें। हम उद्योग-प्रासंगिक कौशल में गहराई तक जाने और हमारे समुदाय के साथ सीमाओं को आगे बढ़ाने के लिए प्रेरित व्यक्तियों का स्वागत करते हैं।</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <a routerLink="/admission-intake" (click)="scrollToTopAndCloseNavbar()" class="btn btn-red btn-lg text-decoration-none px-5 py-3">प्रवेश के बारे में अधिक जानकारी</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing Image -->
+    <div class="closing-image">
+      <img src="../../../assets/images/used/activites/batch_20.jpg" loading="lazy" class="img-fluid w-100" alt="कैंपस बैच">
+    </div>
+  </div>
 </div>

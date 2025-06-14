@@ -25,7 +25,10 @@ export class MainAreaComponent {
     private textSizeService: TextSizeService,
     private languageService: LanguageService,
     private themeService: ThemeService
-  ) {}
+  ) {
+    // Use signal-based system for dark mode
+    this.isDarkMode = this.themeService.getDarkMode();
+  }
 
   selectNews(newsId: string): void {
     this.selectedNews = newsId;
@@ -34,10 +37,7 @@ export class MainAreaComponent {
     this.languageService.setLanguage(language);
   }
   ngOnInit() {
-    this.themeService.isDarkMode$.subscribe((darkMode: boolean) => {
-      this.isDarkMode = darkMode;
-      // Update component styles or perform other actions based on darkMode
-    });
+    // Dark mode is now handled via signals in constructor
   }
 
   getTextSize(): number {

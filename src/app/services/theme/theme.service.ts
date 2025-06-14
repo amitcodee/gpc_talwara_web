@@ -1,16 +1,19 @@
 // theme.service.ts
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ThemeService {
-  toggleDarkMode() {
-    throw new Error('Method not implemented.');
+  private isDarkMode = signal<boolean>(false);
+
+  toggleDarkMode(): void {
+    const currentMode = this.isDarkMode();
+    const newMode = !currentMode;
+    this.isDarkMode.set(newMode);
+    localStorage.setItem('darkMode', JSON.stringify(newMode));
   }
-  private isDarkMode = new BehaviorSubject<boolean>(false);
-  public isDarkMode$ = this.isDarkMode.asObservable();
 
   setDarkMode(mode: string): void {
     let darkMode = false;
@@ -23,10 +26,14 @@ export class ThemeService {
       // Handle the default case as needed
     }
 
-    // Save the dark mode preference to local storage or any other method
+    // Save the dark mode preference to local storage
     localStorage.setItem('darkMode', JSON.stringify(darkMode));
 
-    // Notify subscribers about the change
-    this.isDarkMode.next(darkMode);
+    // Update the signal
+    this.isDarkMode.set(darkMode);
+  }
+
+  getDarkMode(): boolean {
+    return this.isDarkMode();
   }
 }

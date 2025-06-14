@@ -1,298 +1,229 @@
 <div class="dark" [class.dark-mode]="isDarkMode"
   *ngIf="getCurrentLanguage() === 'English'"
   [style.font-size.px]="getTextSize()">
-  <div class="container">
-    <div
-      class="fw-bold fs-1 red-title pt-3 border-bottom border-danger border-2  border-bottom border-danger border-2">
-      Mechanical Engineering
-    </div>
-    <div class="fs-4 lh-lg fw-lighter text-center">
-      <div class="py-3">
-        <p>
-          From robots to rockets, nanomachines to megaprojects, build the future
-          with mechanical engineering: master
-          design, analysis, and innovation to shape the world, one gear at a
-          time
-        </div>
-        <div class="mb-5">
-          <img src="../../../../assets/images/used/department/me/class/me.webp"
-            class="img-fluid shadow" alt>
-        </div>
-        <div class="my-3">
-          <div class="border-bottom border-top border-danger py-3">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="fw-semibold">2,304
-                </div>
-                <div>
-                  <a href class="text-decoration-none text-dark"> Faculty
-                    members</a>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="fw-semibold">2,304
-                </div>
-                <div>
-                  <a href class="text-decoration-none text-dark"> Faculty
-                    members</a>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="fw-semibold">2,304
-                </div>
-                <div>
-                  <a href class="text-decoration-none text-dark"> Faculty
-                    members</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="fw-semibold red-title fs-2">
-          Mechanical Engineering in a Nutshell</div>
-        <div class="text-start my-3">
-          <ul>
-            <li>
-              <i class="fa-regular fa-hand-point-right"></i>
-              <span class="fw-semibold"> Focus on designing mechanical
-                components and systems:</span>Mechanical
-              Engineering at our college emphasizes the creation and
-              optimization of machines, devices, and systems
-              through a comprehensive understanding of mechanics and materials.
-            </li>
-            <li>
-              <i class="fa-regular fa-hand-point-right"></i>
-              <span class="fw-semibold">Hands-on learning
-                experiences:</span>Through well-equipped labs and projects,
-              students gain practical skills in manufacturing, thermodynamics,
-              and fluid mechanics, ensuring they can
-              apply theoretical knowledge to real-world engineering challenges.
-            </li>
-            <li>
-              <i class="fa-regular fa-hand-point-right"></i>
-              <span class="fw-semibold">Encouragement of creative
-                problem-solving:</span> Our Mechanical Engineering
-              program promotes innovation and research, empowering students to
-              explore cutting-edge technologies,
-              materials, and sustainable practices in the field.
-            </li>
-            <li>
-              <i class="fa-regular fa-hand-point-right"></i>
-              <span class="fw-semibold"> Integration with other engineering
-                disciplines:</span> Students benefit from a
-              holistic education, integrating aspects of electrical, civil, and
-              materials engineering to produce
-              well-rounded mechanical engineers capable of addressing complex,
-              interdisciplinary problems.
-            </li>
+  <div class="container department-container">
+    <!-- Header Section -->
+    <section class="section py-5 border-bottom border-danger border-2 animate__animated animate__fadeIn">
+      <h1 class="fw-bold red-title mb-0 display-5 text-center">Mechanical Engineering</h1>
+      <p class="fs-5 fw-lighter text-center mt-3 lead">
+        From robots to rockets, nanomachines to megaprojects, build the future with mechanical engineering: master design, analysis, and innovation to shape the world, one gear at a time.
+      </p>
+    </section>
 
-          </ul>
+    <!-- Banner Image Section -->
+    <section class="section my-5 animate__animated animate__zoomIn">
+      <div class="banner-container position-relative text-center overflow-hidden rounded shadow-lg">
+        <img src="../../../../assets/images/used/department/me/class/me.webp" class="img-fluid w-100 department-banner" alt="Mechanical Engineering Banner">
+        <div class="banner-overlay p-4 d-flex align-items-center justify-content-center">
+          <p class="text-white fw-lighter h4 m-0">Shaping the world with innovative engineering.</p>
         </div>
-        <div class="fw-semibold red-title fs-2 my-3">
-          Our Labs</div>
-        <div class="card my-3">
-          <div class="card-body">
-            <div class="row">
-              <div class="fw-semibold fs-3">
-                Survey Lab</div>
-              <div class="col-md-5">
-                <img
-                  src="../../../../assets/images/used/department/cse/lab/18.webp"
-                  class="img-fluid shadow" alt>
-              </div>
-              <div class="col-md-7">
-                <div class="my-3 fs-5">
-                  A survey lab in engineering serves as a practical training
-                  ground where students gain hands-on experience with the tools
-                  and techniques used in land surveying and data collection.
-                  This crucial component of many engineering disciplines equips
-                  future professionals with the ability to accurately measure,
-                  map, and analyze the physical environment, forming the
-                  essential groundwork for various projects.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card my-3">
-          <div class="card-body">
-            <div class="row">
-              <div class="fw-semibold fs-3">
-                Public Health Engineering Lab </div>
-              <div class="col-md-7">
-                <div class="my-3 fs-5">
-                  A public health engineering lab serves as a practical space
-                  where students translate classroom knowledge into hands-on
-                  experience tackling real-world challenges in public health
-                  protection. Through diverse experiments and projects, future
-                  engineers delve into various aspects of water supply,
-                  sanitation, environmental health, and other crucial areas to
-                  ensure healthy communities.
-                </div>
-              </div>
-              <div class="col-md-5">
-                <img
-                  src="../../../../assets/images/used/department/cse/lab/15.webp"
-                  class="img-fluid shadow" alt>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card my-3">
-          <div class="card-body">
-            <div class="row">
-              <div class="fw-semibold fs-3">
-                Concrete lab</div>
-              <div class="col-md-5">
-                <img
-                  src="../../../../assets/images/used/department/cse/lab/13.webp"
-                  class="img-fluid shadow" alt>
-              </div>
-              <div class="col-md-7">
-                <div class="my-3 fs-5">
-                  A concrete lab in civil engineering delves into the hands-on
-                  exploration of concrete, the most widely used construction
-                  material globally. Students gain practical experience with its
-                  properties, testing methods, and behavior, preparing them for
-                  future roles in designing, constructing, and maintaining
-                  concrete structures.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card my-3">
-          <div class="card-body">
-            <div class="row">
-              <div class="fw-semibold fs-3">
-                Electrical lab</div>
-              <div class="col-md-7">
-                <div class="my-3 fs-5">
-                  An electrical lab serves as a hands-on learning environment
-                  where students delve into the fascinating world of
-                  electricity. Through experimentation with various circuits,
-                  components, and instruments, future engineers and scientists
-                  gain invaluable practical skills and solidify their
-                  understanding of electrical principles.
+      </div>
+    </section>
 
+    <!-- Statistics Section -->
+    <section class="section my-5 border-bottom border-top border-danger py-5 border-2 animate__animated animate__fadeInUp">
+      <div class="row text-center g-4">
+        <div class="col-md-4">
+          <div class="stat-card shadow-sm p-4 rounded">
+            <div class="fw-semibold display-6 text-danger">2,304</div>
+            <div class="mt-2">
+              <a href="#" class="text-decoration-none text-dark h5">Faculty Members</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card shadow-sm p-4 rounded">
+            <div class="fw-semibold display-6 text-danger">2,304</div>
+            <div class="mt-2">
+              <a href="#" class="text-decoration-none text-dark h5">Faculty Members</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card shadow-sm p-4 rounded">
+            <div class="fw-semibold display-6 text-danger">2,304</div>
+            <div class="mt-2">
+              <a href="#" class="text-decoration-none text-dark h5">Faculty Members</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="section my-5 animate__animated animate__fadeIn">
+      <h2 class="fw-semibold red-title display-6 mb-5 text-center">Mechanical Engineering in a Nutshell</h2>
+      <div class="row row-cols-1 row-cols-md-2 g-4 text-start">
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <h5 class="fw-semibold mb-3 h4">Focus on Designing Mechanical Components and Systems</h5>
+              <p class="card-text text-muted">Mechanical Engineering at our college emphasizes the creation and optimization of machines, devices, and systems through a comprehensive understanding of mechanics and materials.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <h5 class="fw-semibold mb-3 h4">Hands-on Learning Experiences</h5>
+              <p class="card-text text-muted">Through well-equipped labs and projects, students gain practical skills in manufacturing, thermodynamics, and fluid mechanics, ensuring they can apply theoretical knowledge to real-world engineering challenges.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <h5 class="fw-semibold mb-3 h4">Encouragement of Creative Problem-Solving</h5>
+              <p class="card-text text-muted">Our Mechanical Engineering program promotes innovation and research, empowering students to explore cutting-edge technologies, materials, and sustainable practices in the field.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <h5 class="fw-semibold mb-3 h4">Integration with Other Engineering Disciplines</h5>
+              <p class="card-text text-muted">Students benefit from a holistic education, integrating aspects of electrical, civil, and materials engineering to produce well-rounded mechanical engineers capable of addressing complex, interdisciplinary problems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Labs Section -->
+    <section class="section my-5 animate__animated animate__fadeIn">
+      <h2 class="fw-semibold red-title display-6 mb-5 text-center">Our Labs</h2>
+      <div class="row row-cols-1 g-4">
+        <div class="col">
+          <div class="card shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-md-5">
+                  <img src="../../../../assets/images/used/department/cse/lab/18.webp" class="img-fluid rounded shadow" alt="Survey Lab">
                 </div>
-              </div>
-              <div class="col-md-5">
-                <img
-                  src="../../../../assets/images/used/department/cse/lab/12.webp"
-                  class="img-fluid shadow" alt>
+                <div class="col-md-7">
+                  <h5 class="fw-semibold mb-3 h4">Survey Lab</h5>
+                  <p class="card-text text-muted">A survey lab in engineering serves as a practical training ground where students gain hands-on experience with the tools and techniques used in land surveying and data collection. This crucial component of many engineering disciplines equips future professionals with the ability to accurately measure, map, and analyze the physical environment, forming the essential groundwork for various projects.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="card my-3">
-          <div class="card-body">
-            <div class="row">
-              <div class="fw-semibold fs-3">
-                Fluid Mechanics Lab</div>
-              <div class="col-md-5">
-                <img src="../../../../assets/images/used/activites/30.jpg"
-                  class="img-fluid shadow" alt>
-              </div>
-              <div class="col-md-7">
-                <div class="my-3 fs-5">
-                  The fluid mechanics lab in mechanical engineering serves as a
-                  gateway to the mesmerizing world of fluids, both at rest and
-                  in motion. This hands-on haven empowers students to transcend
-                  the realm of theoretical knowledge and dive directly into the
-                  dynamic world of liquids and gases. Through a diverse array of
-                  experiments, measurements, and intriguing apparatus, the lab
-                  becomes a living textbook, fostering a deeper understanding
-                  and igniting a passion for this fundamental engineering
-                  subject.
-
+        <div class="col">
+          <div class="card shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-md-7">
+                  <h5 class="fw-semibold mb-3 h4">Public Health Engineering Lab</h5>
+                  <p class="card-text text-muted">A public health engineering lab serves as a practical space where students translate classroom knowledge into hands-on experience tackling real-world challenges in public health protection. Through diverse experiments and projects, future engineers delve into various aspects of water supply, sanitation, environmental health, and other crucial areas to ensure healthy communities.</p>
+                </div>
+                <div class="col-md-5">
+                  <img src="../../../../assets/images/used/department/cse/lab/15.webp" class="img-fluid rounded shadow" alt="Public Health Engineering Lab">
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="card my-3">
-          <div class="card-body">
-            <div class="row">
-              <div class="fw-semibold fs-3">
-                Thermodynamics lab</div>
-              <div class="col-md-7">
-                <div class="my-3 fs-5">
-                  In engineering, a thermodynamics lab serves as a practical
-                  learning space where students delve into the principles of
-                  energy conversion and transformation, solidifying their
-                  theoretical understanding through hands-on experience. This
-                  immersive environment equips future engineers with crucial
-                  skills and insights into various energy-related applications
-                  across different engineering disciplines.
-
+        <div class="col">
+          <div class="card shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-md-5">
+                  <img src="../../../../assets/images/used/department/cse/lab/13.webp" class="img-fluid rounded shadow" alt="Concrete Lab">
                 </div>
-              </div>
-              <div class="col-md-5">
-                <img
-                  src="../../../../assets/images/used/department/cse/lab/12.webp"
-                  class="img-fluid shadow" alt>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card my-3">
-          <div class="card-body">
-            <div class="row">
-              <div class="fw-semibold fs-3">
-                Foundary lab</div>
-              <div class="col-md-5">
-                <img src="../../../../assets/images/used/activites/30.jpg"
-                  class="img-fluid shadow" alt>
-              </div>
-              <div class="col-md-7">
-                <div class="my-3 fs-5">
-                  In the realm of engineering, a foundry lab transforms into a
-                  captivating space where students delve into the captivating
-                  world of metal casting. It's more than just pouring molten
-                  metal; it's a hands-on exploration of the entire casting
-                  process, from pattern making to finished product, equipping
-                  future engineers with invaluable practical skills and a deeper
-                  appreciation for this versatile manufacturing technique.
-
+                <div class="col-md-7">
+                  <h5 class="fw-semibold mb-3 h4">Concrete Lab</h5>
+                  <p class="card-text text-muted">A concrete lab in civil engineering delves into the hands-on exploration of concrete, the most widely used construction material globally. Students gain practical experience with its properties, testing methods, and behavior, preparing them for future roles in designing, constructing, and maintaining concrete structures.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="card my-3">
-          <div class="card-body">
-            <div class="row">
-              <div class="fw-semibold fs-3">
-                Refrigeration and Air conditioning (RAC) lab</div>
-              <div class="col-md-7">
-                <div class="my-3 fs-5">
-                  In the realm of mechanical engineering, the refrigeration and
-                  air conditioning (RAC) lab serves as a practical training
-                  ground for students to explore the fascinating world of
-                  thermal comfort and food preservation. It transcends
-                  theoretical learning by providing hands-on experience with
-                  various components, systems, and concepts, equipping future
-                  engineers with valuable skills and a deeper understanding of
-                  this crucial field.
-
+        <div class="col">
+          <div class="card shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-md-7">
+                  <h5 class="fw-semibold mb-3 h4">Electrical Lab</h5>
+                  <p class="card-text text-muted">An electrical lab serves as a hands-on learning environment where students delve into the fascinating world of electricity. Through experimentation with various circuits, components, and instruments, future engineers and scientists gain invaluable practical skills and solidify their understanding of electrical principles.</p>
+                </div>
+                <div class="col-md-5">
+                  <img src="../../../../assets/images/used/department/cse/lab/12.webp" class="img-fluid rounded shadow" alt="Electrical Lab">
                 </div>
               </div>
-              <div class="col-md-5">
-                <img
-                  src="../../../../assets/images/used/department/cse/lab/12.webp"
-                  class="img-fluid shadow" alt>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-md-5">
+                  <img src="../../../../assets/images/used/activites/30.jpg" class="img-fluid rounded shadow" alt="Fluid Mechanics Lab">
+                </div>
+                <div class="col-md-7">
+                  <h5 class="fw-semibold mb-3 h4">Fluid Mechanics Lab</h5>
+                  <p class="card-text text-muted">The fluid mechanics lab in mechanical engineering serves as a gateway to the mesmerizing world of fluids, both at rest and in motion. This hands-on haven empowers students to transcend the realm of theoretical knowledge and dive directly into the dynamic world of liquids and gases. Through a diverse array of experiments, measurements, and intriguing apparatus, the lab becomes a living textbook, fostering a deeper understanding and igniting a passion for this fundamental engineering subject.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-md-7">
+                  <h5 class="fw-semibold mb-3 h4">Thermodynamics Lab</h5>
+                  <p class="card-text text-muted">In engineering, a thermodynamics lab serves as a practical learning space where students delve into the principles of energy conversion and transformation, solidifying their theoretical understanding through hands-on experience. This immersive environment equips future engineers with crucial skills and insights into various energy-related applications across different engineering disciplines.</p>
+                </div>
+                <div class="col-md-5">
+                  <img src="../../../../assets/images/used/department/cse/lab/12.webp" class="img-fluid rounded shadow" alt="Thermodynamics Lab">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-md-5">
+                  <img src="../../../../assets/images/used/activites/30.jpg" class="img-fluid rounded shadow" alt="Foundary Lab">
+                </div>
+                <div class="col-md-7">
+                  <h5 class="fw-semibold mb-3 h4">Foundary Lab</h5>
+                  <p class="card-text text-muted">In the realm of engineering, a foundry lab transforms into a captivating space where students delve into the captivating world of metal casting. It's more than just pouring molten metal; it's a hands-on exploration of the entire casting process, from pattern making to finished product, equipping future engineers with invaluable practical skills and a deeper appreciation for this versatile manufacturing technique.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm border-0 hover-effect p-4 rounded-lg transition-all">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-md-7">
+                  <h5 class="fw-semibold mb-3 h4">Refrigeration and Air Conditioning (RAC) Lab</h5>
+                  <p class="card-text text-muted">In the realm of mechanical engineering, the refrigeration and air conditioning (RAC) lab serves as a practical training ground for students to explore the fascinating world of thermal comfort and food preservation. It transcends theoretical learning by providing hands-on experience with various components, systems, and concepts, equipping future engineers with valuable skills and a deeper understanding of this crucial field.</p>
+                </div>
+                <div class="col-md-5">
+                  <img src="../../../../assets/images/used/department/cse/lab/12.webp" class="img-fluid rounded shadow" alt="Refrigeration and Air Conditioning Lab">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class>
-      <img src="../../../../assets/images/used/department/me/lab/1.webp"
-        class="img-fluid" alt>
-    </div>
+    </section>
+
+    <!-- Lab/Facility Image Section -->
+    <section class="section my-5 animate__animated animate__zoomIn">
+      <div class="image-container overflow-hidden rounded shadow-lg">
+        <img src="../../../../assets/images/used/department/me/lab/1.webp" class="img-fluid w-100 department-lab transition-scale" alt="Mechanical Engineering Lab">
+      </div>
+    </section>
   </div>
+</div>
 
   <div [class.dark-mode]="isDarkMode" *ngIf="getCurrentLanguage() === 'ਪੰਜਾਬੀ'"
     [style.font-size.px]="getTextSize()">

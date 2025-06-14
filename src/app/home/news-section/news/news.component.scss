@@ -1,12 +1,17 @@
 :host .red-title {
     color: #b1040e;
   }
-  
-  :host .btn-red {
-    background-color: #b1040e;
-    color: #fff;
-  }
-  
+
+:host .btn-red {
+  background-color: #b1040e;
+  color: #fff;
+}
+
+.dark-mode .btn-red {
+  background-color: #666;
+  color: #fff;
+}
+
   :host .card {
     background-color: #fff;
   }
@@ -20,5 +25,3 @@
   .dark-mode .card{
     --bs-card-border-color: #fff !important
   }
-  
- 
