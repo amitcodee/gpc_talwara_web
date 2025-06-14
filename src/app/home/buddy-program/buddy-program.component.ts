@@ -5,11 +5,10 @@ import { LanguageService } from '../../services/language/language.service';
 import { ThemeService } from '../../services/theme/theme.service';
 
 @Component({
-  selector: 'app-buddy-program',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './buddy-program.component.html',
-  styleUrl: './buddy-program.component.scss'
+    selector: 'app-buddy-program',
+    imports: [CommonModule],
+    templateUrl: './buddy-program.component.html',
+    styleUrl: './buddy-program.component.scss'
 })
 export class BuddyProgramComponent {
   isDarkMode = false;

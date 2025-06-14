@@ -5,11 +5,10 @@ import { TextSizeService } from '../../../services/text-size/text-size.service';
 import { ThemeService } from '../../../services/theme/theme.service';
 
 @Component({
-  selector: 'app-principal-message',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './principal-message.component.html',
-  styleUrl: './principal-message.component.scss'
+    selector: 'app-principal-message',
+    imports: [CommonModule],
+    templateUrl: './principal-message.component.html',
+    styleUrl: './principal-message.component.scss'
 })
 export class PrincipalMessageComponent {
   isDarkMode = false;

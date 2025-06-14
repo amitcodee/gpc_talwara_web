@@ -5,11 +5,10 @@ import { ThemeService } from '../../services/theme/theme.service';
 import { TextSizeService } from '../../services/text-size/text-size.service';
 
 @Component({
-  selector: 'app-admission-helpdesk',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './admission-helpdesk.component.html',
-  styleUrl: './admission-helpdesk.component.scss'
+    selector: 'app-admission-helpdesk',
+    imports: [CommonModule],
+    templateUrl: './admission-helpdesk.component.html',
+    styleUrl: './admission-helpdesk.component.scss'
 })
 export class AdmissionHelpdeskComponent {
   isDarkMode = false;

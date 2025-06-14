@@ -5,11 +5,10 @@ import { TextSizeService } from '../../../services/text-size/text-size.service';
 import { ThemeService } from '../../../services/theme/theme.service';
 
 @Component({
-  selector: 'app-cse-faculty',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './cse.component.html',
-  styleUrl: './cse.component.scss'
+    selector: 'app-cse-faculty',
+    imports: [CommonModule],
+    templateUrl: './cse.component.html',
+    styleUrl: './cse.component.scss'
 })
 export class CseFacultyComponent {
   isDarkMode = false;

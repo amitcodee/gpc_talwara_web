@@ -5,11 +5,10 @@ import { LanguageService } from '../../../services/language/language.service';
 import { ThemeService } from '../../../services/theme/theme.service';
 
 @Component({
-  selector: 'app-admission-intake',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './admission-intake.component.html',
-  styleUrl: './admission-intake.component.scss'
+    selector: 'app-admission-intake',
+    imports: [CommonModule],
+    templateUrl: './admission-intake.component.html',
+    styleUrl: './admission-intake.component.scss'
 })
 export class AdmissionIntakeComponent {
   isDarkMode = false;

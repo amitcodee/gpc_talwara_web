@@ -5,11 +5,10 @@ import { TextSizeService } from '../../../services/text-size/text-size.service';
 import { ThemeService } from '../../../services/theme/theme.service';
 
 @Component({
-  selector: 'app-ws',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './ws.component.html',
-  styleUrl: './ws.component.scss'
+    selector: 'app-ws',
+    imports: [CommonModule],
+    templateUrl: './ws.component.html',
+    styleUrl: './ws.component.scss'
 })
 export class WsComponent {
   isDarkMode = false;

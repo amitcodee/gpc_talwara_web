@@ -5,11 +5,10 @@ import { TextSizeService } from '../../../services/text-size/text-size.service';
 import { ThemeService } from '../../../services/theme/theme.service';
 
 @Component({
-  selector: 'app-event-picture',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './event-picture.component.html',
-  styleUrls: ['./event-picture.component.scss'],
+    selector: 'app-event-picture',
+    imports: [CommonModule],
+    templateUrl: './event-picture.component.html',
+    styleUrls: ['./event-picture.component.scss']
 })
 export class EventPictureComponent implements OnInit {
   isDarkMode = false;

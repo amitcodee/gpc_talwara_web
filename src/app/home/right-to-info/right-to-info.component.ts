@@ -5,11 +5,10 @@ import { LanguageService } from '../../services/language/language.service';
 import { ThemeService } from '../../services/theme/theme.service';
 
 @Component({
-  selector: 'app-right-to-info',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './right-to-info.component.html',
-  styleUrl: './right-to-info.component.scss'
+    selector: 'app-right-to-info',
+    imports: [CommonModule],
+    templateUrl: './right-to-info.component.html',
+    styleUrl: './right-to-info.component.scss'
 })
 export class RightToInfoComponent {
   isDarkMode = false;

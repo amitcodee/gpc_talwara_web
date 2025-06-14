@@ -5,11 +5,10 @@ import { LanguageService } from '../../../services/language/language.service';
 import { ThemeService } from '../../../services/theme/theme.service';
 
 @Component({
-  selector: 'app-student-activities',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './student-activities.component.html',
-  styleUrl: './student-activities.component.scss'
+    selector: 'app-student-activities',
+    imports: [CommonModule],
+    templateUrl: './student-activities.component.html',
+    styleUrl: './student-activities.component.scss'
 })
 export class StudentActivitiesComponent {
   isDarkMode = false;

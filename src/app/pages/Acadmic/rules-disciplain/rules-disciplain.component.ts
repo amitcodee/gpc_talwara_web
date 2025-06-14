@@ -5,11 +5,10 @@ import { TextSizeService } from '../../../services/text-size/text-size.service';
 import { ThemeService } from '../../../services/theme/theme.service';
 
 @Component({
-  selector: 'app-rules-disciplain',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './rules-disciplain.component.html',
-  styleUrl: './rules-disciplain.component.scss'
+    selector: 'app-rules-disciplain',
+    imports: [CommonModule],
+    templateUrl: './rules-disciplain.component.html',
+    styleUrl: './rules-disciplain.component.scss'
 })
 export class RulesDisciplainComponent {
   isDarkMode = false;

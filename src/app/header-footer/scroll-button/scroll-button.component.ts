@@ -6,11 +6,10 @@ import { TextSizeService } from '../../services/text-size/text-size.service';
 import { ThemeService } from '../../services/theme/theme.service';
 
 @Component({
-  selector: 'app-scroll-button',
-  standalone: true,
-  imports: [CommonModule],
-  styleUrls: ['./scroll-button.component.scss'],
-  templateUrl: './scroll-button.component.html',
+    selector: 'app-scroll-button',
+    imports: [CommonModule],
+    styleUrls: ['./scroll-button.component.scss'],
+    templateUrl: './scroll-button.component.html'
 })
 export class ScrollButtonComponent {
   showButton = false;

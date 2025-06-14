@@ -7,7 +7,6 @@ import { MainAreaComponent } from "../main-area/main-area.component";
 
 @Component({
     selector: 'app-hero-section',
-    standalone: true,
     templateUrl: './hero-section.component.html',
     styleUrls: ['./hero-section.component.scss'],
     imports: [CommonModule, MainAreaComponent]

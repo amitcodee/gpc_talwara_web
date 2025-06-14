@@ -5,11 +5,10 @@ import { TextSizeService } from '../../../services/text-size/text-size.service';
 import { ThemeService } from '../../../services/theme/theme.service';
 
 @Component({
-  selector: 'app-supporting-staff',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './supporting-staff.component.html',
-  styleUrl: './supporting-staff.component.scss'
+    selector: 'app-supporting-staff',
+    imports: [CommonModule],
+    templateUrl: './supporting-staff.component.html',
+    styleUrl: './supporting-staff.component.scss'
 })
 export class SupportingStaffComponent {
   isDarkMode = false;

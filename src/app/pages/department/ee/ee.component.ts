@@ -5,11 +5,10 @@ import { TextSizeService } from '../../../services/text-size/text-size.service';
 import { ThemeService } from '../../../services/theme/theme.service';
 
 @Component({
-  selector: 'app-ee',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './ee.component.html',
-  styleUrl: './ee.component.scss'
+    selector: 'app-ee',
+    imports: [CommonModule],
+    templateUrl: './ee.component.html',
+    styleUrl: './ee.component.scss'
 })
 export class EeComponent {
   isDarkMode = false;

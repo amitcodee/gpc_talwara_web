@@ -5,11 +5,10 @@ import { TextSizeService } from '../../../services/text-size/text-size.service';
 import { ThemeService } from '../../../services/theme/theme.service';
 
 @Component({
-  selector: 'app-traning-placement-cell',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './traning-placement-cell.component.html',
-  styleUrl: './traning-placement-cell.component.scss'
+    selector: 'app-traning-placement-cell',
+    imports: [CommonModule],
+    templateUrl: './traning-placement-cell.component.html',
+    styleUrl: './traning-placement-cell.component.scss'
 })
 export class TraningPlacementCellComponent {
   isDarkMode = false;

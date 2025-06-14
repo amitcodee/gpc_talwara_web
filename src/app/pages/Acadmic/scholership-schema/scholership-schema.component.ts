@@ -5,11 +5,10 @@ import { TextSizeService } from '../../../services/text-size/text-size.service';
 import { ThemeService } from '../../../services/theme/theme.service';
 
 @Component({
-  selector: 'app-scholership-schema',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './scholership-schema.component.html',
-  styleUrl: './scholership-schema.component.scss'
+    selector: 'app-scholership-schema',
+    imports: [CommonModule],
+    templateUrl: './scholership-schema.component.html',
+    styleUrl: './scholership-schema.component.scss'
 })
 export class ScholershipSchemaComponent {
   isDarkMode = false;

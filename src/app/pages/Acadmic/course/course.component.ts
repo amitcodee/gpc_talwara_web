@@ -5,11 +5,10 @@ import { TextSizeService } from '../../../services/text-size/text-size.service';
 import { ThemeService } from '../../../services/theme/theme.service';
 
 @Component({
-  selector: 'app-course',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './course.component.html',
-  styleUrl: './course.component.scss'
+    selector: 'app-course',
+    imports: [CommonModule],
+    templateUrl: './course.component.html',
+    styleUrl: './course.component.scss'
 })
 export class CourseComponent {
   isDarkMode = false;

@@ -6,11 +6,10 @@ import { ThemeService } from '../../../services/theme/theme.service';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-mandotory-disclore',
-  standalone: true,
-  imports: [CommonModule, RouterLink],
-  templateUrl: './mandotory-disclore.component.html',
-  styleUrl: './mandotory-disclore.component.scss'
+    selector: 'app-mandotory-disclore',
+    imports: [CommonModule, RouterLink],
+    templateUrl: './mandotory-disclore.component.html',
+    styleUrl: './mandotory-disclore.component.scss'
 })
 export class MandotoryDiscloreComponent {
   isDarkMode = false;

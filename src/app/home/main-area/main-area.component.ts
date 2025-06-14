@@ -7,11 +7,10 @@ import { NewsComponent } from '../news-section/news/news.component';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-main-area',
-  standalone: true,
-  templateUrl: './main-area.component.html',
-  styleUrl: './main-area.component.scss',
-  imports: [CommonModule, NewsComponent, RouterLink],
+    selector: 'app-main-area',
+    templateUrl: './main-area.component.html',
+    styleUrl: './main-area.component.scss',
+    imports: [CommonModule, NewsComponent, RouterLink]
 })
 export class MainAreaComponent {
   scrollToTopAndCloseNavbar() {

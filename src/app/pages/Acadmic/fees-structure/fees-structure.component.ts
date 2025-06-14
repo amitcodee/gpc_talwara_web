@@ -5,11 +5,10 @@ import { TextSizeService } from '../../../services/text-size/text-size.service';
 import { ThemeService } from '../../../services/theme/theme.service';
 
 @Component({
-  selector: 'app-fees-structure',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './fees-structure.component.html',
-  styleUrl: './fees-structure.component.scss'
+    selector: 'app-fees-structure',
+    imports: [CommonModule],
+    templateUrl: './fees-structure.component.html',
+    styleUrl: './fees-structure.component.scss'
 })
 export class FeesStructureComponent {
   isDarkMode = false;

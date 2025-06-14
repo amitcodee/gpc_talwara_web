@@ -5,11 +5,10 @@ import { TextSizeService } from '../../../services/text-size/text-size.service';
 import { ThemeService } from '../../../services/theme/theme.service';
 
 @Component({
-  selector: 'app-vision',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './vision.component.html',
-  styleUrl: './vision.component.scss'
+    selector: 'app-vision',
+    imports: [CommonModule],
+    templateUrl: './vision.component.html',
+    styleUrl: './vision.component.scss'
 })
 export class VisionComponent {
   isDarkMode = false;

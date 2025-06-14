@@ -5,11 +5,10 @@ import { TextSizeService } from '../../../services/text-size/text-size.service';
 import { ThemeService } from '../../../services/theme/theme.service';
 
 @Component({
-  selector: 'app-news',
-  styleUrls: ['./news.component.scss'],
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './news.component.html',
+    selector: 'app-news',
+    styleUrls: ['./news.component.scss'],
+    imports: [CommonModule],
+    templateUrl: './news.component.html'
 })
 export class NewsComponent implements OnInit {
   isDarkMode = false;

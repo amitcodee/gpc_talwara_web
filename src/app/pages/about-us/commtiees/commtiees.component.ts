@@ -5,11 +5,10 @@ import { TextSizeService } from '../../../services/text-size/text-size.service';
 import { ThemeService } from '../../../services/theme/theme.service';
 
 @Component({
-  selector: 'app-commtiees',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './commtiees.component.html',
-  styleUrl: './commtiees.component.scss'
+    selector: 'app-commtiees',
+    imports: [CommonModule],
+    templateUrl: './commtiees.component.html',
+    styleUrl: './commtiees.component.scss'
 })
 export class CommtieesComponent {
   isDarkMode = false;
